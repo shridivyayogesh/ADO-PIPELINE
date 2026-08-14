@@ -1,0 +1,48 @@
+2026-08-06T07:49:38.3013563Z ##[section]Starting: Approve merge
+2026-08-06T07:49:38.3021378Z ==============================================================================
+2026-08-06T07:49:38.3021488Z Task         : Command line
+2026-08-06T07:49:38.3021552Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-06T07:49:38.3021647Z Version      : 2.276.0
+2026-08-06T07:49:38.3021705Z Author       : Microsoft Corporation
+2026-08-06T07:49:38.3021798Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-06T07:49:38.3021883Z ==============================================================================
+2026-08-06T07:49:43.8785042Z Generating script.
+2026-08-06T07:49:43.8791460Z ========================== Starting Command Output ===========================
+2026-08-06T07:49:43.8808504Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/64664622-5ddf-40ff-bbc3-8c6cfcdc7611.sh
+2026-08-06T07:49:43.8863788Z + '[' prod_non_active_pods_remaining_subnet = all_pods_subnet ']'
+2026-08-06T07:49:43.8864526Z + pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+2026-08-06T07:50:00.4196269Z ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+2026-08-06T07:50:00.4196975Z azure-cli 2.77.0 requires PyGithub~=1.38, but you have pygithub 2.9.1 which is incompatible.
+2026-08-06T07:50:00.5175799Z 
+2026-08-06T07:50:00.5176643Z [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+2026-08-06T07:50:00.5176945Z [notice] To update, run: pip3 install --upgrade pip
+2026-08-06T07:50:00.7502619Z + export git_token=***
+2026-08-06T07:50:00.7503354Z + git_token=***
+2026-08-06T07:50:00.7504071Z + python3 batch_deployment_automation/approve_merge.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token ***
+2026-08-06T07:50:03.0042729Z [INFO] [approve_merge:58]: File "output_RRGEN2_26.7.3-1-ATMS_prod.csv" downloaded successfully.
+2026-08-06T07:50:03.0066861Z /usr/local/ado-agent/_work/1/s/batch_deployment_automation/approve_merge.py:139: DeprecationWarning: Argument login_or_token is deprecated, please use auth=github.Auth.Token(...) instead
+2026-08-06T07:50:03.0067353Z   github_object = Github(base_url=ghe_url, login_or_token=git_token)
+2026-08-06T07:50:04.0834458Z [INFO] [approve_merge:78]: PR 1328 has DevOps approval from: terraform-pr-reviewer
+2026-08-06T07:50:05.5797933Z [INFO] [approve_merge:93]: Approval done
+2026-08-06T07:50:08.0256999Z [INFO] [approve_merge:114]: PR merged using squash and merge
+2026-08-06T07:50:08.0257701Z [INFO] [approve_merge:165]: PR 1328 in repo WPPg2/avatar-signalmgmt has been approved and merged.
+2026-08-06T07:50:09.4099615Z [INFO] [approve_merge:78]: PR 2555 has DevOps approval from: terraform-pr-reviewer
+2026-08-06T07:50:10.9745639Z [INFO] [approve_merge:93]: Approval done
+2026-08-06T07:50:13.6290841Z [INFO] [approve_merge:114]: PR merged using squash and merge
+2026-08-06T07:50:15.2012212Z [INFO] [approve_merge:165]: PR 2555 in repo WPPg2/avatar-reg has been approved and merged.
+2026-08-06T07:50:15.2012747Z [WARNING] [approve_merge:81]: PR 982 does not have any approval from DevOps reviewers
+2026-08-06T07:50:15.2013303Z [WARNING] [approve_merge:153]: PR 982 in repo WPPg2/avatar-signal-outbound-processor does not have approval from DevOps reviewers. Skipping approval and merge.
+2026-08-06T07:50:15.2029896Z [INFO] [approve_merge:187]: 
+2026-08-06T07:50:15.2030296Z +-------------+-------------------------------------------------------------------------------+------------------------------+
+2026-08-06T07:50:15.2030664Z |   PR Number | PR Link                                                                       | Approval Status              |
+2026-08-06T07:50:15.2031022Z +=============+===============================================================================+==============================+
+2026-08-06T07:50:15.2031902Z |        1328 | https://github.azc.ext.hp.com/WPPg2/avatar-signalmgmt/pull/1328               | Approved and Merged          |
+2026-08-06T07:50:15.2032289Z +-------------+-------------------------------------------------------------------------------+------------------------------+
+2026-08-06T07:50:15.2032669Z |        2555 | https://github.azc.ext.hp.com/WPPg2/avatar-reg/pull/2555                      | Approved and Merged          |
+2026-08-06T07:50:15.2033050Z +-------------+-------------------------------------------------------------------------------+------------------------------+
+2026-08-06T07:50:15.2033493Z |         982 | https://github.azc.ext.hp.com/WPPg2/avatar-signal-outbound-processor/pull/982 | No DevOps Approval - Skipped |
+2026-08-06T07:50:15.2033897Z +-------------+-------------------------------------------------------------------------------+------------------------------+
+2026-08-06T07:50:15.2034288Z [ERROR] [approve_merge:191]: One or more PRs were not approved and merged. Failing the job.
+2026-08-06T07:50:15.2692235Z 
+2026-08-06T07:50:15.2723894Z ##[error]Bash exited with code '1'.
+2026-08-06T07:50:15.2770421Z ##[section]Finishing: Approve merge
