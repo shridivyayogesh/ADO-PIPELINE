@@ -1,0 +1,533 @@
+2026-08-06T07:48:42.0669408Z ##[section]Starting: PreDeploymentPRValidation
+2026-08-06T07:48:43.3975851Z ##[section]Starting: Initialize job
+2026-08-06T07:48:43.3977919Z Agent name: 'i-0c60fc5894813b7fd'
+2026-08-06T07:48:43.3978258Z Agent machine name: 'ip-100-64-42-65'
+2026-08-06T07:48:43.3978376Z Current agent version: '4.270.0'
+2026-08-06T07:48:45.2026872Z Agent running as: 'agent-runner'
+2026-08-06T07:48:45.2059085Z Prepare build directory.
+2026-08-06T07:48:45.2219063Z Set build variables.
+2026-08-06T07:48:45.2231416Z Download all required tasks.
+2026-08-06T07:48:45.2290771Z Downloading task: CmdLine (2.276.0)
+2026-08-06T07:48:45.6167541Z Checking job knob settings.
+2026-08-06T07:48:45.6169377Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2026-08-06T07:48:45.6170105Z    Knob: UseGitLongPaths = true Source: $(USE_GIT_LONG_PATHS) 
+2026-08-06T07:48:45.6170954Z    Knob: UseNode24withHandlerData = True Source: $(DistributedTask.Agent.UseNode24withHandlerData) 
+2026-08-06T07:48:45.6171929Z    Knob: EnableIssueSourceValidation = true Source: $(ENABLE_ISSUE_SOURCE_VALIDATION) 
+2026-08-06T07:48:45.6172387Z    Knob: AgentEnablePipelineArtifactLargeChunkSize = true Source: $(AGENT_ENABLE_PIPELINEARTIFACT_LARGE_CHUNK_SIZE) 
+2026-08-06T07:48:45.6173317Z    Knob: DisableNode6Tasks = true Source: $(AGENT_DISABLE_NODE6_TASKS) 
+2026-08-06T07:48:45.6173801Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2026-08-06T07:48:45.6174155Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC) 
+2026-08-06T07:48:45.6174381Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC_LOG) 
+2026-08-06T07:48:45.6174608Z    Knob: ProcessHandlerTelemetry = true Source: $(AZP_75787_ENABLE_COLLECT) 
+2026-08-06T07:48:45.6174852Z    Knob: UseNewNodeHandlerTelemetry = True Source: $(DistributedTask.Agent.USENEWNODEHANDLERTELEMETRY) 
+2026-08-06T07:48:45.6175085Z    Knob: ProcessHandlerEnableNewLogic = true Source: $(AZP_75787_ENABLE_NEW_PH_LOGIC) 
+2026-08-06T07:48:45.6175566Z    Knob: EnableResourceMonitorDebugOutput = true Source: $(AZP_ENABLE_RESOURCE_MONITOR_DEBUG_OUTPUT) 
+2026-08-06T07:48:45.6175814Z    Knob: EnableResourceUtilizationWarnings = true Source: $(AZP_ENABLE_RESOURCE_UTILIZATION_WARNINGS) 
+2026-08-06T07:48:45.6176164Z    Knob: IgnoreVSTSTaskLib = true Source: $(AZP_AGENT_IGNORE_VSTSTASKLIB) 
+2026-08-06T07:48:45.6176372Z    Knob: FailJobWhenAgentDies = true Source: $(FAIL_JOB_WHEN_AGENT_DIES) 
+2026-08-06T07:48:45.6176517Z    Knob: EnhancedWorkerCrashHandling = true Source: ${AZP_ENHANCED_WORKER_CRASH_HANDLING} 
+2026-08-06T07:48:45.6176811Z    Knob: CheckForTaskDeprecation = true Source: $(AZP_AGENT_CHECK_FOR_TASK_DEPRECATION) 
+2026-08-06T07:48:45.6177133Z    Knob: CheckIfTaskNodeRunnerIsDeprecated246 = True Source: $(DistributedTask.Agent.CheckIfTaskNodeRunnerIsDeprecated246) 
+2026-08-06T07:48:45.6177512Z    Knob: UseNode20ToStartContainer = True Source: $(DistributedTask.Agent.UseNode20ToStartContainer) 
+2026-08-06T07:48:45.6177786Z    Knob: UseNode24ToStartContainer = True Source: $(DistributedTask.Agent.UseNode24ToStartContainer) 
+2026-08-06T07:48:45.6178043Z    Knob: EnableTimeoutLogFlushing = True Source: $(DistributedTask.Agent.EnableTimeoutLogFlushing) 
+2026-08-06T07:48:45.6178386Z    Knob: LogTaskNameInUserAgent = true Source: $(AZP_AGENT_LOG_TASKNAME_IN_USERAGENT) 
+2026-08-06T07:48:45.6178628Z    Knob: UseFetchFilterInCheckoutTask = true Source: $(AGENT_USE_FETCH_FILTER_IN_CHECKOUT_TASK) 
+2026-08-06T07:48:45.6178934Z    Knob: Rosetta2Warning = true Source: $(ROSETTA2_WARNING) 
+2026-08-06T07:48:45.6179509Z    Knob: AddForceCredentialsToGitCheckout = True Source: $(DistributedTask.Agent.AddForceCredentialsToGitCheckout) 
+2026-08-06T07:48:45.6179854Z    Knob: AddForceCredentialsToGitCheckoutEnhanced = True Source: $(DistributedTask.Agent.AddForceCredentialsToGitCheckoutEnhanced) 
+2026-08-06T07:48:45.6180262Z    Knob: UseLatestTfExe = True Source: $(DistributedTask.Agent.UseLatestTfExe) 
+2026-08-06T07:48:45.6181132Z    Knob: UseSparseCheckoutInCheckoutTask = true Source: $(AGENT_USE_SPARSE_CHECKOUT_IN_CHECKOUT_TASK) 
+2026-08-06T07:48:45.6181511Z    Knob: AgentCDNConnectivityFailWarning = False Source: $(DistributedTask.Agent.AgentCDNConnectivityFailWarning) 
+2026-08-06T07:48:45.6181728Z    Knob: UseEnhancedLogging = true Source: ${AZP_USE_ENHANCED_LOGGING} 
+2026-08-06T07:48:45.6181982Z    Knob: EnableEnhancedContainerDiagnostics = True Source: $(DistributedTask.Agent.EnableEnhancedContainerDiagnostics) 
+2026-08-06T07:48:45.6182357Z    Knob: EnableDockerExecDiagnostics = True Source: $(DistributedTask.Agent.EnableDockerExecDiagnostics) 
+2026-08-06T07:48:45.6182586Z Finished checking job knob settings.
+2026-08-06T07:48:45.6375904Z Start tracking orphan processes.
+2026-08-06T07:48:45.6644861Z ##[section]Finishing: Initialize job
+2026-08-06T07:48:45.6706742Z ##[section]Async Command Start: DetectDockerContainer
+2026-08-06T07:48:45.6707300Z ##[section]Async Command End: DetectDockerContainer
+2026-08-06T07:48:45.6708770Z ##[section]Async Command Start: DetectDockerContainer
+2026-08-06T07:48:45.6708950Z ##[section]Async Command End: DetectDockerContainer
+2026-08-06T07:48:45.6837764Z ##[section]Starting: Checkout RCB-Ops/ADO-automations@master to s
+2026-08-06T07:48:45.6923465Z ==============================================================================
+2026-08-06T07:48:45.6924255Z Task         : Get sources
+2026-08-06T07:48:45.6924531Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-08-06T07:48:45.6924638Z Version      : 1.0.0
+2026-08-06T07:48:45.6924834Z Author       : Microsoft
+2026-08-06T07:48:45.6925079Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-08-06T07:48:45.6925190Z ==============================================================================
+2026-08-06T07:48:47.1953076Z Syncing repository: RCB-Ops/ADO-automations (GitHubEnterprise)
+2026-08-06T07:48:47.1962264Z ##[command]git version
+2026-08-06T07:48:47.1973271Z git version 2.50.1
+2026-08-06T07:48:47.1974428Z ##[command]git lfs version
+2026-08-06T07:48:47.1984624Z git-lfs/3.7.1 (GitHub; linux amd64; go 1.25.11 X:nodwarf5)
+2026-08-06T07:48:47.1987458Z ##[command]git init "/usr/local/ado-agent/_work/1/s"
+2026-08-06T07:48:47.1995629Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-06T07:48:47.1996045Z hint: is subject to change. To configure the initial branch name to use in all
+2026-08-06T07:48:47.1996441Z hint: of your new repositories, which will suppress this warning, call:
+2026-08-06T07:48:47.1996774Z hint:
+2026-08-06T07:48:47.1997094Z hint: 	git config --global init.defaultBranch <name>
+2026-08-06T07:48:47.1997381Z hint:
+2026-08-06T07:48:47.1997691Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-06T07:48:47.1998078Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-06T07:48:47.1998422Z hint:
+2026-08-06T07:48:47.1998732Z hint: 	git branch -m <name>
+2026-08-06T07:48:47.1999004Z hint:
+2026-08-06T07:48:47.1999347Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-06T07:48:47.1999752Z Initialized empty Git repository in /usr/local/ado-agent/_work/1/s/.git/
+2026-08-06T07:48:47.2002439Z ##[command]git remote add origin https://github.azc.ext.hp.com/RCB-Ops/ADO-automations
+2026-08-06T07:48:47.2012793Z ##[command]git sparse-checkout disable
+2026-08-06T07:48:47.2026776Z ##[command]git config gc.auto 0
+2026-08-06T07:48:47.2037085Z ##[command]git config core.longpaths true
+2026-08-06T07:48:47.2045390Z ##[command]git config --get-all http.https://github.azc.ext.hp.com/RCB-Ops/ADO-automations.extraheader
+2026-08-06T07:48:47.2056632Z ##[command]git config --get-all http.extraheader
+2026-08-06T07:48:47.2067506Z ##[command]git config --get-regexp .*extraheader
+2026-08-06T07:48:47.2072584Z ##[command]git config --get-all http.proxy
+2026-08-06T07:48:47.2078249Z ##[command]git config http.version HTTP/1.1
+2026-08-06T07:48:47.2086438Z ##[command]git config --get-all remote.origin.promisor
+2026-08-06T07:48:47.2113732Z ##[command]git config --get-all remote.origin.partialclonefilter
+2026-08-06T07:48:47.2120499Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +acde9fc4f19ce29e699bc31f90f1718d98327a6f:refs/remotes/origin/acde9fc4f19ce29e699bc31f90f1718d98327a6f
+2026-08-06T07:48:47.3932369Z remote: Enumerating objects: 145, done.        
+2026-08-06T07:48:47.3932728Z remote: Counting objects:   0% (1/145)        
+2026-08-06T07:48:47.3933040Z remote: Counting objects:   1% (2/145)        
+2026-08-06T07:48:47.3937581Z remote: Counting objects:   2% (3/145)        
+2026-08-06T07:48:47.3937923Z remote: Counting objects:   3% (5/145)        
+2026-08-06T07:48:47.3938234Z remote: Counting objects:   4% (6/145)        
+2026-08-06T07:48:47.3938650Z remote: Counting objects:   5% (8/145)        
+2026-08-06T07:48:47.3938999Z remote: Counting objects:   6% (9/145)        
+2026-08-06T07:48:47.3939385Z remote: Counting objects:   7% (11/145)        
+2026-08-06T07:48:47.3940072Z remote: Counting objects:   8% (12/145)        
+2026-08-06T07:48:47.3940451Z remote: Counting objects:   9% (14/145)        
+2026-08-06T07:48:47.3940794Z remote: Counting objects:  10% (15/145)        
+2026-08-06T07:48:47.3941112Z remote: Counting objects:  11% (16/145)        
+2026-08-06T07:48:47.3941467Z remote: Counting objects:  12% (18/145)        
+2026-08-06T07:48:47.3941755Z remote: Counting objects:  13% (19/145)        
+2026-08-06T07:48:47.3942118Z remote: Counting objects:  14% (21/145)        
+2026-08-06T07:48:47.3942447Z remote: Counting objects:  15% (22/145)        
+2026-08-06T07:48:47.3942758Z remote: Counting objects:  16% (24/145)        
+2026-08-06T07:48:47.3943076Z remote: Counting objects:  17% (25/145)        
+2026-08-06T07:48:47.3943389Z remote: Counting objects:  18% (27/145)        
+2026-08-06T07:48:47.3943716Z remote: Counting objects:  19% (28/145)        
+2026-08-06T07:48:47.3944078Z remote: Counting objects:  20% (29/145)        
+2026-08-06T07:48:47.3944415Z remote: Counting objects:  21% (31/145)        
+2026-08-06T07:48:47.3944732Z remote: Counting objects:  22% (32/145)        
+2026-08-06T07:48:47.3945072Z remote: Counting objects:  23% (34/145)        
+2026-08-06T07:48:47.3945380Z remote: Counting objects:  24% (35/145)        
+2026-08-06T07:48:47.3945678Z remote: Counting objects:  25% (37/145)        
+2026-08-06T07:48:47.3946011Z remote: Counting objects:  26% (38/145)        
+2026-08-06T07:48:47.3946335Z remote: Counting objects:  27% (40/145)        
+2026-08-06T07:48:47.3946656Z remote: Counting objects:  28% (41/145)        
+2026-08-06T07:48:47.3946969Z remote: Counting objects:  29% (43/145)        
+2026-08-06T07:48:47.3947320Z remote: Counting objects:  30% (44/145)        
+2026-08-06T07:48:47.3947655Z remote: Counting objects:  31% (45/145)        
+2026-08-06T07:48:47.3947985Z remote: Counting objects:  32% (47/145)        
+2026-08-06T07:48:47.3948317Z remote: Counting objects:  33% (48/145)        
+2026-08-06T07:48:47.3948616Z remote: Counting objects:  34% (50/145)        
+2026-08-06T07:48:47.3948943Z remote: Counting objects:  35% (51/145)        
+2026-08-06T07:48:47.3949219Z remote: Counting objects:  36% (53/145)        
+2026-08-06T07:48:47.3949514Z remote: Counting objects:  37% (54/145)        
+2026-08-06T07:48:47.3949808Z remote: Counting objects:  38% (56/145)        
+2026-08-06T07:48:47.3950110Z remote: Counting objects:  39% (57/145)        
+2026-08-06T07:48:47.3950408Z remote: Counting objects:  40% (58/145)        
+2026-08-06T07:48:47.3950708Z remote: Counting objects:  41% (60/145)        
+2026-08-06T07:48:47.3951326Z remote: Counting objects:  42% (61/145)        
+2026-08-06T07:48:47.3951756Z remote: Counting objects:  43% (63/145)        
+2026-08-06T07:48:47.3952092Z remote: Counting objects:  44% (64/145)        
+2026-08-06T07:48:47.3952407Z remote: Counting objects:  45% (66/145)        
+2026-08-06T07:48:47.3952718Z remote: Counting objects:  46% (67/145)        
+2026-08-06T07:48:47.3953362Z remote: Counting objects:  47% (69/145)        
+2026-08-06T07:48:47.3953739Z remote: Counting objects:  48% (70/145)        
+2026-08-06T07:48:47.3954087Z remote: Counting objects:  49% (72/145)        
+2026-08-06T07:48:47.3954432Z remote: Counting objects:  50% (73/145)        
+2026-08-06T07:48:47.3954773Z remote: Counting objects:  51% (74/145)        
+2026-08-06T07:48:47.3955090Z remote: Counting objects:  52% (76/145)        
+2026-08-06T07:48:47.3955384Z remote: Counting objects:  53% (77/145)        
+2026-08-06T07:48:47.3955741Z remote: Counting objects:  54% (79/145)        
+2026-08-06T07:48:47.3956080Z remote: Counting objects:  55% (80/145)        
+2026-08-06T07:48:47.3956372Z remote: Counting objects:  56% (82/145)        
+2026-08-06T07:48:47.3956662Z remote: Counting objects:  57% (83/145)        
+2026-08-06T07:48:47.3958024Z remote: Counting objects:  58% (85/145)        
+2026-08-06T07:48:47.3958304Z remote: Counting objects:  59% (86/145)        
+2026-08-06T07:48:47.3958591Z remote: Counting objects:  60% (87/145)        
+2026-08-06T07:48:47.3959050Z remote: Counting objects:  61% (89/145)        
+2026-08-06T07:48:47.3959353Z remote: Counting objects:  62% (90/145)        
+2026-08-06T07:48:47.3959650Z remote: Counting objects:  63% (92/145)        
+2026-08-06T07:48:47.3959974Z remote: Counting objects:  64% (93/145)        
+2026-08-06T07:48:47.3960271Z remote: Counting objects:  65% (95/145)        
+2026-08-06T07:48:47.3960566Z remote: Counting objects:  66% (96/145)        
+2026-08-06T07:48:47.3960843Z remote: Counting objects:  67% (98/145)        
+2026-08-06T07:48:47.3961095Z remote: Counting objects:  68% (99/145)        
+2026-08-06T07:48:47.3961347Z remote: Counting objects:  69% (101/145)        
+2026-08-06T07:48:47.3961617Z remote: Counting objects:  70% (102/145)        
+2026-08-06T07:48:47.3961945Z remote: Counting objects:  71% (103/145)        
+2026-08-06T07:48:47.3962196Z remote: Counting objects:  72% (105/145)        
+2026-08-06T07:48:47.3962478Z remote: Counting objects:  73% (106/145)        
+2026-08-06T07:48:47.3962730Z remote: Counting objects:  74% (108/145)        
+2026-08-06T07:48:47.3963002Z remote: Counting objects:  75% (109/145)        
+2026-08-06T07:48:47.3963257Z remote: Counting objects:  76% (111/145)        
+2026-08-06T07:48:47.3963551Z remote: Counting objects:  77% (112/145)        
+2026-08-06T07:48:47.3963807Z remote: Counting objects:  78% (114/145)        
+2026-08-06T07:48:47.3964084Z remote: Counting objects:  79% (115/145)        
+2026-08-06T07:48:47.3964335Z remote: Counting objects:  80% (116/145)        
+2026-08-06T07:48:47.3964626Z remote: Counting objects:  81% (118/145)        
+2026-08-06T07:48:47.3964929Z remote: Counting objects:  82% (119/145)        
+2026-08-06T07:48:47.3965223Z remote: Counting objects:  83% (121/145)        
+2026-08-06T07:48:47.3965751Z remote: Counting objects:  84% (122/145)        
+2026-08-06T07:48:47.3966073Z remote: Counting objects:  85% (124/145)        
+2026-08-06T07:48:47.3966380Z remote: Counting objects:  86% (125/145)        
+2026-08-06T07:48:47.3966680Z remote: Counting objects:  87% (127/145)        
+2026-08-06T07:48:47.3966979Z remote: Counting objects:  88% (128/145)        
+2026-08-06T07:48:47.3967298Z remote: Counting objects:  89% (130/145)        
+2026-08-06T07:48:47.3967581Z remote: Counting objects:  90% (131/145)        
+2026-08-06T07:48:47.3967751Z remote: Counting objects:  91% (132/145)        
+2026-08-06T07:48:47.3967926Z remote: Counting objects:  92% (134/145)        
+2026-08-06T07:48:47.3968090Z remote: Counting objects:  93% (135/145)        
+2026-08-06T07:48:47.3968266Z remote: Counting objects:  94% (137/145)        
+2026-08-06T07:48:47.3968441Z remote: Counting objects:  95% (138/145)        
+2026-08-06T07:48:47.3968606Z remote: Counting objects:  96% (140/145)        
+2026-08-06T07:48:47.3968767Z remote: Counting objects:  97% (141/145)        
+2026-08-06T07:48:47.3968929Z remote: Counting objects:  98% (143/145)        
+2026-08-06T07:48:47.3969095Z remote: Counting objects:  99% (144/145)        
+2026-08-06T07:48:47.3969430Z remote: Counting objects: 100% (145/145)        
+2026-08-06T07:48:47.3969599Z remote: Counting objects: 100% (145/145), done.        
+2026-08-06T07:48:47.3969781Z remote: Compressing objects:   0% (1/122)        
+2026-08-06T07:48:47.3969947Z remote: Compressing objects:   1% (2/122)        
+2026-08-06T07:48:47.3970108Z remote: Compressing objects:   2% (3/122)        
+2026-08-06T07:48:47.3970268Z remote: Compressing objects:   3% (4/122)        
+2026-08-06T07:48:47.3970436Z remote: Compressing objects:   4% (5/122)        
+2026-08-06T07:48:47.3970596Z remote: Compressing objects:   5% (7/122)        
+2026-08-06T07:48:47.3970760Z remote: Compressing objects:   6% (8/122)        
+2026-08-06T07:48:47.3970929Z remote: Compressing objects:   7% (9/122)        
+2026-08-06T07:48:47.3971091Z remote: Compressing objects:   8% (10/122)        
+2026-08-06T07:48:47.3971253Z remote: Compressing objects:   9% (11/122)        
+2026-08-06T07:48:47.3971437Z remote: Compressing objects:  10% (13/122)        
+2026-08-06T07:48:47.3971600Z remote: Compressing objects:  11% (14/122)        
+2026-08-06T07:48:47.3971870Z remote: Compressing objects:  12% (15/122)        
+2026-08-06T07:48:47.3972051Z remote: Compressing objects:  13% (16/122)        
+2026-08-06T07:48:47.3972219Z remote: Compressing objects:  14% (18/122)        
+2026-08-06T07:48:47.3972380Z remote: Compressing objects:  15% (19/122)        
+2026-08-06T07:48:47.3972540Z remote: Compressing objects:  16% (20/122)        
+2026-08-06T07:48:47.3972715Z remote: Compressing objects:  17% (21/122)        
+2026-08-06T07:48:47.3972882Z remote: Compressing objects:  18% (22/122)        
+2026-08-06T07:48:47.3973045Z remote: Compressing objects:  19% (24/122)        
+2026-08-06T07:48:47.3973209Z remote: Compressing objects:  20% (25/122)        
+2026-08-06T07:48:47.3973376Z remote: Compressing objects:  21% (26/122)        
+2026-08-06T07:48:47.3973538Z remote: Compressing objects:  22% (27/122)        
+2026-08-06T07:48:47.3973706Z remote: Compressing objects:  23% (29/122)        
+2026-08-06T07:48:47.3973874Z remote: Compressing objects:  24% (30/122)        
+2026-08-06T07:48:47.3974035Z remote: Compressing objects:  25% (31/122)        
+2026-08-06T07:48:47.3974196Z remote: Compressing objects:  26% (32/122)        
+2026-08-06T07:48:47.3974362Z remote: Compressing objects:  27% (33/122)        
+2026-08-06T07:48:47.3974524Z remote: Compressing objects:  28% (35/122)        
+2026-08-06T07:48:47.3974686Z remote: Compressing objects:  29% (36/122)        
+2026-08-06T07:48:47.3974845Z remote: Compressing objects:  30% (37/122)        
+2026-08-06T07:48:47.3975013Z remote: Compressing objects:  31% (38/122)        
+2026-08-06T07:48:47.3975174Z remote: Compressing objects:  32% (40/122)        
+2026-08-06T07:48:47.3975335Z remote: Compressing objects:  33% (41/122)        
+2026-08-06T07:48:47.3975501Z remote: Compressing objects:  34% (42/122)        
+2026-08-06T07:48:47.3975663Z remote: Compressing objects:  35% (43/122)        
+2026-08-06T07:48:47.3975826Z remote: Compressing objects:  36% (44/122)        
+2026-08-06T07:48:47.3976073Z remote: Compressing objects:  37% (46/122)        
+2026-08-06T07:48:47.3976388Z remote: Compressing objects:  38% (47/122)        
+2026-08-06T07:48:47.3976692Z remote: Compressing objects:  39% (48/122)        
+2026-08-06T07:48:47.3976999Z remote: Compressing objects:  40% (49/122)        
+2026-08-06T07:48:47.3977423Z remote: Compressing objects:  41% (51/122)        
+2026-08-06T07:48:47.3977622Z remote: Compressing objects:  42% (52/122)        
+2026-08-06T07:48:47.3977787Z remote: Compressing objects:  43% (53/122)        
+2026-08-06T07:48:47.3978088Z remote: Compressing objects:  44% (54/122)        
+2026-08-06T07:48:47.3978409Z remote: Compressing objects:  45% (55/122)        
+2026-08-06T07:48:47.3978702Z remote: Compressing objects:  46% (57/122)        
+2026-08-06T07:48:47.3979032Z remote: Compressing objects:  47% (58/122)        
+2026-08-06T07:48:47.3979382Z remote: Compressing objects:  48% (59/122)        
+2026-08-06T07:48:47.3979900Z remote: Compressing objects:  49% (60/122)        
+2026-08-06T07:48:47.3980240Z remote: Compressing objects:  50% (61/122)        
+2026-08-06T07:48:47.3980577Z remote: Compressing objects:  51% (63/122)        
+2026-08-06T07:48:47.3980903Z remote: Compressing objects:  52% (64/122)        
+2026-08-06T07:48:47.3981225Z remote: Compressing objects:  53% (65/122)        
+2026-08-06T07:48:47.3981559Z remote: Compressing objects:  54% (66/122)        
+2026-08-06T07:48:47.3981892Z remote: Compressing objects:  55% (68/122)        
+2026-08-06T07:48:47.3982218Z remote: Compressing objects:  56% (69/122)        
+2026-08-06T07:48:47.3982537Z remote: Compressing objects:  57% (70/122)        
+2026-08-06T07:48:47.3982859Z remote: Compressing objects:  58% (71/122)        
+2026-08-06T07:48:47.3983186Z remote: Compressing objects:  59% (72/122)        
+2026-08-06T07:48:47.3983497Z remote: Compressing objects:  60% (74/122)        
+2026-08-06T07:48:47.3983797Z remote: Compressing objects:  61% (75/122)        
+2026-08-06T07:48:47.3984090Z remote: Compressing objects:  62% (76/122)        
+2026-08-06T07:48:47.3984518Z remote: Compressing objects:  63% (77/122)        
+2026-08-06T07:48:47.3984783Z remote: Compressing objects:  64% (79/122)        
+2026-08-06T07:48:47.3984991Z remote: Compressing objects:  65% (80/122)        
+2026-08-06T07:48:47.3985303Z remote: Compressing objects:  66% (81/122)        
+2026-08-06T07:48:47.3985586Z remote: Compressing objects:  67% (82/122)        
+2026-08-06T07:48:47.3985761Z remote: Compressing objects:  68% (83/122)        
+2026-08-06T07:48:47.3985926Z remote: Compressing objects:  69% (85/122)        
+2026-08-06T07:48:47.3986086Z remote: Compressing objects:  70% (86/122)        
+2026-08-06T07:48:47.3986257Z remote: Compressing objects:  71% (87/122)        
+2026-08-06T07:48:47.3986420Z remote: Compressing objects:  72% (88/122)        
+2026-08-06T07:48:47.3986581Z remote: Compressing objects:  73% (90/122)        
+2026-08-06T07:48:47.3986747Z remote: Compressing objects:  74% (91/122)        
+2026-08-06T07:48:47.3986914Z remote: Compressing objects:  75% (92/122)        
+2026-08-06T07:48:47.3987083Z remote: Compressing objects:  76% (93/122)        
+2026-08-06T07:48:47.3987244Z remote: Compressing objects:  77% (94/122)        
+2026-08-06T07:48:47.3987419Z remote: Compressing objects:  78% (96/122)        
+2026-08-06T07:48:47.3987587Z remote: Compressing objects:  79% (97/122)        
+2026-08-06T07:48:47.3987749Z remote: Compressing objects:  80% (98/122)        
+2026-08-06T07:48:47.3987916Z remote: Compressing objects:  81% (99/122)        
+2026-08-06T07:48:47.3988078Z remote: Compressing objects:  82% (101/122)        
+2026-08-06T07:48:47.3988240Z remote: Compressing objects:  83% (102/122)        
+2026-08-06T07:48:47.3988402Z remote: Compressing objects:  84% (103/122)        
+2026-08-06T07:48:47.3988676Z remote: Compressing objects:  85% (104/122)        
+2026-08-06T07:48:47.3988983Z remote: Compressing objects:  86% (105/122)        
+2026-08-06T07:48:47.3989301Z remote: Compressing objects:  87% (107/122)        
+2026-08-06T07:48:47.3989639Z remote: Compressing objects:  88% (108/122)        
+2026-08-06T07:48:47.3989830Z remote: Compressing objects:  89% (109/122)        
+2026-08-06T07:48:47.3990015Z remote: Compressing objects:  90% (110/122)        
+2026-08-06T07:48:47.3990176Z remote: Compressing objects:  91% (112/122)        
+2026-08-06T07:48:47.3990340Z remote: Compressing objects:  92% (113/122)        
+2026-08-06T07:48:47.3990509Z remote: Compressing objects:  93% (114/122)        
+2026-08-06T07:48:47.3990671Z remote: Compressing objects:  94% (115/122)        
+2026-08-06T07:48:47.3990834Z remote: Compressing objects:  95% (116/122)        
+2026-08-06T07:48:47.3990996Z remote: Compressing objects:  96% (118/122)        
+2026-08-06T07:48:47.3991168Z remote: Compressing objects:  97% (119/122)        
+2026-08-06T07:48:47.3991331Z remote: Compressing objects:  98% (120/122)        
+2026-08-06T07:48:47.3991495Z remote: Compressing objects:  99% (121/122)        
+2026-08-06T07:48:47.3991810Z remote: Compressing objects: 100% (122/122)        
+2026-08-06T07:48:47.3991985Z remote: Compressing objects: 100% (122/122), done.        
+2026-08-06T07:48:47.3992209Z Receiving objects:   0% (1/145)
+2026-08-06T07:48:47.3992374Z Receiving objects:   1% (2/145)
+2026-08-06T07:48:47.3992527Z Receiving objects:   2% (3/145)
+2026-08-06T07:48:47.3992677Z Receiving objects:   3% (5/145)
+2026-08-06T07:48:47.3992829Z Receiving objects:   4% (6/145)
+2026-08-06T07:48:47.3992986Z Receiving objects:   5% (8/145)
+2026-08-06T07:48:47.3993139Z Receiving objects:   6% (9/145)
+2026-08-06T07:48:47.3993290Z Receiving objects:   7% (11/145)
+2026-08-06T07:48:47.3993447Z Receiving objects:   8% (12/145)
+2026-08-06T07:48:47.3994676Z Receiving objects:   9% (14/145)
+2026-08-06T07:48:47.3999464Z Receiving objects:  10% (15/145)
+2026-08-06T07:48:47.4002177Z Receiving objects:  11% (16/145)
+2026-08-06T07:48:47.4003456Z Receiving objects:  12% (18/145)
+2026-08-06T07:48:47.4005601Z Receiving objects:  13% (19/145)
+2026-08-06T07:48:47.4005929Z Receiving objects:  14% (21/145)
+2026-08-06T07:48:47.4006373Z Receiving objects:  15% (22/145)
+2026-08-06T07:48:47.4006686Z Receiving objects:  16% (24/145)
+2026-08-06T07:48:47.4006961Z Receiving objects:  17% (25/145)
+2026-08-06T07:48:47.4007238Z Receiving objects:  18% (27/145)
+2026-08-06T07:48:47.4007547Z Receiving objects:  19% (28/145)
+2026-08-06T07:48:47.4011246Z Receiving objects:  20% (29/145)
+2026-08-06T07:48:47.4011581Z Receiving objects:  21% (31/145)
+2026-08-06T07:48:47.4012109Z Receiving objects:  22% (32/145)
+2026-08-06T07:48:47.4012980Z Receiving objects:  23% (34/145)
+2026-08-06T07:48:47.4017683Z Receiving objects:  24% (35/145)
+2026-08-06T07:48:47.4018779Z Receiving objects:  25% (37/145)
+2026-08-06T07:48:47.4063241Z Receiving objects:  26% (38/145)
+2026-08-06T07:48:47.4063809Z Receiving objects:  27% (40/145)
+2026-08-06T07:48:47.4068053Z Receiving objects:  28% (41/145)
+2026-08-06T07:48:47.4068830Z Receiving objects:  29% (43/145)
+2026-08-06T07:48:47.4069643Z Receiving objects:  30% (44/145)
+2026-08-06T07:48:47.4070129Z Receiving objects:  31% (45/145)
+2026-08-06T07:48:47.4070780Z Receiving objects:  32% (47/145)
+2026-08-06T07:48:47.4071125Z Receiving objects:  33% (48/145)
+2026-08-06T07:48:47.4071420Z Receiving objects:  34% (50/145)
+2026-08-06T07:48:47.4071925Z Receiving objects:  35% (51/145)
+2026-08-06T07:48:47.4072603Z Receiving objects:  36% (53/145)
+2026-08-06T07:48:47.4076265Z Receiving objects:  37% (54/145)
+2026-08-06T07:48:47.4076560Z Receiving objects:  38% (56/145)
+2026-08-06T07:48:47.4076842Z Receiving objects:  39% (57/145)
+2026-08-06T07:48:47.4077123Z Receiving objects:  40% (58/145)
+2026-08-06T07:48:47.4077401Z Receiving objects:  41% (60/145)
+2026-08-06T07:48:47.4077677Z Receiving objects:  42% (61/145)
+2026-08-06T07:48:47.4077967Z Receiving objects:  43% (63/145)
+2026-08-06T07:48:47.4078246Z Receiving objects:  44% (64/145)
+2026-08-06T07:48:47.4078575Z Receiving objects:  45% (66/145)
+2026-08-06T07:48:47.4079024Z Receiving objects:  46% (67/145)
+2026-08-06T07:48:47.4080182Z Receiving objects:  47% (69/145)
+2026-08-06T07:48:47.4080517Z Receiving objects:  48% (70/145)
+2026-08-06T07:48:47.4089353Z Receiving objects:  49% (72/145)
+2026-08-06T07:48:47.4089539Z Receiving objects:  50% (73/145)
+2026-08-06T07:48:47.4089737Z Receiving objects:  51% (74/145)
+2026-08-06T07:48:47.4089892Z Receiving objects:  52% (76/145)
+2026-08-06T07:48:47.4090043Z Receiving objects:  53% (77/145)
+2026-08-06T07:48:47.4090201Z Receiving objects:  54% (79/145)
+2026-08-06T07:48:47.4090448Z Receiving objects:  55% (80/145)
+2026-08-06T07:48:47.4090750Z Receiving objects:  56% (82/145)
+2026-08-06T07:48:47.4091035Z Receiving objects:  57% (83/145)
+2026-08-06T07:48:47.4091303Z Receiving objects:  58% (85/145)
+2026-08-06T07:48:47.4091565Z Receiving objects:  59% (86/145)
+2026-08-06T07:48:47.4091845Z Receiving objects:  60% (87/145)
+2026-08-06T07:48:47.4092070Z Receiving objects:  61% (89/145)
+2026-08-06T07:48:47.4092228Z Receiving objects:  62% (90/145)
+2026-08-06T07:48:47.4092593Z Receiving objects:  63% (92/145)
+2026-08-06T07:48:47.4092767Z Receiving objects:  64% (93/145)
+2026-08-06T07:48:47.4092929Z Receiving objects:  65% (95/145)
+2026-08-06T07:48:47.4093086Z Receiving objects:  66% (96/145)
+2026-08-06T07:48:47.4093244Z Receiving objects:  67% (98/145)
+2026-08-06T07:48:47.4093402Z Receiving objects:  68% (99/145)
+2026-08-06T07:48:47.4093557Z Receiving objects:  69% (101/145)
+2026-08-06T07:48:47.4093717Z Receiving objects:  70% (102/145)
+2026-08-06T07:48:47.4093877Z Receiving objects:  71% (103/145)
+2026-08-06T07:48:47.4094039Z Receiving objects:  72% (105/145)
+2026-08-06T07:48:47.4094194Z Receiving objects:  73% (106/145)
+2026-08-06T07:48:47.4094352Z Receiving objects:  74% (108/145)
+2026-08-06T07:48:47.4094513Z Receiving objects:  75% (109/145)
+2026-08-06T07:48:47.4094694Z Receiving objects:  76% (111/145)
+2026-08-06T07:48:47.4098479Z Receiving objects:  77% (112/145)
+2026-08-06T07:48:47.4098795Z Receiving objects:  78% (114/145)
+2026-08-06T07:48:47.4099082Z Receiving objects:  79% (115/145)
+2026-08-06T07:48:47.4099371Z Receiving objects:  80% (116/145)
+2026-08-06T07:48:47.4099872Z Receiving objects:  81% (118/145)
+2026-08-06T07:48:47.4100703Z Receiving objects:  82% (119/145)
+2026-08-06T07:48:47.4101053Z Receiving objects:  83% (121/145)
+2026-08-06T07:48:47.4102309Z Receiving objects:  84% (122/145)
+2026-08-06T07:48:47.4102663Z Receiving objects:  85% (124/145)
+2026-08-06T07:48:47.4162514Z Receiving objects:  86% (125/145)
+2026-08-06T07:48:47.4164821Z Receiving objects:  87% (127/145)
+2026-08-06T07:48:47.4165740Z Receiving objects:  88% (128/145)
+2026-08-06T07:48:47.4166103Z Receiving objects:  89% (130/145)
+2026-08-06T07:48:47.4166396Z Receiving objects:  90% (131/145)
+2026-08-06T07:48:47.4166679Z Receiving objects:  91% (132/145)
+2026-08-06T07:48:47.4166995Z remote: Total 145 (delta 31), reused 77 (delta 10), pack-reused 0 (from 0)        
+2026-08-06T07:48:47.4167301Z Receiving objects:  92% (134/145)
+2026-08-06T07:48:47.4172324Z Receiving objects:  93% (135/145)
+2026-08-06T07:48:47.4173710Z Receiving objects:  94% (137/145)
+2026-08-06T07:48:47.4174412Z Receiving objects:  95% (138/145)
+2026-08-06T07:48:47.4174720Z Receiving objects:  96% (140/145)
+2026-08-06T07:48:47.4175074Z Receiving objects:  97% (141/145)
+2026-08-06T07:48:47.4175520Z Receiving objects:  98% (143/145)
+2026-08-06T07:48:47.4176464Z Receiving objects:  99% (144/145)
+2026-08-06T07:48:47.4176906Z Receiving objects: 100% (145/145)
+2026-08-06T07:48:47.4177253Z Receiving objects: 100% (145/145), 157.75 KiB | 7.89 MiB/s, done.
+2026-08-06T07:48:47.4180396Z Resolving deltas:   0% (0/31)
+2026-08-06T07:48:47.4187245Z Resolving deltas:   3% (1/31)
+2026-08-06T07:48:47.4192330Z Resolving deltas:   6% (2/31)
+2026-08-06T07:48:47.4202336Z Resolving deltas:   9% (3/31)
+2026-08-06T07:48:47.4203007Z Resolving deltas:  12% (4/31)
+2026-08-06T07:48:47.4203302Z Resolving deltas:  16% (5/31)
+2026-08-06T07:48:47.4203580Z Resolving deltas:  19% (6/31)
+2026-08-06T07:48:47.4203878Z Resolving deltas:  22% (7/31)
+2026-08-06T07:48:47.4204176Z Resolving deltas:  25% (8/31)
+2026-08-06T07:48:47.4204470Z Resolving deltas:  29% (9/31)
+2026-08-06T07:48:47.4204756Z Resolving deltas:  32% (10/31)
+2026-08-06T07:48:47.4205041Z Resolving deltas:  35% (11/31)
+2026-08-06T07:48:47.4205324Z Resolving deltas:  38% (12/31)
+2026-08-06T07:48:47.4205610Z Resolving deltas:  41% (13/31)
+2026-08-06T07:48:47.4205902Z Resolving deltas:  45% (14/31)
+2026-08-06T07:48:47.4206186Z Resolving deltas:  48% (15/31)
+2026-08-06T07:48:47.4206478Z Resolving deltas:  51% (16/31)
+2026-08-06T07:48:47.4206776Z Resolving deltas:  54% (17/31)
+2026-08-06T07:48:47.4207110Z Resolving deltas:  58% (18/31)
+2026-08-06T07:48:47.4208567Z Resolving deltas:  61% (19/31)
+2026-08-06T07:48:47.4208906Z Resolving deltas:  64% (20/31)
+2026-08-06T07:48:47.4209201Z Resolving deltas:  67% (21/31)
+2026-08-06T07:48:47.4213264Z Resolving deltas:  70% (22/31)
+2026-08-06T07:48:47.4213711Z Resolving deltas:  74% (23/31)
+2026-08-06T07:48:47.4214496Z Resolving deltas:  77% (24/31)
+2026-08-06T07:48:47.4215136Z Resolving deltas:  80% (25/31)
+2026-08-06T07:48:47.4215456Z Resolving deltas:  83% (26/31)
+2026-08-06T07:48:47.4215757Z Resolving deltas:  87% (27/31)
+2026-08-06T07:48:47.4216038Z Resolving deltas:  90% (28/31)
+2026-08-06T07:48:47.4216323Z Resolving deltas:  93% (29/31)
+2026-08-06T07:48:47.4216610Z Resolving deltas:  96% (30/31)
+2026-08-06T07:48:47.4216889Z Resolving deltas: 100% (31/31)
+2026-08-06T07:48:47.4217180Z Resolving deltas: 100% (31/31), done.
+2026-08-06T07:48:47.4354768Z From https://github.azc.ext.hp.com/RCB-Ops/ADO-automations
+2026-08-06T07:48:47.4355195Z  * [new ref]         acde9fc4f19ce29e699bc31f90f1718d98327a6f -> origin/acde9fc4f19ce29e699bc31f90f1718d98327a6f
+2026-08-06T07:48:48.5822264Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +acde9fc4f19ce29e699bc31f90f1718d98327a6f
+2026-08-06T07:48:48.5827269Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2026-08-06T07:48:48.5827502Z From https://github.azc.ext.hp.com/RCB-Ops/ADO-automations
+2026-08-06T07:48:48.5827975Z  * branch            acde9fc4f19ce29e699bc31f90f1718d98327a6f -> FETCH_HEAD
+2026-08-06T07:48:49.3273877Z ##[command]git checkout --progress --force refs/remotes/origin/acde9fc4f19ce29e699bc31f90f1718d98327a6f
+2026-08-06T07:48:49.3283008Z Note: switching to 'refs/remotes/origin/acde9fc4f19ce29e699bc31f90f1718d98327a6f'.
+2026-08-06T07:48:49.3283179Z 
+2026-08-06T07:48:49.3284560Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-08-06T07:48:49.3284931Z changes and commit them, and you can discard any commits you make in this
+2026-08-06T07:48:49.3285288Z state without impacting any branches by switching back to a branch.
+2026-08-06T07:48:49.3285446Z 
+2026-08-06T07:48:49.3285751Z If you want to create a new branch to retain commits you create, you may
+2026-08-06T07:48:49.3286099Z do so (now or later) by using -c with the switch command. Example:
+2026-08-06T07:48:49.3286263Z 
+2026-08-06T07:48:49.3286526Z   git switch -c <new-branch-name>
+2026-08-06T07:48:49.3286656Z 
+2026-08-06T07:48:49.3286928Z Or undo this operation with:
+2026-08-06T07:48:49.3287044Z 
+2026-08-06T07:48:49.3287284Z   git switch -
+2026-08-06T07:48:49.3287382Z 
+2026-08-06T07:48:49.3287685Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-08-06T07:48:49.3287850Z 
+2026-08-06T07:48:49.5001911Z HEAD is now at acde9fc refactor: replace instance IDs with instance names in database connec… (#137)
+2026-08-06T07:48:49.5054367Z ##[section]Finishing: Checkout RCB-Ops/ADO-automations@master to s
+2026-08-06T07:48:49.5094916Z ##[section]Starting: Pre-deployment PR validation
+2026-08-06T07:48:49.5103069Z ==============================================================================
+2026-08-06T07:48:49.5103210Z Task         : Command line
+2026-08-06T07:48:49.5103274Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-06T07:48:49.5103505Z Version      : 2.276.0
+2026-08-06T07:48:49.5103569Z Author       : Microsoft Corporation
+2026-08-06T07:48:49.5103722Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-06T07:48:49.5103809Z ==============================================================================
+2026-08-06T07:48:54.2857251Z Generating script.
+2026-08-06T07:48:54.2863366Z ========================== Starting Command Output ===========================
+2026-08-06T07:48:54.2878260Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/c8334f82-845f-4eae-bb9d-8a6778b7a6ec.sh
+2026-08-06T07:48:54.2926356Z + ls -l
+2026-08-06T07:48:54.2949890Z total 148
+2026-08-06T07:48:54.2950880Z drwxrwxr-x+ 2 agent-runner agent-runner    52 Aug  6 07:48 DSRQ
+2026-08-06T07:48:54.2951338Z -rw-rw-r--+ 1 agent-runner agent-runner    89 Aug  6 07:48 README.md
+2026-08-06T07:48:54.2951699Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 ami-copy
+2026-08-06T07:48:54.2952386Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 ami_refresh_automation
+2026-08-06T07:48:54.2952813Z drwxrwxr-x+ 2 agent-runner agent-runner    99 Aug  6 07:48 ami_refresh_report_generation
+2026-08-06T07:48:54.2953201Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 base-ami
+2026-08-06T07:48:54.2953587Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 batch_deployment_automation
+2026-08-06T07:48:54.2953967Z drwxrwxr-x+ 2 agent-runner agent-runner    52 Aug  6 07:48 cost_tags_update
+2026-08-06T07:48:54.2954325Z drwxrwxr-x+ 2 agent-runner agent-runner    26 Aug  6 07:48 github
+2026-08-06T07:48:54.2954691Z drwxrwxr-x+ 4 agent-runner agent-runner 16384 Aug  6 07:48 infra
+2026-08-06T07:48:54.2955054Z drwxrwxr-x+ 2 agent-runner agent-runner    46 Aug  6 07:48 kms-encrypt-decrypt
+2026-08-06T07:48:54.2955433Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 lambda-deployment
+2026-08-06T07:48:54.2955813Z drwxrwxr-x+ 4 agent-runner agent-runner   100 Aug  6 07:48 missing_tags_update
+2026-08-06T07:48:54.2956209Z drwxrwxr-x+ 2 agent-runner agent-runner    31 Aug  6 07:48 post_deployment_asg_health_status
+2026-08-06T07:48:54.2956488Z drwxrwxr-x+ 4 agent-runner agent-runner 16384 Aug  6 07:48 printer-claim-cleanup
+2026-08-06T07:48:54.2956694Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 rollback_automation
+2026-08-06T07:48:54.2956910Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 rp-ami_refresh_automation
+2026-08-06T07:48:54.2957128Z drwxrwxr-x+ 2 agent-runner agent-runner    35 Aug  6 07:48 tomcat-hardening
+2026-08-06T07:48:54.2957352Z drwxrwxr-x+ 2 agent-runner agent-runner   102 Aug  6 07:48 validate-gen2-service-deployment
+2026-08-06T07:48:54.2957596Z + pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+2026-08-06T07:49:09.9516763Z ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+2026-08-06T07:49:09.9541143Z azure-cli 2.77.0 requires PyGithub~=1.38, but you have pygithub 2.9.1 which is incompatible.
+2026-08-06T07:49:10.0490516Z 
+2026-08-06T07:49:10.0490967Z [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+2026-08-06T07:49:10.0491304Z [notice] To update, run: pip3 install --upgrade pip
+2026-08-06T07:49:10.2251957Z + export git_token=***
+2026-08-06T07:49:10.2252323Z + git_token=***
+2026-08-06T07:49:10.2253022Z + python3 batch_deployment_automation/pr_validation.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token ***
+2026-08-06T07:49:11.6146474Z [INFO] [pr_validation:45]: File "output_RRGEN2_26.7.3-1-ATMS_prod.csv" downloaded successfully.
+2026-08-06T07:49:11.6171798Z /usr/local/ado-agent/_work/1/s/batch_deployment_automation/pr_validation.py:84: DeprecationWarning: Argument login_or_token is deprecated, please use auth=github.Auth.Token(...) instead
+2026-08-06T07:49:11.6172374Z   github_object = Github(base_url=ghe_url, login_or_token=git_token)
+2026-08-06T07:49:12.6929326Z [INFO] [pr_validation:98]: PR 1328 in repo WPPg2/avatar-signalmgmt (service_pod: prod_non_active_pods_remaining_subnet) has been approved by DevOps reviewers.
+2026-08-06T07:49:14.0002257Z [INFO] [pr_validation:98]: PR 2555 in repo WPPg2/avatar-reg (service_pod: prod_non_active_pods_remaining_subnet) has been approved by DevOps reviewers.
+2026-08-06T07:49:15.1946228Z [INFO] [pr_validation:100]: PR 982 in repo WPPg2/avatar-signal-outbound-processor (service_pod: prod_non_active_pods_remaining_subnet) has not been approved by DevOps reviewers.
+2026-08-06T07:49:15.1963185Z [INFO] [pr_validation:111]: 
+2026-08-06T07:49:15.1963795Z +---------------------------------------+-------------+-------------------------------------------------------------------------------+-------------------+
+2026-08-06T07:49:15.1964698Z | Service Pod                           |   PR Number | PR Link                                                                       | Approval Status   |
+2026-08-06T07:49:15.1966337Z +=======================================+=============+===============================================================================+===================+
+2026-08-06T07:49:15.1966837Z | prod_non_active_pods_remaining_subnet |        1328 | https://github.azc.ext.hp.com/WPPg2/avatar-signalmgmt/pull/1328               | Approved          |
+2026-08-06T07:49:15.1967349Z +---------------------------------------+-------------+-------------------------------------------------------------------------------+-------------------+
+2026-08-06T07:49:15.1967865Z | prod_non_active_pods_remaining_subnet |        2555 | https://github.azc.ext.hp.com/WPPg2/avatar-reg/pull/2555                      | Approved          |
+2026-08-06T07:49:15.1968361Z +---------------------------------------+-------------+-------------------------------------------------------------------------------+-------------------+
+2026-08-06T07:49:15.1968893Z | prod_non_active_pods_remaining_subnet |         982 | https://github.azc.ext.hp.com/WPPg2/avatar-signal-outbound-processor/pull/982 | Not Approved      |
+2026-08-06T07:49:15.1969401Z +---------------------------------------+-------------+-------------------------------------------------------------------------------+-------------------+
+2026-08-06T07:49:15.1969897Z [ERROR] [pr_validation:114]: One or more PRs have not been approved by DevOps reviewers. Exiting.
+2026-08-06T07:49:15.2576997Z 
+2026-08-06T07:49:15.2607146Z ##[error]Bash exited with code '1'.
+2026-08-06T07:49:15.2650823Z ##[section]Finishing: Pre-deployment PR validation
+2026-08-06T07:49:15.2700079Z ##[section]Starting: Checkout RCB-Ops/ADO-automations@master to s
+2026-08-06T07:49:15.2704749Z ==============================================================================
+2026-08-06T07:49:15.2704860Z Task         : Get sources
+2026-08-06T07:49:15.2704920Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-08-06T07:49:15.2705025Z Version      : 1.0.0
+2026-08-06T07:49:15.2705089Z Author       : Microsoft
+2026-08-06T07:49:15.2705154Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-08-06T07:49:15.2705238Z ==============================================================================
+2026-08-06T07:49:15.5412296Z Cleaning any cached credential from repository: RCB-Ops/ADO-automations (GitHubEnterprise)
+2026-08-06T07:49:15.5515698Z ##[section]Finishing: Checkout RCB-Ops/ADO-automations@master to s
+2026-08-06T07:49:15.5537454Z ##[section]Starting: Finalize Job
+2026-08-06T07:49:15.5547879Z Cleaning up task key
+2026-08-06T07:49:15.5548729Z Start cleaning up orphan processes.
+2026-08-06T07:49:15.5943557Z ##[section]Finishing: Finalize Job
+2026-08-06T07:49:15.5963762Z ##[section]Finishing: PreDeploymentPRValidation
