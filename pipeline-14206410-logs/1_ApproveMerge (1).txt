@@ -1,0 +1,38 @@
+2026-08-06T07:49:22.0058624Z ##[section]Starting: Prepare job ApproveMerge
+2026-08-06T07:49:22.0397989Z Variables:
+2026-08-06T07:49:22.0397989Z   user_name: $[ variablegroups.wpp-tf-pr-merge.user_name ]
+2026-08-06T07:49:22.0397989Z ContinueOnError: False
+2026-08-06T07:49:22.0397989Z TimeoutInMinutes: 60
+2026-08-06T07:49:22.0397989Z CancelTimeoutInMinutes: 5
+2026-08-06T07:49:22.0397989Z Expand:
+2026-08-06T07:49:22.0397989Z   MaxConcurrency: 0
+2026-08-06T07:49:22.0532786Z   ########## System Pipeline Decorator(s) ##########
+
+2026-08-06T07:49:22.0532786Z   Begin evaluating template 'system-pre-steps.yml'
+Evaluating: eq('true', variables['system.debugContext'])
+Expanded: eq('true', Null)
+Result: False
+Evaluating: resources['repositories']['self']
+Expanded: Object
+Result: True
+Evaluating: not(containsValue(job['steps']['*']['task']['id'], '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Expanded: not(containsValue(Object, '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Result: True
+Evaluating: resources['repositories']['self']['checkoutOptions']
+Result: Object
+Evaluating: pair['key']
+Result: 'fetchDepth'
+Evaluating: pair['value']
+Result: '1'
+Finished evaluating template 'system-pre-steps.yml'
+********************************************************************************
+Template and static variable resolution complete. Final runtime YAML document:
+steps:
+- task: 6d15af64-176c-496d-b583-fd2ae21d4df4@1
+  inputs:
+    repository: self
+    fetchDepth: 1
+
+
+2026-08-06T07:49:22.0532786Z   MaxConcurrency: 0
+2026-08-06T07:49:22.0613132Z ##[section]Finishing: Prepare job ApproveMerge
