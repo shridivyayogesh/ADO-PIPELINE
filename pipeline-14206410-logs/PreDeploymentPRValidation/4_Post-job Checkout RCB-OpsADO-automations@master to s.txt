@@ -1,0 +1,10 @@
+2026-08-06T07:49:15.2700067Z ##[section]Starting: Checkout RCB-Ops/ADO-automations@master to s
+2026-08-06T07:49:15.2704742Z ==============================================================================
+2026-08-06T07:49:15.2704858Z Task         : Get sources
+2026-08-06T07:49:15.2704918Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-08-06T07:49:15.2705023Z Version      : 1.0.0
+2026-08-06T07:49:15.2705088Z Author       : Microsoft
+2026-08-06T07:49:15.2705152Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-08-06T07:49:15.2705237Z ==============================================================================
+2026-08-06T07:49:15.5412270Z Cleaning any cached credential from repository: RCB-Ops/ADO-automations (GitHubEnterprise)
+2026-08-06T07:49:15.5515688Z ##[section]Finishing: Checkout RCB-Ops/ADO-automations@master to s
