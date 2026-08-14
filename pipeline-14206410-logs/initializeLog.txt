@@ -1,0 +1,282 @@
+Template Parameters:
+- ReleaseDate: 20-07-2026
+- FileName: output_RRGEN2_26.7.3-1-ATMS_prod.csv
+- SubnetSelection: prod_non_active_pods_remaining_subnet
+- OpSelect: Approve_and_Merge
+Begin evaluating template '/batch_deployment_automation/post-validation.yaml'
+Finished evaluating template '/batch_deployment_automation/post-validation.yaml'
+Begin evaluating template '/batch_deployment_automation/post-validation.yaml'
+Begin transform: trigger
+End transform: trigger
+Begin transform: pr
+End transform: pr
+Begin transform: pool
+Evaluating: value
+Result: 'codeway-aws-linux2023'
+End transform: pool
+Begin load: variablesTemplateReference
+Begin evaluating template '/batch_deployment_automation/codeway-pools.yml'
+Evaluating: ne(parameters['pool'], '')
+Expanded: ne('', '')
+Result: False
+Evaluating: eq(parameters['os'], 'linux')
+Expanded: eq('linux', 'linux')
+Result: True
+Evaluating: eq(parameters['os'], 'windows')
+Expanded: eq('linux', 'windows')
+Result: False
+Evaluating: eq(parameters['os'], 'macos')
+Expanded: eq('linux', 'macos')
+Result: False
+Evaluating: eq(variables['pool'], 'codeway-aws-linux2023')
+Expanded: eq('codeway-aws-linux2023', 'codeway-aws-linux2023')
+Result: True
+Begin transform: variablesTemplate
+Evaluating: value['variables']
+Expanded: Object
+Result: True
+Evaluating: value['variables']
+Result: Object
+End transform: variablesTemplate
+Finished evaluating template '/batch_deployment_automation/codeway-pools.yml'
+End load: variablesTemplateReference
+Evaluating: format('or(eq(''{0}'', ''PreDeploymentPRValidation''), eq(''{1}'', ''Approve_and_Merge''))', parameters['OpSelect'], parameters['OpSelect'])
+Result: 'or(eq(''Approve_and_Merge'', ''PreDeploymentPRValidation''), eq(''Approve_and_Merge'', ''Approve_and_Merge''))'
+Evaluating: format('set -xe
+ls -l
+pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+export git_token=$(git_token)
+python3 batch_deployment_automation/pr_validation.py --release_date {0} --file_name {1} --subnet_selection {2} --git_token $git_token 
+', parameters['ReleaseDate'], parameters['FileName'], parameters['SubnetSelection'])
+Result: 'set -xe
+ls -l
+pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+export git_token=$(git_token)
+python3 batch_deployment_automation/pr_validation.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token $git_token 
+'
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Pre-deployment PR validation'
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('continueOnError', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'continueOnError'
+Evaluating: pair['value']
+Result: 'false'
+Result: Object
+Evaluating: value['script']
+Result: 'set -xe
+ls -l
+pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+export git_token=$(git_token)
+python3 batch_deployment_automation/pr_validation.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token $git_token 
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin load: variablesTemplateReference
+Begin evaluating template '/batch_deployment_automation/codeway-pools.yml'
+Evaluating: ne(parameters['pool'], '')
+Expanded: ne('', '')
+Result: False
+Evaluating: eq(parameters['os'], 'linux')
+Expanded: eq('linux', 'linux')
+Result: True
+Evaluating: eq(parameters['os'], 'windows')
+Expanded: eq('linux', 'windows')
+Result: False
+Evaluating: eq(parameters['os'], 'macos')
+Expanded: eq('linux', 'macos')
+Result: False
+Evaluating: eq(variables['pool'], 'codeway-aws-linux2023')
+Expanded: eq('codeway-aws-linux2023', 'codeway-aws-linux2023')
+Result: True
+Begin transform: variablesTemplate
+Evaluating: value['variables']
+Expanded: Object
+Result: True
+Evaluating: value['variables']
+Result: Object
+End transform: variablesTemplate
+Finished evaluating template '/batch_deployment_automation/codeway-pools.yml'
+End load: variablesTemplateReference
+Evaluating: variables['pool']
+Result: 'codeway-aws-linux2023'
+Begin transform: pool
+Evaluating: value
+Result: 'codeway-aws-linux2023'
+End transform: pool
+Evaluating: format('eq(''{0}'', ''Approve_and_Merge'')', parameters['OpSelect'])
+Result: 'eq(''Approve_and_Merge'', ''Approve_and_Merge'')'
+Begin transform: jobDependsOn
+Evaluating: value
+Expanded: 'PreDeploymentPRValidation'
+Result: True
+Evaluating: value
+Result: 'PreDeploymentPRValidation'
+End transform: jobDependsOn
+Evaluating: format('set -xe
+if [ "{0}" = "all_pods_subnet" ]; then
+  echo "ERROR: SubnetSelection cannot be ''all_pods_subnet'' for Approve_and_Merge stage."
+  exit 1
+fi
+pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+export git_token=$(git_token)
+python3 batch_deployment_automation/approve_merge.py --release_date {1} --file_name {2} --subnet_selection {3} --git_token $git_token
+', parameters['SubnetSelection'], parameters['ReleaseDate'], parameters['FileName'], parameters['SubnetSelection'])
+Result: 'set -xe
+if [ "prod_non_active_pods_remaining_subnet" = "all_pods_subnet" ]; then
+  echo "ERROR: SubnetSelection cannot be ''all_pods_subnet'' for Approve_and_Merge stage."
+  exit 1
+fi
+pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+export git_token=$(git_token)
+python3 batch_deployment_automation/approve_merge.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token $git_token
+'
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Approve merge'
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('continueOnError', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'continueOnError'
+Evaluating: pair['value']
+Result: 'false'
+Result: Object
+Evaluating: value['script']
+Result: 'set -xe
+if [ "prod_non_active_pods_remaining_subnet" = "all_pods_subnet" ]; then
+  echo "ERROR: SubnetSelection cannot be ''all_pods_subnet'' for Approve_and_Merge stage."
+  exit 1
+fi
+pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+export git_token=$(git_token)
+python3 batch_deployment_automation/approve_merge.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token $git_token
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin load: variablesTemplateReference
+Begin evaluating template '/batch_deployment_automation/codeway-pools.yml'
+Evaluating: ne(parameters['pool'], '')
+Expanded: ne('', '')
+Result: False
+Evaluating: eq(parameters['os'], 'linux')
+Expanded: eq('linux', 'linux')
+Result: True
+Evaluating: eq(parameters['os'], 'windows')
+Expanded: eq('linux', 'windows')
+Result: False
+Evaluating: eq(parameters['os'], 'macos')
+Expanded: eq('linux', 'macos')
+Result: False
+Evaluating: eq(variables['pool'], 'codeway-aws-linux2023')
+Expanded: eq('codeway-aws-linux2023', 'codeway-aws-linux2023')
+Result: True
+Begin transform: variablesTemplate
+Evaluating: value['variables']
+Expanded: Object
+Result: True
+Evaluating: value['variables']
+Result: Object
+End transform: variablesTemplate
+Finished evaluating template '/batch_deployment_automation/codeway-pools.yml'
+End load: variablesTemplateReference
+Evaluating: format('eq(''{0}'', ''Post_Deployment_Pipeline_Validation'')', parameters['OpSelect'])
+Result: 'eq(''Approve_and_Merge'', ''Post_Deployment_Pipeline_Validation'')'
+Evaluating: format('set -xe
+if [ "{0}" = "all_pods_subnet" ]; then
+  echo "ERROR: SubnetSelection cannot be ''all_pods_subnet'' for Post_Deployment_Pipeline_Validation stage."
+  exit 1
+fi
+pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+export git_token=$(git_token)
+python3 batch_deployment_automation/pipeline_status_check.py --release_date {1} --file_name {2} --subnet_selection {3} --git_token $git_token
+', parameters['SubnetSelection'], parameters['ReleaseDate'], parameters['FileName'], parameters['SubnetSelection'])
+Result: 'set -xe
+if [ "prod_non_active_pods_remaining_subnet" = "all_pods_subnet" ]; then
+  echo "ERROR: SubnetSelection cannot be ''all_pods_subnet'' for Post_Deployment_Pipeline_Validation stage."
+  exit 1
+fi
+pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+export git_token=$(git_token)
+python3 batch_deployment_automation/pipeline_status_check.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token $git_token
+'
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Post-deployment pipeline validation'
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('continueOnError', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'continueOnError'
+Evaluating: pair['value']
+Result: 'false'
+Result: Object
+Evaluating: value['script']
+Result: 'set -xe
+if [ "prod_non_active_pods_remaining_subnet" = "all_pods_subnet" ]; then
+  echo "ERROR: SubnetSelection cannot be ''all_pods_subnet'' for Post_Deployment_Pipeline_Validation stage."
+  exit 1
+fi
+pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+export git_token=$(git_token)
+python3 batch_deployment_automation/pipeline_status_check.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token $git_token
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Finished evaluating template '/batch_deployment_automation/post-validation.yaml'
+Load Time: 00:00:00.3789783
+Estimated Memory: 34,484 bytes (Max: 2,09,71,520)
+Parser Event Count: 1,452 (Max: 1,00,00,000)
+Greatest Parser Depth: 15 (Max: 100)
+File Count: 2 (Max: 100)
+Greatest File Size: 4,299 (Max: 10,48,576)
