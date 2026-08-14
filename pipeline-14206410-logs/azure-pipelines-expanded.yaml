@@ -1,0 +1,130 @@
+resources:
+  repositories:
+  - repository: templates
+    type: githubenterprise
+    name: codeway/templates
+    endpoint: ghe
+trigger:
+  enabled: false
+pr:
+  enabled: false
+parameters:
+- name: ReleaseDate
+  type: string
+  displayName: 'Release date in the format DD-MM-YYYY'
+  default: '25-09-2024'
+- name: FileName
+  type: string
+  displayName: 'File name'
+  default: 'output_automated.csv'
+- name: SubnetSelection
+  type: string
+  displayName: 'Select Subnet'
+  default: 'all_pods_subnet'
+  values:
+  - all_pods_subnet
+  - stage_pod1_subnet-a
+  - stage_pod1_remaining_subnet
+  - stage_active-pod_subnet-a
+  - stage_active-pod_remaining_subnet
+  - stage_non_active_pods_subnet-a
+  - stage_non_active_pods_remaining_subnet
+  - prod_pod1_subnet-a
+  - prod_pod1_remaining_subnet
+  - prod_active-pod_subnet-a
+  - prod_active-pod_remaining_subnet
+  - prod_non_active_pods_subnet-a
+  - prod_non_active_pods_remaining_subnet
+- name: OpSelect
+  type: string
+  displayName: 'Select Ops'
+  default: 'PreDeploymentPRValidation'
+  values:
+  - PreDeploymentPRValidation
+  - Approve_and_Merge
+  - Post_Deployment_Pipeline_Validation
+pool:
+  name: codeway-aws-linux2023
+variables:
+- group: wpp-tf-pr-merge
+stages:
+- stage: PreDeploymentPRValidation
+  variables:
+  - name: pool
+    value: 'codeway-aws-linux2023'
+  - name: ephemeralAgent
+    value: true
+  - group: wpp-tf-pr-merge
+  displayName: 'Pre-deployment PR validation'
+  condition: or(eq('Approve_and_Merge', 'PreDeploymentPRValidation'), eq('Approve_and_Merge', 'Approve_and_Merge'))
+  jobs:
+  - job: PreDeploymentPRValidation
+    steps:
+    - task: CmdLine@2
+      displayName: 'Pre-deployment PR validation'
+      continueOnError: false
+      inputs:
+        script: "set -xe\nls -l\npip3 install -q --upgrade boto3 PyGithub pandas tabulate\nexport git_token=$(git_token)\npython3 batch_deployment_automation/pr_validation.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token $git_token \n"
+- stage: ApproveMerge
+  variables:
+  - name: pool
+    value: 'codeway-aws-linux2023'
+  - name: ephemeralAgent
+    value: true
+  - group: wpp-tf-pr-merge
+  pool:
+    name: codeway-aws-linux2023
+  displayName: 'Approve merge'
+  condition: eq('Approve_and_Merge', 'Approve_and_Merge')
+  dependsOn:
+  - PreDeploymentPRValidation
+  jobs:
+  - job: ApproveMerge
+    steps:
+    - task: CmdLine@2
+      displayName: 'Approve merge'
+      continueOnError: false
+      inputs:
+        script: >
+          set -xe
+
+          if [ "prod_non_active_pods_remaining_subnet" = "all_pods_subnet" ]; then
+            echo "ERROR: SubnetSelection cannot be 'all_pods_subnet' for Approve_and_Merge stage."
+            exit 1
+          fi
+
+          pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+
+          export git_token=$(git_token)
+
+          python3 batch_deployment_automation/approve_merge.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token $git_token
+- stage: PostDeploymentPipelineValidation
+  variables:
+  - name: pool
+    value: 'codeway-aws-linux2023'
+  - name: ephemeralAgent
+    value: true
+  - group: wpp-tf-pr-merge
+  displayName: 'Post-deployment pipeline validation'
+  condition: eq('Approve_and_Merge', 'Post_Deployment_Pipeline_Validation')
+  jobs:
+  - job: PostDeploymentPipelineValidation
+    steps:
+    - task: CmdLine@2
+      displayName: 'Post-deployment pipeline validation'
+      continueOnError: false
+      inputs:
+        script: >
+          set -xe
+
+          if [ "prod_non_active_pods_remaining_subnet" = "all_pods_subnet" ]; then
+            echo "ERROR: SubnetSelection cannot be 'all_pods_subnet' for Post_Deployment_Pipeline_Validation stage."
+            exit 1
+          fi
+
+          pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+
+          export git_token=$(git_token)
+
+          python3 batch_deployment_automation/pipeline_status_check.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token $git_token
+
