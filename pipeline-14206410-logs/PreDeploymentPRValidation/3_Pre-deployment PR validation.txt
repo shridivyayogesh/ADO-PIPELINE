@@ -1,0 +1,61 @@
+2026-08-06T07:48:49.5094905Z ##[section]Starting: Pre-deployment PR validation
+2026-08-06T07:48:49.5103057Z ==============================================================================
+2026-08-06T07:48:49.5103207Z Task         : Command line
+2026-08-06T07:48:49.5103271Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-06T07:48:49.5103503Z Version      : 2.276.0
+2026-08-06T07:48:49.5103566Z Author       : Microsoft Corporation
+2026-08-06T07:48:49.5103720Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-06T07:48:49.5103807Z ==============================================================================
+2026-08-06T07:48:54.2857217Z Generating script.
+2026-08-06T07:48:54.2863354Z ========================== Starting Command Output ===========================
+2026-08-06T07:48:54.2878251Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/c8334f82-845f-4eae-bb9d-8a6778b7a6ec.sh
+2026-08-06T07:48:54.2926256Z + ls -l
+2026-08-06T07:48:54.2949878Z total 148
+2026-08-06T07:48:54.2950867Z drwxrwxr-x+ 2 agent-runner agent-runner    52 Aug  6 07:48 DSRQ
+2026-08-06T07:48:54.2951334Z -rw-rw-r--+ 1 agent-runner agent-runner    89 Aug  6 07:48 README.md
+2026-08-06T07:48:54.2951696Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 ami-copy
+2026-08-06T07:48:54.2952378Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 ami_refresh_automation
+2026-08-06T07:48:54.2952808Z drwxrwxr-x+ 2 agent-runner agent-runner    99 Aug  6 07:48 ami_refresh_report_generation
+2026-08-06T07:48:54.2953197Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 base-ami
+2026-08-06T07:48:54.2953584Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 batch_deployment_automation
+2026-08-06T07:48:54.2953964Z drwxrwxr-x+ 2 agent-runner agent-runner    52 Aug  6 07:48 cost_tags_update
+2026-08-06T07:48:54.2954322Z drwxrwxr-x+ 2 agent-runner agent-runner    26 Aug  6 07:48 github
+2026-08-06T07:48:54.2954682Z drwxrwxr-x+ 4 agent-runner agent-runner 16384 Aug  6 07:48 infra
+2026-08-06T07:48:54.2955050Z drwxrwxr-x+ 2 agent-runner agent-runner    46 Aug  6 07:48 kms-encrypt-decrypt
+2026-08-06T07:48:54.2955423Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 lambda-deployment
+2026-08-06T07:48:54.2955811Z drwxrwxr-x+ 4 agent-runner agent-runner   100 Aug  6 07:48 missing_tags_update
+2026-08-06T07:48:54.2956205Z drwxrwxr-x+ 2 agent-runner agent-runner    31 Aug  6 07:48 post_deployment_asg_health_status
+2026-08-06T07:48:54.2956486Z drwxrwxr-x+ 4 agent-runner agent-runner 16384 Aug  6 07:48 printer-claim-cleanup
+2026-08-06T07:48:54.2956693Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 rollback_automation
+2026-08-06T07:48:54.2956908Z drwxrwxr-x+ 2 agent-runner agent-runner 16384 Aug  6 07:48 rp-ami_refresh_automation
+2026-08-06T07:48:54.2957126Z drwxrwxr-x+ 2 agent-runner agent-runner    35 Aug  6 07:48 tomcat-hardening
+2026-08-06T07:48:54.2957346Z drwxrwxr-x+ 2 agent-runner agent-runner   102 Aug  6 07:48 validate-gen2-service-deployment
+2026-08-06T07:48:54.2957594Z + pip3 install -q --upgrade boto3 PyGithub pandas tabulate
+2026-08-06T07:49:09.9516719Z ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+2026-08-06T07:49:09.9541115Z azure-cli 2.77.0 requires PyGithub~=1.38, but you have pygithub 2.9.1 which is incompatible.
+2026-08-06T07:49:10.0490497Z 
+2026-08-06T07:49:10.0490960Z [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+2026-08-06T07:49:10.0491290Z [notice] To update, run: pip3 install --upgrade pip
+2026-08-06T07:49:10.2251918Z + export git_token=***
+2026-08-06T07:49:10.2252319Z + git_token=***
+2026-08-06T07:49:10.2253016Z + python3 batch_deployment_automation/pr_validation.py --release_date 20-07-2026 --file_name output_RRGEN2_26.7.3-1-ATMS_prod.csv --subnet_selection prod_non_active_pods_remaining_subnet --git_token ***
+2026-08-06T07:49:11.6145713Z [INFO] [pr_validation:45]: File "output_RRGEN2_26.7.3-1-ATMS_prod.csv" downloaded successfully.
+2026-08-06T07:49:11.6171778Z /usr/local/ado-agent/_work/1/s/batch_deployment_automation/pr_validation.py:84: DeprecationWarning: Argument login_or_token is deprecated, please use auth=github.Auth.Token(...) instead
+2026-08-06T07:49:11.6172368Z   github_object = Github(base_url=ghe_url, login_or_token=git_token)
+2026-08-06T07:49:12.6929285Z [INFO] [pr_validation:98]: PR 1328 in repo WPPg2/avatar-signalmgmt (service_pod: prod_non_active_pods_remaining_subnet) has been approved by DevOps reviewers.
+2026-08-06T07:49:14.0002220Z [INFO] [pr_validation:98]: PR 2555 in repo WPPg2/avatar-reg (service_pod: prod_non_active_pods_remaining_subnet) has been approved by DevOps reviewers.
+2026-08-06T07:49:15.1946200Z [INFO] [pr_validation:100]: PR 982 in repo WPPg2/avatar-signal-outbound-processor (service_pod: prod_non_active_pods_remaining_subnet) has not been approved by DevOps reviewers.
+2026-08-06T07:49:15.1963154Z [INFO] [pr_validation:111]: 
+2026-08-06T07:49:15.1963788Z +---------------------------------------+-------------+-------------------------------------------------------------------------------+-------------------+
+2026-08-06T07:49:15.1964690Z | Service Pod                           |   PR Number | PR Link                                                                       | Approval Status   |
+2026-08-06T07:49:15.1966326Z +=======================================+=============+===============================================================================+===================+
+2026-08-06T07:49:15.1966833Z | prod_non_active_pods_remaining_subnet |        1328 | https://github.azc.ext.hp.com/WPPg2/avatar-signalmgmt/pull/1328               | Approved          |
+2026-08-06T07:49:15.1967343Z +---------------------------------------+-------------+-------------------------------------------------------------------------------+-------------------+
+2026-08-06T07:49:15.1967850Z | prod_non_active_pods_remaining_subnet |        2555 | https://github.azc.ext.hp.com/WPPg2/avatar-reg/pull/2555                      | Approved          |
+2026-08-06T07:49:15.1968356Z +---------------------------------------+-------------+-------------------------------------------------------------------------------+-------------------+
+2026-08-06T07:49:15.1968888Z | prod_non_active_pods_remaining_subnet |         982 | https://github.azc.ext.hp.com/WPPg2/avatar-signal-outbound-processor/pull/982 | Not Approved      |
+2026-08-06T07:49:15.1969396Z +---------------------------------------+-------------+-------------------------------------------------------------------------------+-------------------+
+2026-08-06T07:49:15.1969891Z [ERROR] [pr_validation:114]: One or more PRs have not been approved by DevOps reviewers. Exiting.
+2026-08-06T07:49:15.2576933Z 
+2026-08-06T07:49:15.2607126Z ##[error]Bash exited with code '1'.
+2026-08-06T07:49:15.2650816Z ##[section]Finishing: Pre-deployment PR validation
