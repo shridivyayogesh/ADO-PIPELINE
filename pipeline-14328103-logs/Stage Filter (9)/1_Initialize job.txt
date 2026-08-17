@@ -1,0 +1,46 @@
+2026-08-14T05:51:32.3603496Z ##[section]Starting: Initialize job
+2026-08-14T05:51:32.3605705Z Agent name: 'i-053aeecb790b3b260'
+2026-08-14T05:51:32.3606270Z Agent machine name: 'ip-172-26-72-145'
+2026-08-14T05:51:32.3606501Z Current agent version: '4.270.0'
+2026-08-14T05:51:34.4167149Z Agent running as: 'agent-runner'
+2026-08-14T05:51:34.4196478Z Prepare build directory.
+2026-08-14T05:51:34.4369674Z Set build variables.
+2026-08-14T05:51:34.4384532Z Download all required tasks.
+2026-08-14T05:51:34.4441416Z Downloading task: CmdLine (2.276.0)
+2026-08-14T05:51:35.2387550Z Checking job knob settings.
+2026-08-14T05:51:35.2389821Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2026-08-14T05:51:35.2391025Z    Knob: UseGitLongPaths = true Source: $(USE_GIT_LONG_PATHS) 
+2026-08-14T05:51:35.2392344Z    Knob: UseNode24withHandlerData = True Source: $(DistributedTask.Agent.UseNode24withHandlerData) 
+2026-08-14T05:51:35.2393794Z    Knob: EnableIssueSourceValidation = true Source: $(ENABLE_ISSUE_SOURCE_VALIDATION) 
+2026-08-14T05:51:35.2394602Z    Knob: AgentEnablePipelineArtifactLargeChunkSize = true Source: $(AGENT_ENABLE_PIPELINEARTIFACT_LARGE_CHUNK_SIZE) 
+2026-08-14T05:51:35.2396127Z    Knob: DisableNode6Tasks = true Source: $(AGENT_DISABLE_NODE6_TASKS) 
+2026-08-14T05:51:35.2396950Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2026-08-14T05:51:35.2397533Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC) 
+2026-08-14T05:51:35.2397917Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC_LOG) 
+2026-08-14T05:51:35.2398303Z    Knob: ProcessHandlerTelemetry = true Source: $(AZP_75787_ENABLE_COLLECT) 
+2026-08-14T05:51:35.2398710Z    Knob: UseNewNodeHandlerTelemetry = True Source: $(DistributedTask.Agent.USENEWNODEHANDLERTELEMETRY) 
+2026-08-14T05:51:35.2399107Z    Knob: ProcessHandlerEnableNewLogic = true Source: $(AZP_75787_ENABLE_NEW_PH_LOGIC) 
+2026-08-14T05:51:35.2399925Z    Knob: EnableResourceMonitorDebugOutput = true Source: $(AZP_ENABLE_RESOURCE_MONITOR_DEBUG_OUTPUT) 
+2026-08-14T05:51:35.2400344Z    Knob: EnableResourceUtilizationWarnings = true Source: $(AZP_ENABLE_RESOURCE_UTILIZATION_WARNINGS) 
+2026-08-14T05:51:35.2400925Z    Knob: IgnoreVSTSTaskLib = true Source: $(AZP_AGENT_IGNORE_VSTSTASKLIB) 
+2026-08-14T05:51:35.2401289Z    Knob: FailJobWhenAgentDies = true Source: $(FAIL_JOB_WHEN_AGENT_DIES) 
+2026-08-14T05:51:35.2401528Z    Knob: EnhancedWorkerCrashHandling = true Source: ${AZP_ENHANCED_WORKER_CRASH_HANDLING} 
+2026-08-14T05:51:35.2402019Z    Knob: CheckForTaskDeprecation = true Source: $(AZP_AGENT_CHECK_FOR_TASK_DEPRECATION) 
+2026-08-14T05:51:35.2402547Z    Knob: CheckIfTaskNodeRunnerIsDeprecated246 = True Source: $(DistributedTask.Agent.CheckIfTaskNodeRunnerIsDeprecated246) 
+2026-08-14T05:51:35.2402978Z    Knob: UseNode20ToStartContainer = True Source: $(DistributedTask.Agent.UseNode20ToStartContainer) 
+2026-08-14T05:51:35.2403408Z    Knob: UseNode24ToStartContainer = True Source: $(DistributedTask.Agent.UseNode24ToStartContainer) 
+2026-08-14T05:51:35.2403835Z    Knob: EnableTimeoutLogFlushing = True Source: $(DistributedTask.Agent.EnableTimeoutLogFlushing) 
+2026-08-14T05:51:35.2404427Z    Knob: LogTaskNameInUserAgent = true Source: $(AZP_AGENT_LOG_TASKNAME_IN_USERAGENT) 
+2026-08-14T05:51:35.2404836Z    Knob: UseFetchFilterInCheckoutTask = true Source: $(AGENT_USE_FETCH_FILTER_IN_CHECKOUT_TASK) 
+2026-08-14T05:51:35.2405315Z    Knob: Rosetta2Warning = true Source: $(ROSETTA2_WARNING) 
+2026-08-14T05:51:35.2406315Z    Knob: AddForceCredentialsToGitCheckout = True Source: $(DistributedTask.Agent.AddForceCredentialsToGitCheckout) 
+2026-08-14T05:51:35.2406875Z    Knob: AddForceCredentialsToGitCheckoutEnhanced = True Source: $(DistributedTask.Agent.AddForceCredentialsToGitCheckoutEnhanced) 
+2026-08-14T05:51:35.2407577Z    Knob: UseLatestTfExe = True Source: $(DistributedTask.Agent.UseLatestTfExe) 
+2026-08-14T05:51:35.2408274Z    Knob: UseSparseCheckoutInCheckoutTask = true Source: $(AGENT_USE_SPARSE_CHECKOUT_IN_CHECKOUT_TASK) 
+2026-08-14T05:51:35.2408931Z    Knob: AgentCDNConnectivityFailWarning = False Source: $(DistributedTask.Agent.AgentCDNConnectivityFailWarning) 
+2026-08-14T05:51:35.2409274Z    Knob: UseEnhancedLogging = true Source: ${AZP_USE_ENHANCED_LOGGING} 
+2026-08-14T05:51:35.2409693Z    Knob: EnableEnhancedContainerDiagnostics = True Source: $(DistributedTask.Agent.EnableEnhancedContainerDiagnostics) 
+2026-08-14T05:51:35.2410275Z    Knob: EnableDockerExecDiagnostics = True Source: $(DistributedTask.Agent.EnableDockerExecDiagnostics) 
+2026-08-14T05:51:35.2410668Z Finished checking job knob settings.
+2026-08-14T05:51:35.2664608Z Start tracking orphan processes.
+2026-08-14T05:51:35.2916492Z ##[section]Finishing: Initialize job
