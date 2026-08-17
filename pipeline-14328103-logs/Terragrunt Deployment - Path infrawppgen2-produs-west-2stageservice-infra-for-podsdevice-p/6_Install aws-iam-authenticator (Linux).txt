@@ -1,0 +1,19 @@
+2026-08-14T05:52:22.1985746Z ##[section]Starting: Install aws-iam-authenticator (Linux)
+2026-08-14T05:52:22.1993147Z ==============================================================================
+2026-08-14T05:52:22.1993266Z Task         : Bash
+2026-08-14T05:52:22.1993341Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-08-14T05:52:22.1993427Z Version      : 3.274.1
+2026-08-14T05:52:22.1993500Z Author       : Microsoft Corporation
+2026-08-14T05:52:22.1993582Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-08-14T05:52:22.1993675Z ==============================================================================
+2026-08-14T05:52:25.3034524Z Generating script.
+2026-08-14T05:52:25.3045884Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:25.3053079Z [command]/usr/bin/bash /usr/local/ado-agent/_work/_temp/4b92e8ed-d7b0-4a42-9aa9-63026403b3a6.sh
+2026-08-14T05:52:25.3135804Z ##[debug]Downloading aws-iam-authenticator version 1.14.6...
+2026-08-14T05:52:25.3198582Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-08-14T05:52:25.3198976Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-08-14T05:52:25.3199125Z 
+2026-08-14T05:52:25.5240998Z   0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+2026-08-14T05:52:25.5257247Z 100 18213k 100 18213k   0     0 88683k     0  --:--:-- --:--:-- --:--:-- 88845k
+2026-08-14T05:52:25.5300634Z 
+2026-08-14T05:52:25.5366726Z ##[section]Finishing: Install aws-iam-authenticator (Linux)
