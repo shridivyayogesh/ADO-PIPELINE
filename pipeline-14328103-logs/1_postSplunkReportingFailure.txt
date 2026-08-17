@@ -1,0 +1,34 @@
+2026-08-14T05:54:06.8580746Z ##[section]Starting: Prepare job postSplunkReportingFailure
+2026-08-14T05:54:06.9061361Z Variables:
+2026-08-14T05:54:06.9061361Z   gheUser: $[ variablegroups.Defaults.gheUser ]
+2026-08-14T05:54:06.9061361Z   HarborRegistryHost: $[ variablegroups.Defaults.HarborRegistryHost ]
+2026-08-14T05:54:06.9061361Z   HarborUsername: $[ variablegroups.Defaults.HarborUsername ]
+2026-08-14T05:54:06.9061361Z   MAVEN_OPTS: $[ variablegroups.Defaults.MAVEN_OPTS ]
+2026-08-14T05:54:06.9061361Z   SonarProjectPrefix: $[ variablegroups.Defaults.SonarProjectPrefix ]
+2026-08-14T05:54:06.9061361Z   wppgen2-pie_s3_jar_promotion_role: $[ variablegroups.Defaults.wppgen2-pie_s3_jar_promotion_role ]
+2026-08-14T05:54:06.9061361Z   wppgen2-prod_s3_jar_promotion_role: $[ variablegroups.Defaults.wppgen2-prod_s3_jar_promotion_role ]
+2026-08-14T05:54:06.9061361Z ContinueOnError: False
+2026-08-14T05:54:06.9061361Z TimeoutInMinutes: 60
+2026-08-14T05:54:06.9061361Z CancelTimeoutInMinutes: 5
+2026-08-14T05:54:06.9061361Z Expand:
+2026-08-14T05:54:06.9061361Z   MaxConcurrency: 0
+2026-08-14T05:54:06.9203488Z   ########## System Pipeline Decorator(s) ##########
+
+2026-08-14T05:54:06.9203488Z   Begin evaluating template 'system-pre-steps.yml'
+Evaluating: eq('true', variables['system.debugContext'])
+Expanded: eq('true', Null)
+Result: False
+Evaluating: resources['repositories']['self']
+Expanded: Object
+Result: True
+Evaluating: not(containsValue(job['steps']['*']['task']['id'], '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Expanded: not(containsValue(Object, '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Result: False
+Finished evaluating template 'system-pre-steps.yml'
+********************************************************************************
+Template and static variable resolution complete. Final runtime YAML document:
+steps: []
+
+
+2026-08-14T05:54:06.9206537Z   MaxConcurrency: 0
+2026-08-14T05:54:06.9263094Z ##[section]Finishing: Prepare job postSplunkReportingFailure
