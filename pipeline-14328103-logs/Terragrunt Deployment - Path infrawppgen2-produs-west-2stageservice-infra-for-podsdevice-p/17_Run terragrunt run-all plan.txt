@@ -1,0 +1,373 @@
+2026-08-14T05:53:26.3978436Z ##[section]Starting: Run terragrunt run-all plan
+2026-08-14T05:53:26.3985759Z ==============================================================================
+2026-08-14T05:53:26.3985874Z Task         : Command line
+2026-08-14T05:53:26.3985951Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:53:26.3986049Z Version      : 2.276.0
+2026-08-14T05:53:26.3986121Z Author       : Microsoft Corporation
+2026-08-14T05:53:26.3986201Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:53:26.3986291Z ==============================================================================
+2026-08-14T05:53:29.0762986Z Generating script.
+2026-08-14T05:53:29.0768641Z ========================== Starting Command Output ===========================
+2026-08-14T05:53:29.0783543Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/3e223d9c-294c-4cbf-9e8f-fe5c8707a6fe.sh
+2026-08-14T05:53:29.0840255Z Running terragrunt run-all plan command on infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/
+2026-08-14T05:53:29.0842459Z terragrunt IncludeArgs: 
+2026-08-14T05:53:29.0842838Z terragrunt IncludeUnitsReadingArgs: 
+2026-08-14T05:53:29.0843185Z ExtraArgs: 
+2026-08-14T05:53:29.7203513Z time=2026-08-14T05:53:29Z level=info msg=Stack at infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/:
+2026-08-14T05:53:29.7204956Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:53:29.7207023Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:53:29.7208435Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/iam/dvc-vpdev (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret])
+2026-08-14T05:53:29.7209609Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:53:29.7210571Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/route53/wppinternal.com/record-sets/vpdev.podlb.device (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb])
+2026-08-14T05:53:29.7211328Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret (excluded: false, dependencies: [])
+2026-08-14T05:53:29.7212141Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:53:29.7213423Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:53:29.7214247Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup (excluded: false, dependencies: [])
+2026-08-14T05:53:29.7215237Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/listner/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:53:29.7216206Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource (excluded: false, dependencies: [])
+2026-08-14T05:53:29.7216958Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/waf/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb])
+2026-08-14T05:53:32.4406089Z aws_security_group.sg: Refreshing state... [id=sg-99afcfe0]
+2026-08-14T05:53:32.5377849Z 
+2026-08-14T05:53:32.5379190Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:32.5379575Z 
+2026-08-14T05:53:32.5382592Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:32.5383154Z and found no differences, so no changes are needed.
+2026-08-14T05:53:32.7325297Z aws_secretsmanager_secret.sm: Refreshing state... [id=arn:aws:secretsmanager:us-west-2:508587356765:secret:stage-vpc1-device-pod1-vp-device-secret-xWovQ5]
+2026-08-14T05:53:32.8247305Z 
+2026-08-14T05:53:32.8248534Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:32.8248949Z 
+2026-08-14T05:53:32.8326496Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:32.8326942Z and found no differences, so no changes are needed.
+2026-08-14T05:53:32.9424998Z aws_lb_target_group.tg: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-2:508587356765:targetgroup/stage-dvc-pod1-vpdev/376e753978cf3ef8]
+2026-08-14T05:53:33.0952470Z 
+2026-08-14T05:53:33.0953682Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:33.0953902Z 
+2026-08-14T05:53:33.0954249Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:33.0954780Z and found no differences, so no changes are needed.
+2026-08-14T05:53:37.2431558Z aws_security_group.sg: Refreshing state... [id=sg-9ef2b2e7]
+2026-08-14T05:53:37.3497387Z 
+2026-08-14T05:53:37.3498866Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:37.3499162Z 
+2026-08-14T05:53:37.3499614Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:37.3499996Z and found no differences, so no changes are needed.
+2026-08-14T05:53:37.3627254Z aws_security_group.sg: Refreshing state... [id=sg-a70248de]
+2026-08-14T05:53:37.4716488Z 
+2026-08-14T05:53:37.4717677Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:37.4718076Z 
+2026-08-14T05:53:37.4718662Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:37.4719503Z and found no differences, so no changes are needed.
+2026-08-14T05:53:37.5256831Z aws_lb.lb: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-2:508587356765:loadbalancer/app/stage-dvc-pod1-vpdev-podlb-alb/284c6f5705454d90]
+2026-08-14T05:53:37.6735589Z 
+2026-08-14T05:53:37.6737506Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:37.6738084Z 
+2026-08-14T05:53:37.6739114Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:37.6739755Z and found no differences, so no changes are needed.
+2026-08-14T05:53:43.6884906Z aws_wafv2_web_acl_association.wafv2assoc: Refreshing state... [id=arn:aws:wafv2:us-west-2:508587356765:regional/webacl/stage-global-pod1-WebACL/f0c157d9-513a-42eb-8bd1-acdc41e9d051,arn:aws:elasticloadbalancing:us-west-2:508587356765:loadbalancer/app/stage-dvc-pod1-vpdev-podlb-alb/284c6f5705454d90]
+2026-08-14T05:53:43.8010541Z 
+2026-08-14T05:53:43.8011875Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:43.8012313Z 
+2026-08-14T05:53:43.8013319Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:43.8013949Z and found no differences, so no changes are needed.
+2026-08-14T05:53:44.2216380Z aws_launch_configuration.this[0]: Refreshing state... [id=stage-vpc1-device-pod1-subnet-b-vpdev-VPDevLaunchConfig-20260715105428793000000001]
+2026-08-14T05:53:44.3925334Z time=2026-08-14T05:53:44Z level=error msg=Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup has finished with an error: 1 error occurred:
+2026-08-14T05:53:44.3926573Z 	* exit status 1
+2026-08-14T05:53:44.3927195Z 
+2026-08-14T05:53:44.3928771Z  prefix=[/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup] 
+2026-08-14T05:53:44.7159931Z aws_launch_configuration.this[0]: Refreshing state... [id=stage-vpc1-device-pod1-subnet-a-vpdev-VPDevLaunchConfig-20260715105428639700000001]
+2026-08-14T05:53:44.8873739Z time=2026-08-14T05:53:44Z level=error msg=Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup has finished with an error: 1 error occurred:
+2026-08-14T05:53:44.8874276Z 	* exit status 1
+2026-08-14T05:53:44.8874389Z 
+2026-08-14T05:53:44.8874770Z  prefix=[/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup] 
+2026-08-14T05:53:48.0412474Z aws_lb_listener.listener: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-2:508587356765:listener/app/stage-dvc-pod1-vpdev-podlb-alb/284c6f5705454d90/a5ce6443baf10311]
+2026-08-14T05:53:48.1660108Z aws_lb_listener_rule.rule[0]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-2:508587356765:listener-rule/app/stage-dvc-pod1-vpdev-podlb-alb/284c6f5705454d90/a5ce6443baf10311/518fc85bdad54a25]
+2026-08-14T05:53:48.1758793Z aws_iam_role.role: Refreshing state... [id=stage-vpc1-pod1-dvc-vpdev]
+2026-08-14T05:53:48.1762380Z module.iam_policy.aws_iam_policy.policy[0]: Refreshing state... [id=arn:aws:iam::508587356765:policy/stage-vpc1-pod1-dvc-vpdev]
+2026-08-14T05:53:48.2710789Z 
+2026-08-14T05:53:48.2711628Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:48.2711807Z 
+2026-08-14T05:53:48.2712165Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:48.2712550Z and found no differences, so no changes are needed.
+2026-08-14T05:53:48.6782737Z aws_iam_instance_profile.iam_role_instance_profile[0]: Refreshing state... [id=stage-vpc1-pod1-dvc-vpdev]
+2026-08-14T05:53:48.6793847Z aws_iam_role_policy_attachment.managed_policy[0]: Refreshing state... [id=stage-vpc1-pod1-dvc-vpdev-20230817105933896600000002]
+2026-08-14T05:53:48.6794422Z aws_iam_role_policy_attachment.managed_policy[1]: Refreshing state... [id=stage-vpc1-pod1-dvc-vpdev-20230817105933891000000001]
+2026-08-14T05:53:48.9094768Z 
+2026-08-14T05:53:48.9095664Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:48.9096253Z 
+2026-08-14T05:53:48.9096615Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:48.9096997Z and found no differences, so no changes are needed.
+2026-08-14T05:53:53.4523898Z aws_route53_record.route_record: Refreshing state... [id=Z1R9NNDW6JWBA6_vpdev.podlb.pod1.device.vpc1-stage-wppinternal.com_A]
+2026-08-14T05:53:53.9442117Z 
+2026-08-14T05:53:53.9443453Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:53.9443738Z 
+2026-08-14T05:53:53.9444155Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:53.9444562Z and found no differences, so no changes are needed.
+2026-08-14T05:53:54.0088541Z time=2026-08-14T05:53:54Z level=info msg=
+2026-08-14T05:53:54.0089010Z Error: expected length of user_data to be in the range (1 - 16384), got #!/bin/bash
+2026-08-14T05:53:54.0089386Z cd /home/ec2-user
+2026-08-14T05:53:54.0094829Z echo '{"environment":{"AWS_REGION":"us-west-2","DATADOG_ENABLED":"true","DRIVER_CLASS":"com.mysql.jdbc.Driver","ENVIRONMENT":"stage","JDBC_URL":"jdbc:mysql://stage-dvc-pod1-rds-dvccommon-db.vpc1-stage-wppinternal.com:3306/ops_db?connectTimeout=60000\u0026socketTimeout=60000\u0026useSSL=true\u0026verifyServerCertificate=true\u0026enabledTLSProtocols=TLSv1.2","LOG_EXCLUDE_FILES":"*.20*.json,*.20*.log,*.20*.json,*.20*.*.log,*..20*,*.gz,*logback*.20*.log,wpp_*.20*.log,stratus_*.20*.log,*.20*_access.log,*.20*_access.json,*access_log..20*","LOG_PATH":"/opt/wpp/gen2/vp-device/logs/eip*.log, /opt/wpp/gen2/vp-device/logs/*,/opt/wpp/gen2/ams/logs/vp-device_access.log","MAX_HEAP":"4096m","MIN_HEAP":"1024m","POD":"pod1","SERVICE_NAME":"vp-device","SPLUNK_APM_ENVIRONMENT":"stg","SPLUNK_APM_SECRET_NAME":"splunk_apm_stg","SPLUNK_APM_TEAM":"iot","SPLUNK_ENTERPRISE_ENABLED":"true","rp_secret_name":"stage-vpc1-device-pod1-rp-vp-device-secret","rp_secret_region":"us-west-2","splunk_index":"wppgen2-stage","splunk_log_path":"/opt/wpp/gen2/vp-device/logs/","splunk_source_type":"vpdev","zabbix_frontend_vpce_r53":"zabbix.stage.vpc1-stage-wppinternal.com","zabbix_hostgroup":"WPP-Gen2:  Avatar: VP-Device: stagepod1","zabbix_server_vpce_r53":"zproxy1.vpc1-stage-wppinternal.com","zabbix_template":"WPP-meta-vpdev","zabbix_usergroup":"WPP-Gen2"},"externalSecrets":[{"key":"DB_USERNAME","name":"DB_USERNAME","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"DB_PASSWORD","name":"DB_PASSWORD","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdev_printer_db_username","name":"VPDEV_SERVICE_DATASOURCE_USERNAME","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdev_printer_db_password","name":"VPDEV_SERVICE_DATASOURCE_PASSWORD","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdevapi_vpeas_authentication_header","name":"VPDEVAPI_VPEAS_AUTHENTICATION_HEADER","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"wns_notification_publish_event_ackToken","name":"WNS_EVENT_ACK_TOKEN","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"wns_notification_publish_event_pubId","name":"WNS_EVENT_PUBID","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdevapi_avatar_avdls_auth","name":"AVDLS_BASIC_AUTH","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"launch_darkly_sdk_key","name":"LAUNCH_DARKLY_SDK_KEY","secret":"stage-vpc1-device-pod1-vp-device-secret"}],"externalSecretsRegion":"us-west-2"}'>/home/ec2-user/service-config.json
+2026-08-14T05:53:54.0108760Z echo 'c2tlcm5lbDoKICBzZWN1cml0eToKICAgIG9hdXRoMjoKICAgICAgYXV0aHo6CiAgICAgICAgY2xpZW50OgogICAgICAgICAgY3JlZGVudGlhbHN0b3JlOgogICAgICAgICAgICBzZWNyZXRzbWFuYWdlcjoKICAgICAgICAgICAgICBzZWNyZXRpZDogc3RhZ2UtdnBjMS1kZXZpY2UtcG9kMS12cC1kZXZpY2Utc2VjcmV0CiAgICAgICAgICAgICAgcmVnaW9uOiB1cy13ZXN0LTIKICAgICAgICB0b2tlbi11cmk6IGh0dHBzOi8vc3RhZ2UuYXV0aHoud3BwLmFwaS5ocC5jb20vb3BlbmlkL3YxL3Rva2VuCiAgY3VzdG9taGVhbHRoOgogICAgdmVyc2lvbjogdjEuMAogICAgZW5hYmxlZDogdHJ1ZQogICAgY29tcG9zaXRlOgogICAgICAtIHR5cGU6IF9fc2tzZXJ2aWNlCiAgICAgICAgbmFtZTogQXZyZWcgSGVhbHRoY2hlY2sKICAgICAgICBoZWFsdGh1cmw6IGh0dHBzOi8vcmVnaXN0cmF0aW9uLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IFZwZWFzIEhlYWx0aGNoZWNrCiAgICAgICAgaGVhbHRodXJsOiBodHRwczovL2VtYWlsY29uZmlnLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IERMUyBIZWFsdGhjaGVjawogICAgICAgIGhlYWx0aHVybDogaHR0cHM6Ly9kZXZpY2Vsb29rdXAuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvYWJvdXQKICAgICAgICByZWdpb246IE5BCiAgICAgICAgZW5hYmxlZDogdHJ1ZQogICAgICAtIHR5cGU6IF9fc2tzZXJ2aWNlCiAgICAgICAgbmFtZTogV05TIEhlYWx0aGNoZWNrCiAgICAgICAgaGVhbHRodXJsOiBodHRwczovL3dwcC5ub3RpZmljYXRpb24uc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IEFNUyBIZWFsdGhjaGVjawogICAgICAgIGhlYWx0aHVybDogaHR0cHM6Ly9hY2Nlc3NtZ210LnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2FjY2Vzc21nbXQvYWN0dWF0b3IvaW5mbwogICAgICAgIHJlZ2lvbjogTkEKICAgICAgICBlbmFibGVkOiB0cnVlCnZwZGV2YXBpOgogIGRiOgogICAgamRiYzoKICAgICAgdXJsOiAiamRiYzpteXNxbDovL3N0YWdlLWR2Yy1wb2QxLXJkcy12cHJlZy1kYi52cGMxLXN0YWdlLXdwcGludGVybmFsLmNvbTozMzA2L3ByaW50ZXJkYj9jb25uZWN0VGltZW91dD02MDAwMCZzb2NrZXRUaW1lb3V0PTYwMDAwJnVzZVNTTD10cnVlJnZlcmlmeVNlcnZlckNlcnRpZmljYXRlPXRydWUmZW5hYmxlZFRMU1Byb3RvY29scz1UTFN2MS4yIgogIGRldmljZToKICAgIHN0YXR1czoKICAgICAgaG9zdDogImRldmljZXN0YXR1cy5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tIgogICAgICBwb3J0OiAiODA4MCIKICAgICAgY29udGV4dDogIi9hdmF0YXIvcHJpbnRlcnMiCiAgICBpbmZvOgogICAgICBpbWFnZTQyMjY6ICJodHRwczovL2RldmljZXMudXMxLmFwaS53cy1ocC5jb20vZGV2aWNlcy92MS9pbWFnZXMvJXMvNDJ4MjYucG5nIgogICAgICBpbWFnZTEzMDEyMDogImh0dHBzOi8vZGV2aWNlcy51czEuYXBpLndzLWhwLmNvbS9kZXZpY2VzL3YxL2ltYWdlcy8lcy8xMzB4MTAyLnBuZyIKICAgICAgaW1hZ2UxNzAxMjg6ICJodHRwczovL2RldmljZXMudXMxLmFwaS53cy1ocC5jb20vZGV2aWNlcy92MS9pbWFnZXMvJXMvMTcweDEyOC5wbmciCiAgICAgIGltYWdlMzAwMjQ1OiAiaHR0cHM6Ly9kZXZpY2VzLnVzMS5hcGkud3MtaHAuY29tL2RldmljZXMvdjEvaW1hZ2VzLyVzLzMwMHgyNDUucG5nIgogICAgICBzZWxmOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby8lcyIKICAgICAgcHJpbnRpbmZvOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby9wcmludC8lcyIKICAgICAgYXBwcGxheWVyOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby9hcHBfcGxheWVyLyVzIgogICAgICBjbG91ZGNvbmZpZzogImh0dHBzOi8vZGV2aWNlbWdtdC5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXJzL2Nsb3VkY29uZmlnLyVzIgogICAgICBlbWFpbGFkZHJlc3M6ICJodHRwczovL2VtYWlsY29uZmlnLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXJzL2VtYWlsX2FkZHJlc3MvJXMiCiAgICAgIHN0YXR1czogImh0dHBzOi8vZGV2aWNlc3RhdHVzLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL3ByaW50ZXJzL3N0YXR1cy8lcyIKICAgIGhwYzoKICAgICAgc2hhcmluZzoKICAgICAgICBlbmFibGVkOiAidHJ1ZSIKICAgIGlzOgogICAgICB3ZWI6CiAgICAgICAgc2VydmljZXM6CiAgICAgICAgICB1cGRhdGU6CiAgICAgICAgICAgIGVuYWJsZWQ6ICJ0cnVlIgogIGVudGl0eToKICAgIGluZm86CiAgICAgIGFwaToKICAgICAgICB1cmw6ICJodHRwczovL3JlZ2lzdHJhdGlvbi5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2F2YXRhci92MS9lbnRpdGllcy9lbnRpdHlfaW5mby8lcyIKICBlbWFpbGNsaWVudDoKICAgIGdlbjoKICAgICAgdXJsOiAiaHR0cHM6Ly9lbWFpbGNvbmZpZy5zdGFnZS5hdmF0YXIuZXh0LmhwLmNvbS92aXJ0dWFscHJpbnRlci92MS9wcmludGVycy9lbWFpbF9hZGRyZXNzLyVzIgogIGRpc2NvdmVyeWNsaWVudDoKICAgIGdlbjoKICAgICAgdXJsOiAiaHR0cHM6Ly9pbnQuZW50aXR5ZGlzY292ZXJ5LnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2F2YXRhci92MS9lbnRpdGllcz9jbG91ZC1pZD0lcyIKICBhdmF0YXI6CiAgICBkYXRhYnJpZGdlOgogICAgICB1cmw6ICJodHRwczovL2RhdGFicmlkZ2UucG9kMS5zdGFnZS5hdmF0YXIuZXh0LmhwLmNvbS9hdmF0YXIvdjEvZGF0YWJyaWRnZS8lcyIKICAgIGlwcGVuZHBvaW50OgogICAgICB1cmw6ICJodHRwczovL2lwcHByaW50LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxLyVzL2lwcC9wcmludCIKICAgIGF2ZGxzOgogICAgICBlbmRwb2ludDogImh0dHBzOi8vZGV2aWNlbG9va3VwLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXIvZGlzY292ZXJ5P2Nsb3VkSWQ9JXMiCgogIHBvbGljeW1ncjoKICAgIHVybDogImh0dHBzOi8vcHJpbnRlci1wb2xpY3ktbWFuYWdlci1zdHJhdHVzLmludC5zdGctdGhvci11ZTEuaHBpcC1pbnRlcm5hbC5jb20vcHJpbnRlcnBvbGljeW1nci92MS9kZXZpY2VzLyVzL3BvbGljaWVzL3RlbGVtZXRyeSIgICAgICAgIAogIGF1dGh6OgogICAgdGltZToKICAgICAgYmVmb3JlOgogICAgICAgIGV4cGlyeToKICAgICAgICAgIHRvOgogICAgICAgICAgICByZWZyZXNoOgogICAgICAgICAgICAgIHRva2VuOgogICAgICAgICAgICAgICAgaW46CiAgICAgICAgICAgICAgICAgIG1pbnV0ZXM6ICI1IgogICAgcmV0cnk6CiAgICAgIGFmdGVyOgogICAgICAgIGZhaWx1cmU6CiAgICAgICAgICBpbjoKICAgICAgICAgICAgc2Vjb25kczogIjUiCiAgICBwcm94eToKICAgICAgcG9ydDogIjgwODAiCiAgICAgIGhvc3Q6ICJ3ZWItcHJveHkuY3VwLmhwLmNvbSIKICAgIHNvY2tldDoKICAgICAgdGltZW91dDogIjYwMDAiCiAgICBzZXJ2aWNlOgogICAgICBuYW1lOiAidnBkZXYiCiAgICBpczoKICAgICAgcHJveHk6CiAgICAgICAgZW5hYmxlZDogImZhbHNlIgogICAgdXJsOiAiaHR0cHM6Ly9hdXRoei1zdHJhdHVzLmludC5zdGctdGhvci11ZTEuaHBpcC1pbnRlcm5hbC5jb20vLndlbGwta25vd24vb3BlbmlkLWNvbmZpZ3VyYXRpb24iCiAgY2xpZW50OgogICAgcm9sZToKICAgICAgZm9yOgogICAgICAgIGFtczoKICAgICAgICAgIGF1dGhvcml6ZTogImNvbS5ocC53cHAuYWNjZXNzbWdtdC5yb2xlLm93bmVyLnZlcnNpb24uMSIKICBhdXRob3JpemU6CiAgICB1cmw6ICJodHRwczovL2FjY2Vzc21nbXQuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYWNjZXNzbWdtdC92MS9hdXRob3JpemF0aW9uIgogIGlzOgogICAgYW1zOgogICAgICBhdXRoOgogICAgICAgIGZlYXR1cmU6CiAgICAgICAgICBlbmFibGVkOiAidHJ1ZSIKICAgIG1lZGlhc2l6ZToKICAgICAgdW5rbm93bjoKICAgICAgICBmZWF0dXJlOgogICAgICAgICAgZW5hYmxlZDogInRydWUiCiAgYW1zOgogICAgY2xpZW50OgogICAgICBodHRwOgogICAgICAgIGNvbmZpZzoKICAgICAgICAgIHNvY2tldDoKICAgICAgICAgICAgdGltZW91dDogIjYwMDAiCiAgICAgICAgICBtYXg6CiAgICAgICAgICAgIHRvdGFsOgogICAgICAgICAgICAgIGNvbm5lY3Rpb25zOiAiMTAwIgogICAgICAgICAgICBjb25uZWN0aW9uczoKICAgICAgICAgICAgICBwZXI6CiAgICAgICAgICAgICAgICByb3V0ZTogIjEwMCIKICAgICAgICAgIHByb3h5OgogICAgICAgICAgICBlbmFibGVkOiAiZmFsc2UiCiAgICAgICAgICAgIGhvc3Q6ICJ3ZWItcHJveHkuY3VwLmhwLmNvbSIKICAgICAgICAgICAgcG9ydDogIjgwODAiCiAgICAgICAgICBkaXNhYmxlOgogICAgICAgICAgICBob3N0bmFtZToKICAgICAgICAgICAgICB2ZXJpZmljYXRpb246ICJ0cnVlIgogIHduczoKICAgIG5vdGlmaWVyOgogICAgICBkZXJlZzoKICAgICAgICBwdWJsaXNoZXI6CiAgICAgICAgICB1cmw6ICJodHRwczovL3dwcC5ub3RpZmljYXRpb24uc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2NkbS9ldmVudGluZy9ldmVudG5vdGlmaWNhdGlvbiIKdnBkZXZpY2U6CiAgZGV2aWNlaW5mbzoKICAgIGZlYXR1cmU6CiAgICAgIG1vY2s6ICJmYWxzZSIKYXV0aExpYjoKICAgICAgICBibGFja2xpc3RVcmw6ICJodHRwczovL29hdXRoLWF1dGguaW50LnN0Zy11cy5ocG9uZWNsb3VkLmlvL29hdXRoMi92MS9leHRlbnNpb25zL2JsYWNrbGlzdCIKICAgICAgICB2YWxpZGF0ZVRhcmdldDogInRva2VuLXZhbGlkYXRpb24tYXV0aC5pbnQuc3RnLXVzLmhwb25lY2xvdWQuaW86NDQzIgogICAgICAgIGlzc3VlclVybDogImh0dHBzOi8vYXV0aHotc3RyYXR1cy5pbnQuc3RnLXRob3ItdWUxLmhwaXAtaW50ZXJuYWwuY29tLyIKICAgICAgICBzZXJ2aWNlSWRlbnRpZmllciA6ICJ2cGRldiIKICAgICAgICAKdnBkZXY6CiAgbGlua3M6CiAgICB3ZWxjb21lcGFnZTogImh0dHBzOi8vd2VsY29tZXBhZ2Uuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvZGV2aWNlcy93ZWxjb21lcGFnZS97Y2xvdWQtaWR9IgogICAgam9iX2V4ZWNfZW5naW5lOiAiaHR0cHM6Ly9qZWVzLXN0YWdlLmhwOC51cy90ZW56aW5nL3YxIgogICAgYXBwX2dhdGV3YXk6ICJodHRwczovL3JldmVyc2Vwcm94eS1nZW4yLXN0YWdlLmV4dC5ocC5jb206NDQzL3Nob3J0Y3V0L3YxL2N1aT9jdXJyZW50PXNob3J0Y3V0Jmxhbmc9eyRsYW5nfSZyZWdpb249eyRyZWdpb259Jm1vZGVsPXskbW9kZWx9JmZ3VmVyPXskZndWZXJ9JmV4cFR5cGU9eyRleHBUeXBlfSZmb2xkZXJJRD17JGZvbGRlcklEfSZwcm90b2NvbD17JHByb3RvY29sfSIKICAgIHBlcnNvX3ZhdWx0OiAiaHR0cHM6Ly9kdnMtc3RhZ2UuZXh0LmhwLmNvbS92YXVsdC92MSIKICAgIHNlc3Npb25fbWdyOiAiaHR0cHM6Ly9zZXNzaW9uc3ZjLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vc2Vzc2lvbnNlcnZpY2UvdjEiCiAgICB0b2tlbl9wcm94eTogImh0dHBzOi8vc3RhZ2UuYXBpLmhwLmNvbS90b2tlblByb3h5L3YxL3Rva2VuIgogICAgcHJpbnRlcl9hdHRlc3RhdGlvbjogImh0dHBzOi8vc3RhZ2UuYXBpLmhwLmNvbS9wcmludGVyQXR0ZXN0YXRpb24vdjEvYXBwVG9rZW4iCiAgICBocGlkOiAiaHR0cHM6Ly9kaXJlY3Rvcnkuc3RnLmNkLmlkLmhwLmNvbS9kaXJlY3RvcnkvdjEvb2F1dGgvYXV0aG9yaXplIgogICAgd2ViYXV0aDogImh0dHBzOi8vc2lvLnBvZDEuc3RhZ2Uud3BwLmFwaS5ocC5jb20vc2lvL3ttZXNzYWdlX3R5cGV9IgogICAgaHBpZFRva2VuOiAiaHR0cHM6Ly9kaXJlY3Rvcnkuc3RnLmNkLmlkLmhwLmNvbS9kaXJlY3RvcnkvdjEvb2F1dGgvdG9rZW4iCiAgICBhcHBfYXR0ZXN0YXRpb246ICJodHRwczovL3N0YWdlLmFwaS5ocC5jb20vYXBwQXR0ZXN0YXRpb24vdjEvYXBwVG9rZW4iCiAgICBocGlkX290cHVybDogImh0dHBzOi8vb3RwLnN0Zy5jZC5pZC5ocC5jb20vb3RwL3YxL290cHMvY2xpZW50IgogICAgc2Nhbl90b19ocGJ1aWxkOiAiaHR0cHM6Ly9zdGF0aWMtYWVjLWl0Zy5ocGNsb3VkLmhwLmNvbS9wcmludGVyL2NvbmZpZy5qc29uIgogIGNhbGxiYWNrOgogICAgdGVsZW1ldHJ5OgogICAgICB1cmk6ICJodHRwczovL3RlbGVtZXRyeS5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3RlbGVtZXRyeS1zZXJ2aWNlL3YxL3tjbG91ZF9pZH0vZXZlbnRzL3tldmVudENhdGVnb3J5fSIKICBwYXJhbXN0b3JlOgogICAgcGF0aDogIi9zdHJhdHVzLXByaW50ZXItdmFsdmUtY29udHJvbGxlci9zdGFnZS90ZWxlbWV0cnkvIgogIHNzbToKICAgIGNhY2hlOgogICAgICByZWZyZXNoOgogICAgICAgIHRpbWU6ICIyNCIKICAgIHJlZ2lvbjoKICAgICAgbmFtZToKICAgICAgICBoZWFsdGhjaGVjazogInVzLXdlc3QtMiIKICBpczoKICAgIHBhcmFtc3RvcmU6CiAgICAgIGZsYWc6CiAgICAgICAgZW5hYmxlZDogInRydWUiCiAgZXhwZWN0ZWQ6CiAgICBzc206CiAgICAgIHJlc3VsdDoKICAgICAgICBjb3VudDoKICAgICAgICAgIGhlYWx0aGNoZWNrOiAiMzAiCiAgZXZlbnQ6CiAgICBjYXRlZ29yaWVzOgogICAgICBibG9ja2VkOgogICAgICAgIGZvcjoKICAgICAgICAgIHRlbGVtZXRyeTogIndpZmlOZXR3b3JrIgo='|base64 --decode >/opt/wpp/gen2/vp-device/config/application.yaml
+2026-08-14T05:53:54.0119405Z sudo ./entrypoint.sh
+2026-08-14T05:53:54.0119710Z #!/bin/bash -e
+2026-08-14T05:53:54.0119993Z sed -i 's/\r$//' "$0"
+2026-08-14T05:53:54.0120289Z set -o pipefail
+2026-08-14T05:53:54.0120404Z 
+2026-08-14T05:53:54.0120726Z EIP_CIDRS="192.170.21.0/24, 192.170.22.0/24, 192.170.23.0/24"
+2026-08-14T05:53:54.0121068Z REGION="us-west-2"
+2026-08-14T05:53:54.0121373Z SERVICE_NAME="vp-device"
+2026-08-14T05:53:54.0121725Z ASG_NAME="stage-vpc1-device-pod1-subnet-a-vpdev-VPDevGroup-1RN5W3DR0CEN5"
+2026-08-14T05:53:54.0122072Z USER_DATA_HEADER_VERSION="2.0"
+2026-08-14T05:53:54.0122207Z 
+2026-08-14T05:53:54.0122498Z LOG_DIR="/opt/wpp/gen2/${SERVICE_NAME}/logs"
+2026-08-14T05:53:54.0122804Z mkdir -p "$LOG_DIR"
+2026-08-14T05:53:54.0123095Z chmod 755 "$LOG_DIR"
+2026-08-14T05:53:54.0123419Z 
+2026-08-14T05:53:54.0123702Z log() {
+2026-08-14T05:53:54.0124002Z 	local level="$1"; shift
+2026-08-14T05:53:54.0124317Z 	local raw="$*" json k v p
+2026-08-14T05:53:54.0124612Z 	local ts
+2026-08-14T05:53:54.0124727Z 
+2026-08-14T05:53:54.0125041Z 	ts="$(date '+%Y-%m-%d %H:%M:%S')"
+2026-08-14T05:53:54.0125538Z 	json="{\"timestamp\":\"$ts\",\"log_level\":\"$level\",\"service\":\"$SERVICE_NAME\",\"asg_name\":\"$ASG_NAME\",\"instance_id\":\"${INSTANCE_ID:-UNKNOWN}\",\"region\":\"$REGION\",\"user_data_header_version\":\"$USER_DATA_HEADER_VERSION\""
+2026-08-14T05:53:54.0125839Z 
+2026-08-14T05:53:54.0126239Z 	IFS='|' read -ra parts <<< "$raw"
+2026-08-14T05:53:54.0126557Z 	for p in "${parts[@]}"; do
+2026-08-14T05:53:54.0127759Z 		p="$(echo "$p" | xargs)"
+2026-08-14T05:53:54.0128063Z 		if [[ "$p" == *=* ]]; then
+2026-08-14T05:53:54.0128341Z 			k="${p%%=*}"
+2026-08-14T05:53:54.0128615Z 			v="${p#*=}"
+2026-08-14T05:53:54.0128881Z 			v="${v//\\/\\\\}"
+2026-08-14T05:53:54.0129165Z 			v="${v//\"/\\\"}"
+2026-08-14T05:53:54.0129448Z 			v="${v//$'\n'/}"
+2026-08-14T05:53:54.0129729Z 			v="${v//$'\r'/}"
+2026-08-14T05:53:54.0129999Z 			v="${v//$'\t'/}"
+2026-08-14T05:53:54.0130284Z 			json="$json,\"$k\":\"$v\""
+2026-08-14T05:53:54.0130570Z 		fi
+2026-08-14T05:53:54.0130848Z 	done
+2026-08-14T05:53:54.0130952Z 
+2026-08-14T05:53:54.0131247Z 	echo "$json}" >> "$EIP_LOG"
+2026-08-14T05:53:54.0131523Z }
+2026-08-14T05:53:54.0131632Z 
+2026-08-14T05:53:54.0132009Z TOKEN=$(curl -sf --max-time 2 -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 3600" || true)
+2026-08-14T05:53:54.0132524Z INSTANCE_ID=$(curl -sf --max-time 2 -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id | tr -d '\r\n' || true)
+2026-08-14T05:53:54.0132753Z 
+2026-08-14T05:53:54.0133067Z EIP_LOG="$LOG_DIR/eip-${INSTANCE_ID:-UNKNOWN}.log"
+2026-08-14T05:53:54.0133399Z EIP_START=$(date +%s)
+2026-08-14T05:53:54.0133532Z 
+2026-08-14T05:53:54.0133898Z trap 'log ERROR "activity=Unexpected runtime error|abort=true|line=${LINENO}|command=${BASH_COMMAND}"' ERR
+2026-08-14T05:53:54.0134534Z log INFO "activity=EIP assignment script started|pools=$EIP_CIDRS"
+2026-08-14T05:53:54.0134703Z 
+2026-08-14T05:53:54.0135105Z [[ -n "$TOKEN" ]] && log INFO "activity=IMDS token retrieved|imds_token=obtained" || log WARNING "activity=IMDS token failed|imds_token=failed"
+2026-08-14T05:53:54.0135630Z [[ -n "$INSTANCE_ID" ]] && log INFO "activity=Instance ID resolved|instance_id=$INSTANCE_ID" || log WARNING "activity=Instance ID resolution failed|instance_id=UNKNOWN"
+2026-08-14T05:53:54.0137234Z 
+2026-08-14T05:53:54.0137600Z if [[ -z "$INSTANCE_ID" ]]; then
+2026-08-14T05:53:54.0137998Z 	log WARNING "activity=Instance ID missing|result=skipping_eip_assignment|abort=true|reason=imds_unavailable"
+2026-08-14T05:53:54.0138447Z 	log INFO "activity=EIP assignment script completed|result=skipped"
+2026-08-14T05:53:54.0138782Z 	trap - ERR
+2026-08-14T05:53:54.0139057Z fi
+2026-08-14T05:53:54.0139163Z 
+2026-08-14T05:53:54.0139436Z JMESPATH_COND=""
+2026-08-14T05:53:54.0139756Z IFS=',' read -ra CIDR_LIST <<< "$EIP_CIDRS"
+2026-08-14T05:53:54.0139893Z 
+2026-08-14T05:53:54.0140166Z for CIDR in "${CIDR_LIST[@]}"; do
+2026-08-14T05:53:54.0140459Z 	CIDR="${CIDR// /}"
+2026-08-14T05:53:54.0140754Z 	BASE="${CIDR%%/*}"
+2026-08-14T05:53:54.0141043Z 	PLEN="${CIDR##*/}"
+2026-08-14T05:53:54.0141330Z 	IFS='.' read -r O1 O2 O3 _ <<< "$BASE"
+2026-08-14T05:53:54.0141465Z 
+2026-08-14T05:53:54.0141747Z 	if ((PLEN <= 16)); then
+2026-08-14T05:53:54.0144444Z 		JMESPATH_COND+="starts_with(PublicIp,'$O1.$O2.')||"
+2026-08-14T05:53:54.0144872Z 	elif ((PLEN <= 24)); then
+2026-08-14T05:53:54.0145225Z 		RANGE=$((1 << (24 - PLEN)))
+2026-08-14T05:53:54.0145555Z 		for ((b=0; b<RANGE; b++)); do
+2026-08-14T05:53:54.0145913Z 			JMESPATH_COND+="starts_with(PublicIp,'$O1.$O2.$((O3 + b)).')||"
+2026-08-14T05:53:54.0146243Z 		done
+2026-08-14T05:53:54.0146515Z 	else
+2026-08-14T05:53:54.0146863Z 		log WARNING "activity=Invalid CIDR skipped|cidr=$CIDR"
+2026-08-14T05:53:54.0147196Z 	fi
+2026-08-14T05:53:54.0147670Z done
+2026-08-14T05:53:54.0147784Z 
+2026-08-14T05:53:54.0148089Z JMESPATH_COND="${JMESPATH_COND%||}"
+2026-08-14T05:53:54.0148473Z log INFO "activity=JMESPath filter generated|jmespath_filter=$JMESPATH_COND"
+2026-08-14T05:53:54.0148646Z 
+2026-08-14T05:53:54.0148941Z ASSOCIATED=false
+2026-08-14T05:53:54.0149066Z 
+2026-08-14T05:53:54.0149378Z for ((retry=1; retry<=3; retry++)); do
+2026-08-14T05:53:54.0149753Z 	log INFO "activity=Discovering available EIPs|retry_attempt=$retry"
+2026-08-14T05:53:54.0150293Z 	ALL_EIPS=$(aws ec2 describe-addresses --region "$REGION" --filters "Name=domain,Values=vpc" --query "Addresses[?(${JMESPATH_COND}) && AssociationId==\`null\`].[AllocationId,PublicIp]" --output text 2>/dev/null || true)
+2026-08-14T05:53:54.0150822Z 	[[ -n "$ALL_EIPS" ]] && break
+2026-08-14T05:53:54.0151172Z 	[[ $retry -lt 3 ]] && sleep $((retry * 2))
+2026-08-14T05:53:54.0151496Z done
+2026-08-14T05:53:54.0151605Z 
+2026-08-14T05:53:54.0151938Z SORTED_LIST=$(echo "$ALL_EIPS" | shuf)
+2026-08-14T05:53:54.0152098Z 
+2026-08-14T05:53:54.0188342Z if [[ -z "$SORTED_LIST" ]]; then
+2026-08-14T05:53:54.0188796Z 	log WARNING "activity=No EIP candidates available|result=no_candidates|pools=$EIP_CIDRS|instance_id=$INSTANCE_ID"
+2026-08-14T05:53:54.0189173Z else
+2026-08-14T05:53:54.0189487Z 	while IFS=$'\t' read -r ALLOC_ID PUBLIC_IP; do
+2026-08-14T05:53:54.0189957Z 		STILL_FREE=$(aws ec2 describe-addresses --region "$REGION" --allocation-ids "$ALLOC_ID" --query "Addresses[?AssociationId==\`null\`].AllocationId" --output text 2>/dev/null || true)
+2026-08-14T05:53:54.0190402Z 		[[ -n "$STILL_FREE" ]] || {
+2026-08-14T05:53:54.0190775Z 			log WARNING "activity=Taken between describe and allocate|result=retry|alloc_id=$ALLOC_ID|public_ip=$PUBLIC_IP"
+2026-08-14T05:53:54.0191149Z 			continue
+2026-08-14T05:53:54.0191417Z 		}
+2026-08-14T05:53:54.0191517Z 
+2026-08-14T05:53:54.0191916Z 		if aws ec2 associate-address --region "$REGION" --instance-id "$INSTANCE_ID" --allocation-id "$ALLOC_ID" --no-allow-reassociation >/dev/null 2>&1; then
+2026-08-14T05:53:54.0192526Z 			EIP_END=$(date +%s)
+2026-08-14T05:53:54.0192926Z 			log INFO "activity=EIP successfully associated|result=success|alloc_id=$ALLOC_ID|public_ip=$PUBLIC_IP|duration_seconds=$((EIP_END - EIP_START))"
+2026-08-14T05:53:54.0193297Z 			ASSOCIATED=true
+2026-08-14T05:53:54.0193546Z 			break
+2026-08-14T05:53:54.0193770Z 		fi
+2026-08-14T05:53:54.0194019Z 	done <<< "$SORTED_LIST"
+2026-08-14T05:53:54.0194132Z 
+2026-08-14T05:53:54.0194393Z 	if [[ "$ASSOCIATED" == false ]]; then
+2026-08-14T05:53:54.0194675Z 		EIP_END=$(date +%s)
+2026-08-14T05:53:54.0195060Z 		log WARNING "activity=All EIP candidates are in use|result=all_in_use|pools=$EIP_CIDRS|instance_id=$INSTANCE_ID|duration_seconds=$((EIP_END - EIP_START))"
+2026-08-14T05:53:54.0195455Z 	fi
+2026-08-14T05:53:54.0195696Z fi
+2026-08-14T05:53:54.0195787Z 
+2026-08-14T05:53:54.0196044Z trap - ERR
+2026-08-14T05:53:54.0196354Z log INFO "activity=EIP assignment script completed"
+2026-08-14T05:53:54.0196508Z 
+2026-08-14T05:53:54.0196767Z   with aws_launch_configuration.this[0],
+2026-08-14T05:53:54.0197061Z   on main.tf line 33, in resource "aws_launch_configuration" "this":
+2026-08-14T05:53:54.0197429Z   33:   user_data                        = try(data.template_file.user_data[0].rendered, var.user_data)
+2026-08-14T05:53:54.0197599Z 
+2026-08-14T05:53:54.0197692Z 
+2026-08-14T05:53:54.0197981Z time=2026-08-14T05:53:54Z level=info msg=
+2026-08-14T05:53:54.0198336Z Error: expected length of user_data to be in the range (1 - 16384), got #!/bin/bash
+2026-08-14T05:53:54.0198652Z cd /home/ec2-user
+2026-08-14T05:53:54.0201123Z echo '{"environment":{"AWS_REGION":"us-west-2","DATADOG_ENABLED":"true","DRIVER_CLASS":"com.mysql.jdbc.Driver","ENVIRONMENT":"stage","JDBC_URL":"jdbc:mysql://stage-dvc-pod1-rds-dvccommon-db.vpc1-stage-wppinternal.com:3306/ops_db?connectTimeout=60000\u0026socketTimeout=60000\u0026useSSL=true\u0026verifyServerCertificate=true\u0026enabledTLSProtocols=TLSv1.2","LOG_EXCLUDE_FILES":"*.20*.json,*.20*.log,*.20*.json,*.20*.*.log,*..20*,*.gz,*logback*.20*.log,wpp_*.20*.log,stratus_*.20*.log,*.20*_access.log,*.20*_access.json,*access_log..20*","LOG_PATH":"/opt/wpp/gen2/vp-device/logs/eip*.log, /opt/wpp/gen2/vp-device/logs/*,/opt/wpp/gen2/ams/logs/vp-device_access.log","MAX_HEAP":"4096m","MIN_HEAP":"1024m","POD":"pod1","SERVICE_NAME":"vp-device","SPLUNK_APM_ENVIRONMENT":"stg","SPLUNK_APM_SECRET_NAME":"splunk_apm_stg","SPLUNK_APM_TEAM":"iot","SPLUNK_ENTERPRISE_ENABLED":"true","rp_secret_name":"stage-vpc1-device-pod1-rp-vp-device-secret","rp_secret_region":"us-west-2","splunk_index":"wppgen2-stage","splunk_log_path":"/opt/wpp/gen2/vp-device/logs/","splunk_source_type":"vpdev","zabbix_frontend_vpce_r53":"zabbix.stage.vpc1-stage-wppinternal.com","zabbix_hostgroup":"WPP-Gen2:  Avatar: VP-Device: stagepod1","zabbix_server_vpce_r53":"zproxy1.vpc1-stage-wppinternal.com","zabbix_template":"WPP-meta-vpdev","zabbix_usergroup":"WPP-Gen2"},"externalSecrets":[{"key":"DB_USERNAME","name":"DB_USERNAME","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"DB_PASSWORD","name":"DB_PASSWORD","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdev_printer_db_username","name":"VPDEV_SERVICE_DATASOURCE_USERNAME","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdev_printer_db_password","name":"VPDEV_SERVICE_DATASOURCE_PASSWORD","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdevapi_vpeas_authentication_header","name":"VPDEVAPI_VPEAS_AUTHENTICATION_HEADER","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"wns_notification_publish_event_ackToken","name":"WNS_EVENT_ACK_TOKEN","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"wns_notification_publish_event_pubId","name":"WNS_EVENT_PUBID","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdevapi_avatar_avdls_auth","name":"AVDLS_BASIC_AUTH","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"launch_darkly_sdk_key","name":"LAUNCH_DARKLY_SDK_KEY","secret":"stage-vpc1-device-pod1-vp-device-secret"}],"externalSecretsRegion":"us-west-2"}'>/home/ec2-user/service-config.json
+2026-08-14T05:53:54.0214195Z echo 'c2tlcm5lbDoKICBzZWN1cml0eToKICAgIG9hdXRoMjoKICAgICAgYXV0aHo6CiAgICAgICAgY2xpZW50OgogICAgICAgICAgY3JlZGVudGlhbHN0b3JlOgogICAgICAgICAgICBzZWNyZXRzbWFuYWdlcjoKICAgICAgICAgICAgICBzZWNyZXRpZDogc3RhZ2UtdnBjMS1kZXZpY2UtcG9kMS12cC1kZXZpY2Utc2VjcmV0CiAgICAgICAgICAgICAgcmVnaW9uOiB1cy13ZXN0LTIKICAgICAgICB0b2tlbi11cmk6IGh0dHBzOi8vc3RhZ2UuYXV0aHoud3BwLmFwaS5ocC5jb20vb3BlbmlkL3YxL3Rva2VuCiAgY3VzdG9taGVhbHRoOgogICAgdmVyc2lvbjogdjEuMAogICAgZW5hYmxlZDogdHJ1ZQogICAgY29tcG9zaXRlOgogICAgICAtIHR5cGU6IF9fc2tzZXJ2aWNlCiAgICAgICAgbmFtZTogQXZyZWcgSGVhbHRoY2hlY2sKICAgICAgICBoZWFsdGh1cmw6IGh0dHBzOi8vcmVnaXN0cmF0aW9uLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IFZwZWFzIEhlYWx0aGNoZWNrCiAgICAgICAgaGVhbHRodXJsOiBodHRwczovL2VtYWlsY29uZmlnLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IERMUyBIZWFsdGhjaGVjawogICAgICAgIGhlYWx0aHVybDogaHR0cHM6Ly9kZXZpY2Vsb29rdXAuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvYWJvdXQKICAgICAgICByZWdpb246IE5BCiAgICAgICAgZW5hYmxlZDogdHJ1ZQogICAgICAtIHR5cGU6IF9fc2tzZXJ2aWNlCiAgICAgICAgbmFtZTogV05TIEhlYWx0aGNoZWNrCiAgICAgICAgaGVhbHRodXJsOiBodHRwczovL3dwcC5ub3RpZmljYXRpb24uc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IEFNUyBIZWFsdGhjaGVjawogICAgICAgIGhlYWx0aHVybDogaHR0cHM6Ly9hY2Nlc3NtZ210LnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2FjY2Vzc21nbXQvYWN0dWF0b3IvaW5mbwogICAgICAgIHJlZ2lvbjogTkEKICAgICAgICBlbmFibGVkOiB0cnVlCnZwZGV2YXBpOgogIGRiOgogICAgamRiYzoKICAgICAgdXJsOiAiamRiYzpteXNxbDovL3N0YWdlLWR2Yy1wb2QxLXJkcy12cHJlZy1kYi52cGMxLXN0YWdlLXdwcGludGVybmFsLmNvbTozMzA2L3ByaW50ZXJkYj9jb25uZWN0VGltZW91dD02MDAwMCZzb2NrZXRUaW1lb3V0PTYwMDAwJnVzZVNTTD10cnVlJnZlcmlmeVNlcnZlckNlcnRpZmljYXRlPXRydWUmZW5hYmxlZFRMU1Byb3RvY29scz1UTFN2MS4yIgogIGRldmljZToKICAgIHN0YXR1czoKICAgICAgaG9zdDogImRldmljZXN0YXR1cy5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tIgogICAgICBwb3J0OiAiODA4MCIKICAgICAgY29udGV4dDogIi9hdmF0YXIvcHJpbnRlcnMiCiAgICBpbmZvOgogICAgICBpbWFnZTQyMjY6ICJodHRwczovL2RldmljZXMudXMxLmFwaS53cy1ocC5jb20vZGV2aWNlcy92MS9pbWFnZXMvJXMvNDJ4MjYucG5nIgogICAgICBpbWFnZTEzMDEyMDogImh0dHBzOi8vZGV2aWNlcy51czEuYXBpLndzLWhwLmNvbS9kZXZpY2VzL3YxL2ltYWdlcy8lcy8xMzB4MTAyLnBuZyIKICAgICAgaW1hZ2UxNzAxMjg6ICJodHRwczovL2RldmljZXMudXMxLmFwaS53cy1ocC5jb20vZGV2aWNlcy92MS9pbWFnZXMvJXMvMTcweDEyOC5wbmciCiAgICAgIGltYWdlMzAwMjQ1OiAiaHR0cHM6Ly9kZXZpY2VzLnVzMS5hcGkud3MtaHAuY29tL2RldmljZXMvdjEvaW1hZ2VzLyVzLzMwMHgyNDUucG5nIgogICAgICBzZWxmOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby8lcyIKICAgICAgcHJpbnRpbmZvOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby9wcmludC8lcyIKICAgICAgYXBwcGxheWVyOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby9hcHBfcGxheWVyLyVzIgogICAgICBjbG91ZGNvbmZpZzogImh0dHBzOi8vZGV2aWNlbWdtdC5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXJzL2Nsb3VkY29uZmlnLyVzIgogICAgICBlbWFpbGFkZHJlc3M6ICJodHRwczovL2VtYWlsY29uZmlnLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXJzL2VtYWlsX2FkZHJlc3MvJXMiCiAgICAgIHN0YXR1czogImh0dHBzOi8vZGV2aWNlc3RhdHVzLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL3ByaW50ZXJzL3N0YXR1cy8lcyIKICAgIGhwYzoKICAgICAgc2hhcmluZzoKICAgICAgICBlbmFibGVkOiAidHJ1ZSIKICAgIGlzOgogICAgICB3ZWI6CiAgICAgICAgc2VydmljZXM6CiAgICAgICAgICB1cGRhdGU6CiAgICAgICAgICAgIGVuYWJsZWQ6ICJ0cnVlIgogIGVudGl0eToKICAgIGluZm86CiAgICAgIGFwaToKICAgICAgICB1cmw6ICJodHRwczovL3JlZ2lzdHJhdGlvbi5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2F2YXRhci92MS9lbnRpdGllcy9lbnRpdHlfaW5mby8lcyIKICBlbWFpbGNsaWVudDoKICAgIGdlbjoKICAgICAgdXJsOiAiaHR0cHM6Ly9lbWFpbGNvbmZpZy5zdGFnZS5hdmF0YXIuZXh0LmhwLmNvbS92aXJ0dWFscHJpbnRlci92MS9wcmludGVycy9lbWFpbF9hZGRyZXNzLyVzIgogIGRpc2NvdmVyeWNsaWVudDoKICAgIGdlbjoKICAgICAgdXJsOiAiaHR0cHM6Ly9pbnQuZW50aXR5ZGlzY292ZXJ5LnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2F2YXRhci92MS9lbnRpdGllcz9jbG91ZC1pZD0lcyIKICBhdmF0YXI6CiAgICBkYXRhYnJpZGdlOgogICAgICB1cmw6ICJodHRwczovL2RhdGFicmlkZ2UucG9kMS5zdGFnZS5hdmF0YXIuZXh0LmhwLmNvbS9hdmF0YXIvdjEvZGF0YWJyaWRnZS8lcyIKICAgIGlwcGVuZHBvaW50OgogICAgICB1cmw6ICJodHRwczovL2lwcHByaW50LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxLyVzL2lwcC9wcmludCIKICAgIGF2ZGxzOgogICAgICBlbmRwb2ludDogImh0dHBzOi8vZGV2aWNlbG9va3VwLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXIvZGlzY292ZXJ5P2Nsb3VkSWQ9JXMiCgogIHBvbGljeW1ncjoKICAgIHVybDogImh0dHBzOi8vcHJpbnRlci1wb2xpY3ktbWFuYWdlci1zdHJhdHVzLmludC5zdGctdGhvci11ZTEuaHBpcC1pbnRlcm5hbC5jb20vcHJpbnRlcnBvbGljeW1nci92MS9kZXZpY2VzLyVzL3BvbGljaWVzL3RlbGVtZXRyeSIgICAgICAgIAogIGF1dGh6OgogICAgdGltZToKICAgICAgYmVmb3JlOgogICAgICAgIGV4cGlyeToKICAgICAgICAgIHRvOgogICAgICAgICAgICByZWZyZXNoOgogICAgICAgICAgICAgIHRva2VuOgogICAgICAgICAgICAgICAgaW46CiAgICAgICAgICAgICAgICAgIG1pbnV0ZXM6ICI1IgogICAgcmV0cnk6CiAgICAgIGFmdGVyOgogICAgICAgIGZhaWx1cmU6CiAgICAgICAgICBpbjoKICAgICAgICAgICAgc2Vjb25kczogIjUiCiAgICBwcm94eToKICAgICAgcG9ydDogIjgwODAiCiAgICAgIGhvc3Q6ICJ3ZWItcHJveHkuY3VwLmhwLmNvbSIKICAgIHNvY2tldDoKICAgICAgdGltZW91dDogIjYwMDAiCiAgICBzZXJ2aWNlOgogICAgICBuYW1lOiAidnBkZXYiCiAgICBpczoKICAgICAgcHJveHk6CiAgICAgICAgZW5hYmxlZDogImZhbHNlIgogICAgdXJsOiAiaHR0cHM6Ly9hdXRoei1zdHJhdHVzLmludC5zdGctdGhvci11ZTEuaHBpcC1pbnRlcm5hbC5jb20vLndlbGwta25vd24vb3BlbmlkLWNvbmZpZ3VyYXRpb24iCiAgY2xpZW50OgogICAgcm9sZToKICAgICAgZm9yOgogICAgICAgIGFtczoKICAgICAgICAgIGF1dGhvcml6ZTogImNvbS5ocC53cHAuYWNjZXNzbWdtdC5yb2xlLm93bmVyLnZlcnNpb24uMSIKICBhdXRob3JpemU6CiAgICB1cmw6ICJodHRwczovL2FjY2Vzc21nbXQuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYWNjZXNzbWdtdC92MS9hdXRob3JpemF0aW9uIgogIGlzOgogICAgYW1zOgogICAgICBhdXRoOgogICAgICAgIGZlYXR1cmU6CiAgICAgICAgICBlbmFibGVkOiAidHJ1ZSIKICAgIG1lZGlhc2l6ZToKICAgICAgdW5rbm93bjoKICAgICAgICBmZWF0dXJlOgogICAgICAgICAgZW5hYmxlZDogInRydWUiCiAgYW1zOgogICAgY2xpZW50OgogICAgICBodHRwOgogICAgICAgIGNvbmZpZzoKICAgICAgICAgIHNvY2tldDoKICAgICAgICAgICAgdGltZW91dDogIjYwMDAiCiAgICAgICAgICBtYXg6CiAgICAgICAgICAgIHRvdGFsOgogICAgICAgICAgICAgIGNvbm5lY3Rpb25zOiAiMTAwIgogICAgICAgICAgICBjb25uZWN0aW9uczoKICAgICAgICAgICAgICBwZXI6CiAgICAgICAgICAgICAgICByb3V0ZTogIjEwMCIKICAgICAgICAgIHByb3h5OgogICAgICAgICAgICBlbmFibGVkOiAiZmFsc2UiCiAgICAgICAgICAgIGhvc3Q6ICJ3ZWItcHJveHkuY3VwLmhwLmNvbSIKICAgICAgICAgICAgcG9ydDogIjgwODAiCiAgICAgICAgICBkaXNhYmxlOgogICAgICAgICAgICBob3N0bmFtZToKICAgICAgICAgICAgICB2ZXJpZmljYXRpb246ICJ0cnVlIgogIHduczoKICAgIG5vdGlmaWVyOgogICAgICBkZXJlZzoKICAgICAgICBwdWJsaXNoZXI6CiAgICAgICAgICB1cmw6ICJodHRwczovL3dwcC5ub3RpZmljYXRpb24uc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2NkbS9ldmVudGluZy9ldmVudG5vdGlmaWNhdGlvbiIKdnBkZXZpY2U6CiAgZGV2aWNlaW5mbzoKICAgIGZlYXR1cmU6CiAgICAgIG1vY2s6ICJmYWxzZSIKYXV0aExpYjoKICAgICAgICBibGFja2xpc3RVcmw6ICJodHRwczovL29hdXRoLWF1dGguaW50LnN0Zy11cy5ocG9uZWNsb3VkLmlvL29hdXRoMi92MS9leHRlbnNpb25zL2JsYWNrbGlzdCIKICAgICAgICB2YWxpZGF0ZVRhcmdldDogInRva2VuLXZhbGlkYXRpb24tYXV0aC5pbnQuc3RnLXVzLmhwb25lY2xvdWQuaW86NDQzIgogICAgICAgIGlzc3VlclVybDogImh0dHBzOi8vYXV0aHotc3RyYXR1cy5pbnQuc3RnLXRob3ItdWUxLmhwaXAtaW50ZXJuYWwuY29tLyIKICAgICAgICBzZXJ2aWNlSWRlbnRpZmllciA6ICJ2cGRldiIKICAgICAgICAKdnBkZXY6CiAgbGlua3M6CiAgICB3ZWxjb21lcGFnZTogImh0dHBzOi8vd2VsY29tZXBhZ2Uuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvZGV2aWNlcy93ZWxjb21lcGFnZS97Y2xvdWQtaWR9IgogICAgam9iX2V4ZWNfZW5naW5lOiAiaHR0cHM6Ly9qZWVzLXN0YWdlLmhwOC51cy90ZW56aW5nL3YxIgogICAgYXBwX2dhdGV3YXk6ICJodHRwczovL3JldmVyc2Vwcm94eS1nZW4yLXN0YWdlLmV4dC5ocC5jb206NDQzL3Nob3J0Y3V0L3YxL2N1aT9jdXJyZW50PXNob3J0Y3V0Jmxhbmc9eyRsYW5nfSZyZWdpb249eyRyZWdpb259Jm1vZGVsPXskbW9kZWx9JmZ3VmVyPXskZndWZXJ9JmV4cFR5cGU9eyRleHBUeXBlfSZmb2xkZXJJRD17JGZvbGRlcklEfSZwcm90b2NvbD17JHByb3RvY29sfSIKICAgIHBlcnNvX3ZhdWx0OiAiaHR0cHM6Ly9kdnMtc3RhZ2UuZXh0LmhwLmNvbS92YXVsdC92MSIKICAgIHNlc3Npb25fbWdyOiAiaHR0cHM6Ly9zZXNzaW9uc3ZjLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vc2Vzc2lvbnNlcnZpY2UvdjEiCiAgICB0b2tlbl9wcm94eTogImh0dHBzOi8vc3RhZ2UuYXBpLmhwLmNvbS90b2tlblByb3h5L3YxL3Rva2VuIgogICAgcHJpbnRlcl9hdHRlc3RhdGlvbjogImh0dHBzOi8vc3RhZ2UuYXBpLmhwLmNvbS9wcmludGVyQXR0ZXN0YXRpb24vdjEvYXBwVG9rZW4iCiAgICBocGlkOiAiaHR0cHM6Ly9kaXJlY3Rvcnkuc3RnLmNkLmlkLmhwLmNvbS9kaXJlY3RvcnkvdjEvb2F1dGgvYXV0aG9yaXplIgogICAgd2ViYXV0aDogImh0dHBzOi8vc2lvLnBvZDEuc3RhZ2Uud3BwLmFwaS5ocC5jb20vc2lvL3ttZXNzYWdlX3R5cGV9IgogICAgaHBpZFRva2VuOiAiaHR0cHM6Ly9kaXJlY3Rvcnkuc3RnLmNkLmlkLmhwLmNvbS9kaXJlY3RvcnkvdjEvb2F1dGgvdG9rZW4iCiAgICBhcHBfYXR0ZXN0YXRpb246ICJodHRwczovL3N0YWdlLmFwaS5ocC5jb20vYXBwQXR0ZXN0YXRpb24vdjEvYXBwVG9rZW4iCiAgICBocGlkX290cHVybDogImh0dHBzOi8vb3RwLnN0Zy5jZC5pZC5ocC5jb20vb3RwL3YxL290cHMvY2xpZW50IgogICAgc2Nhbl90b19ocGJ1aWxkOiAiaHR0cHM6Ly9zdGF0aWMtYWVjLWl0Zy5ocGNsb3VkLmhwLmNvbS9wcmludGVyL2NvbmZpZy5qc29uIgogIGNhbGxiYWNrOgogICAgdGVsZW1ldHJ5OgogICAgICB1cmk6ICJodHRwczovL3RlbGVtZXRyeS5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3RlbGVtZXRyeS1zZXJ2aWNlL3YxL3tjbG91ZF9pZH0vZXZlbnRzL3tldmVudENhdGVnb3J5fSIKICBwYXJhbXN0b3JlOgogICAgcGF0aDogIi9zdHJhdHVzLXByaW50ZXItdmFsdmUtY29udHJvbGxlci9zdGFnZS90ZWxlbWV0cnkvIgogIHNzbToKICAgIGNhY2hlOgogICAgICByZWZyZXNoOgogICAgICAgIHRpbWU6ICIyNCIKICAgIHJlZ2lvbjoKICAgICAgbmFtZToKICAgICAgICBoZWFsdGhjaGVjazogInVzLXdlc3QtMiIKICBpczoKICAgIHBhcmFtc3RvcmU6CiAgICAgIGZsYWc6CiAgICAgICAgZW5hYmxlZDogInRydWUiCiAgZXhwZWN0ZWQ6CiAgICBzc206CiAgICAgIHJlc3VsdDoKICAgICAgICBjb3VudDoKICAgICAgICAgIGhlYWx0aGNoZWNrOiAiMzAiCiAgZXZlbnQ6CiAgICBjYXRlZ29yaWVzOgogICAgICBibG9ja2VkOgogICAgICAgIGZvcjoKICAgICAgICAgIHRlbGVtZXRyeTogIndpZmlOZXR3b3JrIgo='|base64 --decode >/opt/wpp/gen2/vp-device/config/application.yaml
+2026-08-14T05:53:54.0224598Z sudo ./entrypoint.sh
+2026-08-14T05:53:54.0224869Z #!/bin/bash -e
+2026-08-14T05:53:54.0225133Z sed -i 's/\r$//' "$0"
+2026-08-14T05:53:54.0225417Z set -o pipefail
+2026-08-14T05:53:54.0225532Z 
+2026-08-14T05:53:54.0225850Z EIP_CIDRS="192.170.21.0/24, 192.170.22.0/24, 192.170.23.0/24"
+2026-08-14T05:53:54.0226151Z REGION="us-west-2"
+2026-08-14T05:53:54.0226418Z SERVICE_NAME="vp-device"
+2026-08-14T05:53:54.0226731Z ASG_NAME="stage-vpc1-device-pod1-subnet-b-vpdev-VPDevGroup-1FBX68R262QU"
+2026-08-14T05:53:54.0227064Z USER_DATA_HEADER_VERSION="2.0"
+2026-08-14T05:53:54.0227359Z 
+2026-08-14T05:53:54.0227642Z LOG_DIR="/opt/wpp/gen2/${SERVICE_NAME}/logs"
+2026-08-14T05:53:54.0227942Z mkdir -p "$LOG_DIR"
+2026-08-14T05:53:54.0228221Z chmod 755 "$LOG_DIR"
+2026-08-14T05:53:54.0228345Z 
+2026-08-14T05:53:54.0228601Z log() {
+2026-08-14T05:53:54.0232748Z 	local level="$1"; shift
+2026-08-14T05:53:54.0233114Z 	local raw="$*" json k v p
+2026-08-14T05:53:54.0233388Z 	local ts
+2026-08-14T05:53:54.0233492Z 
+2026-08-14T05:53:54.0233792Z 	ts="$(date '+%Y-%m-%d %H:%M:%S')"
+2026-08-14T05:53:54.0234282Z 	json="{\"timestamp\":\"$ts\",\"log_level\":\"$level\",\"service\":\"$SERVICE_NAME\",\"asg_name\":\"$ASG_NAME\",\"instance_id\":\"${INSTANCE_ID:-UNKNOWN}\",\"region\":\"$REGION\",\"user_data_header_version\":\"$USER_DATA_HEADER_VERSION\""
+2026-08-14T05:53:54.0234599Z 
+2026-08-14T05:53:54.0234888Z 	IFS='|' read -ra parts <<< "$raw"
+2026-08-14T05:53:54.0235184Z 	for p in "${parts[@]}"; do
+2026-08-14T05:53:54.0235371Z 		p="$(echo "$p" | xargs)"
+2026-08-14T05:53:54.0235683Z 		if [[ "$p" == *=* ]]; then
+2026-08-14T05:53:54.0235975Z 			k="${p%%=*}"
+2026-08-14T05:53:54.0236241Z 			v="${p#*=}"
+2026-08-14T05:53:54.0236503Z 			v="${v//\\/\\\\}"
+2026-08-14T05:53:54.0236675Z 			v="${v//\"/\\\"}"
+2026-08-14T05:53:54.0236829Z 			v="${v//$'\n'/}"
+2026-08-14T05:53:54.0236985Z 			v="${v//$'\r'/}"
+2026-08-14T05:53:54.0237134Z 			v="${v//$'\t'/}"
+2026-08-14T05:53:54.0237295Z 			json="$json,\"$k\":\"$v\""
+2026-08-14T05:53:54.0237451Z 		fi
+2026-08-14T05:53:54.0237597Z 	done
+2026-08-14T05:53:54.0237655Z 
+2026-08-14T05:53:54.0237809Z 	echo "$json}" >> "$EIP_LOG"
+2026-08-14T05:53:54.0237959Z }
+2026-08-14T05:53:54.0238025Z 
+2026-08-14T05:53:54.0238234Z TOKEN=$(curl -sf --max-time 2 -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 3600" || true)
+2026-08-14T05:53:54.0238531Z INSTANCE_ID=$(curl -sf --max-time 2 -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id | tr -d '\r\n' || true)
+2026-08-14T05:53:54.0238663Z 
+2026-08-14T05:53:54.0238841Z EIP_LOG="$LOG_DIR/eip-${INSTANCE_ID:-UNKNOWN}.log"
+2026-08-14T05:53:54.0239207Z EIP_START=$(date +%s)
+2026-08-14T05:53:54.0239276Z 
+2026-08-14T05:53:54.0239472Z trap 'log ERROR "activity=Unexpected runtime error|abort=true|line=${LINENO}|command=${BASH_COMMAND}"' ERR
+2026-08-14T05:53:54.0239699Z log INFO "activity=EIP assignment script started|pools=$EIP_CIDRS"
+2026-08-14T05:53:54.0239788Z 
+2026-08-14T05:53:54.0239998Z [[ -n "$TOKEN" ]] && log INFO "activity=IMDS token retrieved|imds_token=obtained" || log WARNING "activity=IMDS token failed|imds_token=failed"
+2026-08-14T05:53:54.0240284Z [[ -n "$INSTANCE_ID" ]] && log INFO "activity=Instance ID resolved|instance_id=$INSTANCE_ID" || log WARNING "activity=Instance ID resolution failed|instance_id=UNKNOWN"
+2026-08-14T05:53:54.0240417Z 
+2026-08-14T05:53:54.0240572Z if [[ -z "$INSTANCE_ID" ]]; then
+2026-08-14T05:53:54.0240780Z 	log WARNING "activity=Instance ID missing|result=skipping_eip_assignment|abort=true|reason=imds_unavailable"
+2026-08-14T05:53:54.0241020Z 	log INFO "activity=EIP assignment script completed|result=skipped"
+2026-08-14T05:53:54.0241207Z 	trap - ERR
+2026-08-14T05:53:54.0241354Z fi
+2026-08-14T05:53:54.0241411Z 
+2026-08-14T05:53:54.0241557Z JMESPATH_COND=""
+2026-08-14T05:53:54.0241730Z IFS=',' read -ra CIDR_LIST <<< "$EIP_CIDRS"
+2026-08-14T05:53:54.0241808Z 
+2026-08-14T05:53:54.0241959Z for CIDR in "${CIDR_LIST[@]}"; do
+2026-08-14T05:53:54.0242120Z 	CIDR="${CIDR// /}"
+2026-08-14T05:53:54.0242273Z 	BASE="${CIDR%%/*}"
+2026-08-14T05:53:54.0242426Z 	PLEN="${CIDR##*/}"
+2026-08-14T05:53:54.0242584Z 	IFS='.' read -r O1 O2 O3 _ <<< "$BASE"
+2026-08-14T05:53:54.0242659Z 
+2026-08-14T05:53:54.0242810Z 	if ((PLEN <= 16)); then
+2026-08-14T05:53:54.0242990Z 		JMESPATH_COND+="starts_with(PublicIp,'$O1.$O2.')||"
+2026-08-14T05:53:54.0243168Z 	elif ((PLEN <= 24)); then
+2026-08-14T05:53:54.0243335Z 		RANGE=$((1 << (24 - PLEN)))
+2026-08-14T05:53:54.0243502Z 		for ((b=0; b<RANGE; b++)); do
+2026-08-14T05:53:54.0243688Z 			JMESPATH_COND+="starts_with(PublicIp,'$O1.$O2.$((O3 + b)).')||"
+2026-08-14T05:53:54.0243958Z 		done
+2026-08-14T05:53:54.0244101Z 	else
+2026-08-14T05:53:54.0244273Z 		log WARNING "activity=Invalid CIDR skipped|cidr=$CIDR"
+2026-08-14T05:53:54.0244443Z 	fi
+2026-08-14T05:53:54.0244587Z done
+2026-08-14T05:53:54.0244648Z 
+2026-08-14T05:53:54.0244813Z JMESPATH_COND="${JMESPATH_COND%||}"
+2026-08-14T05:53:54.0245015Z log INFO "activity=JMESPath filter generated|jmespath_filter=$JMESPATH_COND"
+2026-08-14T05:53:54.0245110Z 
+2026-08-14T05:53:54.0245260Z ASSOCIATED=false
+2026-08-14T05:53:54.0245327Z 
+2026-08-14T05:53:54.0245487Z for ((retry=1; retry<=3; retry++)); do
+2026-08-14T05:53:54.0245683Z 	log INFO "activity=Discovering available EIPs|retry_attempt=$retry"
+2026-08-14T05:53:54.0245972Z 	ALL_EIPS=$(aws ec2 describe-addresses --region "$REGION" --filters "Name=domain,Values=vpc" --query "Addresses[?(${JMESPATH_COND}) && AssociationId==\`null\`].[AllocationId,PublicIp]" --output text 2>/dev/null || true)
+2026-08-14T05:53:54.0246225Z 	[[ -n "$ALL_EIPS" ]] && break
+2026-08-14T05:53:54.0246404Z 	[[ $retry -lt 3 ]] && sleep $((retry * 2))
+2026-08-14T05:53:54.0246569Z done
+2026-08-14T05:53:54.0246626Z 
+2026-08-14T05:53:54.0246782Z SORTED_LIST=$(echo "$ALL_EIPS" | shuf)
+2026-08-14T05:53:54.0246862Z 
+2026-08-14T05:53:54.0247013Z if [[ -z "$SORTED_LIST" ]]; then
+2026-08-14T05:53:54.0247223Z 	log WARNING "activity=No EIP candidates available|result=no_candidates|pools=$EIP_CIDRS|instance_id=$INSTANCE_ID"
+2026-08-14T05:53:54.0247421Z else
+2026-08-14T05:53:54.0247658Z 	while IFS=$'\t' read -r ALLOC_ID PUBLIC_IP; do
+2026-08-14T05:53:54.0247949Z 		STILL_FREE=$(aws ec2 describe-addresses --region "$REGION" --allocation-ids "$ALLOC_ID" --query "Addresses[?AssociationId==\`null\`].AllocationId" --output text 2>/dev/null || true)
+2026-08-14T05:53:54.0248181Z 		[[ -n "$STILL_FREE" ]] || {
+2026-08-14T05:53:54.0248386Z 			log WARNING "activity=Taken between describe and allocate|result=retry|alloc_id=$ALLOC_ID|public_ip=$PUBLIC_IP"
+2026-08-14T05:53:54.0248587Z 			continue
+2026-08-14T05:53:54.0248829Z 		}
+2026-08-14T05:53:54.0248889Z 
+2026-08-14T05:53:54.0249101Z 		if aws ec2 associate-address --region "$REGION" --instance-id "$INSTANCE_ID" --allocation-id "$ALLOC_ID" --no-allow-reassociation >/dev/null 2>&1; then
+2026-08-14T05:53:54.0249330Z 			EIP_END=$(date +%s)
+2026-08-14T05:53:54.0249563Z 			log INFO "activity=EIP successfully associated|result=success|alloc_id=$ALLOC_ID|public_ip=$PUBLIC_IP|duration_seconds=$((EIP_END - EIP_START))"
+2026-08-14T05:53:54.0249782Z 			ASSOCIATED=true
+2026-08-14T05:53:54.0249947Z 			break
+2026-08-14T05:53:54.0250090Z 		fi
+2026-08-14T05:53:54.0250251Z 	done <<< "$SORTED_LIST"
+2026-08-14T05:53:54.0250318Z 
+2026-08-14T05:53:54.0250480Z 	if [[ "$ASSOCIATED" == false ]]; then
+2026-08-14T05:53:54.0250656Z 		EIP_END=$(date +%s)
+2026-08-14T05:53:54.0250891Z 		log WARNING "activity=All EIP candidates are in use|result=all_in_use|pools=$EIP_CIDRS|instance_id=$INSTANCE_ID|duration_seconds=$((EIP_END - EIP_START))"
+2026-08-14T05:53:54.0251104Z 	fi
+2026-08-14T05:53:54.0251252Z fi
+2026-08-14T05:53:54.0251316Z 
+2026-08-14T05:53:54.0251463Z trap - ERR
+2026-08-14T05:53:54.0251636Z log INFO "activity=EIP assignment script completed"
+2026-08-14T05:53:54.0251723Z 
+2026-08-14T05:53:54.0251898Z   with aws_launch_configuration.this[0],
+2026-08-14T05:53:54.0252099Z   on main.tf line 33, in resource "aws_launch_configuration" "this":
+2026-08-14T05:53:54.0252314Z   33:   user_data                        = try(data.template_file.user_data[0].rendered, var.user_data)
+2026-08-14T05:53:54.0252413Z 
+2026-08-14T05:53:54.0252471Z 
+2026-08-14T05:53:54.0252649Z time=2026-08-14T05:53:54Z level=error msg=2 errors occurred:
+2026-08-14T05:53:54.0252843Z 	* exit status 1
+2026-08-14T05:53:54.0253003Z 	* exit status 1
+2026-08-14T05:53:54.0253070Z 
+2026-08-14T05:53:54.0253123Z 
+2026-08-14T05:53:54.0269605Z ##[error] terragrunt run-all plan failed with exitcode: 1
+2026-08-14T05:53:54.0274700Z 
+2026-08-14T05:53:54.0278453Z ##[section]Finishing: Run terragrunt run-all plan
