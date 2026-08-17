@@ -1,0 +1,1637 @@
+2026-08-14T05:51:57.3697497Z ##[section]Starting: Terragrunt Deployment - Path: infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/
+2026-08-14T05:51:58.1985771Z ##[section]Starting: Initialize job
+2026-08-14T05:51:58.1988129Z Agent name: 'i-0794c79034cfc8443'
+2026-08-14T05:51:58.1988595Z Agent machine name: 'ip-100-64-75-7'
+2026-08-14T05:51:58.1988821Z Current agent version: '4.270.0'
+2026-08-14T05:51:59.8766743Z Agent running as: 'agent-runner'
+2026-08-14T05:51:59.8797156Z Prepare build directory.
+2026-08-14T05:51:59.8955184Z Set build variables.
+2026-08-14T05:51:59.8968154Z Download all required tasks.
+2026-08-14T05:51:59.9342011Z Downloading task: UsePythonVersion (0.276.0)
+2026-08-14T05:52:00.9418070Z Downloading task: Bash (3.274.1)
+2026-08-14T05:52:01.8654735Z Downloading task: PowerShell (2.276.1)
+2026-08-14T05:52:02.8510784Z Downloading task: CmdLine (2.276.0)
+2026-08-14T05:52:03.1992165Z Downloading task: PythonScript (0.274.1)
+2026-08-14T05:52:03.5367157Z Checking job knob settings.
+2026-08-14T05:52:03.5369343Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2026-08-14T05:52:03.5370250Z    Knob: UseGitLongPaths = true Source: $(USE_GIT_LONG_PATHS) 
+2026-08-14T05:52:03.5371157Z    Knob: UseNode24withHandlerData = True Source: $(DistributedTask.Agent.UseNode24withHandlerData) 
+2026-08-14T05:52:03.5372256Z    Knob: EnableIssueSourceValidation = true Source: $(ENABLE_ISSUE_SOURCE_VALIDATION) 
+2026-08-14T05:52:03.5372744Z    Knob: AgentEnablePipelineArtifactLargeChunkSize = true Source: $(AGENT_ENABLE_PIPELINEARTIFACT_LARGE_CHUNK_SIZE) 
+2026-08-14T05:52:03.5373791Z    Knob: DisableNode6Tasks = true Source: $(AGENT_DISABLE_NODE6_TASKS) 
+2026-08-14T05:52:03.5374353Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2026-08-14T05:52:03.5374750Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC) 
+2026-08-14T05:52:03.5375012Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC_LOG) 
+2026-08-14T05:52:03.5375273Z    Knob: ProcessHandlerTelemetry = true Source: $(AZP_75787_ENABLE_COLLECT) 
+2026-08-14T05:52:03.5375553Z    Knob: UseNewNodeHandlerTelemetry = True Source: $(DistributedTask.Agent.USENEWNODEHANDLERTELEMETRY) 
+2026-08-14T05:52:03.5375826Z    Knob: ProcessHandlerEnableNewLogic = true Source: $(AZP_75787_ENABLE_NEW_PH_LOGIC) 
+2026-08-14T05:52:03.5376373Z    Knob: EnableResourceMonitorDebugOutput = true Source: $(AZP_ENABLE_RESOURCE_MONITOR_DEBUG_OUTPUT) 
+2026-08-14T05:52:03.5376664Z    Knob: EnableResourceUtilizationWarnings = true Source: $(AZP_ENABLE_RESOURCE_UTILIZATION_WARNINGS) 
+2026-08-14T05:52:03.5377066Z    Knob: IgnoreVSTSTaskLib = true Source: $(AZP_AGENT_IGNORE_VSTSTASKLIB) 
+2026-08-14T05:52:03.5377315Z    Knob: FailJobWhenAgentDies = true Source: $(FAIL_JOB_WHEN_AGENT_DIES) 
+2026-08-14T05:52:03.5377497Z    Knob: EnhancedWorkerCrashHandling = true Source: ${AZP_ENHANCED_WORKER_CRASH_HANDLING} 
+2026-08-14T05:52:03.5377838Z    Knob: CheckForTaskDeprecation = true Source: $(AZP_AGENT_CHECK_FOR_TASK_DEPRECATION) 
+2026-08-14T05:52:03.5378212Z    Knob: CheckIfTaskNodeRunnerIsDeprecated246 = True Source: $(DistributedTask.Agent.CheckIfTaskNodeRunnerIsDeprecated246) 
+2026-08-14T05:52:03.5378531Z    Knob: UseNode20ToStartContainer = True Source: $(DistributedTask.Agent.UseNode20ToStartContainer) 
+2026-08-14T05:52:03.5378828Z    Knob: UseNode24ToStartContainer = True Source: $(DistributedTask.Agent.UseNode24ToStartContainer) 
+2026-08-14T05:52:03.5379137Z    Knob: EnableTimeoutLogFlushing = True Source: $(DistributedTask.Agent.EnableTimeoutLogFlushing) 
+2026-08-14T05:52:03.5379554Z    Knob: LogTaskNameInUserAgent = true Source: $(AZP_AGENT_LOG_TASKNAME_IN_USERAGENT) 
+2026-08-14T05:52:03.5379842Z    Knob: UseFetchFilterInCheckoutTask = true Source: $(AGENT_USE_FETCH_FILTER_IN_CHECKOUT_TASK) 
+2026-08-14T05:52:03.5380191Z    Knob: Rosetta2Warning = true Source: $(ROSETTA2_WARNING) 
+2026-08-14T05:52:03.5380871Z    Knob: AddForceCredentialsToGitCheckout = True Source: $(DistributedTask.Agent.AddForceCredentialsToGitCheckout) 
+2026-08-14T05:52:03.5381632Z    Knob: AddForceCredentialsToGitCheckoutEnhanced = True Source: $(DistributedTask.Agent.AddForceCredentialsToGitCheckoutEnhanced) 
+2026-08-14T05:52:03.5382143Z    Knob: UseLatestTfExe = True Source: $(DistributedTask.Agent.UseLatestTfExe) 
+2026-08-14T05:52:03.5382419Z    Knob: UseSparseCheckoutInCheckoutTask = true Source: $(AGENT_USE_SPARSE_CHECKOUT_IN_CHECKOUT_TASK) 
+2026-08-14T05:52:03.5382817Z    Knob: AgentCDNConnectivityFailWarning = False Source: $(DistributedTask.Agent.AgentCDNConnectivityFailWarning) 
+2026-08-14T05:52:03.5383068Z    Knob: UseEnhancedLogging = true Source: ${AZP_USE_ENHANCED_LOGGING} 
+2026-08-14T05:52:03.5383359Z    Knob: EnableEnhancedContainerDiagnostics = True Source: $(DistributedTask.Agent.EnableEnhancedContainerDiagnostics) 
+2026-08-14T05:52:03.5383740Z    Knob: EnableDockerExecDiagnostics = True Source: $(DistributedTask.Agent.EnableDockerExecDiagnostics) 
+2026-08-14T05:52:03.5384015Z Finished checking job knob settings.
+2026-08-14T05:52:03.5686372Z Start tracking orphan processes.
+2026-08-14T05:52:03.5956569Z ##[section]Finishing: Initialize job
+2026-08-14T05:52:03.6019913Z ##[section]Async Command Start: DetectDockerContainer
+2026-08-14T05:52:03.6020520Z ##[section]Async Command End: DetectDockerContainer
+2026-08-14T05:52:03.6022019Z ##[section]Async Command Start: DetectDockerContainer
+2026-08-14T05:52:03.6022216Z ##[section]Async Command End: DetectDockerContainer
+2026-08-14T05:52:03.6145488Z ##[section]Starting: Checkout WPPg2/vp-device@refs/pull/1253/merge to s
+2026-08-14T05:52:03.6228032Z ==============================================================================
+2026-08-14T05:52:03.6228824Z Task         : Get sources
+2026-08-14T05:52:03.6229336Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-08-14T05:52:03.6229474Z Version      : 1.0.0
+2026-08-14T05:52:03.6229744Z Author       : Microsoft
+2026-08-14T05:52:03.6230025Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-08-14T05:52:03.6230134Z ==============================================================================
+2026-08-14T05:52:04.9459204Z Syncing repository: WPPg2/vp-device (GitHubEnterprise)
+2026-08-14T05:52:04.9464892Z ##[command]git version
+2026-08-14T05:52:04.9471936Z git version 2.50.1
+2026-08-14T05:52:04.9472649Z ##[command]git lfs version
+2026-08-14T05:52:04.9478404Z git-lfs/3.7.1 (GitHub; linux amd64; go 1.25.11 X:nodwarf5)
+2026-08-14T05:52:04.9479937Z ##[command]git init "/usr/local/ado-agent/_work/1/s"
+2026-08-14T05:52:04.9485078Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-14T05:52:04.9485320Z hint: is subject to change. To configure the initial branch name to use in all
+2026-08-14T05:52:04.9485541Z hint: of your new repositories, which will suppress this warning, call:
+2026-08-14T05:52:04.9485735Z hint:
+2026-08-14T05:52:04.9486199Z hint: 	git config --global init.defaultBranch <name>
+2026-08-14T05:52:04.9486391Z hint:
+2026-08-14T05:52:04.9486583Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-14T05:52:04.9486809Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-14T05:52:04.9487027Z hint:
+2026-08-14T05:52:04.9487219Z hint: 	git branch -m <name>
+2026-08-14T05:52:04.9487388Z hint:
+2026-08-14T05:52:04.9487706Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-14T05:52:04.9487972Z Initialized empty Git repository in /usr/local/ado-agent/_work/1/s/.git/
+2026-08-14T05:52:04.9488724Z ##[command]git remote add origin https://github.azc.ext.hp.com/WPPg2/vp-device
+2026-08-14T05:52:04.9494699Z ##[command]git sparse-checkout disable
+2026-08-14T05:52:04.9554886Z ##[command]git config gc.auto 0
+2026-08-14T05:52:04.9564331Z ##[command]git config core.longpaths true
+2026-08-14T05:52:04.9572641Z ##[command]git config --get-all http.https://github.azc.ext.hp.com/WPPg2/vp-device.extraheader
+2026-08-14T05:52:04.9603578Z ##[command]git config --get-all http.extraheader
+2026-08-14T05:52:04.9609418Z ##[command]git config --get-regexp .*extraheader
+2026-08-14T05:52:04.9615332Z ##[command]git config --get-all http.proxy
+2026-08-14T05:52:04.9621488Z ##[command]git config http.version HTTP/1.1
+2026-08-14T05:52:04.9630824Z ##[command]git config --get-all remote.origin.promisor
+2026-08-14T05:52:04.9636818Z ##[command]git config --get-all remote.origin.partialclonefilter
+2026-08-14T05:52:04.9644706Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +164fc48798ee3c3b43ac7ebf071bf27d9320899e:refs/remotes/origin/164fc48798ee3c3b43ac7ebf071bf27d9320899e
+2026-08-14T05:52:05.2023183Z remote: Enumerating objects: 10640, done.        
+2026-08-14T05:52:05.2024016Z remote: Counting objects:   0% (1/10640)        
+2026-08-14T05:52:05.2028111Z remote: Counting objects:   1% (107/10640)        
+2026-08-14T05:52:05.2030820Z remote: Counting objects:   2% (213/10640)        
+2026-08-14T05:52:05.2031354Z remote: Counting objects:   3% (320/10640)        
+2026-08-14T05:52:05.2031775Z remote: Counting objects:   4% (426/10640)        
+2026-08-14T05:52:05.2032178Z remote: Counting objects:   5% (532/10640)        
+2026-08-14T05:52:05.2032570Z remote: Counting objects:   6% (639/10640)        
+2026-08-14T05:52:05.2032959Z remote: Counting objects:   7% (745/10640)        
+2026-08-14T05:52:05.2033603Z remote: Counting objects:   8% (852/10640)        
+2026-08-14T05:52:05.2034120Z remote: Counting objects:   9% (958/10640)        
+2026-08-14T05:52:05.2034637Z remote: Counting objects:  10% (1064/10640)        
+2026-08-14T05:52:05.2035740Z remote: Counting objects:  11% (1171/10640)        
+2026-08-14T05:52:05.2039972Z remote: Counting objects:  12% (1277/10640)        
+2026-08-14T05:52:05.2041149Z remote: Counting objects:  13% (1384/10640)        
+2026-08-14T05:52:05.2043586Z remote: Counting objects:  14% (1490/10640)        
+2026-08-14T05:52:05.2044393Z remote: Counting objects:  15% (1596/10640)        
+2026-08-14T05:52:05.2045213Z remote: Counting objects:  16% (1703/10640)        
+2026-08-14T05:52:05.2045866Z remote: Counting objects:  17% (1809/10640)        
+2026-08-14T05:52:05.2046527Z remote: Counting objects:  18% (1916/10640)        
+2026-08-14T05:52:05.2047198Z remote: Counting objects:  19% (2022/10640)        
+2026-08-14T05:52:05.2047860Z remote: Counting objects:  20% (2128/10640)        
+2026-08-14T05:52:05.2048487Z remote: Counting objects:  21% (2235/10640)        
+2026-08-14T05:52:05.2049240Z remote: Counting objects:  22% (2341/10640)        
+2026-08-14T05:52:05.2049942Z remote: Counting objects:  23% (2448/10640)        
+2026-08-14T05:52:05.2050318Z remote: Counting objects:  24% (2554/10640)        
+2026-08-14T05:52:05.2050643Z remote: Counting objects:  25% (2660/10640)        
+2026-08-14T05:52:05.2050973Z remote: Counting objects:  26% (2767/10640)        
+2026-08-14T05:52:05.2051309Z remote: Counting objects:  27% (2873/10640)        
+2026-08-14T05:52:05.2051690Z remote: Counting objects:  28% (2980/10640)        
+2026-08-14T05:52:05.2052025Z remote: Counting objects:  29% (3086/10640)        
+2026-08-14T05:52:05.2052354Z remote: Counting objects:  30% (3192/10640)        
+2026-08-14T05:52:05.2052686Z remote: Counting objects:  31% (3299/10640)        
+2026-08-14T05:52:05.2053021Z remote: Counting objects:  32% (3405/10640)        
+2026-08-14T05:52:05.2071989Z remote: Counting objects:  33% (3512/10640)        
+2026-08-14T05:52:05.2072376Z remote: Counting objects:  34% (3618/10640)        
+2026-08-14T05:52:05.2072716Z remote: Counting objects:  35% (3724/10640)        
+2026-08-14T05:52:05.2073058Z remote: Counting objects:  36% (3831/10640)        
+2026-08-14T05:52:05.2073390Z remote: Counting objects:  37% (3937/10640)        
+2026-08-14T05:52:05.2073713Z remote: Counting objects:  38% (4044/10640)        
+2026-08-14T05:52:05.2074058Z remote: Counting objects:  39% (4150/10640)        
+2026-08-14T05:52:05.2074663Z remote: Counting objects:  40% (4256/10640)        
+2026-08-14T05:52:05.2075006Z remote: Counting objects:  41% (4363/10640)        
+2026-08-14T05:52:05.2075327Z remote: Counting objects:  42% (4469/10640)        
+2026-08-14T05:52:05.2075665Z remote: Counting objects:  43% (4576/10640)        
+2026-08-14T05:52:05.2075992Z remote: Counting objects:  44% (4682/10640)        
+2026-08-14T05:52:05.2076324Z remote: Counting objects:  45% (4788/10640)        
+2026-08-14T05:52:05.2076654Z remote: Counting objects:  46% (4895/10640)        
+2026-08-14T05:52:05.2076989Z remote: Counting objects:  47% (5001/10640)        
+2026-08-14T05:52:05.2077319Z remote: Counting objects:  48% (5108/10640)        
+2026-08-14T05:52:05.2077650Z remote: Counting objects:  49% (5214/10640)        
+2026-08-14T05:52:05.2077976Z remote: Counting objects:  50% (5320/10640)        
+2026-08-14T05:52:05.2078325Z remote: Counting objects:  51% (5427/10640)        
+2026-08-14T05:52:05.2078655Z remote: Counting objects:  52% (5533/10640)        
+2026-08-14T05:52:05.2079000Z remote: Counting objects:  53% (5640/10640)        
+2026-08-14T05:52:05.2079392Z remote: Counting objects:  54% (5746/10640)        
+2026-08-14T05:52:05.2081036Z remote: Counting objects:  55% (5852/10640)        
+2026-08-14T05:52:05.2081421Z remote: Counting objects:  56% (5959/10640)        
+2026-08-14T05:52:05.2081742Z remote: Counting objects:  57% (6065/10640)        
+2026-08-14T05:52:05.2082054Z remote: Counting objects:  58% (6172/10640)        
+2026-08-14T05:52:05.2082561Z remote: Counting objects:  59% (6278/10640)        
+2026-08-14T05:52:05.2082911Z remote: Counting objects:  60% (6384/10640)        
+2026-08-14T05:52:05.2083244Z remote: Counting objects:  61% (6491/10640)        
+2026-08-14T05:52:05.2083580Z remote: Counting objects:  62% (6597/10640)        
+2026-08-14T05:52:05.2083907Z remote: Counting objects:  63% (6704/10640)        
+2026-08-14T05:52:05.2084314Z remote: Counting objects:  64% (6810/10640)        
+2026-08-14T05:52:05.2084657Z remote: Counting objects:  65% (6916/10640)        
+2026-08-14T05:52:05.2084989Z remote: Counting objects:  66% (7023/10640)        
+2026-08-14T05:52:05.2085324Z remote: Counting objects:  67% (7129/10640)        
+2026-08-14T05:52:05.2085646Z remote: Counting objects:  68% (7236/10640)        
+2026-08-14T05:52:05.2085982Z remote: Counting objects:  69% (7342/10640)        
+2026-08-14T05:52:05.2086313Z remote: Counting objects:  70% (7448/10640)        
+2026-08-14T05:52:05.2086651Z remote: Counting objects:  71% (7555/10640)        
+2026-08-14T05:52:05.2086977Z remote: Counting objects:  72% (7661/10640)        
+2026-08-14T05:52:05.2087302Z remote: Counting objects:  73% (7768/10640)        
+2026-08-14T05:52:05.2087758Z remote: Counting objects:  74% (7874/10640)        
+2026-08-14T05:52:05.2088084Z remote: Counting objects:  75% (7980/10640)        
+2026-08-14T05:52:05.2088407Z remote: Counting objects:  76% (8087/10640)        
+2026-08-14T05:52:05.2088736Z remote: Counting objects:  77% (8193/10640)        
+2026-08-14T05:52:05.2089099Z remote: Counting objects:  78% (8300/10640)        
+2026-08-14T05:52:05.2089438Z remote: Counting objects:  79% (8406/10640)        
+2026-08-14T05:52:05.2089759Z remote: Counting objects:  80% (8512/10640)        
+2026-08-14T05:52:05.2090093Z remote: Counting objects:  81% (8619/10640)        
+2026-08-14T05:52:05.2090424Z remote: Counting objects:  82% (8725/10640)        
+2026-08-14T05:52:05.2090751Z remote: Counting objects:  83% (8832/10640)        
+2026-08-14T05:52:05.2091086Z remote: Counting objects:  84% (8938/10640)        
+2026-08-14T05:52:05.2091413Z remote: Counting objects:  85% (9044/10640)        
+2026-08-14T05:52:05.2091740Z remote: Counting objects:  86% (9151/10640)        
+2026-08-14T05:52:05.2092087Z remote: Counting objects:  87% (9257/10640)        
+2026-08-14T05:52:05.2092429Z remote: Counting objects:  88% (9364/10640)        
+2026-08-14T05:52:05.2092782Z remote: Counting objects:  89% (9470/10640)        
+2026-08-14T05:52:05.2093127Z remote: Counting objects:  90% (9576/10640)        
+2026-08-14T05:52:05.2093616Z remote: Counting objects:  91% (9683/10640)        
+2026-08-14T05:52:05.2093961Z remote: Counting objects:  92% (9789/10640)        
+2026-08-14T05:52:05.2094310Z remote: Counting objects:  93% (9896/10640)        
+2026-08-14T05:52:05.2094660Z remote: Counting objects:  94% (10002/10640)        
+2026-08-14T05:52:05.2095022Z remote: Counting objects:  95% (10108/10640)        
+2026-08-14T05:52:05.2095377Z remote: Counting objects:  96% (10215/10640)        
+2026-08-14T05:52:05.2095745Z remote: Counting objects:  97% (10321/10640)        
+2026-08-14T05:52:05.2096099Z remote: Counting objects:  98% (10428/10640)        
+2026-08-14T05:52:05.2096456Z remote: Counting objects:  99% (10534/10640)        
+2026-08-14T05:52:05.2115488Z remote: Counting objects: 100% (10640/10640)        
+2026-08-14T05:52:05.2115993Z remote: Counting objects: 100% (10640/10640), done.        
+2026-08-14T05:52:05.2116389Z remote: Compressing objects:   0% (1/5726)        
+2026-08-14T05:52:05.2116766Z remote: Compressing objects:   1% (58/5726)        
+2026-08-14T05:52:05.2117199Z remote: Compressing objects:   2% (115/5726)        
+2026-08-14T05:52:05.2117570Z remote: Compressing objects:   3% (172/5726)        
+2026-08-14T05:52:05.2118402Z remote: Compressing objects:   4% (230/5726)        
+2026-08-14T05:52:05.2120503Z remote: Compressing objects:   5% (287/5726)        
+2026-08-14T05:52:05.2120912Z remote: Compressing objects:   6% (344/5726)        
+2026-08-14T05:52:05.2121537Z remote: Compressing objects:   7% (401/5726)        
+2026-08-14T05:52:05.2121934Z remote: Compressing objects:   8% (459/5726)        
+2026-08-14T05:52:05.2122310Z remote: Compressing objects:   9% (516/5726)        
+2026-08-14T05:52:05.2122678Z remote: Compressing objects:  10% (573/5726)        
+2026-08-14T05:52:05.2123048Z remote: Compressing objects:  11% (630/5726)        
+2026-08-14T05:52:05.2123418Z remote: Compressing objects:  12% (688/5726)        
+2026-08-14T05:52:05.2123787Z remote: Compressing objects:  13% (745/5726)        
+2026-08-14T05:52:05.2124158Z remote: Compressing objects:  14% (802/5726)        
+2026-08-14T05:52:05.2124534Z remote: Compressing objects:  15% (859/5726)        
+2026-08-14T05:52:05.2124921Z remote: Compressing objects:  16% (917/5726)        
+2026-08-14T05:52:05.2125301Z remote: Compressing objects:  17% (974/5726)        
+2026-08-14T05:52:05.2125685Z remote: Compressing objects:  18% (1031/5726)        
+2026-08-14T05:52:05.2126087Z remote: Compressing objects:  19% (1088/5726)        
+2026-08-14T05:52:05.2126493Z remote: Compressing objects:  20% (1146/5726)        
+2026-08-14T05:52:05.2126888Z remote: Compressing objects:  21% (1203/5726)        
+2026-08-14T05:52:05.2127271Z remote: Compressing objects:  22% (1260/5726)        
+2026-08-14T05:52:05.2127822Z remote: Compressing objects:  23% (1317/5726)        
+2026-08-14T05:52:05.2128214Z remote: Compressing objects:  24% (1375/5726)        
+2026-08-14T05:52:05.2128589Z remote: Compressing objects:  25% (1432/5726)        
+2026-08-14T05:52:05.2128980Z remote: Compressing objects:  26% (1489/5726)        
+2026-08-14T05:52:05.2129367Z remote: Compressing objects:  27% (1547/5726)        
+2026-08-14T05:52:05.2129751Z remote: Compressing objects:  28% (1604/5726)        
+2026-08-14T05:52:05.2130119Z remote: Compressing objects:  29% (1661/5726)        
+2026-08-14T05:52:05.2130477Z remote: Compressing objects:  30% (1718/5726)        
+2026-08-14T05:52:05.2130843Z remote: Compressing objects:  31% (1776/5726)        
+2026-08-14T05:52:05.2131212Z remote: Compressing objects:  32% (1833/5726)        
+2026-08-14T05:52:05.2131580Z remote: Compressing objects:  33% (1890/5726)        
+2026-08-14T05:52:05.2131947Z remote: Compressing objects:  34% (1947/5726)        
+2026-08-14T05:52:05.2132383Z remote: Compressing objects:  35% (2005/5726)        
+2026-08-14T05:52:05.2132765Z remote: Compressing objects:  36% (2062/5726)        
+2026-08-14T05:52:05.2133125Z remote: Compressing objects:  37% (2119/5726)        
+2026-08-14T05:52:05.2133685Z remote: Compressing objects:  38% (2176/5726)        
+2026-08-14T05:52:05.2134045Z remote: Compressing objects:  39% (2234/5726)        
+2026-08-14T05:52:05.2134418Z remote: Compressing objects:  40% (2291/5726)        
+2026-08-14T05:52:05.2134697Z remote: Compressing objects:  41% (2348/5726)        
+2026-08-14T05:52:05.2134904Z remote: Compressing objects:  42% (2405/5726)        
+2026-08-14T05:52:05.2135126Z remote: Compressing objects:  43% (2463/5726)        
+2026-08-14T05:52:05.2135347Z remote: Compressing objects:  44% (2520/5726)        
+2026-08-14T05:52:05.2135566Z remote: Compressing objects:  45% (2577/5726)        
+2026-08-14T05:52:05.2135780Z remote: Compressing objects:  46% (2634/5726)        
+2026-08-14T05:52:05.2135993Z remote: Compressing objects:  47% (2692/5726)        
+2026-08-14T05:52:05.2136224Z remote: Compressing objects:  48% (2749/5726)        
+2026-08-14T05:52:05.2136618Z remote: Compressing objects:  49% (2806/5726)        
+2026-08-14T05:52:05.2137019Z remote: Compressing objects:  50% (2863/5726)        
+2026-08-14T05:52:05.2137416Z remote: Compressing objects:  51% (2921/5726)        
+2026-08-14T05:52:05.2137791Z remote: Compressing objects:  52% (2978/5726)        
+2026-08-14T05:52:05.2138156Z remote: Compressing objects:  53% (3035/5726)        
+2026-08-14T05:52:05.2138506Z remote: Compressing objects:  54% (3093/5726)        
+2026-08-14T05:52:05.2138869Z remote: Compressing objects:  55% (3150/5726)        
+2026-08-14T05:52:05.2139371Z remote: Compressing objects:  56% (3207/5726)        
+2026-08-14T05:52:05.2139740Z remote: Compressing objects:  57% (3264/5726)        
+2026-08-14T05:52:05.2140095Z remote: Compressing objects:  58% (3322/5726)        
+2026-08-14T05:52:05.2140453Z remote: Compressing objects:  59% (3379/5726)        
+2026-08-14T05:52:05.2140818Z remote: Compressing objects:  60% (3436/5726)        
+2026-08-14T05:52:05.2141125Z remote: Compressing objects:  61% (3493/5726)        
+2026-08-14T05:52:05.2141489Z remote: Compressing objects:  62% (3551/5726)        
+2026-08-14T05:52:05.2141713Z remote: Compressing objects:  63% (3608/5726)        
+2026-08-14T05:52:05.2141927Z remote: Compressing objects:  64% (3665/5726)        
+2026-08-14T05:52:05.2142145Z remote: Compressing objects:  65% (3722/5726)        
+2026-08-14T05:52:05.2142346Z remote: Compressing objects:  66% (3780/5726)        
+2026-08-14T05:52:05.2142574Z remote: Compressing objects:  67% (3837/5726)        
+2026-08-14T05:52:05.2142791Z remote: Compressing objects:  68% (3894/5726)        
+2026-08-14T05:52:05.2143169Z remote: Compressing objects:  69% (3951/5726)        
+2026-08-14T05:52:05.2143547Z remote: Compressing objects:  70% (4009/5726)        
+2026-08-14T05:52:05.2143909Z remote: Compressing objects:  71% (4066/5726)        
+2026-08-14T05:52:05.2144269Z remote: Compressing objects:  72% (4123/5726)        
+2026-08-14T05:52:05.2144626Z remote: Compressing objects:  73% (4180/5726)        
+2026-08-14T05:52:05.2144990Z remote: Compressing objects:  74% (4238/5726)        
+2026-08-14T05:52:05.2145370Z remote: Compressing objects:  75% (4295/5726)        
+2026-08-14T05:52:05.2145738Z remote: Compressing objects:  76% (4352/5726)        
+2026-08-14T05:52:05.2146109Z remote: Compressing objects:  77% (4410/5726)        
+2026-08-14T05:52:05.2146467Z remote: Compressing objects:  78% (4467/5726)        
+2026-08-14T05:52:05.2146827Z remote: Compressing objects:  79% (4524/5726)        
+2026-08-14T05:52:05.2147184Z remote: Compressing objects:  80% (4581/5726)        
+2026-08-14T05:52:05.2147546Z remote: Compressing objects:  81% (4639/5726)        
+2026-08-14T05:52:05.2147903Z remote: Compressing objects:  82% (4696/5726)        
+2026-08-14T05:52:05.2148299Z remote: Compressing objects:  83% (4753/5726)        
+2026-08-14T05:52:05.2148687Z remote: Compressing objects:  84% (4810/5726)        
+2026-08-14T05:52:05.2149058Z remote: Compressing objects:  85% (4868/5726)        
+2026-08-14T05:52:05.2149489Z remote: Compressing objects:  86% (4925/5726)        
+2026-08-14T05:52:05.2149839Z remote: Compressing objects:  87% (4982/5726)        
+2026-08-14T05:52:05.2150363Z remote: Compressing objects:  88% (5039/5726)        
+2026-08-14T05:52:05.2150724Z remote: Compressing objects:  89% (5097/5726)        
+2026-08-14T05:52:05.2151107Z remote: Compressing objects:  90% (5154/5726)        
+2026-08-14T05:52:05.2151464Z remote: Compressing objects:  91% (5211/5726)        
+2026-08-14T05:52:05.2151820Z remote: Compressing objects:  92% (5268/5726)        
+2026-08-14T05:52:05.2152194Z remote: Compressing objects:  93% (5326/5726)        
+2026-08-14T05:52:05.2152567Z remote: Compressing objects:  94% (5383/5726)        
+2026-08-14T05:52:05.2152959Z remote: Compressing objects:  95% (5440/5726)        
+2026-08-14T05:52:05.2153334Z remote: Compressing objects:  96% (5497/5726)        
+2026-08-14T05:52:05.2153688Z remote: Compressing objects:  97% (5555/5726)        
+2026-08-14T05:52:05.2154053Z remote: Compressing objects:  98% (5612/5726)        
+2026-08-14T05:52:05.2154413Z remote: Compressing objects:  99% (5669/5726)        
+2026-08-14T05:52:05.2154777Z remote: Compressing objects: 100% (5726/5726)        
+2026-08-14T05:52:05.2155142Z remote: Compressing objects: 100% (5726/5726), done.        
+2026-08-14T05:52:05.2155492Z Receiving objects:   0% (1/10640)
+2026-08-14T05:52:05.2155819Z Receiving objects:   1% (107/10640)
+2026-08-14T05:52:05.2156142Z Receiving objects:   2% (213/10640)
+2026-08-14T05:52:05.2156461Z Receiving objects:   3% (320/10640)
+2026-08-14T05:52:05.2156787Z Receiving objects:   4% (426/10640)
+2026-08-14T05:52:05.2157244Z Receiving objects:   5% (532/10640)
+2026-08-14T05:52:05.2157581Z Receiving objects:   6% (639/10640)
+2026-08-14T05:52:05.2157932Z Receiving objects:   7% (745/10640)
+2026-08-14T05:52:05.2158273Z Receiving objects:   8% (852/10640)
+2026-08-14T05:52:05.2162287Z Receiving objects:   9% (958/10640)
+2026-08-14T05:52:05.2165193Z Receiving objects:  10% (1064/10640)
+2026-08-14T05:52:05.2168604Z Receiving objects:  11% (1171/10640)
+2026-08-14T05:52:05.2171193Z Receiving objects:  12% (1277/10640)
+2026-08-14T05:52:05.2173977Z Receiving objects:  13% (1384/10640)
+2026-08-14T05:52:05.2177240Z Receiving objects:  14% (1490/10640)
+2026-08-14T05:52:05.2180739Z Receiving objects:  15% (1596/10640)
+2026-08-14T05:52:05.2183658Z Receiving objects:  16% (1703/10640)
+2026-08-14T05:52:05.2186325Z Receiving objects:  17% (1809/10640)
+2026-08-14T05:52:05.2190545Z Receiving objects:  18% (1916/10640)
+2026-08-14T05:52:05.2193540Z Receiving objects:  19% (2022/10640)
+2026-08-14T05:52:05.2196600Z Receiving objects:  20% (2128/10640)
+2026-08-14T05:52:05.2200088Z Receiving objects:  21% (2235/10640)
+2026-08-14T05:52:05.2203346Z Receiving objects:  22% (2341/10640)
+2026-08-14T05:52:05.2207147Z Receiving objects:  23% (2448/10640)
+2026-08-14T05:52:05.2210222Z Receiving objects:  24% (2554/10640)
+2026-08-14T05:52:05.2212914Z Receiving objects:  25% (2660/10640)
+2026-08-14T05:52:05.2216014Z Receiving objects:  26% (2767/10640)
+2026-08-14T05:52:05.2219886Z Receiving objects:  27% (2873/10640)
+2026-08-14T05:52:05.2221895Z Receiving objects:  28% (2980/10640)
+2026-08-14T05:52:05.2224500Z Receiving objects:  29% (3086/10640)
+2026-08-14T05:52:05.2228046Z Receiving objects:  30% (3192/10640)
+2026-08-14T05:52:05.2231020Z Receiving objects:  31% (3299/10640)
+2026-08-14T05:52:05.2234071Z Receiving objects:  32% (3405/10640)
+2026-08-14T05:52:05.2238629Z Receiving objects:  33% (3512/10640)
+2026-08-14T05:52:05.2241111Z Receiving objects:  34% (3618/10640)
+2026-08-14T05:52:05.2244757Z Receiving objects:  35% (3724/10640)
+2026-08-14T05:52:05.2248428Z Receiving objects:  36% (3831/10640)
+2026-08-14T05:52:05.2253580Z Receiving objects:  37% (3937/10640)
+2026-08-14T05:52:05.2255503Z Receiving objects:  38% (4044/10640)
+2026-08-14T05:52:05.2258131Z Receiving objects:  39% (4150/10640)
+2026-08-14T05:52:05.2261310Z Receiving objects:  40% (4256/10640)
+2026-08-14T05:52:05.2263845Z Receiving objects:  41% (4363/10640)
+2026-08-14T05:52:05.2266583Z Receiving objects:  42% (4469/10640)
+2026-08-14T05:52:05.2269309Z Receiving objects:  43% (4576/10640)
+2026-08-14T05:52:05.2271748Z Receiving objects:  44% (4682/10640)
+2026-08-14T05:52:05.2274980Z Receiving objects:  45% (4788/10640)
+2026-08-14T05:52:05.2277132Z Receiving objects:  46% (4895/10640)
+2026-08-14T05:52:05.2281640Z Receiving objects:  47% (5001/10640)
+2026-08-14T05:52:05.2283708Z Receiving objects:  48% (5108/10640)
+2026-08-14T05:52:05.2286646Z Receiving objects:  49% (5214/10640)
+2026-08-14T05:52:05.2289628Z Receiving objects:  50% (5320/10640)
+2026-08-14T05:52:05.2292606Z Receiving objects:  51% (5427/10640)
+2026-08-14T05:52:05.2295298Z Receiving objects:  52% (5533/10640)
+2026-08-14T05:52:05.2297758Z Receiving objects:  53% (5640/10640)
+2026-08-14T05:52:05.2301134Z Receiving objects:  54% (5746/10640)
+2026-08-14T05:52:05.2302417Z Receiving objects:  55% (5852/10640)
+2026-08-14T05:52:05.2306143Z Receiving objects:  56% (5959/10640)
+2026-08-14T05:52:05.2309513Z Receiving objects:  57% (6065/10640)
+2026-08-14T05:52:05.2312582Z Receiving objects:  58% (6172/10640)
+2026-08-14T05:52:05.2315788Z Receiving objects:  59% (6278/10640)
+2026-08-14T05:52:05.2318108Z Receiving objects:  60% (6384/10640)
+2026-08-14T05:52:05.2320948Z Receiving objects:  61% (6491/10640)
+2026-08-14T05:52:05.2327656Z Receiving objects:  62% (6597/10640)
+2026-08-14T05:52:05.2334681Z Receiving objects:  63% (6704/10640)
+2026-08-14T05:52:05.2337927Z Receiving objects:  64% (6810/10640)
+2026-08-14T05:52:05.2340848Z Receiving objects:  65% (6916/10640)
+2026-08-14T05:52:05.2344584Z Receiving objects:  66% (7023/10640)
+2026-08-14T05:52:05.2348493Z Receiving objects:  67% (7129/10640)
+2026-08-14T05:52:05.2354175Z Receiving objects:  68% (7236/10640)
+2026-08-14T05:52:05.2357581Z Receiving objects:  69% (7342/10640)
+2026-08-14T05:52:05.2363412Z Receiving objects:  70% (7448/10640)
+2026-08-14T05:52:05.2371433Z Receiving objects:  71% (7555/10640)
+2026-08-14T05:52:05.2372910Z Receiving objects:  72% (7661/10640)
+2026-08-14T05:52:05.2381466Z Receiving objects:  73% (7768/10640)
+2026-08-14T05:52:05.2390439Z Receiving objects:  74% (7874/10640)
+2026-08-14T05:52:05.2411521Z Receiving objects:  75% (7980/10640)
+2026-08-14T05:52:05.2419137Z Receiving objects:  76% (8087/10640)
+2026-08-14T05:52:05.2424806Z Receiving objects:  77% (8193/10640)
+2026-08-14T05:52:05.2468127Z Receiving objects:  78% (8300/10640)
+2026-08-14T05:52:05.2504523Z Receiving objects:  79% (8406/10640)
+2026-08-14T05:52:05.2520136Z Receiving objects:  80% (8512/10640)
+2026-08-14T05:52:05.2531224Z Receiving objects:  81% (8619/10640)
+2026-08-14T05:52:05.2548267Z Receiving objects:  82% (8725/10640)
+2026-08-14T05:52:05.2548694Z Receiving objects:  83% (8832/10640)
+2026-08-14T05:52:05.2585278Z Receiving objects:  84% (8938/10640)
+2026-08-14T05:52:05.2587889Z Receiving objects:  85% (9044/10640)
+2026-08-14T05:52:05.2591978Z Receiving objects:  86% (9151/10640)
+2026-08-14T05:52:05.2593339Z Receiving objects:  87% (9257/10640)
+2026-08-14T05:52:05.2595210Z Receiving objects:  88% (9364/10640)
+2026-08-14T05:52:05.2598923Z Receiving objects:  89% (9470/10640)
+2026-08-14T05:52:05.2624526Z Receiving objects:  90% (9576/10640)
+2026-08-14T05:52:05.2632346Z Receiving objects:  91% (9683/10640)
+2026-08-14T05:52:05.2638929Z Receiving objects:  92% (9789/10640)
+2026-08-14T05:52:05.2690127Z Receiving objects:  93% (9896/10640)
+2026-08-14T05:52:05.2762169Z Receiving objects:  94% (10002/10640)
+2026-08-14T05:52:05.2803889Z Receiving objects:  95% (10108/10640)
+2026-08-14T05:52:05.2851848Z Receiving objects:  96% (10215/10640)
+2026-08-14T05:52:05.2886172Z Receiving objects:  97% (10321/10640)
+2026-08-14T05:52:05.2918891Z Receiving objects:  98% (10428/10640)
+2026-08-14T05:52:05.3107854Z Receiving objects:  99% (10534/10640)
+2026-08-14T05:52:05.3108291Z remote: Total 10640 (delta 3975), reused 8727 (delta 2588), pack-reused 0 (from 0)        
+2026-08-14T05:52:05.3120364Z Receiving objects: 100% (10640/10640)
+2026-08-14T05:52:05.3120923Z Receiving objects: 100% (10640/10640), 3.06 MiB | 29.58 MiB/s, done.
+2026-08-14T05:52:05.3130127Z Resolving deltas:   0% (0/3975)
+2026-08-14T05:52:05.3130933Z Resolving deltas:   1% (40/3975)
+2026-08-14T05:52:05.3135760Z Resolving deltas:   2% (80/3975)
+2026-08-14T05:52:05.3139443Z Resolving deltas:   3% (120/3975)
+2026-08-14T05:52:05.3144867Z Resolving deltas:   4% (159/3975)
+2026-08-14T05:52:05.3146662Z Resolving deltas:   5% (199/3975)
+2026-08-14T05:52:05.3148956Z Resolving deltas:   6% (239/3975)
+2026-08-14T05:52:05.3152706Z Resolving deltas:   7% (279/3975)
+2026-08-14T05:52:05.3157806Z Resolving deltas:   8% (318/3975)
+2026-08-14T05:52:05.3162488Z Resolving deltas:   9% (358/3975)
+2026-08-14T05:52:05.3165113Z Resolving deltas:  10% (398/3975)
+2026-08-14T05:52:05.3169904Z Resolving deltas:  11% (438/3975)
+2026-08-14T05:52:05.3170504Z Resolving deltas:  12% (478/3975)
+2026-08-14T05:52:05.3172188Z Resolving deltas:  13% (517/3975)
+2026-08-14T05:52:05.3178275Z Resolving deltas:  14% (557/3975)
+2026-08-14T05:52:05.3179038Z Resolving deltas:  15% (597/3975)
+2026-08-14T05:52:05.3182337Z Resolving deltas:  16% (637/3975)
+2026-08-14T05:52:05.3185099Z Resolving deltas:  17% (676/3975)
+2026-08-14T05:52:05.3188580Z Resolving deltas:  18% (716/3975)
+2026-08-14T05:52:05.3191915Z Resolving deltas:  19% (756/3975)
+2026-08-14T05:52:05.3195875Z Resolving deltas:  20% (795/3975)
+2026-08-14T05:52:05.3198814Z Resolving deltas:  21% (835/3975)
+2026-08-14T05:52:05.3202478Z Resolving deltas:  22% (875/3975)
+2026-08-14T05:52:05.3204984Z Resolving deltas:  23% (915/3975)
+2026-08-14T05:52:05.3208865Z Resolving deltas:  24% (955/3975)
+2026-08-14T05:52:05.3210883Z Resolving deltas:  25% (994/3975)
+2026-08-14T05:52:05.3217398Z Resolving deltas:  26% (1034/3975)
+2026-08-14T05:52:05.3217866Z Resolving deltas:  27% (1074/3975)
+2026-08-14T05:52:05.3222658Z Resolving deltas:  28% (1113/3975)
+2026-08-14T05:52:05.3223987Z Resolving deltas:  29% (1153/3975)
+2026-08-14T05:52:05.3230488Z Resolving deltas:  30% (1193/3975)
+2026-08-14T05:52:05.3232876Z Resolving deltas:  31% (1233/3975)
+2026-08-14T05:52:05.3236863Z Resolving deltas:  32% (1272/3975)
+2026-08-14T05:52:05.3244900Z Resolving deltas:  33% (1312/3975)
+2026-08-14T05:52:05.3246089Z Resolving deltas:  34% (1353/3975)
+2026-08-14T05:52:05.3249567Z Resolving deltas:  35% (1392/3975)
+2026-08-14T05:52:05.3252789Z Resolving deltas:  36% (1431/3975)
+2026-08-14T05:52:05.3257434Z Resolving deltas:  37% (1471/3975)
+2026-08-14T05:52:05.3264461Z Resolving deltas:  38% (1512/3975)
+2026-08-14T05:52:05.3272069Z Resolving deltas:  39% (1551/3975)
+2026-08-14T05:52:05.3278507Z Resolving deltas:  40% (1590/3975)
+2026-08-14T05:52:05.3284736Z Resolving deltas:  41% (1631/3975)
+2026-08-14T05:52:05.3291317Z Resolving deltas:  42% (1670/3975)
+2026-08-14T05:52:05.3295446Z Resolving deltas:  43% (1710/3975)
+2026-08-14T05:52:05.3299227Z Resolving deltas:  44% (1749/3975)
+2026-08-14T05:52:05.3304613Z Resolving deltas:  45% (1789/3975)
+2026-08-14T05:52:05.3315750Z Resolving deltas:  46% (1829/3975)
+2026-08-14T05:52:05.3326252Z Resolving deltas:  47% (1869/3975)
+2026-08-14T05:52:05.3333366Z Resolving deltas:  48% (1908/3975)
+2026-08-14T05:52:05.3343582Z Resolving deltas:  49% (1948/3975)
+2026-08-14T05:52:05.3347336Z Resolving deltas:  50% (1988/3975)
+2026-08-14T05:52:05.3353566Z Resolving deltas:  51% (2028/3975)
+2026-08-14T05:52:05.3363877Z Resolving deltas:  52% (2067/3975)
+2026-08-14T05:52:05.3371036Z Resolving deltas:  53% (2107/3975)
+2026-08-14T05:52:05.3378978Z Resolving deltas:  54% (2147/3975)
+2026-08-14T05:52:05.3383289Z Resolving deltas:  55% (2187/3975)
+2026-08-14T05:52:05.3389658Z Resolving deltas:  56% (2226/3975)
+2026-08-14T05:52:05.3397810Z Resolving deltas:  57% (2266/3975)
+2026-08-14T05:52:05.3401594Z Resolving deltas:  58% (2306/3975)
+2026-08-14T05:52:05.3405936Z Resolving deltas:  59% (2346/3975)
+2026-08-14T05:52:05.3415384Z Resolving deltas:  60% (2385/3975)
+2026-08-14T05:52:05.3427397Z Resolving deltas:  61% (2425/3975)
+2026-08-14T05:52:05.3439502Z Resolving deltas:  62% (2465/3975)
+2026-08-14T05:52:05.3452419Z Resolving deltas:  63% (2505/3975)
+2026-08-14T05:52:05.3467479Z Resolving deltas:  64% (2544/3975)
+2026-08-14T05:52:05.3470535Z Resolving deltas:  65% (2584/3975)
+2026-08-14T05:52:05.3478084Z Resolving deltas:  66% (2624/3975)
+2026-08-14T05:52:05.3489370Z Resolving deltas:  67% (2665/3975)
+2026-08-14T05:52:05.3497320Z Resolving deltas:  68% (2703/3975)
+2026-08-14T05:52:05.3506428Z Resolving deltas:  69% (2743/3975)
+2026-08-14T05:52:05.3516065Z Resolving deltas:  70% (2783/3975)
+2026-08-14T05:52:05.3525199Z Resolving deltas:  71% (2824/3975)
+2026-08-14T05:52:05.3528413Z Resolving deltas:  72% (2862/3975)
+2026-08-14T05:52:05.3543689Z Resolving deltas:  73% (2902/3975)
+2026-08-14T05:52:05.3544660Z Resolving deltas:  74% (2942/3975)
+2026-08-14T05:52:05.3549447Z Resolving deltas:  75% (2982/3975)
+2026-08-14T05:52:05.3562186Z Resolving deltas:  76% (3021/3975)
+2026-08-14T05:52:05.3572565Z Resolving deltas:  77% (3061/3975)
+2026-08-14T05:52:05.3590318Z Resolving deltas:  78% (3101/3975)
+2026-08-14T05:52:05.3603356Z Resolving deltas:  79% (3141/3975)
+2026-08-14T05:52:05.3623205Z Resolving deltas:  80% (3180/3975)
+2026-08-14T05:52:05.3633833Z Resolving deltas:  81% (3220/3975)
+2026-08-14T05:52:05.3638271Z Resolving deltas:  82% (3260/3975)
+2026-08-14T05:52:05.3644180Z Resolving deltas:  83% (3300/3975)
+2026-08-14T05:52:05.3664297Z Resolving deltas:  84% (3339/3975)
+2026-08-14T05:52:05.3671233Z Resolving deltas:  85% (3379/3975)
+2026-08-14T05:52:05.3676101Z Resolving deltas:  86% (3419/3975)
+2026-08-14T05:52:05.3681573Z Resolving deltas:  87% (3459/3975)
+2026-08-14T05:52:05.3685738Z Resolving deltas:  88% (3498/3975)
+2026-08-14T05:52:05.3693799Z Resolving deltas:  89% (3538/3975)
+2026-08-14T05:52:05.3694574Z Resolving deltas:  90% (3578/3975)
+2026-08-14T05:52:05.3695114Z Resolving deltas:  91% (3618/3975)
+2026-08-14T05:52:05.3698244Z Resolving deltas:  92% (3657/3975)
+2026-08-14T05:52:05.3707575Z Resolving deltas:  93% (3697/3975)
+2026-08-14T05:52:05.3713662Z Resolving deltas:  94% (3737/3975)
+2026-08-14T05:52:05.3726372Z Resolving deltas:  95% (3777/3975)
+2026-08-14T05:52:05.3733902Z Resolving deltas:  96% (3816/3975)
+2026-08-14T05:52:05.3749860Z Resolving deltas:  97% (3856/3975)
+2026-08-14T05:52:05.3754867Z Resolving deltas:  98% (3896/3975)
+2026-08-14T05:52:05.3760576Z Resolving deltas:  99% (3936/3975)
+2026-08-14T05:52:05.3766605Z Resolving deltas: 100% (3975/3975)
+2026-08-14T05:52:05.3767019Z Resolving deltas: 100% (3975/3975), done.
+2026-08-14T05:52:05.4143524Z From https://github.azc.ext.hp.com/WPPg2/vp-device
+2026-08-14T05:52:05.4143955Z  * [new ref]         164fc48798ee3c3b43ac7ebf071bf27d9320899e -> origin/164fc48798ee3c3b43ac7ebf071bf27d9320899e
+2026-08-14T05:52:05.4184599Z  * [new tag]         v2.1.105                  -> v2.1.105
+2026-08-14T05:52:05.4184939Z  * [new tag]         v2.1.106                  -> v2.1.106
+2026-08-14T05:52:05.4185261Z  * [new tag]         v2.1.107                  -> v2.1.107
+2026-08-14T05:52:05.4185589Z  * [new tag]         v2.1.108                  -> v2.1.108
+2026-08-14T05:52:05.4185916Z  * [new tag]         v2.1.109                  -> v2.1.109
+2026-08-14T05:52:05.4189155Z  * [new tag]         v2.1.110                  -> v2.1.110
+2026-08-14T05:52:05.4214931Z  * [new tag]         v2.1.111                  -> v2.1.111
+2026-08-14T05:52:05.4215289Z  * [new tag]         v2.1.112                  -> v2.1.112
+2026-08-14T05:52:05.4215673Z  * [new tag]         v2.1.114                  -> v2.1.114
+2026-08-14T05:52:05.4241854Z  * [new tag]         v2.1.115                  -> v2.1.115
+2026-08-14T05:52:05.4249716Z  * [new tag]         v2.1.116                  -> v2.1.116
+2026-08-14T05:52:05.4250052Z  * [new tag]         v2.1.117                  -> v2.1.117
+2026-08-14T05:52:05.4250366Z  * [new tag]         v2.1.118                  -> v2.1.118
+2026-08-14T05:52:05.4250687Z  * [new tag]         v2.1.119                  -> v2.1.119
+2026-08-14T05:52:05.4250984Z  * [new tag]         v2.1.120                  -> v2.1.120
+2026-08-14T05:52:05.4251291Z  * [new tag]         v2.1.121                  -> v2.1.121
+2026-08-14T05:52:05.4251615Z  * [new tag]         v2.1.122                  -> v2.1.122
+2026-08-14T05:52:05.4251937Z  * [new tag]         v2.1.123                  -> v2.1.123
+2026-08-14T05:52:05.4252652Z  * [new tag]         v2.1.124                  -> v2.1.124
+2026-08-14T05:52:05.4252984Z  * [new tag]         v2.1.125                  -> v2.1.125
+2026-08-14T05:52:05.4253313Z  * [new tag]         v2.1.126                  -> v2.1.126
+2026-08-14T05:52:05.4253631Z  * [new tag]         v2.1.127                  -> v2.1.127
+2026-08-14T05:52:05.4253938Z  * [new tag]         v2.1.128                  -> v2.1.128
+2026-08-14T05:52:05.4254256Z  * [new tag]         v2.1.129                  -> v2.1.129
+2026-08-14T05:52:05.4254637Z  * [new tag]         v2.1.130                  -> v2.1.130
+2026-08-14T05:52:05.4261225Z  * [new tag]         v2.1.131                  -> v2.1.131
+2026-08-14T05:52:05.4273353Z  * [new tag]         v2.1.132                  -> v2.1.132
+2026-08-14T05:52:05.4273698Z  * [new tag]         v2.1.133                  -> v2.1.133
+2026-08-14T05:52:05.4282945Z  * [new tag]         v2.1.134                  -> v2.1.134
+2026-08-14T05:52:05.4283282Z  * [new tag]         v2.1.135                  -> v2.1.135
+2026-08-14T05:52:05.4287853Z  * [new tag]         v2.1.136                  -> v2.1.136
+2026-08-14T05:52:05.4293254Z  * [new tag]         v2.1.137                  -> v2.1.137
+2026-08-14T05:52:05.4303977Z  * [new tag]         v2.1.48                   -> v2.1.48
+2026-08-14T05:52:05.4306905Z  * [new tag]         v2.1.49                   -> v2.1.49
+2026-08-14T05:52:05.4314804Z  * [new tag]         v2.1.53                   -> v2.1.53
+2026-08-14T05:52:05.4323130Z  * [new tag]         v2.1.54                   -> v2.1.54
+2026-08-14T05:52:05.4330846Z  * [new tag]         v2.1.55                   -> v2.1.55
+2026-08-14T05:52:05.4340580Z  * [new tag]         v2.1.56                   -> v2.1.56
+2026-08-14T05:52:05.4344371Z  * [new tag]         v2.1.57                   -> v2.1.57
+2026-08-14T05:52:05.4351724Z  * [new tag]         v2.1.58                   -> v2.1.58
+2026-08-14T05:52:05.4354324Z  * [new tag]         v2.1.77                   -> v2.1.77
+2026-08-14T05:52:05.4360086Z  * [new tag]         v2.1.79                   -> v2.1.79
+2026-08-14T05:52:05.4366903Z  * [new tag]         v2.1.80                   -> v2.1.80
+2026-08-14T05:52:05.4372823Z  * [new tag]         v2.1.81                   -> v2.1.81
+2026-08-14T05:52:05.4378249Z  * [new tag]         v2.1.88                   -> v2.1.88
+2026-08-14T05:52:05.4380038Z  * [new tag]         v2.1.89                   -> v2.1.89
+2026-08-14T05:52:05.4384047Z  * [new tag]         v2.1.90                   -> v2.1.90
+2026-08-14T05:52:05.4387892Z  * [new tag]         v2.1.91                   -> v2.1.91
+2026-08-14T05:52:05.4389273Z  * [new tag]         vp-device-1.0.10          -> vp-device-1.0.10
+2026-08-14T05:52:05.4393019Z  * [new tag]         vp-device-1.0.11          -> vp-device-1.0.11
+2026-08-14T05:52:05.4397512Z  * [new tag]         vp-device-1.0.12          -> vp-device-1.0.12
+2026-08-14T05:52:05.4403936Z  * [new tag]         vp-device-1.0.13          -> vp-device-1.0.13
+2026-08-14T05:52:05.4408529Z  * [new tag]         vp-device-1.0.14          -> vp-device-1.0.14
+2026-08-14T05:52:05.4410258Z  * [new tag]         vp-device-1.0.15          -> vp-device-1.0.15
+2026-08-14T05:52:05.4412587Z  * [new tag]         vp-device-1.0.16          -> vp-device-1.0.16
+2026-08-14T05:52:05.4418626Z  * [new tag]         vp-device-1.0.17          -> vp-device-1.0.17
+2026-08-14T05:52:05.4421857Z  * [new tag]         vp-device-1.0.18          -> vp-device-1.0.18
+2026-08-14T05:52:05.4426814Z  * [new tag]         vp-device-1.0.19          -> vp-device-1.0.19
+2026-08-14T05:52:05.4432470Z  * [new tag]         vp-device-1.0.2           -> vp-device-1.0.2
+2026-08-14T05:52:05.4433343Z  * [new tag]         vp-device-1.0.3           -> vp-device-1.0.3
+2026-08-14T05:52:05.4442515Z  * [new tag]         vp-device-1.0.4           -> vp-device-1.0.4
+2026-08-14T05:52:05.4449952Z  * [new tag]         vp-device-1.0.5           -> vp-device-1.0.5
+2026-08-14T05:52:05.4450308Z  * [new tag]         vp-device-1.0.6           -> vp-device-1.0.6
+2026-08-14T05:52:05.4450645Z  * [new tag]         vp-device-1.0.7           -> vp-device-1.0.7
+2026-08-14T05:52:05.4452092Z  * [new tag]         vp-device-1.0.8           -> vp-device-1.0.8
+2026-08-14T05:52:05.4456809Z  * [new tag]         vp-device-1.0.9           -> vp-device-1.0.9
+2026-08-14T05:52:05.4464270Z  * [new tag]         vp-device-1.1.3           -> vp-device-1.1.3
+2026-08-14T05:52:05.4464650Z  * [new tag]         vp-device-2.0.0           -> vp-device-2.0.0
+2026-08-14T05:52:05.4470137Z  * [new tag]         vp-device-2.0.1           -> vp-device-2.0.1
+2026-08-14T05:52:05.4470958Z  * [new tag]         vp-device-2.0.10          -> vp-device-2.0.10
+2026-08-14T05:52:05.4471471Z  * [new tag]         vp-device-2.0.13          -> vp-device-2.0.13
+2026-08-14T05:52:05.4471830Z  * [new tag]         vp-device-2.0.15          -> vp-device-2.0.15
+2026-08-14T05:52:05.4475270Z  * [new tag]         vp-device-2.0.16          -> vp-device-2.0.16
+2026-08-14T05:52:05.4482092Z  * [new tag]         vp-device-2.0.20          -> vp-device-2.0.20
+2026-08-14T05:52:05.4482509Z  * [new tag]         vp-device-2.0.21          -> vp-device-2.0.21
+2026-08-14T05:52:05.4486942Z  * [new tag]         vp-device-2.0.22          -> vp-device-2.0.22
+2026-08-14T05:52:05.4488336Z  * [new tag]         vp-device-2.0.24          -> vp-device-2.0.24
+2026-08-14T05:52:05.4491547Z  * [new tag]         vp-device-2.0.25          -> vp-device-2.0.25
+2026-08-14T05:52:05.4492511Z  * [new tag]         vp-device-2.0.26          -> vp-device-2.0.26
+2026-08-14T05:52:05.4494935Z  * [new tag]         vp-device-2.0.27          -> vp-device-2.0.27
+2026-08-14T05:52:05.4501627Z  * [new tag]         vp-device-2.0.28          -> vp-device-2.0.28
+2026-08-14T05:52:05.4503045Z  * [new tag]         vp-device-2.0.29          -> vp-device-2.0.29
+2026-08-14T05:52:05.4509885Z  * [new tag]         vp-device-2.0.3           -> vp-device-2.0.3
+2026-08-14T05:52:05.4521610Z  * [new tag]         vp-device-2.0.31          -> vp-device-2.0.31
+2026-08-14T05:52:05.4522969Z  * [new tag]         vp-device-2.0.32          -> vp-device-2.0.32
+2026-08-14T05:52:05.4525791Z  * [new tag]         vp-device-2.0.33          -> vp-device-2.0.33
+2026-08-14T05:52:05.4527503Z  * [new tag]         vp-device-2.0.35          -> vp-device-2.0.35
+2026-08-14T05:52:05.4531817Z  * [new tag]         vp-device-2.0.37          -> vp-device-2.0.37
+2026-08-14T05:52:05.4534943Z  * [new tag]         vp-device-2.0.38          -> vp-device-2.0.38
+2026-08-14T05:52:05.4537609Z  * [new tag]         vp-device-2.0.39          -> vp-device-2.0.39
+2026-08-14T05:52:05.4542198Z  * [new tag]         vp-device-2.0.4           -> vp-device-2.0.4
+2026-08-14T05:52:05.4544367Z  * [new tag]         vp-device-2.0.40          -> vp-device-2.0.40
+2026-08-14T05:52:05.4547040Z  * [new tag]         vp-device-2.0.41          -> vp-device-2.0.41
+2026-08-14T05:52:05.4552664Z  * [new tag]         vp-device-2.0.42          -> vp-device-2.0.42
+2026-08-14T05:52:05.4556420Z  * [new tag]         vp-device-2.0.43          -> vp-device-2.0.43
+2026-08-14T05:52:05.4562474Z  * [new tag]         vp-device-2.0.44          -> vp-device-2.0.44
+2026-08-14T05:52:05.4563828Z  * [new tag]         vp-device-2.0.45          -> vp-device-2.0.45
+2026-08-14T05:52:05.4566276Z  * [new tag]         vp-device-2.0.46          -> vp-device-2.0.46
+2026-08-14T05:52:05.4572110Z  * [new tag]         vp-device-2.0.47          -> vp-device-2.0.47
+2026-08-14T05:52:05.4574421Z  * [new tag]         vp-device-2.0.48          -> vp-device-2.0.48
+2026-08-14T05:52:05.4579730Z  * [new tag]         vp-device-2.0.49          -> vp-device-2.0.49
+2026-08-14T05:52:05.4585128Z  * [new tag]         vp-device-2.0.5           -> vp-device-2.0.5
+2026-08-14T05:52:05.4587956Z  * [new tag]         vp-device-2.0.51          -> vp-device-2.0.51
+2026-08-14T05:52:05.4592698Z  * [new tag]         vp-device-2.0.52          -> vp-device-2.0.52
+2026-08-14T05:52:05.4599117Z  * [new tag]         vp-device-2.0.53          -> vp-device-2.0.53
+2026-08-14T05:52:05.4599990Z  * [new tag]         vp-device-2.0.54          -> vp-device-2.0.54
+2026-08-14T05:52:05.4604380Z  * [new tag]         vp-device-2.0.55          -> vp-device-2.0.55
+2026-08-14T05:52:05.4607509Z  * [new tag]         vp-device-2.0.56          -> vp-device-2.0.56
+2026-08-14T05:52:05.4615373Z  * [new tag]         vp-device-2.0.57          -> vp-device-2.0.57
+2026-08-14T05:52:05.4615722Z  * [new tag]         vp-device-2.0.6           -> vp-device-2.0.6
+2026-08-14T05:52:05.4617740Z  * [new tag]         vp-device-2.0.9           -> vp-device-2.0.9
+2026-08-14T05:52:05.4622544Z  * [new tag]         vp-device-2.1.0           -> vp-device-2.1.0
+2026-08-14T05:52:05.4625410Z  * [new tag]         vp-device-2.1.1           -> vp-device-2.1.1
+2026-08-14T05:52:05.4629541Z  * [new tag]         vp-device-2.1.10          -> vp-device-2.1.10
+2026-08-14T05:52:05.4635816Z  * [new tag]         vp-device-2.1.15          -> vp-device-2.1.15
+2026-08-14T05:52:05.4636171Z  * [new tag]         vp-device-2.1.16          -> vp-device-2.1.16
+2026-08-14T05:52:05.4638138Z  * [new tag]         vp-device-2.1.17          -> vp-device-2.1.17
+2026-08-14T05:52:05.4644495Z  * [new tag]         vp-device-2.1.18          -> vp-device-2.1.18
+2026-08-14T05:52:05.4650855Z  * [new tag]         vp-device-2.1.2           -> vp-device-2.1.2
+2026-08-14T05:52:05.4651216Z  * [new tag]         vp-device-2.1.21          -> vp-device-2.1.21
+2026-08-14T05:52:05.4657101Z  * [new tag]         vp-device-2.1.22          -> vp-device-2.1.22
+2026-08-14T05:52:05.4661179Z  * [new tag]         vp-device-2.1.23          -> vp-device-2.1.23
+2026-08-14T05:52:05.4662081Z  * [new tag]         vp-device-2.1.24          -> vp-device-2.1.24
+2026-08-14T05:52:05.4669611Z  * [new tag]         vp-device-2.1.25          -> vp-device-2.1.25
+2026-08-14T05:52:05.4670058Z  * [new tag]         vp-device-2.1.26          -> vp-device-2.1.26
+2026-08-14T05:52:05.4677392Z  * [new tag]         vp-device-2.1.27          -> vp-device-2.1.27
+2026-08-14T05:52:05.4677752Z  * [new tag]         vp-device-2.1.28          -> vp-device-2.1.28
+2026-08-14T05:52:05.4678092Z  * [new tag]         vp-device-2.1.29          -> vp-device-2.1.29
+2026-08-14T05:52:05.4680981Z  * [new tag]         vp-device-2.1.3           -> vp-device-2.1.3
+2026-08-14T05:52:05.4681357Z  * [new tag]         vp-device-2.1.30          -> vp-device-2.1.30
+2026-08-14T05:52:05.4687900Z  * [new tag]         vp-device-2.1.31          -> vp-device-2.1.31
+2026-08-14T05:52:05.4695633Z  * [new tag]         vp-device-2.1.31-SNAPSHOT -> vp-device-2.1.31-SNAPSHOT
+2026-08-14T05:52:05.4698563Z  * [new tag]         vp-device-2.1.32          -> vp-device-2.1.32
+2026-08-14T05:52:05.4703258Z  * [new tag]         vp-device-2.1.33          -> vp-device-2.1.33
+2026-08-14T05:52:05.4709101Z  * [new tag]         vp-device-2.1.34          -> vp-device-2.1.34
+2026-08-14T05:52:05.4710644Z  * [new tag]         vp-device-2.1.4           -> vp-device-2.1.4
+2026-08-14T05:52:05.4712644Z  * [new tag]         vp-device-2.1.44          -> vp-device-2.1.44
+2026-08-14T05:52:05.4721606Z  * [new tag]         vp-device-2.1.45          -> vp-device-2.1.45
+2026-08-14T05:52:05.4724264Z  * [new tag]         vp-device-2.1.46          -> vp-device-2.1.46
+2026-08-14T05:52:05.4732897Z  * [new tag]         vp-device-2.1.47          -> vp-device-2.1.47
+2026-08-14T05:52:05.4734556Z  * [new tag]         vp-device-2.1.5           -> vp-device-2.1.5
+2026-08-14T05:52:05.4735276Z  * [new tag]         vp-device-2.1.51          -> vp-device-2.1.51
+2026-08-14T05:52:05.4743640Z  * [new tag]         vp-device-2.1.6           -> vp-device-2.1.6
+2026-08-14T05:52:05.4744086Z  * [new tag]         vp-device-2.1.7           -> vp-device-2.1.7
+2026-08-14T05:52:05.4747392Z  * [new tag]         vp-device-2.1.8           -> vp-device-2.1.8
+2026-08-14T05:52:05.4748025Z  * [new tag]         vp-device-2.1.9           -> vp-device-2.1.9
+2026-08-14T05:52:05.4748617Z  * [new tag]         vpdev-docs-1.0.0          -> vpdev-docs-1.0.0
+2026-08-14T05:52:05.4752371Z  * [new tag]         vpdev-docs-1.0.1          -> vpdev-docs-1.0.1
+2026-08-14T05:52:05.4756733Z  * [new tag]         vpdev-docs-1.0.2          -> vpdev-docs-1.0.2
+2026-08-14T05:52:05.4762824Z  * [new tag]         vpdev-docs-1.1.0          -> vpdev-docs-1.1.0
+2026-08-14T05:52:06.2340747Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +164fc48798ee3c3b43ac7ebf071bf27d9320899e
+2026-08-14T05:52:06.2345605Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2026-08-14T05:52:06.2345837Z From https://github.azc.ext.hp.com/WPPg2/vp-device
+2026-08-14T05:52:06.2346045Z  * branch            164fc48798ee3c3b43ac7ebf071bf27d9320899e -> FETCH_HEAD
+2026-08-14T05:52:07.3410871Z ##[command]git checkout --progress --force refs/remotes/origin/164fc48798ee3c3b43ac7ebf071bf27d9320899e
+2026-08-14T05:52:07.3415460Z Note: switching to 'refs/remotes/origin/164fc48798ee3c3b43ac7ebf071bf27d9320899e'.
+2026-08-14T05:52:07.3415565Z 
+2026-08-14T05:52:07.3415783Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-08-14T05:52:07.3416007Z changes and commit them, and you can discard any commits you make in this
+2026-08-14T05:52:07.3416214Z state without impacting any branches by switching back to a branch.
+2026-08-14T05:52:07.3416306Z 
+2026-08-14T05:52:07.3416480Z If you want to create a new branch to retain commits you create, you may
+2026-08-14T05:52:07.3416687Z do so (now or later) by using -c with the switch command. Example:
+2026-08-14T05:52:07.3416774Z 
+2026-08-14T05:52:07.3417261Z   git switch -c <new-branch-name>
+2026-08-14T05:52:07.3417349Z 
+2026-08-14T05:52:07.3417513Z Or undo this operation with:
+2026-08-14T05:52:07.3417582Z 
+2026-08-14T05:52:07.3417729Z   git switch -
+2026-08-14T05:52:07.3417793Z 
+2026-08-14T05:52:07.3417974Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-08-14T05:52:07.3418071Z 
+2026-08-14T05:52:07.3418278Z HEAD is now at 164fc48 Merge 06903d3fd3c073436557998419b71b87e0e72ca8 into 40cfb36251277e252ee90ca368a84e726cf35bb7
+2026-08-14T05:52:07.3471211Z ##[section]Finishing: Checkout WPPg2/vp-device@refs/pull/1253/merge to s
+2026-08-14T05:52:07.3513546Z ##[section]Starting: UsePythonVersion
+2026-08-14T05:52:07.3523407Z ==============================================================================
+2026-08-14T05:52:07.3523571Z Task         : Use Python version
+2026-08-14T05:52:07.3523685Z Description  : Use the specified version of Python from the tool cache, optionally adding it to the PATH
+2026-08-14T05:52:07.3523828Z Version      : 0.276.0
+2026-08-14T05:52:07.3523899Z Author       : Microsoft Corporation
+2026-08-14T05:52:07.3524010Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/tool/use-python-version
+2026-08-14T05:52:07.3524146Z ==============================================================================
+2026-08-14T05:52:12.7511948Z Found tool in cache: Python 3.13.2 x64
+2026-08-14T05:52:12.7612237Z Prepending PATH environment variable with directory: /usr/local/ado-agent/_work/_tool/Python/3.13.2/x64
+2026-08-14T05:52:12.7615857Z Prepending PATH environment variable with directory: /usr/local/ado-agent/_work/_tool/Python/3.13.2/x64/bin
+2026-08-14T05:52:13.9714012Z ##[section]Finishing: UsePythonVersion
+2026-08-14T05:52:13.9746495Z ##[section]Starting: Install terragrunt
+2026-08-14T05:52:13.9753195Z ==============================================================================
+2026-08-14T05:52:13.9753304Z Task         : Bash
+2026-08-14T05:52:13.9753382Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-08-14T05:52:13.9753468Z Version      : 3.274.1
+2026-08-14T05:52:13.9753545Z Author       : Microsoft Corporation
+2026-08-14T05:52:13.9753625Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-08-14T05:52:13.9753718Z ==============================================================================
+2026-08-14T05:52:16.8352618Z Generating script.
+2026-08-14T05:52:16.8363573Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:16.8371067Z [command]/usr/bin/bash /usr/local/ado-agent/_work/_temp/49d92013-ea82-4bdd-8da2-cecc07a91409.sh
+2026-08-14T05:52:16.8450860Z Downloading terragrunt version v0.32.3...
+2026-08-14T05:52:16.8509865Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-08-14T05:52:16.8518378Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-08-14T05:52:16.8518785Z 
+2026-08-14T05:52:16.8961640Z   0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+2026-08-14T05:52:16.8963906Z   0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+2026-08-14T05:52:17.7884372Z 
+2026-08-14T05:52:18.7874115Z  20 35305k  20  7411k   0     0  7903k     0   0:00:04 --:--:--  0:00:04  7903k
+2026-08-14T05:52:19.2362583Z  69 35305k  69 24667k   0     0 12737k     0   0:00:02  0:00:01  0:00:01 17273k
+2026-08-14T05:52:19.2366284Z 100 35305k 100 35305k   0     0 14800k     0   0:00:02  0:00:02 --:--:-- 19276k
+2026-08-14T05:52:19.2424432Z 
+2026-08-14T05:52:19.2485333Z ##[section]Finishing: Install terragrunt
+2026-08-14T05:52:19.2536921Z ##[section]Starting: Install Terraform
+2026-08-14T05:52:19.2543875Z ==============================================================================
+2026-08-14T05:52:19.2543982Z Task         : Terraform tool installer
+2026-08-14T05:52:19.2544062Z Description  : Find in cache or download a specific version of Terraform and prepend it to the PATH
+2026-08-14T05:52:19.2544164Z Version      : 1.216.36
+2026-08-14T05:52:19.2544238Z Author       : Microsoft Corporation
+2026-08-14T05:52:19.2544325Z Help         : [Learn more about this task](https://aka.ms/AAf1a0p)
+2026-08-14T05:52:19.2544409Z ==============================================================================
+2026-08-14T05:52:21.1802982Z Downloading: https://releases.hashicorp.com/terraform/1.0.7/terraform_1.0.7_linux_amd64.zip
+2026-08-14T05:52:21.4785830Z Extracting archive
+2026-08-14T05:52:21.4840506Z [command]/usr/bin/unzip /usr/local/ado-agent/_work/_temp/terraform-1.0.7-2c83c2af-4e09-44e1-a7aa-03b2e166f8e8.zip
+2026-08-14T05:52:21.5372148Z Archive:  /usr/local/ado-agent/_work/_temp/terraform-1.0.7-2c83c2af-4e09-44e1-a7aa-03b2e166f8e8.zip
+2026-08-14T05:52:22.0033593Z   inflating: terraform               
+2026-08-14T05:52:22.0040949Z 
+2026-08-14T05:52:22.0057799Z Caching tool: terraform 1.0.7 x64
+2026-08-14T05:52:22.0558765Z Prepending PATH environment variable with directory: /usr/local/ado-agent/_work/_tool/terraform/1.0.7/x64
+2026-08-14T05:52:22.0560488Z Verifying Terraform installation...
+2026-08-14T05:52:22.0564807Z [command]/usr/local/ado-agent/_work/_tool/terraform/1.0.7/x64/terraform version
+2026-08-14T05:52:22.1752919Z Terraform v1.0.7
+2026-08-14T05:52:22.1753767Z on linux_amd64
+2026-08-14T05:52:22.1753967Z 
+2026-08-14T05:52:22.1754400Z Your version of Terraform is out of date! The latest version
+2026-08-14T05:52:22.1754927Z is 1.15.8. You can update by downloading from https://www.terraform.io/downloads.html
+2026-08-14T05:52:22.1821270Z 
+2026-08-14T05:52:22.1924251Z ##[section]Finishing: Install Terraform
+2026-08-14T05:52:22.1985759Z ##[section]Starting: Install aws-iam-authenticator (Linux)
+2026-08-14T05:52:22.1993155Z ==============================================================================
+2026-08-14T05:52:22.1993269Z Task         : Bash
+2026-08-14T05:52:22.1993343Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-08-14T05:52:22.1993429Z Version      : 3.274.1
+2026-08-14T05:52:22.1993502Z Author       : Microsoft Corporation
+2026-08-14T05:52:22.1993585Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-08-14T05:52:22.1993677Z ==============================================================================
+2026-08-14T05:52:25.3034541Z Generating script.
+2026-08-14T05:52:25.3045898Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:25.3053094Z [command]/usr/bin/bash /usr/local/ado-agent/_work/_temp/4b92e8ed-d7b0-4a42-9aa9-63026403b3a6.sh
+2026-08-14T05:52:25.3135862Z ##[debug]Downloading aws-iam-authenticator version 1.14.6...
+2026-08-14T05:52:25.3198599Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-08-14T05:52:25.3198980Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-08-14T05:52:25.3199128Z 
+2026-08-14T05:52:25.5241020Z   0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+2026-08-14T05:52:25.5257270Z 100 18213k 100 18213k   0     0 88683k     0  --:--:-- --:--:-- --:--:-- 88845k
+2026-08-14T05:52:25.5300650Z 
+2026-08-14T05:52:25.5366735Z ##[section]Finishing: Install aws-iam-authenticator (Linux)
+2026-08-14T05:52:25.5451508Z Skipping step due to condition evaluation.
+Evaluating: and(always(), eq(variables['Agent.OS'], 'Windows_NT'))
+Expanded: and(True, eq('Linux', 'Windows_NT'))
+Result: False
+
+2026-08-14T05:52:25.5483002Z ##[section]Starting: Validate aws-iam-authenticator installation
+2026-08-14T05:52:25.5490351Z ==============================================================================
+2026-08-14T05:52:25.5490468Z Task         : Bash
+2026-08-14T05:52:25.5490540Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-08-14T05:52:25.5490622Z Version      : 3.274.1
+2026-08-14T05:52:25.5490704Z Author       : Microsoft Corporation
+2026-08-14T05:52:25.5490788Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-08-14T05:52:25.5490879Z ==============================================================================
+2026-08-14T05:52:28.4725842Z Generating script.
+2026-08-14T05:52:28.4736560Z Script contents:
+2026-08-14T05:52:28.4736910Z aws-iam-authenticator version
+2026-08-14T05:52:28.4740762Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:28.4749591Z [command]/usr/bin/bash /usr/local/ado-agent/_work/_temp/3254fc6c-e857-4dee-b5b6-f6998cede393.sh
+2026-08-14T05:52:28.5157488Z {"Version":"v0.4.0","Commit":"c141eda34ad1b6b4d71056810951801348f8c367"}
+2026-08-14T05:52:28.5178550Z 
+2026-08-14T05:52:28.5237928Z ##[section]Finishing: Validate aws-iam-authenticator installation
+2026-08-14T05:52:28.5295821Z ##[section]Starting: Authenticate on GCP
+2026-08-14T05:52:28.5305698Z ==============================================================================
+2026-08-14T05:52:28.5305909Z Task         : Command line
+2026-08-14T05:52:28.5306054Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:52:28.5306247Z Version      : 2.276.0
+2026-08-14T05:52:28.5306379Z Author       : Microsoft Corporation
+2026-08-14T05:52:28.5306542Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:52:28.5306731Z ==============================================================================
+2026-08-14T05:52:31.3930047Z Generating script.
+2026-08-14T05:52:31.3936399Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:31.3951002Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/6c64def1-eb17-4397-b389-4c4959ef4d0e.sh
+2026-08-14T05:52:31.4007147Z Authentication skipped because the optional 'gcpAuthFile' parameter was not provided!
+2026-08-14T05:52:31.4016160Z 
+2026-08-14T05:52:31.4078722Z ##[section]Finishing: Authenticate on GCP
+2026-08-14T05:52:31.4114317Z ##[section]Starting: Update git config settings
+2026-08-14T05:52:31.4121748Z ==============================================================================
+2026-08-14T05:52:31.4121857Z Task         : Bash
+2026-08-14T05:52:31.4121926Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-08-14T05:52:31.4122009Z Version      : 3.274.1
+2026-08-14T05:52:31.4122086Z Author       : Microsoft Corporation
+2026-08-14T05:52:31.4122168Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-08-14T05:52:31.4122259Z ==============================================================================
+2026-08-14T05:52:34.6808285Z Generating script.
+2026-08-14T05:52:34.6819966Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:34.6828724Z [command]/usr/bin/bash /usr/local/ado-agent/_work/_temp/64981907-adb4-484f-810b-cbdf23265eac.sh
+2026-08-14T05:52:34.6883261Z Configuring GitHub Enterprise access
+2026-08-14T05:52:34.7007460Z 
+2026-08-14T05:52:34.7066662Z ##[section]Finishing: Update git config settings
+2026-08-14T05:52:34.7101101Z ##[section]Starting: Assume the role in team’s AWS account
+2026-08-14T05:52:34.7108167Z ==============================================================================
+2026-08-14T05:52:34.7108279Z Task         : Bash
+2026-08-14T05:52:34.7108350Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-08-14T05:52:34.7108434Z Version      : 3.274.1
+2026-08-14T05:52:34.7108507Z Author       : Microsoft Corporation
+2026-08-14T05:52:34.7108590Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-08-14T05:52:34.7108679Z ==============================================================================
+2026-08-14T05:52:37.4255455Z Generating script.
+2026-08-14T05:52:37.4268870Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:37.4273877Z [command]/usr/bin/bash /usr/local/ado-agent/_work/_temp/45bcbf2a-616d-4d4c-9dee-4e71eb38a839.sh
+2026-08-14T05:52:38.1416675Z ##[section]Successfully assumed role: arn:aws:iam::508587356765:role/codeway-linux-agent-ec2
+2026-08-14T05:52:38.1427849Z 
+2026-08-14T05:52:38.1492207Z ##[section]Finishing: Assume the role in team’s AWS account
+2026-08-14T05:52:38.1535386Z Skipping step due to condition evaluation.
+Evaluating: and(succeeded(), or(contains(variables['Build.Repository.Name'], 'onecloud-'), contains(variables['Build.Repository.Name'], 'hpip-'), contains(variables['Build.Repository.Name'], 'tropos-')))
+Expanded: and(True, or(contains('WPPg2/vp-device', 'onecloud-'), contains('WPPg2/vp-device', 'hpip-'), contains('WPPg2/vp-device', 'tropos-')))
+Result: False
+
+2026-08-14T05:52:38.1586975Z Skipping step due to condition evaluation.
+Evaluating: and(succeeded(), or(contains(variables['Build.Repository.Name'], 'onecloud-'), contains(variables['Build.Repository.Name'], 'hpip-'), contains(variables['Build.Repository.Name'], 'tropos-')))
+Expanded: and(True, or(contains('WPPg2/vp-device', 'onecloud-'), contains('WPPg2/vp-device', 'hpip-'), contains('WPPg2/vp-device', 'tropos-')))
+Result: False
+
+2026-08-14T05:52:38.1621950Z Skipping step due to condition evaluation.
+Evaluating: and(succeeded(), or(contains(variables['Build.Repository.Name'], 'onecloud-'), contains(variables['Build.Repository.Name'], 'hpip-'), contains(variables['Build.Repository.Name'], 'tropos-')))
+Expanded: and(True, or(contains('WPPg2/vp-device', 'onecloud-'), contains('WPPg2/vp-device', 'hpip-'), contains('WPPg2/vp-device', 'tropos-')))
+Result: False
+
+2026-08-14T05:52:38.1651325Z ##[section]Starting: Run terragrunt hclfmt
+2026-08-14T05:52:38.1658130Z ==============================================================================
+2026-08-14T05:52:38.1658240Z Task         : Command line
+2026-08-14T05:52:38.1658319Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:52:38.1658424Z Version      : 2.276.0
+2026-08-14T05:52:38.1658501Z Author       : Microsoft Corporation
+2026-08-14T05:52:38.1658575Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:52:38.1658686Z ==============================================================================
+2026-08-14T05:52:40.6699892Z Generating script.
+2026-08-14T05:52:40.6705843Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:40.6721629Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/7685cbd5-4a9a-4ee6-af49-a4ac991bd392.sh
+2026-08-14T05:52:40.6779896Z Running terragrunt hclfmt command on infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/
+2026-08-14T05:52:40.6870579Z time=2026-08-14T05:52:40Z level=info msg=Formatting hcl files from the directory tree /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device.
+2026-08-14T05:52:40.6882905Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/service.hcl
+2026-08-14T05:52:40.6884930Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/iam/dvc-vpdev/terragrunt.hcl
+2026-08-14T05:52:40.6914096Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup/terragrunt.hcl
+2026-08-14T05:52:40.6939549Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup/terragrunt.hcl
+2026-08-14T05:52:40.6951873Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup/terragrunt.hcl
+2026-08-14T05:52:40.6979272Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/waf/dvc-vpdev-podlb-alb/terragrunt.hcl
+2026-08-14T05:52:40.6991497Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource/terragrunt.hcl
+2026-08-14T05:52:40.7004338Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/service-config.hcl
+2026-08-14T05:52:40.7006154Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:52:40.7040509Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/service-config.hcl
+2026-08-14T05:52:40.7047792Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:52:40.7071338Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/listner/dvc-vpdev-podlb-alb/terragrunt.hcl
+2026-08-14T05:52:40.7095736Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret/terragrunt.hcl
+2026-08-14T05:52:40.7104801Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/route53/wppinternal.com/record-sets/vpdev.podlb.device/terragrunt.hcl
+2026-08-14T05:52:40.7113411Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb/terragrunt.hcl
+2026-08-14T05:52:40.7170101Z 
+2026-08-14T05:52:40.7241740Z ##[section]Finishing: Run terragrunt hclfmt
+2026-08-14T05:52:40.7275385Z ##[section]Starting: Run terragrunt run-all validate
+2026-08-14T05:52:40.7283668Z ==============================================================================
+2026-08-14T05:52:40.7283772Z Task         : Command line
+2026-08-14T05:52:40.7283847Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:52:40.7283952Z Version      : 2.276.0
+2026-08-14T05:52:40.7284031Z Author       : Microsoft Corporation
+2026-08-14T05:52:40.7284105Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:52:40.7284203Z ==============================================================================
+2026-08-14T05:52:43.5497956Z Generating script.
+2026-08-14T05:52:43.5503853Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:43.5518798Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/8f755e9d-ac0f-4392-8abf-1a1836dd8ebd.sh
+2026-08-14T05:52:43.5572809Z Running terragrunt run-all validate command on infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/
+2026-08-14T05:52:43.5575369Z terragrunt IncludeArgs: 
+2026-08-14T05:52:43.5575917Z terragrunt IncludeUnitsReadingArgs: 
+2026-08-14T05:52:43.5576260Z ExtraArgs: 
+2026-08-14T05:52:44.3310054Z time=2026-08-14T05:52:44Z level=info msg=Stack at infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/:
+2026-08-14T05:52:44.3311070Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:52:44.3312372Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:52:44.3313441Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/iam/dvc-vpdev (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret])
+2026-08-14T05:52:44.3314366Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:52:44.3315324Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/route53/wppinternal.com/record-sets/vpdev.podlb.device (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb])
+2026-08-14T05:52:44.3316133Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret (excluded: false, dependencies: [])
+2026-08-14T05:52:44.3317362Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:52:44.3318552Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:52:44.3322124Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup (excluded: false, dependencies: [])
+2026-08-14T05:52:44.3323090Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/listner/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:52:44.3324068Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource (excluded: false, dependencies: [])
+2026-08-14T05:52:44.3324839Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/waf/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb])
+2026-08-14T05:52:45.5354915Z 
+2026-08-14T05:52:45.6925098Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:45.6925422Z 
+2026-08-14T05:52:45.6925798Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:45.6925872Z 
+2026-08-14T05:52:45.6926094Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:45.6926394Z [0m[32m
+2026-08-14T05:52:45.6926606Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:45.6926827Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:45.6927028Z [0m[32m
+2026-08-14T05:52:45.6927334Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:45.6927630Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:45.6927849Z [0m[32m
+2026-08-14T05:52:45.6928169Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:45.6928402Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:45.7503537Z 
+2026-08-14T05:52:45.7504910Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:45.7505320Z - Finding hashicorp/aws versions matching "~> 4.1.0"...
+2026-08-14T05:52:45.7677054Z 
+2026-08-14T05:52:45.7678328Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:45.7678782Z - Finding hashicorp/aws versions matching "~> 3.74.0"...
+2026-08-14T05:52:45.7810074Z 
+2026-08-14T05:52:45.7811229Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:45.7811526Z - Finding hashicorp/aws versions matching "~> 4.3.0"...
+2026-08-14T05:52:45.8970559Z - Installing hashicorp/aws v4.1.0...
+2026-08-14T05:52:45.9091568Z - Installing hashicorp/aws v3.74.3...
+2026-08-14T05:52:45.9483933Z - Installing hashicorp/aws v4.3.0...
+2026-08-14T05:52:48.3873913Z - Installed hashicorp/aws v4.3.0 (signed by HashiCorp)
+2026-08-14T05:52:48.3874514Z 
+2026-08-14T05:52:48.3876340Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:48.3877214Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:48.3877745Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:48.3878242Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:48.3884628Z 
+2026-08-14T05:52:48.3885436Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:48.3885984Z [0m[32m
+2026-08-14T05:52:48.3886436Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:48.3886943Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:48.3887364Z should now work.
+2026-08-14T05:52:48.3887564Z 
+2026-08-14T05:52:48.3888133Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:48.3888627Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:48.3889100Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:48.5379922Z - Installed hashicorp/aws v4.1.0 (signed by HashiCorp)
+2026-08-14T05:52:48.5380510Z 
+2026-08-14T05:52:48.5381555Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:48.5382160Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:48.5383505Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:48.5387485Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:48.5390950Z 
+2026-08-14T05:52:48.5391644Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:48.5392117Z [0m[32m
+2026-08-14T05:52:48.5392540Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:48.5393077Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:48.5393519Z should now work.
+2026-08-14T05:52:48.5393721Z 
+2026-08-14T05:52:48.5394149Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:48.5394628Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:48.5395094Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:48.7928326Z - Installed hashicorp/aws v3.74.3 (signed by HashiCorp)
+2026-08-14T05:52:48.7929050Z 
+2026-08-14T05:52:48.7930006Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:48.7930746Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:48.7931401Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:48.7938119Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:48.7941697Z 
+2026-08-14T05:52:48.7942487Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:48.8009613Z [0m[32m
+2026-08-14T05:52:48.8009980Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:48.8010400Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:48.8010742Z should now work.
+2026-08-14T05:52:48.8010869Z 
+2026-08-14T05:52:48.8011203Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:48.8011614Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:48.8012026Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:50.5333729Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:52:50.5334183Z [0m
+2026-08-14T05:52:50.6422163Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:52:50.6422970Z [0m
+2026-08-14T05:52:51.2016086Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:52:51.2016974Z [0m
+2026-08-14T05:52:53.4016234Z 
+2026-08-14T05:52:53.4022724Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:53.5085496Z 
+2026-08-14T05:52:53.5088286Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:53.5160280Z [0m[1mInitializing modules...[0m
+2026-08-14T05:52:53.5188994Z - iam_policy in ../iam_policy
+2026-08-14T05:52:53.5207455Z 
+2026-08-14T05:52:53.5208423Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:53.5473637Z 
+2026-08-14T05:52:53.5474769Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:53.6202013Z [0m[32m
+2026-08-14T05:52:53.6202462Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:53.6202861Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:53.6381816Z [0m[32m
+2026-08-14T05:52:53.6382411Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:53.6383184Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:53.6606399Z [0m[32m
+2026-08-14T05:52:53.6607858Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:53.6609456Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:53.6610555Z [0m[32m
+2026-08-14T05:52:53.6614784Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:53.6615186Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:53.7680844Z 
+2026-08-14T05:52:53.7681837Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:53.7682345Z - Finding hashicorp/aws versions matching "~> 4.3.0"...
+2026-08-14T05:52:53.7833791Z 
+2026-08-14T05:52:53.7834352Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:53.7835262Z - Finding hashicorp/aws versions matching "~> 3.73.0"...
+2026-08-14T05:52:53.8303709Z 
+2026-08-14T05:52:53.8304912Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:53.8305641Z - Finding latest version of hashicorp/aws...
+2026-08-14T05:52:53.8317529Z 
+2026-08-14T05:52:53.8332683Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:53.8333298Z - Finding hashicorp/aws versions matching "~> 4.3.0"...
+2026-08-14T05:52:53.9514259Z - Installing hashicorp/aws v4.3.0...
+2026-08-14T05:52:53.9530006Z - Installing hashicorp/aws v3.73.0...
+2026-08-14T05:52:53.9857925Z - Installing hashicorp/aws v4.3.0...
+2026-08-14T05:52:53.9930270Z - Installing hashicorp/aws v6.60.0...
+2026-08-14T05:52:57.1899704Z - Installed hashicorp/aws v3.73.0 (signed by HashiCorp)
+2026-08-14T05:52:57.1900089Z 
+2026-08-14T05:52:57.1900820Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:57.1901371Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:57.1901880Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:57.1902336Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:57.1922728Z 
+2026-08-14T05:52:57.1923779Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:57.1924527Z [0m[32m
+2026-08-14T05:52:57.1925643Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:57.1926259Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:57.1926620Z should now work.
+2026-08-14T05:52:57.1926741Z 
+2026-08-14T05:52:57.1927074Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:57.1927468Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:57.1927962Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:57.1954020Z - Installed hashicorp/aws v4.3.0 (signed by HashiCorp)
+2026-08-14T05:52:57.1955397Z 
+2026-08-14T05:52:57.1955987Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:57.1956412Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:57.1956800Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:57.1957422Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:57.1962282Z 
+2026-08-14T05:52:57.1963063Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:57.1963629Z [0m[32m
+2026-08-14T05:52:57.1964164Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:57.1964695Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:57.1965242Z should now work.
+2026-08-14T05:52:57.1965494Z 
+2026-08-14T05:52:57.1966210Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:57.1966772Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:57.1967288Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:57.3238267Z - Installed hashicorp/aws v4.3.0 (signed by HashiCorp)
+2026-08-14T05:52:57.3244584Z 
+2026-08-14T05:52:57.3245673Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:57.3246388Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:57.3247043Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:57.3257693Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:57.3288087Z 
+2026-08-14T05:52:57.3296468Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:57.3302846Z [0m[32m
+2026-08-14T05:52:57.3303536Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:57.3304177Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:57.3304749Z should now work.
+2026-08-14T05:52:57.3305155Z 
+2026-08-14T05:52:57.3306086Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:57.3306924Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:57.3321210Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:59.9485459Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:52:59.9486459Z [0m
+2026-08-14T05:53:00.2240917Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:00.2241740Z [0m
+2026-08-14T05:53:00.2497826Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:00.2498606Z [0m
+2026-08-14T05:53:03.2804111Z 
+2026-08-14T05:53:03.2805638Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:03.3718847Z [0m[32m
+2026-08-14T05:53:03.3782068Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:03.3782493Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:03.4010362Z 
+2026-08-14T05:53:03.4011545Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:03.4378150Z 
+2026-08-14T05:53:03.4379004Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:03.4763560Z [0m[32m
+2026-08-14T05:53:03.4764423Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:03.4765147Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:03.5104160Z 
+2026-08-14T05:53:03.5106572Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:03.5107834Z - Finding hashicorp/aws versions matching "~> 3.74.0"...
+2026-08-14T05:53:03.5122266Z [0m[32m
+2026-08-14T05:53:03.5123024Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:03.5123694Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:03.6068637Z 
+2026-08-14T05:53:03.6069657Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:03.6070296Z - Finding latest version of hashicorp/template...
+2026-08-14T05:53:03.6633015Z 
+2026-08-14T05:53:03.6633672Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:03.6634004Z - Finding hashicorp/aws versions matching "~> 4.10.0"...
+2026-08-14T05:53:03.6673559Z - Finding hashicorp/aws versions matching "~> 4.10.0"...
+2026-08-14T05:53:03.6708918Z - Installing hashicorp/aws v3.74.3...
+2026-08-14T05:53:03.7176324Z - Finding latest version of hashicorp/template...
+2026-08-14T05:53:03.8619621Z - Installing hashicorp/aws v4.10.0...
+2026-08-14T05:53:04.1080876Z - Installing hashicorp/aws v4.10.0...
+2026-08-14T05:53:04.6978778Z - Installed hashicorp/aws v6.60.0 (signed by HashiCorp)
+2026-08-14T05:53:04.6979535Z 
+2026-08-14T05:53:04.6980707Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:04.6981392Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:04.7025290Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:04.7026091Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:04.7026844Z 
+2026-08-14T05:53:04.7027709Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:04.7028238Z [0m[32m
+2026-08-14T05:53:04.7028755Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:04.7029288Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:04.7029793Z should now work.
+2026-08-14T05:53:04.7030027Z 
+2026-08-14T05:53:04.7030466Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:04.7030992Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:04.7031484Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:06.8201468Z - Installed hashicorp/aws v3.74.3 (signed by HashiCorp)
+2026-08-14T05:53:06.8202212Z 
+2026-08-14T05:53:06.8203457Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:06.8204115Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:06.8204807Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:06.8205529Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:06.8226773Z 
+2026-08-14T05:53:06.8228263Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:06.8229015Z [0m[32m
+2026-08-14T05:53:06.8229629Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:06.8297398Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:06.8298033Z should now work.
+2026-08-14T05:53:06.8298809Z 
+2026-08-14T05:53:06.8299318Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:06.8299894Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:06.8300414Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:07.0587712Z - Installed hashicorp/aws v4.10.0 (signed by HashiCorp)
+2026-08-14T05:53:07.1460636Z - Installed hashicorp/aws v4.10.0 (signed by HashiCorp)
+2026-08-14T05:53:07.1674636Z - Installing hashicorp/template v2.2.0...
+2026-08-14T05:53:07.2668260Z - Installing hashicorp/template v2.2.0...
+2026-08-14T05:53:07.6172281Z - Installed hashicorp/template v2.2.0 (signed by HashiCorp)
+2026-08-14T05:53:07.6172469Z 
+2026-08-14T05:53:07.6173139Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:07.6173555Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:07.6173945Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:07.6174292Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:07.6188715Z 
+2026-08-14T05:53:07.6190564Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:07.6191201Z [0m[32m
+2026-08-14T05:53:07.6191764Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:07.6192344Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:07.6192991Z should now work.
+2026-08-14T05:53:07.6193114Z 
+2026-08-14T05:53:07.6193607Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:07.6194009Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:07.6194403Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:07.7054554Z - Installed hashicorp/template v2.2.0 (signed by HashiCorp)
+2026-08-14T05:53:07.7054840Z 
+2026-08-14T05:53:07.7055672Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:07.7056095Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:07.7056502Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:07.7056871Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:07.7062342Z 
+2026-08-14T05:53:07.7063138Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:07.7063832Z [0m[32m
+2026-08-14T05:53:07.7064446Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:07.7065018Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:07.7065565Z should now work.
+2026-08-14T05:53:07.7065812Z 
+2026-08-14T05:53:07.7067103Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:07.7067662Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:07.7068174Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:09.8085092Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:09.8086148Z [0m
+2026-08-14T05:53:11.6312981Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:11.6314028Z [0m
+2026-08-14T05:53:12.0156289Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:12.0157031Z [0m
+2026-08-14T05:53:12.1593716Z 
+2026-08-14T05:53:12.1594828Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:12.3234333Z [0m[32m
+2026-08-14T05:53:12.3235258Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:12.3243998Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:12.5034744Z 
+2026-08-14T05:53:12.5041131Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:12.5041584Z - Finding hashicorp/aws versions matching ">= 3.61.0"...
+2026-08-14T05:53:12.6697188Z - Installing hashicorp/aws v6.60.0...
+2026-08-14T05:53:13.3075212Z 
+2026-08-14T05:53:13.3076753Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:13.4709878Z [0m[32m
+2026-08-14T05:53:13.4710807Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:13.4711844Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:13.6524512Z 
+2026-08-14T05:53:13.6526078Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:13.6526756Z - Finding hashicorp/aws versions matching "~> 3.74.0"...
+2026-08-14T05:53:13.8171839Z - Installing hashicorp/aws v3.74.3...
+2026-08-14T05:53:15.3768457Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:15.3769372Z [0m
+2026-08-14T05:53:16.4518510Z - Installed hashicorp/aws v3.74.3 (signed by HashiCorp)
+2026-08-14T05:53:16.4519119Z 
+2026-08-14T05:53:16.4519991Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:16.4520425Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:16.4520827Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:16.4521211Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:16.4533200Z 
+2026-08-14T05:53:16.4534039Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:16.4534794Z [0m[32m
+2026-08-14T05:53:16.4535240Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:16.4536201Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:16.4536762Z should now work.
+2026-08-14T05:53:16.4536885Z 
+2026-08-14T05:53:16.4537219Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:16.4537615Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:16.4538008Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:17.9280842Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:17.9281327Z [0m
+2026-08-14T05:53:20.3835599Z - Installed hashicorp/aws v6.60.0 (signed by HashiCorp)
+2026-08-14T05:53:20.3835931Z 
+2026-08-14T05:53:20.3836667Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:20.3837093Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:20.3837496Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:20.3837873Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:20.3838020Z 
+2026-08-14T05:53:20.3838459Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:20.3838825Z [0m[32m
+2026-08-14T05:53:20.3839159Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:20.3839554Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:20.3839899Z should now work.
+2026-08-14T05:53:20.3840010Z 
+2026-08-14T05:53:20.3840198Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:20.3840447Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:20.3840662Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:26.3586909Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:26.3587338Z [0m
+2026-08-14T05:53:26.3883252Z 
+2026-08-14T05:53:26.3943639Z ##[section]Finishing: Run terragrunt run-all validate
+2026-08-14T05:53:26.3978451Z ##[section]Starting: Run terragrunt run-all plan
+2026-08-14T05:53:26.3985767Z ==============================================================================
+2026-08-14T05:53:26.3985876Z Task         : Command line
+2026-08-14T05:53:26.3985953Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:53:26.3986050Z Version      : 2.276.0
+2026-08-14T05:53:26.3986123Z Author       : Microsoft Corporation
+2026-08-14T05:53:26.3986202Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:53:26.3986293Z ==============================================================================
+2026-08-14T05:53:29.0763021Z Generating script.
+2026-08-14T05:53:29.0768653Z ========================== Starting Command Output ===========================
+2026-08-14T05:53:29.0783557Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/3e223d9c-294c-4cbf-9e8f-fe5c8707a6fe.sh
+2026-08-14T05:53:29.0840329Z Running terragrunt run-all plan command on infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/
+2026-08-14T05:53:29.0842469Z terragrunt IncludeArgs: 
+2026-08-14T05:53:29.0842842Z terragrunt IncludeUnitsReadingArgs: 
+2026-08-14T05:53:29.0843190Z ExtraArgs: 
+2026-08-14T05:53:29.7203549Z time=2026-08-14T05:53:29Z level=info msg=Stack at infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/:
+2026-08-14T05:53:29.7205003Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:53:29.7207031Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:53:29.7208440Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/iam/dvc-vpdev (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret])
+2026-08-14T05:53:29.7209630Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:53:29.7210575Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/route53/wppinternal.com/record-sets/vpdev.podlb.device (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb])
+2026-08-14T05:53:29.7211332Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret (excluded: false, dependencies: [])
+2026-08-14T05:53:29.7212410Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:53:29.7213428Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:53:29.7214260Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup (excluded: false, dependencies: [])
+2026-08-14T05:53:29.7215243Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/listner/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:53:29.7216210Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource (excluded: false, dependencies: [])
+2026-08-14T05:53:29.7216975Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/waf/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb])
+2026-08-14T05:53:32.4406126Z aws_security_group.sg: Refreshing state... [id=sg-99afcfe0]
+2026-08-14T05:53:32.5377905Z 
+2026-08-14T05:53:32.5379199Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:32.5379589Z 
+2026-08-14T05:53:32.5382598Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:32.5383158Z and found no differences, so no changes are needed.
+2026-08-14T05:53:32.7325338Z aws_secretsmanager_secret.sm: Refreshing state... [id=arn:aws:secretsmanager:us-west-2:508587356765:secret:stage-vpc1-device-pod1-vp-device-secret-xWovQ5]
+2026-08-14T05:53:32.8247359Z 
+2026-08-14T05:53:32.8248539Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:32.8248953Z 
+2026-08-14T05:53:32.8326522Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:32.8326967Z and found no differences, so no changes are needed.
+2026-08-14T05:53:32.9425043Z aws_lb_target_group.tg: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-2:508587356765:targetgroup/stage-dvc-pod1-vpdev/376e753978cf3ef8]
+2026-08-14T05:53:33.0952534Z 
+2026-08-14T05:53:33.0953698Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:33.0953906Z 
+2026-08-14T05:53:33.0954253Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:33.0954785Z and found no differences, so no changes are needed.
+2026-08-14T05:53:37.2431591Z aws_security_group.sg: Refreshing state... [id=sg-9ef2b2e7]
+2026-08-14T05:53:37.3497448Z 
+2026-08-14T05:53:37.3498881Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:37.3499176Z 
+2026-08-14T05:53:37.3499617Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:37.3499999Z and found no differences, so no changes are needed.
+2026-08-14T05:53:37.3627567Z aws_security_group.sg: Refreshing state... [id=sg-a70248de]
+2026-08-14T05:53:37.4716545Z 
+2026-08-14T05:53:37.4717685Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:37.4718081Z 
+2026-08-14T05:53:37.4718667Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:37.4719509Z and found no differences, so no changes are needed.
+2026-08-14T05:53:37.5256868Z aws_lb.lb: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-2:508587356765:loadbalancer/app/stage-dvc-pod1-vpdev-podlb-alb/284c6f5705454d90]
+2026-08-14T05:53:37.6735645Z 
+2026-08-14T05:53:37.6737516Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:37.6738088Z 
+2026-08-14T05:53:37.6739118Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:37.6739759Z and found no differences, so no changes are needed.
+2026-08-14T05:53:43.6884969Z aws_wafv2_web_acl_association.wafv2assoc: Refreshing state... [id=arn:aws:wafv2:us-west-2:508587356765:regional/webacl/stage-global-pod1-WebACL/f0c157d9-513a-42eb-8bd1-acdc41e9d051,arn:aws:elasticloadbalancing:us-west-2:508587356765:loadbalancer/app/stage-dvc-pod1-vpdev-podlb-alb/284c6f5705454d90]
+2026-08-14T05:53:43.8010600Z 
+2026-08-14T05:53:43.8011882Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:43.8012316Z 
+2026-08-14T05:53:43.8013323Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:43.8013955Z and found no differences, so no changes are needed.
+2026-08-14T05:53:44.2216418Z aws_launch_configuration.this[0]: Refreshing state... [id=stage-vpc1-device-pod1-subnet-b-vpdev-VPDevLaunchConfig-20260715105428793000000001]
+2026-08-14T05:53:44.3925372Z time=2026-08-14T05:53:44Z level=error msg=Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup has finished with an error: 1 error occurred:
+2026-08-14T05:53:44.3926581Z 	* exit status 1
+2026-08-14T05:53:44.3927224Z 
+2026-08-14T05:53:44.3928780Z  prefix=[/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup] 
+2026-08-14T05:53:44.7159952Z aws_launch_configuration.this[0]: Refreshing state... [id=stage-vpc1-device-pod1-subnet-a-vpdev-VPDevLaunchConfig-20260715105428639700000001]
+2026-08-14T05:53:44.8873775Z time=2026-08-14T05:53:44Z level=error msg=Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup has finished with an error: 1 error occurred:
+2026-08-14T05:53:44.8874279Z 	* exit status 1
+2026-08-14T05:53:44.8874392Z 
+2026-08-14T05:53:44.8874775Z  prefix=[/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup] 
+2026-08-14T05:53:48.0412533Z aws_lb_listener.listener: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-2:508587356765:listener/app/stage-dvc-pod1-vpdev-podlb-alb/284c6f5705454d90/a5ce6443baf10311]
+2026-08-14T05:53:48.1660154Z aws_lb_listener_rule.rule[0]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-2:508587356765:listener-rule/app/stage-dvc-pod1-vpdev-podlb-alb/284c6f5705454d90/a5ce6443baf10311/518fc85bdad54a25]
+2026-08-14T05:53:48.1758821Z aws_iam_role.role: Refreshing state... [id=stage-vpc1-pod1-dvc-vpdev]
+2026-08-14T05:53:48.1762399Z module.iam_policy.aws_iam_policy.policy[0]: Refreshing state... [id=arn:aws:iam::508587356765:policy/stage-vpc1-pod1-dvc-vpdev]
+2026-08-14T05:53:48.2710848Z 
+2026-08-14T05:53:48.2711634Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:48.2711810Z 
+2026-08-14T05:53:48.2712169Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:48.2712553Z and found no differences, so no changes are needed.
+2026-08-14T05:53:48.6783100Z aws_iam_instance_profile.iam_role_instance_profile[0]: Refreshing state... [id=stage-vpc1-pod1-dvc-vpdev]
+2026-08-14T05:53:48.6793864Z aws_iam_role_policy_attachment.managed_policy[0]: Refreshing state... [id=stage-vpc1-pod1-dvc-vpdev-20230817105933896600000002]
+2026-08-14T05:53:48.6794427Z aws_iam_role_policy_attachment.managed_policy[1]: Refreshing state... [id=stage-vpc1-pod1-dvc-vpdev-20230817105933891000000001]
+2026-08-14T05:53:48.9094822Z 
+2026-08-14T05:53:48.9095669Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:48.9096257Z 
+2026-08-14T05:53:48.9096619Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:48.9097000Z and found no differences, so no changes are needed.
+2026-08-14T05:53:53.4523941Z aws_route53_record.route_record: Refreshing state... [id=Z1R9NNDW6JWBA6_vpdev.podlb.pod1.device.vpc1-stage-wppinternal.com_A]
+2026-08-14T05:53:53.9442175Z 
+2026-08-14T05:53:53.9443461Z No changes. Your infrastructure matches the configuration.
+2026-08-14T05:53:53.9443749Z 
+2026-08-14T05:53:53.9444180Z Terraform has compared your real infrastructure against your configuration
+2026-08-14T05:53:53.9444573Z and found no differences, so no changes are needed.
+2026-08-14T05:53:54.0088561Z time=2026-08-14T05:53:54Z level=info msg=
+2026-08-14T05:53:54.0089015Z Error: expected length of user_data to be in the range (1 - 16384), got #!/bin/bash
+2026-08-14T05:53:54.0089389Z cd /home/ec2-user
+2026-08-14T05:53:54.0094870Z echo '{"environment":{"AWS_REGION":"us-west-2","DATADOG_ENABLED":"true","DRIVER_CLASS":"com.mysql.jdbc.Driver","ENVIRONMENT":"stage","JDBC_URL":"jdbc:mysql://stage-dvc-pod1-rds-dvccommon-db.vpc1-stage-wppinternal.com:3306/ops_db?connectTimeout=60000\u0026socketTimeout=60000\u0026useSSL=true\u0026verifyServerCertificate=true\u0026enabledTLSProtocols=TLSv1.2","LOG_EXCLUDE_FILES":"*.20*.json,*.20*.log,*.20*.json,*.20*.*.log,*..20*,*.gz,*logback*.20*.log,wpp_*.20*.log,stratus_*.20*.log,*.20*_access.log,*.20*_access.json,*access_log..20*","LOG_PATH":"/opt/wpp/gen2/vp-device/logs/eip*.log, /opt/wpp/gen2/vp-device/logs/*,/opt/wpp/gen2/ams/logs/vp-device_access.log","MAX_HEAP":"4096m","MIN_HEAP":"1024m","POD":"pod1","SERVICE_NAME":"vp-device","SPLUNK_APM_ENVIRONMENT":"stg","SPLUNK_APM_SECRET_NAME":"splunk_apm_stg","SPLUNK_APM_TEAM":"iot","SPLUNK_ENTERPRISE_ENABLED":"true","rp_secret_name":"stage-vpc1-device-pod1-rp-vp-device-secret","rp_secret_region":"us-west-2","splunk_index":"wppgen2-stage","splunk_log_path":"/opt/wpp/gen2/vp-device/logs/","splunk_source_type":"vpdev","zabbix_frontend_vpce_r53":"zabbix.stage.vpc1-stage-wppinternal.com","zabbix_hostgroup":"WPP-Gen2:  Avatar: VP-Device: stagepod1","zabbix_server_vpce_r53":"zproxy1.vpc1-stage-wppinternal.com","zabbix_template":"WPP-meta-vpdev","zabbix_usergroup":"WPP-Gen2"},"externalSecrets":[{"key":"DB_USERNAME","name":"DB_USERNAME","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"DB_PASSWORD","name":"DB_PASSWORD","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdev_printer_db_username","name":"VPDEV_SERVICE_DATASOURCE_USERNAME","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdev_printer_db_password","name":"VPDEV_SERVICE_DATASOURCE_PASSWORD","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdevapi_vpeas_authentication_header","name":"VPDEVAPI_VPEAS_AUTHENTICATION_HEADER","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"wns_notification_publish_event_ackToken","name":"WNS_EVENT_ACK_TOKEN","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"wns_notification_publish_event_pubId","name":"WNS_EVENT_PUBID","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdevapi_avatar_avdls_auth","name":"AVDLS_BASIC_AUTH","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"launch_darkly_sdk_key","name":"LAUNCH_DARKLY_SDK_KEY","secret":"stage-vpc1-device-pod1-vp-device-secret"}],"externalSecretsRegion":"us-west-2"}'>/home/ec2-user/service-config.json
+2026-08-14T05:53:54.0109174Z echo 'c2tlcm5lbDoKICBzZWN1cml0eToKICAgIG9hdXRoMjoKICAgICAgYXV0aHo6CiAgICAgICAgY2xpZW50OgogICAgICAgICAgY3JlZGVudGlhbHN0b3JlOgogICAgICAgICAgICBzZWNyZXRzbWFuYWdlcjoKICAgICAgICAgICAgICBzZWNyZXRpZDogc3RhZ2UtdnBjMS1kZXZpY2UtcG9kMS12cC1kZXZpY2Utc2VjcmV0CiAgICAgICAgICAgICAgcmVnaW9uOiB1cy13ZXN0LTIKICAgICAgICB0b2tlbi11cmk6IGh0dHBzOi8vc3RhZ2UuYXV0aHoud3BwLmFwaS5ocC5jb20vb3BlbmlkL3YxL3Rva2VuCiAgY3VzdG9taGVhbHRoOgogICAgdmVyc2lvbjogdjEuMAogICAgZW5hYmxlZDogdHJ1ZQogICAgY29tcG9zaXRlOgogICAgICAtIHR5cGU6IF9fc2tzZXJ2aWNlCiAgICAgICAgbmFtZTogQXZyZWcgSGVhbHRoY2hlY2sKICAgICAgICBoZWFsdGh1cmw6IGh0dHBzOi8vcmVnaXN0cmF0aW9uLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IFZwZWFzIEhlYWx0aGNoZWNrCiAgICAgICAgaGVhbHRodXJsOiBodHRwczovL2VtYWlsY29uZmlnLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IERMUyBIZWFsdGhjaGVjawogICAgICAgIGhlYWx0aHVybDogaHR0cHM6Ly9kZXZpY2Vsb29rdXAuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvYWJvdXQKICAgICAgICByZWdpb246IE5BCiAgICAgICAgZW5hYmxlZDogdHJ1ZQogICAgICAtIHR5cGU6IF9fc2tzZXJ2aWNlCiAgICAgICAgbmFtZTogV05TIEhlYWx0aGNoZWNrCiAgICAgICAgaGVhbHRodXJsOiBodHRwczovL3dwcC5ub3RpZmljYXRpb24uc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IEFNUyBIZWFsdGhjaGVjawogICAgICAgIGhlYWx0aHVybDogaHR0cHM6Ly9hY2Nlc3NtZ210LnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2FjY2Vzc21nbXQvYWN0dWF0b3IvaW5mbwogICAgICAgIHJlZ2lvbjogTkEKICAgICAgICBlbmFibGVkOiB0cnVlCnZwZGV2YXBpOgogIGRiOgogICAgamRiYzoKICAgICAgdXJsOiAiamRiYzpteXNxbDovL3N0YWdlLWR2Yy1wb2QxLXJkcy12cHJlZy1kYi52cGMxLXN0YWdlLXdwcGludGVybmFsLmNvbTozMzA2L3ByaW50ZXJkYj9jb25uZWN0VGltZW91dD02MDAwMCZzb2NrZXRUaW1lb3V0PTYwMDAwJnVzZVNTTD10cnVlJnZlcmlmeVNlcnZlckNlcnRpZmljYXRlPXRydWUmZW5hYmxlZFRMU1Byb3RvY29scz1UTFN2MS4yIgogIGRldmljZToKICAgIHN0YXR1czoKICAgICAgaG9zdDogImRldmljZXN0YXR1cy5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tIgogICAgICBwb3J0OiAiODA4MCIKICAgICAgY29udGV4dDogIi9hdmF0YXIvcHJpbnRlcnMiCiAgICBpbmZvOgogICAgICBpbWFnZTQyMjY6ICJodHRwczovL2RldmljZXMudXMxLmFwaS53cy1ocC5jb20vZGV2aWNlcy92MS9pbWFnZXMvJXMvNDJ4MjYucG5nIgogICAgICBpbWFnZTEzMDEyMDogImh0dHBzOi8vZGV2aWNlcy51czEuYXBpLndzLWhwLmNvbS9kZXZpY2VzL3YxL2ltYWdlcy8lcy8xMzB4MTAyLnBuZyIKICAgICAgaW1hZ2UxNzAxMjg6ICJodHRwczovL2RldmljZXMudXMxLmFwaS53cy1ocC5jb20vZGV2aWNlcy92MS9pbWFnZXMvJXMvMTcweDEyOC5wbmciCiAgICAgIGltYWdlMzAwMjQ1OiAiaHR0cHM6Ly9kZXZpY2VzLnVzMS5hcGkud3MtaHAuY29tL2RldmljZXMvdjEvaW1hZ2VzLyVzLzMwMHgyNDUucG5nIgogICAgICBzZWxmOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby8lcyIKICAgICAgcHJpbnRpbmZvOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby9wcmludC8lcyIKICAgICAgYXBwcGxheWVyOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby9hcHBfcGxheWVyLyVzIgogICAgICBjbG91ZGNvbmZpZzogImh0dHBzOi8vZGV2aWNlbWdtdC5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXJzL2Nsb3VkY29uZmlnLyVzIgogICAgICBlbWFpbGFkZHJlc3M6ICJodHRwczovL2VtYWlsY29uZmlnLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXJzL2VtYWlsX2FkZHJlc3MvJXMiCiAgICAgIHN0YXR1czogImh0dHBzOi8vZGV2aWNlc3RhdHVzLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL3ByaW50ZXJzL3N0YXR1cy8lcyIKICAgIGhwYzoKICAgICAgc2hhcmluZzoKICAgICAgICBlbmFibGVkOiAidHJ1ZSIKICAgIGlzOgogICAgICB3ZWI6CiAgICAgICAgc2VydmljZXM6CiAgICAgICAgICB1cGRhdGU6CiAgICAgICAgICAgIGVuYWJsZWQ6ICJ0cnVlIgogIGVudGl0eToKICAgIGluZm86CiAgICAgIGFwaToKICAgICAgICB1cmw6ICJodHRwczovL3JlZ2lzdHJhdGlvbi5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2F2YXRhci92MS9lbnRpdGllcy9lbnRpdHlfaW5mby8lcyIKICBlbWFpbGNsaWVudDoKICAgIGdlbjoKICAgICAgdXJsOiAiaHR0cHM6Ly9lbWFpbGNvbmZpZy5zdGFnZS5hdmF0YXIuZXh0LmhwLmNvbS92aXJ0dWFscHJpbnRlci92MS9wcmludGVycy9lbWFpbF9hZGRyZXNzLyVzIgogIGRpc2NvdmVyeWNsaWVudDoKICAgIGdlbjoKICAgICAgdXJsOiAiaHR0cHM6Ly9pbnQuZW50aXR5ZGlzY292ZXJ5LnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2F2YXRhci92MS9lbnRpdGllcz9jbG91ZC1pZD0lcyIKICBhdmF0YXI6CiAgICBkYXRhYnJpZGdlOgogICAgICB1cmw6ICJodHRwczovL2RhdGFicmlkZ2UucG9kMS5zdGFnZS5hdmF0YXIuZXh0LmhwLmNvbS9hdmF0YXIvdjEvZGF0YWJyaWRnZS8lcyIKICAgIGlwcGVuZHBvaW50OgogICAgICB1cmw6ICJodHRwczovL2lwcHByaW50LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxLyVzL2lwcC9wcmludCIKICAgIGF2ZGxzOgogICAgICBlbmRwb2ludDogImh0dHBzOi8vZGV2aWNlbG9va3VwLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXIvZGlzY292ZXJ5P2Nsb3VkSWQ9JXMiCgogIHBvbGljeW1ncjoKICAgIHVybDogImh0dHBzOi8vcHJpbnRlci1wb2xpY3ktbWFuYWdlci1zdHJhdHVzLmludC5zdGctdGhvci11ZTEuaHBpcC1pbnRlcm5hbC5jb20vcHJpbnRlcnBvbGljeW1nci92MS9kZXZpY2VzLyVzL3BvbGljaWVzL3RlbGVtZXRyeSIgICAgICAgIAogIGF1dGh6OgogICAgdGltZToKICAgICAgYmVmb3JlOgogICAgICAgIGV4cGlyeToKICAgICAgICAgIHRvOgogICAgICAgICAgICByZWZyZXNoOgogICAgICAgICAgICAgIHRva2VuOgogICAgICAgICAgICAgICAgaW46CiAgICAgICAgICAgICAgICAgIG1pbnV0ZXM6ICI1IgogICAgcmV0cnk6CiAgICAgIGFmdGVyOgogICAgICAgIGZhaWx1cmU6CiAgICAgICAgICBpbjoKICAgICAgICAgICAgc2Vjb25kczogIjUiCiAgICBwcm94eToKICAgICAgcG9ydDogIjgwODAiCiAgICAgIGhvc3Q6ICJ3ZWItcHJveHkuY3VwLmhwLmNvbSIKICAgIHNvY2tldDoKICAgICAgdGltZW91dDogIjYwMDAiCiAgICBzZXJ2aWNlOgogICAgICBuYW1lOiAidnBkZXYiCiAgICBpczoKICAgICAgcHJveHk6CiAgICAgICAgZW5hYmxlZDogImZhbHNlIgogICAgdXJsOiAiaHR0cHM6Ly9hdXRoei1zdHJhdHVzLmludC5zdGctdGhvci11ZTEuaHBpcC1pbnRlcm5hbC5jb20vLndlbGwta25vd24vb3BlbmlkLWNvbmZpZ3VyYXRpb24iCiAgY2xpZW50OgogICAgcm9sZToKICAgICAgZm9yOgogICAgICAgIGFtczoKICAgICAgICAgIGF1dGhvcml6ZTogImNvbS5ocC53cHAuYWNjZXNzbWdtdC5yb2xlLm93bmVyLnZlcnNpb24uMSIKICBhdXRob3JpemU6CiAgICB1cmw6ICJodHRwczovL2FjY2Vzc21nbXQuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYWNjZXNzbWdtdC92MS9hdXRob3JpemF0aW9uIgogIGlzOgogICAgYW1zOgogICAgICBhdXRoOgogICAgICAgIGZlYXR1cmU6CiAgICAgICAgICBlbmFibGVkOiAidHJ1ZSIKICAgIG1lZGlhc2l6ZToKICAgICAgdW5rbm93bjoKICAgICAgICBmZWF0dXJlOgogICAgICAgICAgZW5hYmxlZDogInRydWUiCiAgYW1zOgogICAgY2xpZW50OgogICAgICBodHRwOgogICAgICAgIGNvbmZpZzoKICAgICAgICAgIHNvY2tldDoKICAgICAgICAgICAgdGltZW91dDogIjYwMDAiCiAgICAgICAgICBtYXg6CiAgICAgICAgICAgIHRvdGFsOgogICAgICAgICAgICAgIGNvbm5lY3Rpb25zOiAiMTAwIgogICAgICAgICAgICBjb25uZWN0aW9uczoKICAgICAgICAgICAgICBwZXI6CiAgICAgICAgICAgICAgICByb3V0ZTogIjEwMCIKICAgICAgICAgIHByb3h5OgogICAgICAgICAgICBlbmFibGVkOiAiZmFsc2UiCiAgICAgICAgICAgIGhvc3Q6ICJ3ZWItcHJveHkuY3VwLmhwLmNvbSIKICAgICAgICAgICAgcG9ydDogIjgwODAiCiAgICAgICAgICBkaXNhYmxlOgogICAgICAgICAgICBob3N0bmFtZToKICAgICAgICAgICAgICB2ZXJpZmljYXRpb246ICJ0cnVlIgogIHduczoKICAgIG5vdGlmaWVyOgogICAgICBkZXJlZzoKICAgICAgICBwdWJsaXNoZXI6CiAgICAgICAgICB1cmw6ICJodHRwczovL3dwcC5ub3RpZmljYXRpb24uc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2NkbS9ldmVudGluZy9ldmVudG5vdGlmaWNhdGlvbiIKdnBkZXZpY2U6CiAgZGV2aWNlaW5mbzoKICAgIGZlYXR1cmU6CiAgICAgIG1vY2s6ICJmYWxzZSIKYXV0aExpYjoKICAgICAgICBibGFja2xpc3RVcmw6ICJodHRwczovL29hdXRoLWF1dGguaW50LnN0Zy11cy5ocG9uZWNsb3VkLmlvL29hdXRoMi92MS9leHRlbnNpb25zL2JsYWNrbGlzdCIKICAgICAgICB2YWxpZGF0ZVRhcmdldDogInRva2VuLXZhbGlkYXRpb24tYXV0aC5pbnQuc3RnLXVzLmhwb25lY2xvdWQuaW86NDQzIgogICAgICAgIGlzc3VlclVybDogImh0dHBzOi8vYXV0aHotc3RyYXR1cy5pbnQuc3RnLXRob3ItdWUxLmhwaXAtaW50ZXJuYWwuY29tLyIKICAgICAgICBzZXJ2aWNlSWRlbnRpZmllciA6ICJ2cGRldiIKICAgICAgICAKdnBkZXY6CiAgbGlua3M6CiAgICB3ZWxjb21lcGFnZTogImh0dHBzOi8vd2VsY29tZXBhZ2Uuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvZGV2aWNlcy93ZWxjb21lcGFnZS97Y2xvdWQtaWR9IgogICAgam9iX2V4ZWNfZW5naW5lOiAiaHR0cHM6Ly9qZWVzLXN0YWdlLmhwOC51cy90ZW56aW5nL3YxIgogICAgYXBwX2dhdGV3YXk6ICJodHRwczovL3JldmVyc2Vwcm94eS1nZW4yLXN0YWdlLmV4dC5ocC5jb206NDQzL3Nob3J0Y3V0L3YxL2N1aT9jdXJyZW50PXNob3J0Y3V0Jmxhbmc9eyRsYW5nfSZyZWdpb249eyRyZWdpb259Jm1vZGVsPXskbW9kZWx9JmZ3VmVyPXskZndWZXJ9JmV4cFR5cGU9eyRleHBUeXBlfSZmb2xkZXJJRD17JGZvbGRlcklEfSZwcm90b2NvbD17JHByb3RvY29sfSIKICAgIHBlcnNvX3ZhdWx0OiAiaHR0cHM6Ly9kdnMtc3RhZ2UuZXh0LmhwLmNvbS92YXVsdC92MSIKICAgIHNlc3Npb25fbWdyOiAiaHR0cHM6Ly9zZXNzaW9uc3ZjLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vc2Vzc2lvbnNlcnZpY2UvdjEiCiAgICB0b2tlbl9wcm94eTogImh0dHBzOi8vc3RhZ2UuYXBpLmhwLmNvbS90b2tlblByb3h5L3YxL3Rva2VuIgogICAgcHJpbnRlcl9hdHRlc3RhdGlvbjogImh0dHBzOi8vc3RhZ2UuYXBpLmhwLmNvbS9wcmludGVyQXR0ZXN0YXRpb24vdjEvYXBwVG9rZW4iCiAgICBocGlkOiAiaHR0cHM6Ly9kaXJlY3Rvcnkuc3RnLmNkLmlkLmhwLmNvbS9kaXJlY3RvcnkvdjEvb2F1dGgvYXV0aG9yaXplIgogICAgd2ViYXV0aDogImh0dHBzOi8vc2lvLnBvZDEuc3RhZ2Uud3BwLmFwaS5ocC5jb20vc2lvL3ttZXNzYWdlX3R5cGV9IgogICAgaHBpZFRva2VuOiAiaHR0cHM6Ly9kaXJlY3Rvcnkuc3RnLmNkLmlkLmhwLmNvbS9kaXJlY3RvcnkvdjEvb2F1dGgvdG9rZW4iCiAgICBhcHBfYXR0ZXN0YXRpb246ICJodHRwczovL3N0YWdlLmFwaS5ocC5jb20vYXBwQXR0ZXN0YXRpb24vdjEvYXBwVG9rZW4iCiAgICBocGlkX290cHVybDogImh0dHBzOi8vb3RwLnN0Zy5jZC5pZC5ocC5jb20vb3RwL3YxL290cHMvY2xpZW50IgogICAgc2Nhbl90b19ocGJ1aWxkOiAiaHR0cHM6Ly9zdGF0aWMtYWVjLWl0Zy5ocGNsb3VkLmhwLmNvbS9wcmludGVyL2NvbmZpZy5qc29uIgogIGNhbGxiYWNrOgogICAgdGVsZW1ldHJ5OgogICAgICB1cmk6ICJodHRwczovL3RlbGVtZXRyeS5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3RlbGVtZXRyeS1zZXJ2aWNlL3YxL3tjbG91ZF9pZH0vZXZlbnRzL3tldmVudENhdGVnb3J5fSIKICBwYXJhbXN0b3JlOgogICAgcGF0aDogIi9zdHJhdHVzLXByaW50ZXItdmFsdmUtY29udHJvbGxlci9zdGFnZS90ZWxlbWV0cnkvIgogIHNzbToKICAgIGNhY2hlOgogICAgICByZWZyZXNoOgogICAgICAgIHRpbWU6ICIyNCIKICAgIHJlZ2lvbjoKICAgICAgbmFtZToKICAgICAgICBoZWFsdGhjaGVjazogInVzLXdlc3QtMiIKICBpczoKICAgIHBhcmFtc3RvcmU6CiAgICAgIGZsYWc6CiAgICAgICAgZW5hYmxlZDogInRydWUiCiAgZXhwZWN0ZWQ6CiAgICBzc206CiAgICAgIHJlc3VsdDoKICAgICAgICBjb3VudDoKICAgICAgICAgIGhlYWx0aGNoZWNrOiAiMzAiCiAgZXZlbnQ6CiAgICBjYXRlZ29yaWVzOgogICAgICBibG9ja2VkOgogICAgICAgIGZvcjoKICAgICAgICAgIHRlbGVtZXRyeTogIndpZmlOZXR3b3JrIgo='|base64 --decode >/opt/wpp/gen2/vp-device/config/application.yaml
+2026-08-14T05:53:54.0119416Z sudo ./entrypoint.sh
+2026-08-14T05:53:54.0119714Z #!/bin/bash -e
+2026-08-14T05:53:54.0119996Z sed -i 's/\r$//' "$0"
+2026-08-14T05:53:54.0120294Z set -o pipefail
+2026-08-14T05:53:54.0120408Z 
+2026-08-14T05:53:54.0120730Z EIP_CIDRS="192.170.21.0/24, 192.170.22.0/24, 192.170.23.0/24"
+2026-08-14T05:53:54.0121073Z REGION="us-west-2"
+2026-08-14T05:53:54.0121377Z SERVICE_NAME="vp-device"
+2026-08-14T05:53:54.0121729Z ASG_NAME="stage-vpc1-device-pod1-subnet-a-vpdev-VPDevGroup-1RN5W3DR0CEN5"
+2026-08-14T05:53:54.0122075Z USER_DATA_HEADER_VERSION="2.0"
+2026-08-14T05:53:54.0122210Z 
+2026-08-14T05:53:54.0122502Z LOG_DIR="/opt/wpp/gen2/${SERVICE_NAME}/logs"
+2026-08-14T05:53:54.0122807Z mkdir -p "$LOG_DIR"
+2026-08-14T05:53:54.0123105Z chmod 755 "$LOG_DIR"
+2026-08-14T05:53:54.0123422Z 
+2026-08-14T05:53:54.0123705Z log() {
+2026-08-14T05:53:54.0124013Z 	local level="$1"; shift
+2026-08-14T05:53:54.0124321Z 	local raw="$*" json k v p
+2026-08-14T05:53:54.0124616Z 	local ts
+2026-08-14T05:53:54.0124730Z 
+2026-08-14T05:53:54.0125045Z 	ts="$(date '+%Y-%m-%d %H:%M:%S')"
+2026-08-14T05:53:54.0125543Z 	json="{\"timestamp\":\"$ts\",\"log_level\":\"$level\",\"service\":\"$SERVICE_NAME\",\"asg_name\":\"$ASG_NAME\",\"instance_id\":\"${INSTANCE_ID:-UNKNOWN}\",\"region\":\"$REGION\",\"user_data_header_version\":\"$USER_DATA_HEADER_VERSION\""
+2026-08-14T05:53:54.0125843Z 
+2026-08-14T05:53:54.0126245Z 	IFS='|' read -ra parts <<< "$raw"
+2026-08-14T05:53:54.0126560Z 	for p in "${parts[@]}"; do
+2026-08-14T05:53:54.0127767Z 		p="$(echo "$p" | xargs)"
+2026-08-14T05:53:54.0128066Z 		if [[ "$p" == *=* ]]; then
+2026-08-14T05:53:54.0128345Z 			k="${p%%=*}"
+2026-08-14T05:53:54.0128617Z 			v="${p#*=}"
+2026-08-14T05:53:54.0128884Z 			v="${v//\\/\\\\}"
+2026-08-14T05:53:54.0129176Z 			v="${v//\"/\\\"}"
+2026-08-14T05:53:54.0129451Z 			v="${v//$'\n'/}"
+2026-08-14T05:53:54.0129732Z 			v="${v//$'\r'/}"
+2026-08-14T05:53:54.0130009Z 			v="${v//$'\t'/}"
+2026-08-14T05:53:54.0130287Z 			json="$json,\"$k\":\"$v\""
+2026-08-14T05:53:54.0130572Z 		fi
+2026-08-14T05:53:54.0130852Z 	done
+2026-08-14T05:53:54.0130955Z 
+2026-08-14T05:53:54.0131250Z 	echo "$json}" >> "$EIP_LOG"
+2026-08-14T05:53:54.0131525Z }
+2026-08-14T05:53:54.0131635Z 
+2026-08-14T05:53:54.0132013Z TOKEN=$(curl -sf --max-time 2 -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 3600" || true)
+2026-08-14T05:53:54.0132528Z INSTANCE_ID=$(curl -sf --max-time 2 -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id | tr -d '\r\n' || true)
+2026-08-14T05:53:54.0132756Z 
+2026-08-14T05:53:54.0133071Z EIP_LOG="$LOG_DIR/eip-${INSTANCE_ID:-UNKNOWN}.log"
+2026-08-14T05:53:54.0133411Z EIP_START=$(date +%s)
+2026-08-14T05:53:54.0133534Z 
+2026-08-14T05:53:54.0134086Z trap 'log ERROR "activity=Unexpected runtime error|abort=true|line=${LINENO}|command=${BASH_COMMAND}"' ERR
+2026-08-14T05:53:54.0134538Z log INFO "activity=EIP assignment script started|pools=$EIP_CIDRS"
+2026-08-14T05:53:54.0134705Z 
+2026-08-14T05:53:54.0135111Z [[ -n "$TOKEN" ]] && log INFO "activity=IMDS token retrieved|imds_token=obtained" || log WARNING "activity=IMDS token failed|imds_token=failed"
+2026-08-14T05:53:54.0135636Z [[ -n "$INSTANCE_ID" ]] && log INFO "activity=Instance ID resolved|instance_id=$INSTANCE_ID" || log WARNING "activity=Instance ID resolution failed|instance_id=UNKNOWN"
+2026-08-14T05:53:54.0137246Z 
+2026-08-14T05:53:54.0137603Z if [[ -z "$INSTANCE_ID" ]]; then
+2026-08-14T05:53:54.0138002Z 	log WARNING "activity=Instance ID missing|result=skipping_eip_assignment|abort=true|reason=imds_unavailable"
+2026-08-14T05:53:54.0138451Z 	log INFO "activity=EIP assignment script completed|result=skipped"
+2026-08-14T05:53:54.0138786Z 	trap - ERR
+2026-08-14T05:53:54.0139063Z fi
+2026-08-14T05:53:54.0139165Z 
+2026-08-14T05:53:54.0139447Z JMESPATH_COND=""
+2026-08-14T05:53:54.0139759Z IFS=',' read -ra CIDR_LIST <<< "$EIP_CIDRS"
+2026-08-14T05:53:54.0139896Z 
+2026-08-14T05:53:54.0140169Z for CIDR in "${CIDR_LIST[@]}"; do
+2026-08-14T05:53:54.0140462Z 	CIDR="${CIDR// /}"
+2026-08-14T05:53:54.0140757Z 	BASE="${CIDR%%/*}"
+2026-08-14T05:53:54.0141046Z 	PLEN="${CIDR##*/}"
+2026-08-14T05:53:54.0141333Z 	IFS='.' read -r O1 O2 O3 _ <<< "$BASE"
+2026-08-14T05:53:54.0141467Z 
+2026-08-14T05:53:54.0141750Z 	if ((PLEN <= 16)); then
+2026-08-14T05:53:54.0144462Z 		JMESPATH_COND+="starts_with(PublicIp,'$O1.$O2.')||"
+2026-08-14T05:53:54.0144878Z 	elif ((PLEN <= 24)); then
+2026-08-14T05:53:54.0145230Z 		RANGE=$((1 << (24 - PLEN)))
+2026-08-14T05:53:54.0145560Z 		for ((b=0; b<RANGE; b++)); do
+2026-08-14T05:53:54.0145919Z 			JMESPATH_COND+="starts_with(PublicIp,'$O1.$O2.$((O3 + b)).')||"
+2026-08-14T05:53:54.0146248Z 		done
+2026-08-14T05:53:54.0146521Z 	else
+2026-08-14T05:53:54.0146869Z 		log WARNING "activity=Invalid CIDR skipped|cidr=$CIDR"
+2026-08-14T05:53:54.0147208Z 	fi
+2026-08-14T05:53:54.0147675Z done
+2026-08-14T05:53:54.0147787Z 
+2026-08-14T05:53:54.0148093Z JMESPATH_COND="${JMESPATH_COND%||}"
+2026-08-14T05:53:54.0148479Z log INFO "activity=JMESPath filter generated|jmespath_filter=$JMESPATH_COND"
+2026-08-14T05:53:54.0148650Z 
+2026-08-14T05:53:54.0148945Z ASSOCIATED=false
+2026-08-14T05:53:54.0149069Z 
+2026-08-14T05:53:54.0149382Z for ((retry=1; retry<=3; retry++)); do
+2026-08-14T05:53:54.0149758Z 	log INFO "activity=Discovering available EIPs|retry_attempt=$retry"
+2026-08-14T05:53:54.0150303Z 	ALL_EIPS=$(aws ec2 describe-addresses --region "$REGION" --filters "Name=domain,Values=vpc" --query "Addresses[?(${JMESPATH_COND}) && AssociationId==\`null\`].[AllocationId,PublicIp]" --output text 2>/dev/null || true)
+2026-08-14T05:53:54.0150828Z 	[[ -n "$ALL_EIPS" ]] && break
+2026-08-14T05:53:54.0151179Z 	[[ $retry -lt 3 ]] && sleep $((retry * 2))
+2026-08-14T05:53:54.0151500Z done
+2026-08-14T05:53:54.0151608Z 
+2026-08-14T05:53:54.0151950Z SORTED_LIST=$(echo "$ALL_EIPS" | shuf)
+2026-08-14T05:53:54.0152102Z 
+2026-08-14T05:53:54.0188358Z if [[ -z "$SORTED_LIST" ]]; then
+2026-08-14T05:53:54.0188801Z 	log WARNING "activity=No EIP candidates available|result=no_candidates|pools=$EIP_CIDRS|instance_id=$INSTANCE_ID"
+2026-08-14T05:53:54.0189177Z else
+2026-08-14T05:53:54.0189492Z 	while IFS=$'\t' read -r ALLOC_ID PUBLIC_IP; do
+2026-08-14T05:53:54.0189963Z 		STILL_FREE=$(aws ec2 describe-addresses --region "$REGION" --allocation-ids "$ALLOC_ID" --query "Addresses[?AssociationId==\`null\`].AllocationId" --output text 2>/dev/null || true)
+2026-08-14T05:53:54.0190407Z 		[[ -n "$STILL_FREE" ]] || {
+2026-08-14T05:53:54.0190779Z 			log WARNING "activity=Taken between describe and allocate|result=retry|alloc_id=$ALLOC_ID|public_ip=$PUBLIC_IP"
+2026-08-14T05:53:54.0191153Z 			continue
+2026-08-14T05:53:54.0191421Z 		}
+2026-08-14T05:53:54.0191520Z 
+2026-08-14T05:53:54.0192079Z 		if aws ec2 associate-address --region "$REGION" --instance-id "$INSTANCE_ID" --allocation-id "$ALLOC_ID" --no-allow-reassociation >/dev/null 2>&1; then
+2026-08-14T05:53:54.0192530Z 			EIP_END=$(date +%s)
+2026-08-14T05:53:54.0192930Z 			log INFO "activity=EIP successfully associated|result=success|alloc_id=$ALLOC_ID|public_ip=$PUBLIC_IP|duration_seconds=$((EIP_END - EIP_START))"
+2026-08-14T05:53:54.0193299Z 			ASSOCIATED=true
+2026-08-14T05:53:54.0193549Z 			break
+2026-08-14T05:53:54.0193773Z 		fi
+2026-08-14T05:53:54.0194023Z 	done <<< "$SORTED_LIST"
+2026-08-14T05:53:54.0194134Z 
+2026-08-14T05:53:54.0194396Z 	if [[ "$ASSOCIATED" == false ]]; then
+2026-08-14T05:53:54.0194678Z 		EIP_END=$(date +%s)
+2026-08-14T05:53:54.0195064Z 		log WARNING "activity=All EIP candidates are in use|result=all_in_use|pools=$EIP_CIDRS|instance_id=$INSTANCE_ID|duration_seconds=$((EIP_END - EIP_START))"
+2026-08-14T05:53:54.0195459Z 	fi
+2026-08-14T05:53:54.0195698Z fi
+2026-08-14T05:53:54.0195789Z 
+2026-08-14T05:53:54.0196047Z trap - ERR
+2026-08-14T05:53:54.0196358Z log INFO "activity=EIP assignment script completed"
+2026-08-14T05:53:54.0196515Z 
+2026-08-14T05:53:54.0196769Z   with aws_launch_configuration.this[0],
+2026-08-14T05:53:54.0197064Z   on main.tf line 33, in resource "aws_launch_configuration" "this":
+2026-08-14T05:53:54.0197432Z   33:   user_data                        = try(data.template_file.user_data[0].rendered, var.user_data)
+2026-08-14T05:53:54.0197603Z 
+2026-08-14T05:53:54.0197695Z 
+2026-08-14T05:53:54.0197985Z time=2026-08-14T05:53:54Z level=info msg=
+2026-08-14T05:53:54.0198340Z Error: expected length of user_data to be in the range (1 - 16384), got #!/bin/bash
+2026-08-14T05:53:54.0198655Z cd /home/ec2-user
+2026-08-14T05:53:54.0201282Z echo '{"environment":{"AWS_REGION":"us-west-2","DATADOG_ENABLED":"true","DRIVER_CLASS":"com.mysql.jdbc.Driver","ENVIRONMENT":"stage","JDBC_URL":"jdbc:mysql://stage-dvc-pod1-rds-dvccommon-db.vpc1-stage-wppinternal.com:3306/ops_db?connectTimeout=60000\u0026socketTimeout=60000\u0026useSSL=true\u0026verifyServerCertificate=true\u0026enabledTLSProtocols=TLSv1.2","LOG_EXCLUDE_FILES":"*.20*.json,*.20*.log,*.20*.json,*.20*.*.log,*..20*,*.gz,*logback*.20*.log,wpp_*.20*.log,stratus_*.20*.log,*.20*_access.log,*.20*_access.json,*access_log..20*","LOG_PATH":"/opt/wpp/gen2/vp-device/logs/eip*.log, /opt/wpp/gen2/vp-device/logs/*,/opt/wpp/gen2/ams/logs/vp-device_access.log","MAX_HEAP":"4096m","MIN_HEAP":"1024m","POD":"pod1","SERVICE_NAME":"vp-device","SPLUNK_APM_ENVIRONMENT":"stg","SPLUNK_APM_SECRET_NAME":"splunk_apm_stg","SPLUNK_APM_TEAM":"iot","SPLUNK_ENTERPRISE_ENABLED":"true","rp_secret_name":"stage-vpc1-device-pod1-rp-vp-device-secret","rp_secret_region":"us-west-2","splunk_index":"wppgen2-stage","splunk_log_path":"/opt/wpp/gen2/vp-device/logs/","splunk_source_type":"vpdev","zabbix_frontend_vpce_r53":"zabbix.stage.vpc1-stage-wppinternal.com","zabbix_hostgroup":"WPP-Gen2:  Avatar: VP-Device: stagepod1","zabbix_server_vpce_r53":"zproxy1.vpc1-stage-wppinternal.com","zabbix_template":"WPP-meta-vpdev","zabbix_usergroup":"WPP-Gen2"},"externalSecrets":[{"key":"DB_USERNAME","name":"DB_USERNAME","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"DB_PASSWORD","name":"DB_PASSWORD","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdev_printer_db_username","name":"VPDEV_SERVICE_DATASOURCE_USERNAME","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdev_printer_db_password","name":"VPDEV_SERVICE_DATASOURCE_PASSWORD","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdevapi_vpeas_authentication_header","name":"VPDEVAPI_VPEAS_AUTHENTICATION_HEADER","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"wns_notification_publish_event_ackToken","name":"WNS_EVENT_ACK_TOKEN","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"wns_notification_publish_event_pubId","name":"WNS_EVENT_PUBID","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"vpdevapi_avatar_avdls_auth","name":"AVDLS_BASIC_AUTH","secret":"stage-vpc1-device-pod1-vp-device-secret"},{"key":"launch_darkly_sdk_key","name":"LAUNCH_DARKLY_SDK_KEY","secret":"stage-vpc1-device-pod1-vp-device-secret"}],"externalSecretsRegion":"us-west-2"}'>/home/ec2-user/service-config.json
+2026-08-14T05:53:54.0214435Z echo 'c2tlcm5lbDoKICBzZWN1cml0eToKICAgIG9hdXRoMjoKICAgICAgYXV0aHo6CiAgICAgICAgY2xpZW50OgogICAgICAgICAgY3JlZGVudGlhbHN0b3JlOgogICAgICAgICAgICBzZWNyZXRzbWFuYWdlcjoKICAgICAgICAgICAgICBzZWNyZXRpZDogc3RhZ2UtdnBjMS1kZXZpY2UtcG9kMS12cC1kZXZpY2Utc2VjcmV0CiAgICAgICAgICAgICAgcmVnaW9uOiB1cy13ZXN0LTIKICAgICAgICB0b2tlbi11cmk6IGh0dHBzOi8vc3RhZ2UuYXV0aHoud3BwLmFwaS5ocC5jb20vb3BlbmlkL3YxL3Rva2VuCiAgY3VzdG9taGVhbHRoOgogICAgdmVyc2lvbjogdjEuMAogICAgZW5hYmxlZDogdHJ1ZQogICAgY29tcG9zaXRlOgogICAgICAtIHR5cGU6IF9fc2tzZXJ2aWNlCiAgICAgICAgbmFtZTogQXZyZWcgSGVhbHRoY2hlY2sKICAgICAgICBoZWFsdGh1cmw6IGh0dHBzOi8vcmVnaXN0cmF0aW9uLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IFZwZWFzIEhlYWx0aGNoZWNrCiAgICAgICAgaGVhbHRodXJsOiBodHRwczovL2VtYWlsY29uZmlnLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IERMUyBIZWFsdGhjaGVjawogICAgICAgIGhlYWx0aHVybDogaHR0cHM6Ly9kZXZpY2Vsb29rdXAuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvYWJvdXQKICAgICAgICByZWdpb246IE5BCiAgICAgICAgZW5hYmxlZDogdHJ1ZQogICAgICAtIHR5cGU6IF9fc2tzZXJ2aWNlCiAgICAgICAgbmFtZTogV05TIEhlYWx0aGNoZWNrCiAgICAgICAgaGVhbHRodXJsOiBodHRwczovL3dwcC5ub3RpZmljYXRpb24uc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2Fib3V0CiAgICAgICAgcmVnaW9uOiBOQQogICAgICAgIGVuYWJsZWQ6IHRydWUKICAgICAgLSB0eXBlOiBfX3Nrc2VydmljZQogICAgICAgIG5hbWU6IEFNUyBIZWFsdGhjaGVjawogICAgICAgIGhlYWx0aHVybDogaHR0cHM6Ly9hY2Nlc3NtZ210LnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2FjY2Vzc21nbXQvYWN0dWF0b3IvaW5mbwogICAgICAgIHJlZ2lvbjogTkEKICAgICAgICBlbmFibGVkOiB0cnVlCnZwZGV2YXBpOgogIGRiOgogICAgamRiYzoKICAgICAgdXJsOiAiamRiYzpteXNxbDovL3N0YWdlLWR2Yy1wb2QxLXJkcy12cHJlZy1kYi52cGMxLXN0YWdlLXdwcGludGVybmFsLmNvbTozMzA2L3ByaW50ZXJkYj9jb25uZWN0VGltZW91dD02MDAwMCZzb2NrZXRUaW1lb3V0PTYwMDAwJnVzZVNTTD10cnVlJnZlcmlmeVNlcnZlckNlcnRpZmljYXRlPXRydWUmZW5hYmxlZFRMU1Byb3RvY29scz1UTFN2MS4yIgogIGRldmljZToKICAgIHN0YXR1czoKICAgICAgaG9zdDogImRldmljZXN0YXR1cy5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tIgogICAgICBwb3J0OiAiODA4MCIKICAgICAgY29udGV4dDogIi9hdmF0YXIvcHJpbnRlcnMiCiAgICBpbmZvOgogICAgICBpbWFnZTQyMjY6ICJodHRwczovL2RldmljZXMudXMxLmFwaS53cy1ocC5jb20vZGV2aWNlcy92MS9pbWFnZXMvJXMvNDJ4MjYucG5nIgogICAgICBpbWFnZTEzMDEyMDogImh0dHBzOi8vZGV2aWNlcy51czEuYXBpLndzLWhwLmNvbS9kZXZpY2VzL3YxL2ltYWdlcy8lcy8xMzB4MTAyLnBuZyIKICAgICAgaW1hZ2UxNzAxMjg6ICJodHRwczovL2RldmljZXMudXMxLmFwaS53cy1ocC5jb20vZGV2aWNlcy92MS9pbWFnZXMvJXMvMTcweDEyOC5wbmciCiAgICAgIGltYWdlMzAwMjQ1OiAiaHR0cHM6Ly9kZXZpY2VzLnVzMS5hcGkud3MtaHAuY29tL2RldmljZXMvdjEvaW1hZ2VzLyVzLzMwMHgyNDUucG5nIgogICAgICBzZWxmOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby8lcyIKICAgICAgcHJpbnRpbmZvOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby9wcmludC8lcyIKICAgICAgYXBwcGxheWVyOiAiaHR0cHM6Ly9kZXZpY2VtZ210LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvcHJpbnRlcnMvaW5mby9hcHBfcGxheWVyLyVzIgogICAgICBjbG91ZGNvbmZpZzogImh0dHBzOi8vZGV2aWNlbWdtdC5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXJzL2Nsb3VkY29uZmlnLyVzIgogICAgICBlbWFpbGFkZHJlc3M6ICJodHRwczovL2VtYWlsY29uZmlnLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXJzL2VtYWlsX2FkZHJlc3MvJXMiCiAgICAgIHN0YXR1czogImh0dHBzOi8vZGV2aWNlc3RhdHVzLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL3ByaW50ZXJzL3N0YXR1cy8lcyIKICAgIGhwYzoKICAgICAgc2hhcmluZzoKICAgICAgICBlbmFibGVkOiAidHJ1ZSIKICAgIGlzOgogICAgICB3ZWI6CiAgICAgICAgc2VydmljZXM6CiAgICAgICAgICB1cGRhdGU6CiAgICAgICAgICAgIGVuYWJsZWQ6ICJ0cnVlIgogIGVudGl0eToKICAgIGluZm86CiAgICAgIGFwaToKICAgICAgICB1cmw6ICJodHRwczovL3JlZ2lzdHJhdGlvbi5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2F2YXRhci92MS9lbnRpdGllcy9lbnRpdHlfaW5mby8lcyIKICBlbWFpbGNsaWVudDoKICAgIGdlbjoKICAgICAgdXJsOiAiaHR0cHM6Ly9lbWFpbGNvbmZpZy5zdGFnZS5hdmF0YXIuZXh0LmhwLmNvbS92aXJ0dWFscHJpbnRlci92MS9wcmludGVycy9lbWFpbF9hZGRyZXNzLyVzIgogIGRpc2NvdmVyeWNsaWVudDoKICAgIGdlbjoKICAgICAgdXJsOiAiaHR0cHM6Ly9pbnQuZW50aXR5ZGlzY292ZXJ5LnN0YWdlLmF2YXRhci5leHQuaHAuY29tL2F2YXRhci92MS9lbnRpdGllcz9jbG91ZC1pZD0lcyIKICBhdmF0YXI6CiAgICBkYXRhYnJpZGdlOgogICAgICB1cmw6ICJodHRwczovL2RhdGFicmlkZ2UucG9kMS5zdGFnZS5hdmF0YXIuZXh0LmhwLmNvbS9hdmF0YXIvdjEvZGF0YWJyaWRnZS8lcyIKICAgIGlwcGVuZHBvaW50OgogICAgICB1cmw6ICJodHRwczovL2lwcHByaW50LnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxLyVzL2lwcC9wcmludCIKICAgIGF2ZGxzOgogICAgICBlbmRwb2ludDogImh0dHBzOi8vZGV2aWNlbG9va3VwLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3ZpcnR1YWxwcmludGVyL3YxL3ByaW50ZXIvZGlzY292ZXJ5P2Nsb3VkSWQ9JXMiCgogIHBvbGljeW1ncjoKICAgIHVybDogImh0dHBzOi8vcHJpbnRlci1wb2xpY3ktbWFuYWdlci1zdHJhdHVzLmludC5zdGctdGhvci11ZTEuaHBpcC1pbnRlcm5hbC5jb20vcHJpbnRlcnBvbGljeW1nci92MS9kZXZpY2VzLyVzL3BvbGljaWVzL3RlbGVtZXRyeSIgICAgICAgIAogIGF1dGh6OgogICAgdGltZToKICAgICAgYmVmb3JlOgogICAgICAgIGV4cGlyeToKICAgICAgICAgIHRvOgogICAgICAgICAgICByZWZyZXNoOgogICAgICAgICAgICAgIHRva2VuOgogICAgICAgICAgICAgICAgaW46CiAgICAgICAgICAgICAgICAgIG1pbnV0ZXM6ICI1IgogICAgcmV0cnk6CiAgICAgIGFmdGVyOgogICAgICAgIGZhaWx1cmU6CiAgICAgICAgICBpbjoKICAgICAgICAgICAgc2Vjb25kczogIjUiCiAgICBwcm94eToKICAgICAgcG9ydDogIjgwODAiCiAgICAgIGhvc3Q6ICJ3ZWItcHJveHkuY3VwLmhwLmNvbSIKICAgIHNvY2tldDoKICAgICAgdGltZW91dDogIjYwMDAiCiAgICBzZXJ2aWNlOgogICAgICBuYW1lOiAidnBkZXYiCiAgICBpczoKICAgICAgcHJveHk6CiAgICAgICAgZW5hYmxlZDogImZhbHNlIgogICAgdXJsOiAiaHR0cHM6Ly9hdXRoei1zdHJhdHVzLmludC5zdGctdGhvci11ZTEuaHBpcC1pbnRlcm5hbC5jb20vLndlbGwta25vd24vb3BlbmlkLWNvbmZpZ3VyYXRpb24iCiAgY2xpZW50OgogICAgcm9sZToKICAgICAgZm9yOgogICAgICAgIGFtczoKICAgICAgICAgIGF1dGhvcml6ZTogImNvbS5ocC53cHAuYWNjZXNzbWdtdC5yb2xlLm93bmVyLnZlcnNpb24uMSIKICBhdXRob3JpemU6CiAgICB1cmw6ICJodHRwczovL2FjY2Vzc21nbXQuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYWNjZXNzbWdtdC92MS9hdXRob3JpemF0aW9uIgogIGlzOgogICAgYW1zOgogICAgICBhdXRoOgogICAgICAgIGZlYXR1cmU6CiAgICAgICAgICBlbmFibGVkOiAidHJ1ZSIKICAgIG1lZGlhc2l6ZToKICAgICAgdW5rbm93bjoKICAgICAgICBmZWF0dXJlOgogICAgICAgICAgZW5hYmxlZDogInRydWUiCiAgYW1zOgogICAgY2xpZW50OgogICAgICBodHRwOgogICAgICAgIGNvbmZpZzoKICAgICAgICAgIHNvY2tldDoKICAgICAgICAgICAgdGltZW91dDogIjYwMDAiCiAgICAgICAgICBtYXg6CiAgICAgICAgICAgIHRvdGFsOgogICAgICAgICAgICAgIGNvbm5lY3Rpb25zOiAiMTAwIgogICAgICAgICAgICBjb25uZWN0aW9uczoKICAgICAgICAgICAgICBwZXI6CiAgICAgICAgICAgICAgICByb3V0ZTogIjEwMCIKICAgICAgICAgIHByb3h5OgogICAgICAgICAgICBlbmFibGVkOiAiZmFsc2UiCiAgICAgICAgICAgIGhvc3Q6ICJ3ZWItcHJveHkuY3VwLmhwLmNvbSIKICAgICAgICAgICAgcG9ydDogIjgwODAiCiAgICAgICAgICBkaXNhYmxlOgogICAgICAgICAgICBob3N0bmFtZToKICAgICAgICAgICAgICB2ZXJpZmljYXRpb246ICJ0cnVlIgogIHduczoKICAgIG5vdGlmaWVyOgogICAgICBkZXJlZzoKICAgICAgICBwdWJsaXNoZXI6CiAgICAgICAgICB1cmw6ICJodHRwczovL3dwcC5ub3RpZmljYXRpb24uc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vYXZhdGFyL3YxL2NkbS9ldmVudGluZy9ldmVudG5vdGlmaWNhdGlvbiIKdnBkZXZpY2U6CiAgZGV2aWNlaW5mbzoKICAgIGZlYXR1cmU6CiAgICAgIG1vY2s6ICJmYWxzZSIKYXV0aExpYjoKICAgICAgICBibGFja2xpc3RVcmw6ICJodHRwczovL29hdXRoLWF1dGguaW50LnN0Zy11cy5ocG9uZWNsb3VkLmlvL29hdXRoMi92MS9leHRlbnNpb25zL2JsYWNrbGlzdCIKICAgICAgICB2YWxpZGF0ZVRhcmdldDogInRva2VuLXZhbGlkYXRpb24tYXV0aC5pbnQuc3RnLXVzLmhwb25lY2xvdWQuaW86NDQzIgogICAgICAgIGlzc3VlclVybDogImh0dHBzOi8vYXV0aHotc3RyYXR1cy5pbnQuc3RnLXRob3ItdWUxLmhwaXAtaW50ZXJuYWwuY29tLyIKICAgICAgICBzZXJ2aWNlSWRlbnRpZmllciA6ICJ2cGRldiIKICAgICAgICAKdnBkZXY6CiAgbGlua3M6CiAgICB3ZWxjb21lcGFnZTogImh0dHBzOi8vd2VsY29tZXBhZ2Uuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vdmlydHVhbHByaW50ZXIvdjEvZGV2aWNlcy93ZWxjb21lcGFnZS97Y2xvdWQtaWR9IgogICAgam9iX2V4ZWNfZW5naW5lOiAiaHR0cHM6Ly9qZWVzLXN0YWdlLmhwOC51cy90ZW56aW5nL3YxIgogICAgYXBwX2dhdGV3YXk6ICJodHRwczovL3JldmVyc2Vwcm94eS1nZW4yLXN0YWdlLmV4dC5ocC5jb206NDQzL3Nob3J0Y3V0L3YxL2N1aT9jdXJyZW50PXNob3J0Y3V0Jmxhbmc9eyRsYW5nfSZyZWdpb249eyRyZWdpb259Jm1vZGVsPXskbW9kZWx9JmZ3VmVyPXskZndWZXJ9JmV4cFR5cGU9eyRleHBUeXBlfSZmb2xkZXJJRD17JGZvbGRlcklEfSZwcm90b2NvbD17JHByb3RvY29sfSIKICAgIHBlcnNvX3ZhdWx0OiAiaHR0cHM6Ly9kdnMtc3RhZ2UuZXh0LmhwLmNvbS92YXVsdC92MSIKICAgIHNlc3Npb25fbWdyOiAiaHR0cHM6Ly9zZXNzaW9uc3ZjLnBvZDEuc3RhZ2UuYXZhdGFyLmV4dC5ocC5jb20vc2Vzc2lvbnNlcnZpY2UvdjEiCiAgICB0b2tlbl9wcm94eTogImh0dHBzOi8vc3RhZ2UuYXBpLmhwLmNvbS90b2tlblByb3h5L3YxL3Rva2VuIgogICAgcHJpbnRlcl9hdHRlc3RhdGlvbjogImh0dHBzOi8vc3RhZ2UuYXBpLmhwLmNvbS9wcmludGVyQXR0ZXN0YXRpb24vdjEvYXBwVG9rZW4iCiAgICBocGlkOiAiaHR0cHM6Ly9kaXJlY3Rvcnkuc3RnLmNkLmlkLmhwLmNvbS9kaXJlY3RvcnkvdjEvb2F1dGgvYXV0aG9yaXplIgogICAgd2ViYXV0aDogImh0dHBzOi8vc2lvLnBvZDEuc3RhZ2Uud3BwLmFwaS5ocC5jb20vc2lvL3ttZXNzYWdlX3R5cGV9IgogICAgaHBpZFRva2VuOiAiaHR0cHM6Ly9kaXJlY3Rvcnkuc3RnLmNkLmlkLmhwLmNvbS9kaXJlY3RvcnkvdjEvb2F1dGgvdG9rZW4iCiAgICBhcHBfYXR0ZXN0YXRpb246ICJodHRwczovL3N0YWdlLmFwaS5ocC5jb20vYXBwQXR0ZXN0YXRpb24vdjEvYXBwVG9rZW4iCiAgICBocGlkX290cHVybDogImh0dHBzOi8vb3RwLnN0Zy5jZC5pZC5ocC5jb20vb3RwL3YxL290cHMvY2xpZW50IgogICAgc2Nhbl90b19ocGJ1aWxkOiAiaHR0cHM6Ly9zdGF0aWMtYWVjLWl0Zy5ocGNsb3VkLmhwLmNvbS9wcmludGVyL2NvbmZpZy5qc29uIgogIGNhbGxiYWNrOgogICAgdGVsZW1ldHJ5OgogICAgICB1cmk6ICJodHRwczovL3RlbGVtZXRyeS5wb2QxLnN0YWdlLmF2YXRhci5leHQuaHAuY29tL3RlbGVtZXRyeS1zZXJ2aWNlL3YxL3tjbG91ZF9pZH0vZXZlbnRzL3tldmVudENhdGVnb3J5fSIKICBwYXJhbXN0b3JlOgogICAgcGF0aDogIi9zdHJhdHVzLXByaW50ZXItdmFsdmUtY29udHJvbGxlci9zdGFnZS90ZWxlbWV0cnkvIgogIHNzbToKICAgIGNhY2hlOgogICAgICByZWZyZXNoOgogICAgICAgIHRpbWU6ICIyNCIKICAgIHJlZ2lvbjoKICAgICAgbmFtZToKICAgICAgICBoZWFsdGhjaGVjazogInVzLXdlc3QtMiIKICBpczoKICAgIHBhcmFtc3RvcmU6CiAgICAgIGZsYWc6CiAgICAgICAgZW5hYmxlZDogInRydWUiCiAgZXhwZWN0ZWQ6CiAgICBzc206CiAgICAgIHJlc3VsdDoKICAgICAgICBjb3VudDoKICAgICAgICAgIGhlYWx0aGNoZWNrOiAiMzAiCiAgZXZlbnQ6CiAgICBjYXRlZ29yaWVzOgogICAgICBibG9ja2VkOgogICAgICAgIGZvcjoKICAgICAgICAgIHRlbGVtZXRyeTogIndpZmlOZXR3b3JrIgo='|base64 --decode >/opt/wpp/gen2/vp-device/config/application.yaml
+2026-08-14T05:53:54.0224604Z sudo ./entrypoint.sh
+2026-08-14T05:53:54.0224873Z #!/bin/bash -e
+2026-08-14T05:53:54.0225136Z sed -i 's/\r$//' "$0"
+2026-08-14T05:53:54.0225420Z set -o pipefail
+2026-08-14T05:53:54.0225535Z 
+2026-08-14T05:53:54.0225853Z EIP_CIDRS="192.170.21.0/24, 192.170.22.0/24, 192.170.23.0/24"
+2026-08-14T05:53:54.0226153Z REGION="us-west-2"
+2026-08-14T05:53:54.0226420Z SERVICE_NAME="vp-device"
+2026-08-14T05:53:54.0226734Z ASG_NAME="stage-vpc1-device-pod1-subnet-b-vpdev-VPDevGroup-1FBX68R262QU"
+2026-08-14T05:53:54.0227071Z USER_DATA_HEADER_VERSION="2.0"
+2026-08-14T05:53:54.0227362Z 
+2026-08-14T05:53:54.0227645Z LOG_DIR="/opt/wpp/gen2/${SERVICE_NAME}/logs"
+2026-08-14T05:53:54.0227945Z mkdir -p "$LOG_DIR"
+2026-08-14T05:53:54.0228224Z chmod 755 "$LOG_DIR"
+2026-08-14T05:53:54.0228349Z 
+2026-08-14T05:53:54.0228605Z log() {
+2026-08-14T05:53:54.0232762Z 	local level="$1"; shift
+2026-08-14T05:53:54.0233117Z 	local raw="$*" json k v p
+2026-08-14T05:53:54.0233390Z 	local ts
+2026-08-14T05:53:54.0233495Z 
+2026-08-14T05:53:54.0233796Z 	ts="$(date '+%Y-%m-%d %H:%M:%S')"
+2026-08-14T05:53:54.0234286Z 	json="{\"timestamp\":\"$ts\",\"log_level\":\"$level\",\"service\":\"$SERVICE_NAME\",\"asg_name\":\"$ASG_NAME\",\"instance_id\":\"${INSTANCE_ID:-UNKNOWN}\",\"region\":\"$REGION\",\"user_data_header_version\":\"$USER_DATA_HEADER_VERSION\""
+2026-08-14T05:53:54.0234604Z 
+2026-08-14T05:53:54.0234891Z 	IFS='|' read -ra parts <<< "$raw"
+2026-08-14T05:53:54.0235189Z 	for p in "${parts[@]}"; do
+2026-08-14T05:53:54.0235376Z 		p="$(echo "$p" | xargs)"
+2026-08-14T05:53:54.0235692Z 		if [[ "$p" == *=* ]]; then
+2026-08-14T05:53:54.0235978Z 			k="${p%%=*}"
+2026-08-14T05:53:54.0236244Z 			v="${p#*=}"
+2026-08-14T05:53:54.0236507Z 			v="${v//\\/\\\\}"
+2026-08-14T05:53:54.0236677Z 			v="${v//\"/\\\"}"
+2026-08-14T05:53:54.0236830Z 			v="${v//$'\n'/}"
+2026-08-14T05:53:54.0236986Z 			v="${v//$'\r'/}"
+2026-08-14T05:53:54.0237139Z 			v="${v//$'\t'/}"
+2026-08-14T05:53:54.0237297Z 			json="$json,\"$k\":\"$v\""
+2026-08-14T05:53:54.0237453Z 		fi
+2026-08-14T05:53:54.0237598Z 	done
+2026-08-14T05:53:54.0237657Z 
+2026-08-14T05:53:54.0237811Z 	echo "$json}" >> "$EIP_LOG"
+2026-08-14T05:53:54.0237961Z }
+2026-08-14T05:53:54.0238026Z 
+2026-08-14T05:53:54.0238236Z TOKEN=$(curl -sf --max-time 2 -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 3600" || true)
+2026-08-14T05:53:54.0238533Z INSTANCE_ID=$(curl -sf --max-time 2 -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id | tr -d '\r\n' || true)
+2026-08-14T05:53:54.0238664Z 
+2026-08-14T05:53:54.0239003Z EIP_LOG="$LOG_DIR/eip-${INSTANCE_ID:-UNKNOWN}.log"
+2026-08-14T05:53:54.0239210Z EIP_START=$(date +%s)
+2026-08-14T05:53:54.0239278Z 
+2026-08-14T05:53:54.0239474Z trap 'log ERROR "activity=Unexpected runtime error|abort=true|line=${LINENO}|command=${BASH_COMMAND}"' ERR
+2026-08-14T05:53:54.0239701Z log INFO "activity=EIP assignment script started|pools=$EIP_CIDRS"
+2026-08-14T05:53:54.0239789Z 
+2026-08-14T05:53:54.0240000Z [[ -n "$TOKEN" ]] && log INFO "activity=IMDS token retrieved|imds_token=obtained" || log WARNING "activity=IMDS token failed|imds_token=failed"
+2026-08-14T05:53:54.0240286Z [[ -n "$INSTANCE_ID" ]] && log INFO "activity=Instance ID resolved|instance_id=$INSTANCE_ID" || log WARNING "activity=Instance ID resolution failed|instance_id=UNKNOWN"
+2026-08-14T05:53:54.0240418Z 
+2026-08-14T05:53:54.0240573Z if [[ -z "$INSTANCE_ID" ]]; then
+2026-08-14T05:53:54.0240782Z 	log WARNING "activity=Instance ID missing|result=skipping_eip_assignment|abort=true|reason=imds_unavailable"
+2026-08-14T05:53:54.0241025Z 	log INFO "activity=EIP assignment script completed|result=skipped"
+2026-08-14T05:53:54.0241209Z 	trap - ERR
+2026-08-14T05:53:54.0241356Z fi
+2026-08-14T05:53:54.0241413Z 
+2026-08-14T05:53:54.0241559Z JMESPATH_COND=""
+2026-08-14T05:53:54.0241732Z IFS=',' read -ra CIDR_LIST <<< "$EIP_CIDRS"
+2026-08-14T05:53:54.0241810Z 
+2026-08-14T05:53:54.0241961Z for CIDR in "${CIDR_LIST[@]}"; do
+2026-08-14T05:53:54.0242121Z 	CIDR="${CIDR// /}"
+2026-08-14T05:53:54.0242274Z 	BASE="${CIDR%%/*}"
+2026-08-14T05:53:54.0242428Z 	PLEN="${CIDR##*/}"
+2026-08-14T05:53:54.0242586Z 	IFS='.' read -r O1 O2 O3 _ <<< "$BASE"
+2026-08-14T05:53:54.0242661Z 
+2026-08-14T05:53:54.0242812Z 	if ((PLEN <= 16)); then
+2026-08-14T05:53:54.0242992Z 		JMESPATH_COND+="starts_with(PublicIp,'$O1.$O2.')||"
+2026-08-14T05:53:54.0243170Z 	elif ((PLEN <= 24)); then
+2026-08-14T05:53:54.0243337Z 		RANGE=$((1 << (24 - PLEN)))
+2026-08-14T05:53:54.0243504Z 		for ((b=0; b<RANGE; b++)); do
+2026-08-14T05:53:54.0243692Z 			JMESPATH_COND+="starts_with(PublicIp,'$O1.$O2.$((O3 + b)).')||"
+2026-08-14T05:53:54.0243960Z 		done
+2026-08-14T05:53:54.0244102Z 	else
+2026-08-14T05:53:54.0244275Z 		log WARNING "activity=Invalid CIDR skipped|cidr=$CIDR"
+2026-08-14T05:53:54.0244445Z 	fi
+2026-08-14T05:53:54.0244589Z done
+2026-08-14T05:53:54.0244649Z 
+2026-08-14T05:53:54.0244815Z JMESPATH_COND="${JMESPATH_COND%||}"
+2026-08-14T05:53:54.0245017Z log INFO "activity=JMESPath filter generated|jmespath_filter=$JMESPATH_COND"
+2026-08-14T05:53:54.0245111Z 
+2026-08-14T05:53:54.0245262Z ASSOCIATED=false
+2026-08-14T05:53:54.0245329Z 
+2026-08-14T05:53:54.0245488Z for ((retry=1; retry<=3; retry++)); do
+2026-08-14T05:53:54.0245685Z 	log INFO "activity=Discovering available EIPs|retry_attempt=$retry"
+2026-08-14T05:53:54.0245974Z 	ALL_EIPS=$(aws ec2 describe-addresses --region "$REGION" --filters "Name=domain,Values=vpc" --query "Addresses[?(${JMESPATH_COND}) && AssociationId==\`null\`].[AllocationId,PublicIp]" --output text 2>/dev/null || true)
+2026-08-14T05:53:54.0246231Z 	[[ -n "$ALL_EIPS" ]] && break
+2026-08-14T05:53:54.0246406Z 	[[ $retry -lt 3 ]] && sleep $((retry * 2))
+2026-08-14T05:53:54.0246570Z done
+2026-08-14T05:53:54.0246627Z 
+2026-08-14T05:53:54.0246784Z SORTED_LIST=$(echo "$ALL_EIPS" | shuf)
+2026-08-14T05:53:54.0246864Z 
+2026-08-14T05:53:54.0247015Z if [[ -z "$SORTED_LIST" ]]; then
+2026-08-14T05:53:54.0247225Z 	log WARNING "activity=No EIP candidates available|result=no_candidates|pools=$EIP_CIDRS|instance_id=$INSTANCE_ID"
+2026-08-14T05:53:54.0247423Z else
+2026-08-14T05:53:54.0247662Z 	while IFS=$'\t' read -r ALLOC_ID PUBLIC_IP; do
+2026-08-14T05:53:54.0247951Z 		STILL_FREE=$(aws ec2 describe-addresses --region "$REGION" --allocation-ids "$ALLOC_ID" --query "Addresses[?AssociationId==\`null\`].AllocationId" --output text 2>/dev/null || true)
+2026-08-14T05:53:54.0248182Z 		[[ -n "$STILL_FREE" ]] || {
+2026-08-14T05:53:54.0248388Z 			log WARNING "activity=Taken between describe and allocate|result=retry|alloc_id=$ALLOC_ID|public_ip=$PUBLIC_IP"
+2026-08-14T05:53:54.0248678Z 			continue
+2026-08-14T05:53:54.0248831Z 		}
+2026-08-14T05:53:54.0248891Z 
+2026-08-14T05:53:54.0249103Z 		if aws ec2 associate-address --region "$REGION" --instance-id "$INSTANCE_ID" --allocation-id "$ALLOC_ID" --no-allow-reassociation >/dev/null 2>&1; then
+2026-08-14T05:53:54.0249331Z 			EIP_END=$(date +%s)
+2026-08-14T05:53:54.0249565Z 			log INFO "activity=EIP successfully associated|result=success|alloc_id=$ALLOC_ID|public_ip=$PUBLIC_IP|duration_seconds=$((EIP_END - EIP_START))"
+2026-08-14T05:53:54.0249784Z 			ASSOCIATED=true
+2026-08-14T05:53:54.0249949Z 			break
+2026-08-14T05:53:54.0250091Z 		fi
+2026-08-14T05:53:54.0250252Z 	done <<< "$SORTED_LIST"
+2026-08-14T05:53:54.0250320Z 
+2026-08-14T05:53:54.0250482Z 	if [[ "$ASSOCIATED" == false ]]; then
+2026-08-14T05:53:54.0250657Z 		EIP_END=$(date +%s)
+2026-08-14T05:53:54.0250893Z 		log WARNING "activity=All EIP candidates are in use|result=all_in_use|pools=$EIP_CIDRS|instance_id=$INSTANCE_ID|duration_seconds=$((EIP_END - EIP_START))"
+2026-08-14T05:53:54.0251106Z 	fi
+2026-08-14T05:53:54.0251256Z fi
+2026-08-14T05:53:54.0251317Z 
+2026-08-14T05:53:54.0251464Z trap - ERR
+2026-08-14T05:53:54.0251638Z log INFO "activity=EIP assignment script completed"
+2026-08-14T05:53:54.0251725Z 
+2026-08-14T05:53:54.0251900Z   with aws_launch_configuration.this[0],
+2026-08-14T05:53:54.0252101Z   on main.tf line 33, in resource "aws_launch_configuration" "this":
+2026-08-14T05:53:54.0252316Z   33:   user_data                        = try(data.template_file.user_data[0].rendered, var.user_data)
+2026-08-14T05:53:54.0252415Z 
+2026-08-14T05:53:54.0252472Z 
+2026-08-14T05:53:54.0252652Z time=2026-08-14T05:53:54Z level=error msg=2 errors occurred:
+2026-08-14T05:53:54.0252845Z 	* exit status 1
+2026-08-14T05:53:54.0253005Z 	* exit status 1
+2026-08-14T05:53:54.0253071Z 
+2026-08-14T05:53:54.0253124Z 
+2026-08-14T05:53:54.0269618Z ##[error] terragrunt run-all plan failed with exitcode: 1
+2026-08-14T05:53:54.0274707Z 
+2026-08-14T05:53:54.0278459Z ##[section]Finishing: Run terragrunt run-all plan
+2026-08-14T05:53:54.0310866Z Skipping step due to condition evaluation.
+Evaluating: SucceededNode()
+Result: False
+
+2026-08-14T05:53:54.0340928Z Skipping step due to condition evaluation.
+Evaluating: SucceededNode()
+Result: False
+
+2026-08-14T05:53:54.0384457Z Skipping step due to condition evaluation.
+Evaluating: succeeded()
+Result: False
+
+2026-08-14T05:53:54.0414108Z Skipping step due to condition evaluation.
+Evaluating: succeeded()
+Result: False
+
+2026-08-14T05:53:54.0443705Z Skipping step due to condition evaluation.
+Evaluating: SucceededNode()
+Result: False
+
+2026-08-14T05:53:54.0481644Z ##[section]Starting: Checkout WPPg2/vp-device@refs/pull/1253/merge to s
+2026-08-14T05:53:54.0486605Z ==============================================================================
+2026-08-14T05:53:54.0486727Z Task         : Get sources
+2026-08-14T05:53:54.0486807Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-08-14T05:53:54.0486910Z Version      : 1.0.0
+2026-08-14T05:53:54.0486977Z Author       : Microsoft
+2026-08-14T05:53:54.0487054Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-08-14T05:53:54.0487148Z ==============================================================================
+2026-08-14T05:53:54.3176626Z Cleaning any cached credential from repository: WPPg2/vp-device (GitHubEnterprise)
+2026-08-14T05:53:54.3274067Z ##[section]Finishing: Checkout WPPg2/vp-device@refs/pull/1253/merge to s
+2026-08-14T05:53:54.3300231Z ##[section]Starting: Finalize Job
+2026-08-14T05:53:54.3311006Z Cleaning up task key
+2026-08-14T05:53:54.3311947Z Start cleaning up orphan processes.
+2026-08-14T05:53:54.3641571Z ##[section]Finishing: Finalize Job
+2026-08-14T05:53:54.3664171Z ##[section]Finishing: Terragrunt Deployment - Path: infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/
