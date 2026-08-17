@@ -1,0 +1,44 @@
+2026-08-14T05:51:12.5970564Z ##[section]Starting: Prepare job filter
+2026-08-14T05:51:12.6583047Z Variables:
+2026-08-14T05:51:12.6583047Z   gheUser: $[ variablegroups.Defaults.gheUser ]
+2026-08-14T05:51:12.6583047Z   HarborRegistryHost: $[ variablegroups.Defaults.HarborRegistryHost ]
+2026-08-14T05:51:12.6583047Z   HarborUsername: $[ variablegroups.Defaults.HarborUsername ]
+2026-08-14T05:51:12.6583047Z   MAVEN_OPTS: $[ variablegroups.Defaults.MAVEN_OPTS ]
+2026-08-14T05:51:12.6583047Z   SonarProjectPrefix: $[ variablegroups.Defaults.SonarProjectPrefix ]
+2026-08-14T05:51:12.6583047Z   wppgen2-pie_s3_jar_promotion_role: $[ variablegroups.Defaults.wppgen2-pie_s3_jar_promotion_role ]
+2026-08-14T05:51:12.6583047Z   wppgen2-prod_s3_jar_promotion_role: $[ variablegroups.Defaults.wppgen2-prod_s3_jar_promotion_role ]
+2026-08-14T05:51:12.6583047Z   role_arn: $[ variablegroups.tf-pipeline-wppgen2-prod.role_arn ]
+2026-08-14T05:51:12.6583047Z   externalId:
+2026-08-14T05:51:12.6583047Z     Parsing expression: <variables['external_id']>
+2026-08-14T05:51:12.6583047Z     Evaluating: variables['external_id']
+2026-08-14T05:51:12.6583047Z     Expanded: Null
+2026-08-14T05:51:12.6583047Z     Result: ''
+2026-08-14T05:51:12.6583047Z   roleArn:
+2026-08-14T05:51:12.6583047Z     Parsing expression: <variables['role_arn']>
+2026-08-14T05:51:12.6583047Z     Evaluating: variables['role_arn']
+2026-08-14T05:51:12.6583047Z     Result: 'arn:aws:iam::508587356765:role/codeway-linux-agent-ec2'
+2026-08-14T05:51:12.6583047Z ContinueOnError: False
+2026-08-14T05:51:12.6583047Z TimeoutInMinutes: 60
+2026-08-14T05:51:12.6583047Z CancelTimeoutInMinutes: 5
+2026-08-14T05:51:12.6583047Z Expand:
+2026-08-14T05:51:12.6583047Z   MaxConcurrency: 0
+2026-08-14T05:51:12.6692036Z   ########## System Pipeline Decorator(s) ##########
+
+2026-08-14T05:51:12.6692036Z   Begin evaluating template 'system-pre-steps.yml'
+Evaluating: eq('true', variables['system.debugContext'])
+Expanded: eq('true', Null)
+Result: False
+Evaluating: resources['repositories']['self']
+Expanded: Object
+Result: True
+Evaluating: not(containsValue(job['steps']['*']['task']['id'], '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Expanded: not(containsValue(Object, '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Result: False
+Finished evaluating template 'system-pre-steps.yml'
+********************************************************************************
+Template and static variable resolution complete. Final runtime YAML document:
+steps: []
+
+
+2026-08-14T05:51:12.6704869Z   MaxConcurrency: 0
+2026-08-14T05:51:12.6750011Z ##[section]Finishing: Prepare job filter
