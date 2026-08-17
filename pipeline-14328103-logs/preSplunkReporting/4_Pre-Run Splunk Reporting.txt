@@ -1,0 +1,54 @@
+2026-08-14T05:50:47.1013870Z ##[section]Starting: Pre-Run Splunk Reporting
+2026-08-14T05:50:47.1021907Z ==============================================================================
+2026-08-14T05:50:47.1022029Z Task         : Command line
+2026-08-14T05:50:47.1022109Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:50:47.1022218Z Version      : 2.276.0
+2026-08-14T05:50:47.1022293Z Author       : Microsoft Corporation
+2026-08-14T05:50:47.1022376Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:50:47.1022477Z ==============================================================================
+2026-08-14T05:50:52.0094067Z Generating script.
+2026-08-14T05:50:52.0100919Z ========================== Starting Command Output ===========================
+2026-08-14T05:50:52.0116404Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/09f17567-fa8b-4d5d-a4bc-e4399e77f3e7.sh
+2026-08-14T05:50:52.0171754Z + cd /usr/local/ado-agent/_work/1/s/self
+2026-08-14T05:50:52.0173032Z ++ date -u +%Y-%m-%dT%H:%M:%S
+2026-08-14T05:50:52.0192240Z + timestamp=2026-08-14T05:50:52
+2026-08-14T05:50:52.0192711Z + export 'job_url=https://dev.azure.com/hpcodeway/WPP/_build/results?buildId=14328103'
+2026-08-14T05:50:52.0193211Z + job_url='https://dev.azure.com/hpcodeway/WPP/_build/results?buildId=14328103'
+2026-08-14T05:50:52.0193628Z + step_name=pull_request
+2026-08-14T05:50:52.0193986Z + step_status=started
+2026-08-14T05:50:52.0194338Z + deployment_status=started
+2026-08-14T05:50:52.0194890Z + echo '***************** Running git diff 164fc48798ee3c3b43ac7ebf071bf27d9320899e 164fc48798ee3c3b43ac7ebf071bf27d9320899e^1 --name-only --diff-filter=ACM*****************************************'
+2026-08-14T05:50:52.0195626Z + git diff 164fc48798ee3c3b43ac7ebf071bf27d9320899e '164fc48798ee3c3b43ac7ebf071bf27d9320899e^1' --name-only --diff-filter=ACM
+2026-08-14T05:50:52.0196269Z ***************** Running git diff 164fc48798ee3c3b43ac7ebf071bf27d9320899e 164fc48798ee3c3b43ac7ebf071bf27d9320899e^1 --name-only --diff-filter=ACM*****************************************
+2026-08-14T05:50:52.0224198Z deploy/stagepod1/service.yaml
+2026-08-14T05:50:52.0224633Z infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/pod.hcl
+2026-08-14T05:50:52.0225285Z infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:50:52.0225719Z infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:50:52.0232176Z ++ git diff 164fc48798ee3c3b43ac7ebf071bf27d9320899e '164fc48798ee3c3b43ac7ebf071bf27d9320899e^1' --name-only --diff-filter=ACM
+2026-08-14T05:50:52.0259417Z + changed_files='deploy/stagepod1/service.yaml
+2026-08-14T05:50:52.0259889Z infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/pod.hcl
+2026-08-14T05:50:52.0260488Z infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:50:52.0261101Z infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl'
+2026-08-14T05:50:52.0261599Z + pip3 install pyhcl
+2026-08-14T05:50:54.4510377Z Collecting pyhcl
+2026-08-14T05:50:54.4910788Z   Downloading pyhcl-0.4.5-py3-none-any.whl (50 kB)
+2026-08-14T05:50:54.6551298Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.2/50.2 kB 3.7 MB/s eta 0:00:00
+2026-08-14T05:50:56.9723666Z Installing collected packages: pyhcl
+2026-08-14T05:50:57.0443627Z Successfully installed pyhcl-0.4.5
+2026-08-14T05:50:57.1594746Z 
+2026-08-14T05:50:57.1595420Z [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+2026-08-14T05:50:57.1595788Z [notice] To update, run: pip3 install --upgrade pip
+2026-08-14T05:50:57.2123944Z + for i in $changed_files
+2026-08-14T05:50:57.2125215Z + python3 /usr/local/ado-agent/_work/1/s/codewaytemplates/projects/wpp/scripts/python/splunk_deployment_dashboard_reporter.py --date_time=2026-08-14T05:50:52 --hcl_file_path=deploy/stagepod1/service.yaml --service_path=infra/ --deployer=surabhi-ghosal '--job_url=https://dev.azure.com/hpcodeway/WPP/_build/results?buildId=14328103' --step_name=pull_request --step_status=started --deployment_status=started
+2026-08-14T05:50:57.2765641Z Skipped reporting for file: deploy/stagepod1/service.yaml
+2026-08-14T05:50:57.2837848Z + for i in $changed_files
+2026-08-14T05:50:57.2840593Z + python3 /usr/local/ado-agent/_work/1/s/codewaytemplates/projects/wpp/scripts/python/splunk_deployment_dashboard_reporter.py --date_time=2026-08-14T05:50:52 --hcl_file_path=infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/pod.hcl --service_path=infra/ --deployer=surabhi-ghosal '--job_url=https://dev.azure.com/hpcodeway/WPP/_build/results?buildId=14328103' --step_name=pull_request --step_status=started --deployment_status=started
+2026-08-14T05:50:57.3486333Z Skipped reporting for file: infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/pod.hcl
+2026-08-14T05:50:57.3555733Z + for i in $changed_files
+2026-08-14T05:50:57.3557022Z + python3 /usr/local/ado-agent/_work/1/s/codewaytemplates/projects/wpp/scripts/python/splunk_deployment_dashboard_reporter.py --date_time=2026-08-14T05:50:52 --hcl_file_path=infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl --service_path=infra/ --deployer=surabhi-ghosal '--job_url=https://dev.azure.com/hpcodeway/WPP/_build/results?buildId=14328103' --step_name=pull_request --step_status=started --deployment_status=started
+2026-08-14T05:50:57.4221353Z Skipped reporting for file: infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:50:57.4290875Z + for i in $changed_files
+2026-08-14T05:50:57.4291774Z + python3 /usr/local/ado-agent/_work/1/s/codewaytemplates/projects/wpp/scripts/python/splunk_deployment_dashboard_reporter.py --date_time=2026-08-14T05:50:52 --hcl_file_path=infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl --service_path=infra/ --deployer=surabhi-ghosal '--job_url=https://dev.azure.com/hpcodeway/WPP/_build/results?buildId=14328103' --step_name=pull_request --step_status=started --deployment_status=started
+2026-08-14T05:50:57.4985069Z Skipped reporting for file: infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:50:57.5072415Z 
+2026-08-14T05:50:57.5149919Z ##[section]Finishing: Pre-Run Splunk Reporting
