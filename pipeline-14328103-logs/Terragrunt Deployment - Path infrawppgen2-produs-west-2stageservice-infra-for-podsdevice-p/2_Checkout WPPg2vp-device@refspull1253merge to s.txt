@@ -1,0 +1,625 @@
+2026-08-14T05:52:03.6145466Z ##[section]Starting: Checkout WPPg2/vp-device@refs/pull/1253/merge to s
+2026-08-14T05:52:03.6228007Z ==============================================================================
+2026-08-14T05:52:03.6228810Z Task         : Get sources
+2026-08-14T05:52:03.6229325Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-08-14T05:52:03.6229471Z Version      : 1.0.0
+2026-08-14T05:52:03.6229738Z Author       : Microsoft
+2026-08-14T05:52:03.6230018Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-08-14T05:52:03.6230131Z ==============================================================================
+2026-08-14T05:52:04.9459169Z Syncing repository: WPPg2/vp-device (GitHubEnterprise)
+2026-08-14T05:52:04.9464879Z ##[command]git version
+2026-08-14T05:52:04.9471924Z git version 2.50.1
+2026-08-14T05:52:04.9472645Z ##[command]git lfs version
+2026-08-14T05:52:04.9478369Z git-lfs/3.7.1 (GitHub; linux amd64; go 1.25.11 X:nodwarf5)
+2026-08-14T05:52:04.9479932Z ##[command]git init "/usr/local/ado-agent/_work/1/s"
+2026-08-14T05:52:04.9485074Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-14T05:52:04.9485315Z hint: is subject to change. To configure the initial branch name to use in all
+2026-08-14T05:52:04.9485538Z hint: of your new repositories, which will suppress this warning, call:
+2026-08-14T05:52:04.9485731Z hint:
+2026-08-14T05:52:04.9486196Z hint: 	git config --global init.defaultBranch <name>
+2026-08-14T05:52:04.9486388Z hint:
+2026-08-14T05:52:04.9486580Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-14T05:52:04.9486805Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-14T05:52:04.9486999Z hint:
+2026-08-14T05:52:04.9487215Z hint: 	git branch -m <name>
+2026-08-14T05:52:04.9487379Z hint:
+2026-08-14T05:52:04.9487699Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-14T05:52:04.9487966Z Initialized empty Git repository in /usr/local/ado-agent/_work/1/s/.git/
+2026-08-14T05:52:04.9488720Z ##[command]git remote add origin https://github.azc.ext.hp.com/WPPg2/vp-device
+2026-08-14T05:52:04.9494686Z ##[command]git sparse-checkout disable
+2026-08-14T05:52:04.9554869Z ##[command]git config gc.auto 0
+2026-08-14T05:52:04.9564323Z ##[command]git config core.longpaths true
+2026-08-14T05:52:04.9572630Z ##[command]git config --get-all http.https://github.azc.ext.hp.com/WPPg2/vp-device.extraheader
+2026-08-14T05:52:04.9603563Z ##[command]git config --get-all http.extraheader
+2026-08-14T05:52:04.9609414Z ##[command]git config --get-regexp .*extraheader
+2026-08-14T05:52:04.9615324Z ##[command]git config --get-all http.proxy
+2026-08-14T05:52:04.9621481Z ##[command]git config http.version HTTP/1.1
+2026-08-14T05:52:04.9630813Z ##[command]git config --get-all remote.origin.promisor
+2026-08-14T05:52:04.9636813Z ##[command]git config --get-all remote.origin.partialclonefilter
+2026-08-14T05:52:04.9644695Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +164fc48798ee3c3b43ac7ebf071bf27d9320899e:refs/remotes/origin/164fc48798ee3c3b43ac7ebf071bf27d9320899e
+2026-08-14T05:52:05.2023165Z remote: Enumerating objects: 10640, done.        
+2026-08-14T05:52:05.2024003Z remote: Counting objects:   0% (1/10640)        
+2026-08-14T05:52:05.2028104Z remote: Counting objects:   1% (107/10640)        
+2026-08-14T05:52:05.2030812Z remote: Counting objects:   2% (213/10640)        
+2026-08-14T05:52:05.2031349Z remote: Counting objects:   3% (320/10640)        
+2026-08-14T05:52:05.2031771Z remote: Counting objects:   4% (426/10640)        
+2026-08-14T05:52:05.2032174Z remote: Counting objects:   5% (532/10640)        
+2026-08-14T05:52:05.2032567Z remote: Counting objects:   6% (639/10640)        
+2026-08-14T05:52:05.2032956Z remote: Counting objects:   7% (745/10640)        
+2026-08-14T05:52:05.2033347Z remote: Counting objects:   8% (852/10640)        
+2026-08-14T05:52:05.2034117Z remote: Counting objects:   9% (958/10640)        
+2026-08-14T05:52:05.2034626Z remote: Counting objects:  10% (1064/10640)        
+2026-08-14T05:52:05.2035735Z remote: Counting objects:  11% (1171/10640)        
+2026-08-14T05:52:05.2039963Z remote: Counting objects:  12% (1277/10640)        
+2026-08-14T05:52:05.2041143Z remote: Counting objects:  13% (1384/10640)        
+2026-08-14T05:52:05.2043580Z remote: Counting objects:  14% (1490/10640)        
+2026-08-14T05:52:05.2044381Z remote: Counting objects:  15% (1596/10640)        
+2026-08-14T05:52:05.2045209Z remote: Counting objects:  16% (1703/10640)        
+2026-08-14T05:52:05.2045862Z remote: Counting objects:  17% (1809/10640)        
+2026-08-14T05:52:05.2046523Z remote: Counting objects:  18% (1916/10640)        
+2026-08-14T05:52:05.2047194Z remote: Counting objects:  19% (2022/10640)        
+2026-08-14T05:52:05.2047856Z remote: Counting objects:  20% (2128/10640)        
+2026-08-14T05:52:05.2048476Z remote: Counting objects:  21% (2235/10640)        
+2026-08-14T05:52:05.2049235Z remote: Counting objects:  22% (2341/10640)        
+2026-08-14T05:52:05.2049933Z remote: Counting objects:  23% (2448/10640)        
+2026-08-14T05:52:05.2050313Z remote: Counting objects:  24% (2554/10640)        
+2026-08-14T05:52:05.2050640Z remote: Counting objects:  25% (2660/10640)        
+2026-08-14T05:52:05.2050970Z remote: Counting objects:  26% (2767/10640)        
+2026-08-14T05:52:05.2051306Z remote: Counting objects:  27% (2873/10640)        
+2026-08-14T05:52:05.2051687Z remote: Counting objects:  28% (2980/10640)        
+2026-08-14T05:52:05.2052022Z remote: Counting objects:  29% (3086/10640)        
+2026-08-14T05:52:05.2052351Z remote: Counting objects:  30% (3192/10640)        
+2026-08-14T05:52:05.2052684Z remote: Counting objects:  31% (3299/10640)        
+2026-08-14T05:52:05.2053018Z remote: Counting objects:  32% (3405/10640)        
+2026-08-14T05:52:05.2071970Z remote: Counting objects:  33% (3512/10640)        
+2026-08-14T05:52:05.2072373Z remote: Counting objects:  34% (3618/10640)        
+2026-08-14T05:52:05.2072713Z remote: Counting objects:  35% (3724/10640)        
+2026-08-14T05:52:05.2073055Z remote: Counting objects:  36% (3831/10640)        
+2026-08-14T05:52:05.2073387Z remote: Counting objects:  37% (3937/10640)        
+2026-08-14T05:52:05.2073709Z remote: Counting objects:  38% (4044/10640)        
+2026-08-14T05:52:05.2074054Z remote: Counting objects:  39% (4150/10640)        
+2026-08-14T05:52:05.2074659Z remote: Counting objects:  40% (4256/10640)        
+2026-08-14T05:52:05.2075003Z remote: Counting objects:  41% (4363/10640)        
+2026-08-14T05:52:05.2075324Z remote: Counting objects:  42% (4469/10640)        
+2026-08-14T05:52:05.2075662Z remote: Counting objects:  43% (4576/10640)        
+2026-08-14T05:52:05.2075990Z remote: Counting objects:  44% (4682/10640)        
+2026-08-14T05:52:05.2076322Z remote: Counting objects:  45% (4788/10640)        
+2026-08-14T05:52:05.2076648Z remote: Counting objects:  46% (4895/10640)        
+2026-08-14T05:52:05.2076986Z remote: Counting objects:  47% (5001/10640)        
+2026-08-14T05:52:05.2077316Z remote: Counting objects:  48% (5108/10640)        
+2026-08-14T05:52:05.2077648Z remote: Counting objects:  49% (5214/10640)        
+2026-08-14T05:52:05.2077974Z remote: Counting objects:  50% (5320/10640)        
+2026-08-14T05:52:05.2078322Z remote: Counting objects:  51% (5427/10640)        
+2026-08-14T05:52:05.2078652Z remote: Counting objects:  52% (5533/10640)        
+2026-08-14T05:52:05.2078997Z remote: Counting objects:  53% (5640/10640)        
+2026-08-14T05:52:05.2079390Z remote: Counting objects:  54% (5746/10640)        
+2026-08-14T05:52:05.2081025Z remote: Counting objects:  55% (5852/10640)        
+2026-08-14T05:52:05.2081417Z remote: Counting objects:  56% (5959/10640)        
+2026-08-14T05:52:05.2081740Z remote: Counting objects:  57% (6065/10640)        
+2026-08-14T05:52:05.2082052Z remote: Counting objects:  58% (6172/10640)        
+2026-08-14T05:52:05.2082391Z remote: Counting objects:  59% (6278/10640)        
+2026-08-14T05:52:05.2082909Z remote: Counting objects:  60% (6384/10640)        
+2026-08-14T05:52:05.2083241Z remote: Counting objects:  61% (6491/10640)        
+2026-08-14T05:52:05.2083578Z remote: Counting objects:  62% (6597/10640)        
+2026-08-14T05:52:05.2083904Z remote: Counting objects:  63% (6704/10640)        
+2026-08-14T05:52:05.2084311Z remote: Counting objects:  64% (6810/10640)        
+2026-08-14T05:52:05.2084654Z remote: Counting objects:  65% (6916/10640)        
+2026-08-14T05:52:05.2084986Z remote: Counting objects:  66% (7023/10640)        
+2026-08-14T05:52:05.2085322Z remote: Counting objects:  67% (7129/10640)        
+2026-08-14T05:52:05.2085644Z remote: Counting objects:  68% (7236/10640)        
+2026-08-14T05:52:05.2085980Z remote: Counting objects:  69% (7342/10640)        
+2026-08-14T05:52:05.2086310Z remote: Counting objects:  70% (7448/10640)        
+2026-08-14T05:52:05.2086646Z remote: Counting objects:  71% (7555/10640)        
+2026-08-14T05:52:05.2086974Z remote: Counting objects:  72% (7661/10640)        
+2026-08-14T05:52:05.2087300Z remote: Counting objects:  73% (7768/10640)        
+2026-08-14T05:52:05.2087754Z remote: Counting objects:  74% (7874/10640)        
+2026-08-14T05:52:05.2088081Z remote: Counting objects:  75% (7980/10640)        
+2026-08-14T05:52:05.2088405Z remote: Counting objects:  76% (8087/10640)        
+2026-08-14T05:52:05.2088733Z remote: Counting objects:  77% (8193/10640)        
+2026-08-14T05:52:05.2089094Z remote: Counting objects:  78% (8300/10640)        
+2026-08-14T05:52:05.2089435Z remote: Counting objects:  79% (8406/10640)        
+2026-08-14T05:52:05.2089757Z remote: Counting objects:  80% (8512/10640)        
+2026-08-14T05:52:05.2090090Z remote: Counting objects:  81% (8619/10640)        
+2026-08-14T05:52:05.2090422Z remote: Counting objects:  82% (8725/10640)        
+2026-08-14T05:52:05.2090749Z remote: Counting objects:  83% (8832/10640)        
+2026-08-14T05:52:05.2091079Z remote: Counting objects:  84% (8938/10640)        
+2026-08-14T05:52:05.2091410Z remote: Counting objects:  85% (9044/10640)        
+2026-08-14T05:52:05.2091737Z remote: Counting objects:  86% (9151/10640)        
+2026-08-14T05:52:05.2092084Z remote: Counting objects:  87% (9257/10640)        
+2026-08-14T05:52:05.2092426Z remote: Counting objects:  88% (9364/10640)        
+2026-08-14T05:52:05.2092779Z remote: Counting objects:  89% (9470/10640)        
+2026-08-14T05:52:05.2093124Z remote: Counting objects:  90% (9576/10640)        
+2026-08-14T05:52:05.2093612Z remote: Counting objects:  91% (9683/10640)        
+2026-08-14T05:52:05.2093958Z remote: Counting objects:  92% (9789/10640)        
+2026-08-14T05:52:05.2094308Z remote: Counting objects:  93% (9896/10640)        
+2026-08-14T05:52:05.2094657Z remote: Counting objects:  94% (10002/10640)        
+2026-08-14T05:52:05.2095020Z remote: Counting objects:  95% (10108/10640)        
+2026-08-14T05:52:05.2095372Z remote: Counting objects:  96% (10215/10640)        
+2026-08-14T05:52:05.2095742Z remote: Counting objects:  97% (10321/10640)        
+2026-08-14T05:52:05.2096097Z remote: Counting objects:  98% (10428/10640)        
+2026-08-14T05:52:05.2096454Z remote: Counting objects:  99% (10534/10640)        
+2026-08-14T05:52:05.2115470Z remote: Counting objects: 100% (10640/10640)        
+2026-08-14T05:52:05.2115988Z remote: Counting objects: 100% (10640/10640), done.        
+2026-08-14T05:52:05.2116385Z remote: Compressing objects:   0% (1/5726)        
+2026-08-14T05:52:05.2116761Z remote: Compressing objects:   1% (58/5726)        
+2026-08-14T05:52:05.2117196Z remote: Compressing objects:   2% (115/5726)        
+2026-08-14T05:52:05.2117568Z remote: Compressing objects:   3% (172/5726)        
+2026-08-14T05:52:05.2118397Z remote: Compressing objects:   4% (230/5726)        
+2026-08-14T05:52:05.2120493Z remote: Compressing objects:   5% (287/5726)        
+2026-08-14T05:52:05.2120908Z remote: Compressing objects:   6% (344/5726)        
+2026-08-14T05:52:05.2121287Z remote: Compressing objects:   7% (401/5726)        
+2026-08-14T05:52:05.2121930Z remote: Compressing objects:   8% (459/5726)        
+2026-08-14T05:52:05.2122300Z remote: Compressing objects:   9% (516/5726)        
+2026-08-14T05:52:05.2122675Z remote: Compressing objects:  10% (573/5726)        
+2026-08-14T05:52:05.2123045Z remote: Compressing objects:  11% (630/5726)        
+2026-08-14T05:52:05.2123415Z remote: Compressing objects:  12% (688/5726)        
+2026-08-14T05:52:05.2123778Z remote: Compressing objects:  13% (745/5726)        
+2026-08-14T05:52:05.2124154Z remote: Compressing objects:  14% (802/5726)        
+2026-08-14T05:52:05.2124531Z remote: Compressing objects:  15% (859/5726)        
+2026-08-14T05:52:05.2124918Z remote: Compressing objects:  16% (917/5726)        
+2026-08-14T05:52:05.2125287Z remote: Compressing objects:  17% (974/5726)        
+2026-08-14T05:52:05.2125682Z remote: Compressing objects:  18% (1031/5726)        
+2026-08-14T05:52:05.2126079Z remote: Compressing objects:  19% (1088/5726)        
+2026-08-14T05:52:05.2126490Z remote: Compressing objects:  20% (1146/5726)        
+2026-08-14T05:52:05.2126877Z remote: Compressing objects:  21% (1203/5726)        
+2026-08-14T05:52:05.2127268Z remote: Compressing objects:  22% (1260/5726)        
+2026-08-14T05:52:05.2127817Z remote: Compressing objects:  23% (1317/5726)        
+2026-08-14T05:52:05.2128210Z remote: Compressing objects:  24% (1375/5726)        
+2026-08-14T05:52:05.2128585Z remote: Compressing objects:  25% (1432/5726)        
+2026-08-14T05:52:05.2128977Z remote: Compressing objects:  26% (1489/5726)        
+2026-08-14T05:52:05.2129364Z remote: Compressing objects:  27% (1547/5726)        
+2026-08-14T05:52:05.2129748Z remote: Compressing objects:  28% (1604/5726)        
+2026-08-14T05:52:05.2130115Z remote: Compressing objects:  29% (1661/5726)        
+2026-08-14T05:52:05.2130474Z remote: Compressing objects:  30% (1718/5726)        
+2026-08-14T05:52:05.2130840Z remote: Compressing objects:  31% (1776/5726)        
+2026-08-14T05:52:05.2131207Z remote: Compressing objects:  32% (1833/5726)        
+2026-08-14T05:52:05.2131577Z remote: Compressing objects:  33% (1890/5726)        
+2026-08-14T05:52:05.2131943Z remote: Compressing objects:  34% (1947/5726)        
+2026-08-14T05:52:05.2132379Z remote: Compressing objects:  35% (2005/5726)        
+2026-08-14T05:52:05.2132762Z remote: Compressing objects:  36% (2062/5726)        
+2026-08-14T05:52:05.2133122Z remote: Compressing objects:  37% (2119/5726)        
+2026-08-14T05:52:05.2133682Z remote: Compressing objects:  38% (2176/5726)        
+2026-08-14T05:52:05.2134042Z remote: Compressing objects:  39% (2234/5726)        
+2026-08-14T05:52:05.2134414Z remote: Compressing objects:  40% (2291/5726)        
+2026-08-14T05:52:05.2134695Z remote: Compressing objects:  41% (2348/5726)        
+2026-08-14T05:52:05.2134902Z remote: Compressing objects:  42% (2405/5726)        
+2026-08-14T05:52:05.2135124Z remote: Compressing objects:  43% (2463/5726)        
+2026-08-14T05:52:05.2135342Z remote: Compressing objects:  44% (2520/5726)        
+2026-08-14T05:52:05.2135564Z remote: Compressing objects:  45% (2577/5726)        
+2026-08-14T05:52:05.2135778Z remote: Compressing objects:  46% (2634/5726)        
+2026-08-14T05:52:05.2135991Z remote: Compressing objects:  47% (2692/5726)        
+2026-08-14T05:52:05.2136221Z remote: Compressing objects:  48% (2749/5726)        
+2026-08-14T05:52:05.2136614Z remote: Compressing objects:  49% (2806/5726)        
+2026-08-14T05:52:05.2137016Z remote: Compressing objects:  50% (2863/5726)        
+2026-08-14T05:52:05.2137412Z remote: Compressing objects:  51% (2921/5726)        
+2026-08-14T05:52:05.2137788Z remote: Compressing objects:  52% (2978/5726)        
+2026-08-14T05:52:05.2138153Z remote: Compressing objects:  53% (3035/5726)        
+2026-08-14T05:52:05.2138503Z remote: Compressing objects:  54% (3093/5726)        
+2026-08-14T05:52:05.2138866Z remote: Compressing objects:  55% (3150/5726)        
+2026-08-14T05:52:05.2139226Z remote: Compressing objects:  56% (3207/5726)        
+2026-08-14T05:52:05.2139737Z remote: Compressing objects:  57% (3264/5726)        
+2026-08-14T05:52:05.2140092Z remote: Compressing objects:  58% (3322/5726)        
+2026-08-14T05:52:05.2140451Z remote: Compressing objects:  59% (3379/5726)        
+2026-08-14T05:52:05.2140814Z remote: Compressing objects:  60% (3436/5726)        
+2026-08-14T05:52:05.2141121Z remote: Compressing objects:  61% (3493/5726)        
+2026-08-14T05:52:05.2141486Z remote: Compressing objects:  62% (3551/5726)        
+2026-08-14T05:52:05.2141711Z remote: Compressing objects:  63% (3608/5726)        
+2026-08-14T05:52:05.2141925Z remote: Compressing objects:  64% (3665/5726)        
+2026-08-14T05:52:05.2142143Z remote: Compressing objects:  65% (3722/5726)        
+2026-08-14T05:52:05.2142344Z remote: Compressing objects:  66% (3780/5726)        
+2026-08-14T05:52:05.2142572Z remote: Compressing objects:  67% (3837/5726)        
+2026-08-14T05:52:05.2142789Z remote: Compressing objects:  68% (3894/5726)        
+2026-08-14T05:52:05.2143161Z remote: Compressing objects:  69% (3951/5726)        
+2026-08-14T05:52:05.2143542Z remote: Compressing objects:  70% (4009/5726)        
+2026-08-14T05:52:05.2143906Z remote: Compressing objects:  71% (4066/5726)        
+2026-08-14T05:52:05.2144266Z remote: Compressing objects:  72% (4123/5726)        
+2026-08-14T05:52:05.2144623Z remote: Compressing objects:  73% (4180/5726)        
+2026-08-14T05:52:05.2144984Z remote: Compressing objects:  74% (4238/5726)        
+2026-08-14T05:52:05.2145365Z remote: Compressing objects:  75% (4295/5726)        
+2026-08-14T05:52:05.2145735Z remote: Compressing objects:  76% (4352/5726)        
+2026-08-14T05:52:05.2146106Z remote: Compressing objects:  77% (4410/5726)        
+2026-08-14T05:52:05.2146464Z remote: Compressing objects:  78% (4467/5726)        
+2026-08-14T05:52:05.2146825Z remote: Compressing objects:  79% (4524/5726)        
+2026-08-14T05:52:05.2147181Z remote: Compressing objects:  80% (4581/5726)        
+2026-08-14T05:52:05.2147539Z remote: Compressing objects:  81% (4639/5726)        
+2026-08-14T05:52:05.2147898Z remote: Compressing objects:  82% (4696/5726)        
+2026-08-14T05:52:05.2148294Z remote: Compressing objects:  83% (4753/5726)        
+2026-08-14T05:52:05.2148681Z remote: Compressing objects:  84% (4810/5726)        
+2026-08-14T05:52:05.2149054Z remote: Compressing objects:  85% (4868/5726)        
+2026-08-14T05:52:05.2149486Z remote: Compressing objects:  86% (4925/5726)        
+2026-08-14T05:52:05.2149835Z remote: Compressing objects:  87% (4982/5726)        
+2026-08-14T05:52:05.2150360Z remote: Compressing objects:  88% (5039/5726)        
+2026-08-14T05:52:05.2150721Z remote: Compressing objects:  89% (5097/5726)        
+2026-08-14T05:52:05.2151104Z remote: Compressing objects:  90% (5154/5726)        
+2026-08-14T05:52:05.2151462Z remote: Compressing objects:  91% (5211/5726)        
+2026-08-14T05:52:05.2151818Z remote: Compressing objects:  92% (5268/5726)        
+2026-08-14T05:52:05.2152187Z remote: Compressing objects:  93% (5326/5726)        
+2026-08-14T05:52:05.2152563Z remote: Compressing objects:  94% (5383/5726)        
+2026-08-14T05:52:05.2152952Z remote: Compressing objects:  95% (5440/5726)        
+2026-08-14T05:52:05.2153331Z remote: Compressing objects:  96% (5497/5726)        
+2026-08-14T05:52:05.2153685Z remote: Compressing objects:  97% (5555/5726)        
+2026-08-14T05:52:05.2154050Z remote: Compressing objects:  98% (5612/5726)        
+2026-08-14T05:52:05.2154411Z remote: Compressing objects:  99% (5669/5726)        
+2026-08-14T05:52:05.2154774Z remote: Compressing objects: 100% (5726/5726)        
+2026-08-14T05:52:05.2155139Z remote: Compressing objects: 100% (5726/5726), done.        
+2026-08-14T05:52:05.2155490Z Receiving objects:   0% (1/10640)
+2026-08-14T05:52:05.2155815Z Receiving objects:   1% (107/10640)
+2026-08-14T05:52:05.2156139Z Receiving objects:   2% (213/10640)
+2026-08-14T05:52:05.2156458Z Receiving objects:   3% (320/10640)
+2026-08-14T05:52:05.2156784Z Receiving objects:   4% (426/10640)
+2026-08-14T05:52:05.2157101Z Receiving objects:   5% (532/10640)
+2026-08-14T05:52:05.2157578Z Receiving objects:   6% (639/10640)
+2026-08-14T05:52:05.2157930Z Receiving objects:   7% (745/10640)
+2026-08-14T05:52:05.2158269Z Receiving objects:   8% (852/10640)
+2026-08-14T05:52:05.2162276Z Receiving objects:   9% (958/10640)
+2026-08-14T05:52:05.2165183Z Receiving objects:  10% (1064/10640)
+2026-08-14T05:52:05.2168593Z Receiving objects:  11% (1171/10640)
+2026-08-14T05:52:05.2171183Z Receiving objects:  12% (1277/10640)
+2026-08-14T05:52:05.2173967Z Receiving objects:  13% (1384/10640)
+2026-08-14T05:52:05.2177231Z Receiving objects:  14% (1490/10640)
+2026-08-14T05:52:05.2180727Z Receiving objects:  15% (1596/10640)
+2026-08-14T05:52:05.2183646Z Receiving objects:  16% (1703/10640)
+2026-08-14T05:52:05.2186319Z Receiving objects:  17% (1809/10640)
+2026-08-14T05:52:05.2190535Z Receiving objects:  18% (1916/10640)
+2026-08-14T05:52:05.2193535Z Receiving objects:  19% (2022/10640)
+2026-08-14T05:52:05.2196586Z Receiving objects:  20% (2128/10640)
+2026-08-14T05:52:05.2200083Z Receiving objects:  21% (2235/10640)
+2026-08-14T05:52:05.2203339Z Receiving objects:  22% (2341/10640)
+2026-08-14T05:52:05.2207141Z Receiving objects:  23% (2448/10640)
+2026-08-14T05:52:05.2210214Z Receiving objects:  24% (2554/10640)
+2026-08-14T05:52:05.2212908Z Receiving objects:  25% (2660/10640)
+2026-08-14T05:52:05.2216008Z Receiving objects:  26% (2767/10640)
+2026-08-14T05:52:05.2219878Z Receiving objects:  27% (2873/10640)
+2026-08-14T05:52:05.2221889Z Receiving objects:  28% (2980/10640)
+2026-08-14T05:52:05.2224493Z Receiving objects:  29% (3086/10640)
+2026-08-14T05:52:05.2228040Z Receiving objects:  30% (3192/10640)
+2026-08-14T05:52:05.2231014Z Receiving objects:  31% (3299/10640)
+2026-08-14T05:52:05.2234065Z Receiving objects:  32% (3405/10640)
+2026-08-14T05:52:05.2238621Z Receiving objects:  33% (3512/10640)
+2026-08-14T05:52:05.2241105Z Receiving objects:  34% (3618/10640)
+2026-08-14T05:52:05.2244749Z Receiving objects:  35% (3724/10640)
+2026-08-14T05:52:05.2248415Z Receiving objects:  36% (3831/10640)
+2026-08-14T05:52:05.2253572Z Receiving objects:  37% (3937/10640)
+2026-08-14T05:52:05.2255496Z Receiving objects:  38% (4044/10640)
+2026-08-14T05:52:05.2258123Z Receiving objects:  39% (4150/10640)
+2026-08-14T05:52:05.2261298Z Receiving objects:  40% (4256/10640)
+2026-08-14T05:52:05.2263834Z Receiving objects:  41% (4363/10640)
+2026-08-14T05:52:05.2266574Z Receiving objects:  42% (4469/10640)
+2026-08-14T05:52:05.2269302Z Receiving objects:  43% (4576/10640)
+2026-08-14T05:52:05.2271739Z Receiving objects:  44% (4682/10640)
+2026-08-14T05:52:05.2274970Z Receiving objects:  45% (4788/10640)
+2026-08-14T05:52:05.2277124Z Receiving objects:  46% (4895/10640)
+2026-08-14T05:52:05.2281630Z Receiving objects:  47% (5001/10640)
+2026-08-14T05:52:05.2283701Z Receiving objects:  48% (5108/10640)
+2026-08-14T05:52:05.2286637Z Receiving objects:  49% (5214/10640)
+2026-08-14T05:52:05.2289620Z Receiving objects:  50% (5320/10640)
+2026-08-14T05:52:05.2292592Z Receiving objects:  51% (5427/10640)
+2026-08-14T05:52:05.2295289Z Receiving objects:  52% (5533/10640)
+2026-08-14T05:52:05.2297750Z Receiving objects:  53% (5640/10640)
+2026-08-14T05:52:05.2301126Z Receiving objects:  54% (5746/10640)
+2026-08-14T05:52:05.2302409Z Receiving objects:  55% (5852/10640)
+2026-08-14T05:52:05.2306132Z Receiving objects:  56% (5959/10640)
+2026-08-14T05:52:05.2309504Z Receiving objects:  57% (6065/10640)
+2026-08-14T05:52:05.2312574Z Receiving objects:  58% (6172/10640)
+2026-08-14T05:52:05.2315779Z Receiving objects:  59% (6278/10640)
+2026-08-14T05:52:05.2318102Z Receiving objects:  60% (6384/10640)
+2026-08-14T05:52:05.2320939Z Receiving objects:  61% (6491/10640)
+2026-08-14T05:52:05.2327645Z Receiving objects:  62% (6597/10640)
+2026-08-14T05:52:05.2334671Z Receiving objects:  63% (6704/10640)
+2026-08-14T05:52:05.2337917Z Receiving objects:  64% (6810/10640)
+2026-08-14T05:52:05.2340840Z Receiving objects:  65% (6916/10640)
+2026-08-14T05:52:05.2344577Z Receiving objects:  66% (7023/10640)
+2026-08-14T05:52:05.2348316Z Receiving objects:  67% (7129/10640)
+2026-08-14T05:52:05.2354165Z Receiving objects:  68% (7236/10640)
+2026-08-14T05:52:05.2357570Z Receiving objects:  69% (7342/10640)
+2026-08-14T05:52:05.2363401Z Receiving objects:  70% (7448/10640)
+2026-08-14T05:52:05.2371421Z Receiving objects:  71% (7555/10640)
+2026-08-14T05:52:05.2372902Z Receiving objects:  72% (7661/10640)
+2026-08-14T05:52:05.2381455Z Receiving objects:  73% (7768/10640)
+2026-08-14T05:52:05.2390428Z Receiving objects:  74% (7874/10640)
+2026-08-14T05:52:05.2411508Z Receiving objects:  75% (7980/10640)
+2026-08-14T05:52:05.2419124Z Receiving objects:  76% (8087/10640)
+2026-08-14T05:52:05.2424798Z Receiving objects:  77% (8193/10640)
+2026-08-14T05:52:05.2468115Z Receiving objects:  78% (8300/10640)
+2026-08-14T05:52:05.2504510Z Receiving objects:  79% (8406/10640)
+2026-08-14T05:52:05.2520121Z Receiving objects:  80% (8512/10640)
+2026-08-14T05:52:05.2531213Z Receiving objects:  81% (8619/10640)
+2026-08-14T05:52:05.2548250Z Receiving objects:  82% (8725/10640)
+2026-08-14T05:52:05.2548690Z Receiving objects:  83% (8832/10640)
+2026-08-14T05:52:05.2585266Z Receiving objects:  84% (8938/10640)
+2026-08-14T05:52:05.2587880Z Receiving objects:  85% (9044/10640)
+2026-08-14T05:52:05.2591968Z Receiving objects:  86% (9151/10640)
+2026-08-14T05:52:05.2593333Z Receiving objects:  87% (9257/10640)
+2026-08-14T05:52:05.2595201Z Receiving objects:  88% (9364/10640)
+2026-08-14T05:52:05.2598912Z Receiving objects:  89% (9470/10640)
+2026-08-14T05:52:05.2624515Z Receiving objects:  90% (9576/10640)
+2026-08-14T05:52:05.2632332Z Receiving objects:  91% (9683/10640)
+2026-08-14T05:52:05.2638917Z Receiving objects:  92% (9789/10640)
+2026-08-14T05:52:05.2690117Z Receiving objects:  93% (9896/10640)
+2026-08-14T05:52:05.2762157Z Receiving objects:  94% (10002/10640)
+2026-08-14T05:52:05.2803878Z Receiving objects:  95% (10108/10640)
+2026-08-14T05:52:05.2851839Z Receiving objects:  96% (10215/10640)
+2026-08-14T05:52:05.2886160Z Receiving objects:  97% (10321/10640)
+2026-08-14T05:52:05.2918874Z Receiving objects:  98% (10428/10640)
+2026-08-14T05:52:05.3107843Z Receiving objects:  99% (10534/10640)
+2026-08-14T05:52:05.3108287Z remote: Total 10640 (delta 3975), reused 8727 (delta 2588), pack-reused 0 (from 0)        
+2026-08-14T05:52:05.3120353Z Receiving objects: 100% (10640/10640)
+2026-08-14T05:52:05.3120917Z Receiving objects: 100% (10640/10640), 3.06 MiB | 29.58 MiB/s, done.
+2026-08-14T05:52:05.3130116Z Resolving deltas:   0% (0/3975)
+2026-08-14T05:52:05.3130929Z Resolving deltas:   1% (40/3975)
+2026-08-14T05:52:05.3135747Z Resolving deltas:   2% (80/3975)
+2026-08-14T05:52:05.3139432Z Resolving deltas:   3% (120/3975)
+2026-08-14T05:52:05.3144853Z Resolving deltas:   4% (159/3975)
+2026-08-14T05:52:05.3146654Z Resolving deltas:   5% (199/3975)
+2026-08-14T05:52:05.3148946Z Resolving deltas:   6% (239/3975)
+2026-08-14T05:52:05.3152696Z Resolving deltas:   7% (279/3975)
+2026-08-14T05:52:05.3157797Z Resolving deltas:   8% (318/3975)
+2026-08-14T05:52:05.3162479Z Resolving deltas:   9% (358/3975)
+2026-08-14T05:52:05.3165096Z Resolving deltas:  10% (398/3975)
+2026-08-14T05:52:05.3169891Z Resolving deltas:  11% (438/3975)
+2026-08-14T05:52:05.3170497Z Resolving deltas:  12% (478/3975)
+2026-08-14T05:52:05.3172177Z Resolving deltas:  13% (517/3975)
+2026-08-14T05:52:05.3178264Z Resolving deltas:  14% (557/3975)
+2026-08-14T05:52:05.3179031Z Resolving deltas:  15% (597/3975)
+2026-08-14T05:52:05.3182327Z Resolving deltas:  16% (637/3975)
+2026-08-14T05:52:05.3185090Z Resolving deltas:  17% (676/3975)
+2026-08-14T05:52:05.3188571Z Resolving deltas:  18% (716/3975)
+2026-08-14T05:52:05.3191904Z Resolving deltas:  19% (756/3975)
+2026-08-14T05:52:05.3195865Z Resolving deltas:  20% (795/3975)
+2026-08-14T05:52:05.3198803Z Resolving deltas:  21% (835/3975)
+2026-08-14T05:52:05.3202467Z Resolving deltas:  22% (875/3975)
+2026-08-14T05:52:05.3204974Z Resolving deltas:  23% (915/3975)
+2026-08-14T05:52:05.3208853Z Resolving deltas:  24% (955/3975)
+2026-08-14T05:52:05.3210874Z Resolving deltas:  25% (994/3975)
+2026-08-14T05:52:05.3217123Z Resolving deltas:  26% (1034/3975)
+2026-08-14T05:52:05.3217861Z Resolving deltas:  27% (1074/3975)
+2026-08-14T05:52:05.3222647Z Resolving deltas:  28% (1113/3975)
+2026-08-14T05:52:05.3223979Z Resolving deltas:  29% (1153/3975)
+2026-08-14T05:52:05.3230475Z Resolving deltas:  30% (1193/3975)
+2026-08-14T05:52:05.3232868Z Resolving deltas:  31% (1233/3975)
+2026-08-14T05:52:05.3236852Z Resolving deltas:  32% (1272/3975)
+2026-08-14T05:52:05.3244891Z Resolving deltas:  33% (1312/3975)
+2026-08-14T05:52:05.3246084Z Resolving deltas:  34% (1353/3975)
+2026-08-14T05:52:05.3249560Z Resolving deltas:  35% (1392/3975)
+2026-08-14T05:52:05.3252784Z Resolving deltas:  36% (1431/3975)
+2026-08-14T05:52:05.3257428Z Resolving deltas:  37% (1471/3975)
+2026-08-14T05:52:05.3264450Z Resolving deltas:  38% (1512/3975)
+2026-08-14T05:52:05.3272060Z Resolving deltas:  39% (1551/3975)
+2026-08-14T05:52:05.3278497Z Resolving deltas:  40% (1590/3975)
+2026-08-14T05:52:05.3284727Z Resolving deltas:  41% (1631/3975)
+2026-08-14T05:52:05.3291298Z Resolving deltas:  42% (1670/3975)
+2026-08-14T05:52:05.3295438Z Resolving deltas:  43% (1710/3975)
+2026-08-14T05:52:05.3299219Z Resolving deltas:  44% (1749/3975)
+2026-08-14T05:52:05.3304605Z Resolving deltas:  45% (1789/3975)
+2026-08-14T05:52:05.3315741Z Resolving deltas:  46% (1829/3975)
+2026-08-14T05:52:05.3326242Z Resolving deltas:  47% (1869/3975)
+2026-08-14T05:52:05.3333354Z Resolving deltas:  48% (1908/3975)
+2026-08-14T05:52:05.3343573Z Resolving deltas:  49% (1948/3975)
+2026-08-14T05:52:05.3347326Z Resolving deltas:  50% (1988/3975)
+2026-08-14T05:52:05.3353556Z Resolving deltas:  51% (2028/3975)
+2026-08-14T05:52:05.3363865Z Resolving deltas:  52% (2067/3975)
+2026-08-14T05:52:05.3371025Z Resolving deltas:  53% (2107/3975)
+2026-08-14T05:52:05.3378968Z Resolving deltas:  54% (2147/3975)
+2026-08-14T05:52:05.3383281Z Resolving deltas:  55% (2187/3975)
+2026-08-14T05:52:05.3389649Z Resolving deltas:  56% (2226/3975)
+2026-08-14T05:52:05.3397800Z Resolving deltas:  57% (2266/3975)
+2026-08-14T05:52:05.3401580Z Resolving deltas:  58% (2306/3975)
+2026-08-14T05:52:05.3405929Z Resolving deltas:  59% (2346/3975)
+2026-08-14T05:52:05.3415372Z Resolving deltas:  60% (2385/3975)
+2026-08-14T05:52:05.3427386Z Resolving deltas:  61% (2425/3975)
+2026-08-14T05:52:05.3439491Z Resolving deltas:  62% (2465/3975)
+2026-08-14T05:52:05.3452406Z Resolving deltas:  63% (2505/3975)
+2026-08-14T05:52:05.3467468Z Resolving deltas:  64% (2544/3975)
+2026-08-14T05:52:05.3470526Z Resolving deltas:  65% (2584/3975)
+2026-08-14T05:52:05.3478072Z Resolving deltas:  66% (2624/3975)
+2026-08-14T05:52:05.3489360Z Resolving deltas:  67% (2665/3975)
+2026-08-14T05:52:05.3497308Z Resolving deltas:  68% (2703/3975)
+2026-08-14T05:52:05.3506415Z Resolving deltas:  69% (2743/3975)
+2026-08-14T05:52:05.3516054Z Resolving deltas:  70% (2783/3975)
+2026-08-14T05:52:05.3525187Z Resolving deltas:  71% (2824/3975)
+2026-08-14T05:52:05.3528408Z Resolving deltas:  72% (2862/3975)
+2026-08-14T05:52:05.3543678Z Resolving deltas:  73% (2902/3975)
+2026-08-14T05:52:05.3544637Z Resolving deltas:  74% (2942/3975)
+2026-08-14T05:52:05.3549435Z Resolving deltas:  75% (2982/3975)
+2026-08-14T05:52:05.3562176Z Resolving deltas:  76% (3021/3975)
+2026-08-14T05:52:05.3572552Z Resolving deltas:  77% (3061/3975)
+2026-08-14T05:52:05.3590306Z Resolving deltas:  78% (3101/3975)
+2026-08-14T05:52:05.3603346Z Resolving deltas:  79% (3141/3975)
+2026-08-14T05:52:05.3623192Z Resolving deltas:  80% (3180/3975)
+2026-08-14T05:52:05.3633824Z Resolving deltas:  81% (3220/3975)
+2026-08-14T05:52:05.3638259Z Resolving deltas:  82% (3260/3975)
+2026-08-14T05:52:05.3644160Z Resolving deltas:  83% (3300/3975)
+2026-08-14T05:52:05.3664287Z Resolving deltas:  84% (3339/3975)
+2026-08-14T05:52:05.3671223Z Resolving deltas:  85% (3379/3975)
+2026-08-14T05:52:05.3676092Z Resolving deltas:  86% (3419/3975)
+2026-08-14T05:52:05.3681564Z Resolving deltas:  87% (3459/3975)
+2026-08-14T05:52:05.3685726Z Resolving deltas:  88% (3498/3975)
+2026-08-14T05:52:05.3693787Z Resolving deltas:  89% (3538/3975)
+2026-08-14T05:52:05.3694305Z Resolving deltas:  90% (3578/3975)
+2026-08-14T05:52:05.3695105Z Resolving deltas:  91% (3618/3975)
+2026-08-14T05:52:05.3698237Z Resolving deltas:  92% (3657/3975)
+2026-08-14T05:52:05.3707563Z Resolving deltas:  93% (3697/3975)
+2026-08-14T05:52:05.3713651Z Resolving deltas:  94% (3737/3975)
+2026-08-14T05:52:05.3726360Z Resolving deltas:  95% (3777/3975)
+2026-08-14T05:52:05.3733889Z Resolving deltas:  96% (3816/3975)
+2026-08-14T05:52:05.3749848Z Resolving deltas:  97% (3856/3975)
+2026-08-14T05:52:05.3754857Z Resolving deltas:  98% (3896/3975)
+2026-08-14T05:52:05.3760564Z Resolving deltas:  99% (3936/3975)
+2026-08-14T05:52:05.3766591Z Resolving deltas: 100% (3975/3975)
+2026-08-14T05:52:05.3767013Z Resolving deltas: 100% (3975/3975), done.
+2026-08-14T05:52:05.4143499Z From https://github.azc.ext.hp.com/WPPg2/vp-device
+2026-08-14T05:52:05.4143951Z  * [new ref]         164fc48798ee3c3b43ac7ebf071bf27d9320899e -> origin/164fc48798ee3c3b43ac7ebf071bf27d9320899e
+2026-08-14T05:52:05.4184570Z  * [new tag]         v2.1.105                  -> v2.1.105
+2026-08-14T05:52:05.4184935Z  * [new tag]         v2.1.106                  -> v2.1.106
+2026-08-14T05:52:05.4185258Z  * [new tag]         v2.1.107                  -> v2.1.107
+2026-08-14T05:52:05.4185585Z  * [new tag]         v2.1.108                  -> v2.1.108
+2026-08-14T05:52:05.4185912Z  * [new tag]         v2.1.109                  -> v2.1.109
+2026-08-14T05:52:05.4189145Z  * [new tag]         v2.1.110                  -> v2.1.110
+2026-08-14T05:52:05.4214918Z  * [new tag]         v2.1.111                  -> v2.1.111
+2026-08-14T05:52:05.4215285Z  * [new tag]         v2.1.112                  -> v2.1.112
+2026-08-14T05:52:05.4215669Z  * [new tag]         v2.1.114                  -> v2.1.114
+2026-08-14T05:52:05.4241842Z  * [new tag]         v2.1.115                  -> v2.1.115
+2026-08-14T05:52:05.4249705Z  * [new tag]         v2.1.116                  -> v2.1.116
+2026-08-14T05:52:05.4250048Z  * [new tag]         v2.1.117                  -> v2.1.117
+2026-08-14T05:52:05.4250355Z  * [new tag]         v2.1.118                  -> v2.1.118
+2026-08-14T05:52:05.4250684Z  * [new tag]         v2.1.119                  -> v2.1.119
+2026-08-14T05:52:05.4250981Z  * [new tag]         v2.1.120                  -> v2.1.120
+2026-08-14T05:52:05.4251288Z  * [new tag]         v2.1.121                  -> v2.1.121
+2026-08-14T05:52:05.4251612Z  * [new tag]         v2.1.122                  -> v2.1.122
+2026-08-14T05:52:05.4251934Z  * [new tag]         v2.1.123                  -> v2.1.123
+2026-08-14T05:52:05.4252647Z  * [new tag]         v2.1.124                  -> v2.1.124
+2026-08-14T05:52:05.4252981Z  * [new tag]         v2.1.125                  -> v2.1.125
+2026-08-14T05:52:05.4253310Z  * [new tag]         v2.1.126                  -> v2.1.126
+2026-08-14T05:52:05.4253628Z  * [new tag]         v2.1.127                  -> v2.1.127
+2026-08-14T05:52:05.4253935Z  * [new tag]         v2.1.128                  -> v2.1.128
+2026-08-14T05:52:05.4254248Z  * [new tag]         v2.1.129                  -> v2.1.129
+2026-08-14T05:52:05.4254634Z  * [new tag]         v2.1.130                  -> v2.1.130
+2026-08-14T05:52:05.4261213Z  * [new tag]         v2.1.131                  -> v2.1.131
+2026-08-14T05:52:05.4273340Z  * [new tag]         v2.1.132                  -> v2.1.132
+2026-08-14T05:52:05.4273694Z  * [new tag]         v2.1.133                  -> v2.1.133
+2026-08-14T05:52:05.4282933Z  * [new tag]         v2.1.134                  -> v2.1.134
+2026-08-14T05:52:05.4283278Z  * [new tag]         v2.1.135                  -> v2.1.135
+2026-08-14T05:52:05.4287842Z  * [new tag]         v2.1.136                  -> v2.1.136
+2026-08-14T05:52:05.4293241Z  * [new tag]         v2.1.137                  -> v2.1.137
+2026-08-14T05:52:05.4303965Z  * [new tag]         v2.1.48                   -> v2.1.48
+2026-08-14T05:52:05.4306894Z  * [new tag]         v2.1.49                   -> v2.1.49
+2026-08-14T05:52:05.4314793Z  * [new tag]         v2.1.53                   -> v2.1.53
+2026-08-14T05:52:05.4322907Z  * [new tag]         v2.1.54                   -> v2.1.54
+2026-08-14T05:52:05.4330834Z  * [new tag]         v2.1.55                   -> v2.1.55
+2026-08-14T05:52:05.4340564Z  * [new tag]         v2.1.56                   -> v2.1.56
+2026-08-14T05:52:05.4344360Z  * [new tag]         v2.1.57                   -> v2.1.57
+2026-08-14T05:52:05.4351712Z  * [new tag]         v2.1.58                   -> v2.1.58
+2026-08-14T05:52:05.4354315Z  * [new tag]         v2.1.77                   -> v2.1.77
+2026-08-14T05:52:05.4360074Z  * [new tag]         v2.1.79                   -> v2.1.79
+2026-08-14T05:52:05.4366891Z  * [new tag]         v2.1.80                   -> v2.1.80
+2026-08-14T05:52:05.4372811Z  * [new tag]         v2.1.81                   -> v2.1.81
+2026-08-14T05:52:05.4378237Z  * [new tag]         v2.1.88                   -> v2.1.88
+2026-08-14T05:52:05.4380026Z  * [new tag]         v2.1.89                   -> v2.1.89
+2026-08-14T05:52:05.4384035Z  * [new tag]         v2.1.90                   -> v2.1.90
+2026-08-14T05:52:05.4387870Z  * [new tag]         v2.1.91                   -> v2.1.91
+2026-08-14T05:52:05.4389267Z  * [new tag]         vp-device-1.0.10          -> vp-device-1.0.10
+2026-08-14T05:52:05.4393008Z  * [new tag]         vp-device-1.0.11          -> vp-device-1.0.11
+2026-08-14T05:52:05.4397500Z  * [new tag]         vp-device-1.0.12          -> vp-device-1.0.12
+2026-08-14T05:52:05.4403921Z  * [new tag]         vp-device-1.0.13          -> vp-device-1.0.13
+2026-08-14T05:52:05.4408518Z  * [new tag]         vp-device-1.0.14          -> vp-device-1.0.14
+2026-08-14T05:52:05.4410251Z  * [new tag]         vp-device-1.0.15          -> vp-device-1.0.15
+2026-08-14T05:52:05.4412577Z  * [new tag]         vp-device-1.0.16          -> vp-device-1.0.16
+2026-08-14T05:52:05.4418614Z  * [new tag]         vp-device-1.0.17          -> vp-device-1.0.17
+2026-08-14T05:52:05.4421836Z  * [new tag]         vp-device-1.0.18          -> vp-device-1.0.18
+2026-08-14T05:52:05.4426802Z  * [new tag]         vp-device-1.0.19          -> vp-device-1.0.19
+2026-08-14T05:52:05.4432452Z  * [new tag]         vp-device-1.0.2           -> vp-device-1.0.2
+2026-08-14T05:52:05.4433337Z  * [new tag]         vp-device-1.0.3           -> vp-device-1.0.3
+2026-08-14T05:52:05.4442498Z  * [new tag]         vp-device-1.0.4           -> vp-device-1.0.4
+2026-08-14T05:52:05.4449941Z  * [new tag]         vp-device-1.0.5           -> vp-device-1.0.5
+2026-08-14T05:52:05.4450305Z  * [new tag]         vp-device-1.0.6           -> vp-device-1.0.6
+2026-08-14T05:52:05.4450642Z  * [new tag]         vp-device-1.0.7           -> vp-device-1.0.7
+2026-08-14T05:52:05.4452084Z  * [new tag]         vp-device-1.0.8           -> vp-device-1.0.8
+2026-08-14T05:52:05.4456796Z  * [new tag]         vp-device-1.0.9           -> vp-device-1.0.9
+2026-08-14T05:52:05.4464258Z  * [new tag]         vp-device-1.1.3           -> vp-device-1.1.3
+2026-08-14T05:52:05.4464646Z  * [new tag]         vp-device-2.0.0           -> vp-device-2.0.0
+2026-08-14T05:52:05.4470110Z  * [new tag]         vp-device-2.0.1           -> vp-device-2.0.1
+2026-08-14T05:52:05.4470952Z  * [new tag]         vp-device-2.0.10          -> vp-device-2.0.10
+2026-08-14T05:52:05.4471467Z  * [new tag]         vp-device-2.0.13          -> vp-device-2.0.13
+2026-08-14T05:52:05.4471827Z  * [new tag]         vp-device-2.0.15          -> vp-device-2.0.15
+2026-08-14T05:52:05.4475254Z  * [new tag]         vp-device-2.0.16          -> vp-device-2.0.16
+2026-08-14T05:52:05.4482077Z  * [new tag]         vp-device-2.0.20          -> vp-device-2.0.20
+2026-08-14T05:52:05.4482505Z  * [new tag]         vp-device-2.0.21          -> vp-device-2.0.21
+2026-08-14T05:52:05.4486928Z  * [new tag]         vp-device-2.0.22          -> vp-device-2.0.22
+2026-08-14T05:52:05.4488329Z  * [new tag]         vp-device-2.0.24          -> vp-device-2.0.24
+2026-08-14T05:52:05.4491537Z  * [new tag]         vp-device-2.0.25          -> vp-device-2.0.25
+2026-08-14T05:52:05.4492505Z  * [new tag]         vp-device-2.0.26          -> vp-device-2.0.26
+2026-08-14T05:52:05.4492919Z  * [new tag]         vp-device-2.0.27          -> vp-device-2.0.27
+2026-08-14T05:52:05.4501613Z  * [new tag]         vp-device-2.0.28          -> vp-device-2.0.28
+2026-08-14T05:52:05.4503037Z  * [new tag]         vp-device-2.0.29          -> vp-device-2.0.29
+2026-08-14T05:52:05.4509875Z  * [new tag]         vp-device-2.0.3           -> vp-device-2.0.3
+2026-08-14T05:52:05.4521598Z  * [new tag]         vp-device-2.0.31          -> vp-device-2.0.31
+2026-08-14T05:52:05.4522962Z  * [new tag]         vp-device-2.0.32          -> vp-device-2.0.32
+2026-08-14T05:52:05.4525783Z  * [new tag]         vp-device-2.0.33          -> vp-device-2.0.33
+2026-08-14T05:52:05.4527493Z  * [new tag]         vp-device-2.0.35          -> vp-device-2.0.35
+2026-08-14T05:52:05.4531809Z  * [new tag]         vp-device-2.0.37          -> vp-device-2.0.37
+2026-08-14T05:52:05.4534934Z  * [new tag]         vp-device-2.0.38          -> vp-device-2.0.38
+2026-08-14T05:52:05.4537591Z  * [new tag]         vp-device-2.0.39          -> vp-device-2.0.39
+2026-08-14T05:52:05.4542182Z  * [new tag]         vp-device-2.0.4           -> vp-device-2.0.4
+2026-08-14T05:52:05.4544358Z  * [new tag]         vp-device-2.0.40          -> vp-device-2.0.40
+2026-08-14T05:52:05.4547031Z  * [new tag]         vp-device-2.0.41          -> vp-device-2.0.41
+2026-08-14T05:52:05.4552655Z  * [new tag]         vp-device-2.0.42          -> vp-device-2.0.42
+2026-08-14T05:52:05.4556409Z  * [new tag]         vp-device-2.0.43          -> vp-device-2.0.43
+2026-08-14T05:52:05.4562464Z  * [new tag]         vp-device-2.0.44          -> vp-device-2.0.44
+2026-08-14T05:52:05.4563821Z  * [new tag]         vp-device-2.0.45          -> vp-device-2.0.45
+2026-08-14T05:52:05.4566268Z  * [new tag]         vp-device-2.0.46          -> vp-device-2.0.46
+2026-08-14T05:52:05.4572101Z  * [new tag]         vp-device-2.0.47          -> vp-device-2.0.47
+2026-08-14T05:52:05.4574404Z  * [new tag]         vp-device-2.0.48          -> vp-device-2.0.48
+2026-08-14T05:52:05.4579715Z  * [new tag]         vp-device-2.0.49          -> vp-device-2.0.49
+2026-08-14T05:52:05.4585116Z  * [new tag]         vp-device-2.0.5           -> vp-device-2.0.5
+2026-08-14T05:52:05.4587946Z  * [new tag]         vp-device-2.0.51          -> vp-device-2.0.51
+2026-08-14T05:52:05.4592687Z  * [new tag]         vp-device-2.0.52          -> vp-device-2.0.52
+2026-08-14T05:52:05.4599106Z  * [new tag]         vp-device-2.0.53          -> vp-device-2.0.53
+2026-08-14T05:52:05.4599983Z  * [new tag]         vp-device-2.0.54          -> vp-device-2.0.54
+2026-08-14T05:52:05.4604369Z  * [new tag]         vp-device-2.0.55          -> vp-device-2.0.55
+2026-08-14T05:52:05.4607500Z  * [new tag]         vp-device-2.0.56          -> vp-device-2.0.56
+2026-08-14T05:52:05.4615361Z  * [new tag]         vp-device-2.0.57          -> vp-device-2.0.57
+2026-08-14T05:52:05.4615719Z  * [new tag]         vp-device-2.0.6           -> vp-device-2.0.6
+2026-08-14T05:52:05.4617732Z  * [new tag]         vp-device-2.0.9           -> vp-device-2.0.9
+2026-08-14T05:52:05.4622527Z  * [new tag]         vp-device-2.1.0           -> vp-device-2.1.0
+2026-08-14T05:52:05.4625399Z  * [new tag]         vp-device-2.1.1           -> vp-device-2.1.1
+2026-08-14T05:52:05.4629531Z  * [new tag]         vp-device-2.1.10          -> vp-device-2.1.10
+2026-08-14T05:52:05.4635805Z  * [new tag]         vp-device-2.1.15          -> vp-device-2.1.15
+2026-08-14T05:52:05.4636168Z  * [new tag]         vp-device-2.1.16          -> vp-device-2.1.16
+2026-08-14T05:52:05.4638130Z  * [new tag]         vp-device-2.1.17          -> vp-device-2.1.17
+2026-08-14T05:52:05.4644482Z  * [new tag]         vp-device-2.1.18          -> vp-device-2.1.18
+2026-08-14T05:52:05.4650844Z  * [new tag]         vp-device-2.1.2           -> vp-device-2.1.2
+2026-08-14T05:52:05.4651212Z  * [new tag]         vp-device-2.1.21          -> vp-device-2.1.21
+2026-08-14T05:52:05.4657091Z  * [new tag]         vp-device-2.1.22          -> vp-device-2.1.22
+2026-08-14T05:52:05.4661168Z  * [new tag]         vp-device-2.1.23          -> vp-device-2.1.23
+2026-08-14T05:52:05.4661573Z  * [new tag]         vp-device-2.1.24          -> vp-device-2.1.24
+2026-08-14T05:52:05.4669598Z  * [new tag]         vp-device-2.1.25          -> vp-device-2.1.25
+2026-08-14T05:52:05.4670053Z  * [new tag]         vp-device-2.1.26          -> vp-device-2.1.26
+2026-08-14T05:52:05.4677381Z  * [new tag]         vp-device-2.1.27          -> vp-device-2.1.27
+2026-08-14T05:52:05.4677748Z  * [new tag]         vp-device-2.1.28          -> vp-device-2.1.28
+2026-08-14T05:52:05.4678089Z  * [new tag]         vp-device-2.1.29          -> vp-device-2.1.29
+2026-08-14T05:52:05.4680972Z  * [new tag]         vp-device-2.1.3           -> vp-device-2.1.3
+2026-08-14T05:52:05.4681352Z  * [new tag]         vp-device-2.1.30          -> vp-device-2.1.30
+2026-08-14T05:52:05.4687888Z  * [new tag]         vp-device-2.1.31          -> vp-device-2.1.31
+2026-08-14T05:52:05.4695622Z  * [new tag]         vp-device-2.1.31-SNAPSHOT -> vp-device-2.1.31-SNAPSHOT
+2026-08-14T05:52:05.4698544Z  * [new tag]         vp-device-2.1.32          -> vp-device-2.1.32
+2026-08-14T05:52:05.4703244Z  * [new tag]         vp-device-2.1.33          -> vp-device-2.1.33
+2026-08-14T05:52:05.4709090Z  * [new tag]         vp-device-2.1.34          -> vp-device-2.1.34
+2026-08-14T05:52:05.4710637Z  * [new tag]         vp-device-2.1.4           -> vp-device-2.1.4
+2026-08-14T05:52:05.4712632Z  * [new tag]         vp-device-2.1.44          -> vp-device-2.1.44
+2026-08-14T05:52:05.4721594Z  * [new tag]         vp-device-2.1.45          -> vp-device-2.1.45
+2026-08-14T05:52:05.4724254Z  * [new tag]         vp-device-2.1.46          -> vp-device-2.1.46
+2026-08-14T05:52:05.4732881Z  * [new tag]         vp-device-2.1.47          -> vp-device-2.1.47
+2026-08-14T05:52:05.4734548Z  * [new tag]         vp-device-2.1.5           -> vp-device-2.1.5
+2026-08-14T05:52:05.4735270Z  * [new tag]         vp-device-2.1.51          -> vp-device-2.1.51
+2026-08-14T05:52:05.4743323Z  * [new tag]         vp-device-2.1.6           -> vp-device-2.1.6
+2026-08-14T05:52:05.4744075Z  * [new tag]         vp-device-2.1.7           -> vp-device-2.1.7
+2026-08-14T05:52:05.4747382Z  * [new tag]         vp-device-2.1.8           -> vp-device-2.1.8
+2026-08-14T05:52:05.4748019Z  * [new tag]         vp-device-2.1.9           -> vp-device-2.1.9
+2026-08-14T05:52:05.4748603Z  * [new tag]         vpdev-docs-1.0.0          -> vpdev-docs-1.0.0
+2026-08-14T05:52:05.4752360Z  * [new tag]         vpdev-docs-1.0.1          -> vpdev-docs-1.0.1
+2026-08-14T05:52:05.4756720Z  * [new tag]         vpdev-docs-1.0.2          -> vpdev-docs-1.0.2
+2026-08-14T05:52:05.4762811Z  * [new tag]         vpdev-docs-1.1.0          -> vpdev-docs-1.1.0
+2026-08-14T05:52:06.2340727Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +164fc48798ee3c3b43ac7ebf071bf27d9320899e
+2026-08-14T05:52:06.2345602Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2026-08-14T05:52:06.2345823Z From https://github.azc.ext.hp.com/WPPg2/vp-device
+2026-08-14T05:52:06.2346043Z  * branch            164fc48798ee3c3b43ac7ebf071bf27d9320899e -> FETCH_HEAD
+2026-08-14T05:52:07.3410853Z ##[command]git checkout --progress --force refs/remotes/origin/164fc48798ee3c3b43ac7ebf071bf27d9320899e
+2026-08-14T05:52:07.3415456Z Note: switching to 'refs/remotes/origin/164fc48798ee3c3b43ac7ebf071bf27d9320899e'.
+2026-08-14T05:52:07.3415562Z 
+2026-08-14T05:52:07.3415780Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-08-14T05:52:07.3416005Z changes and commit them, and you can discard any commits you make in this
+2026-08-14T05:52:07.3416212Z state without impacting any branches by switching back to a branch.
+2026-08-14T05:52:07.3416304Z 
+2026-08-14T05:52:07.3416478Z If you want to create a new branch to retain commits you create, you may
+2026-08-14T05:52:07.3416685Z do so (now or later) by using -c with the switch command. Example:
+2026-08-14T05:52:07.3416772Z 
+2026-08-14T05:52:07.3416927Z   git switch -c <new-branch-name>
+2026-08-14T05:52:07.3417347Z 
+2026-08-14T05:52:07.3417511Z Or undo this operation with:
+2026-08-14T05:52:07.3417581Z 
+2026-08-14T05:52:07.3417727Z   git switch -
+2026-08-14T05:52:07.3417791Z 
+2026-08-14T05:52:07.3417972Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-08-14T05:52:07.3418069Z 
+2026-08-14T05:52:07.3418276Z HEAD is now at 164fc48 Merge 06903d3fd3c073436557998419b71b87e0e72ca8 into 40cfb36251277e252ee90ca368a84e726cf35bb7
+2026-08-14T05:52:07.3471203Z ##[section]Finishing: Checkout WPPg2/vp-device@refs/pull/1253/merge to s
