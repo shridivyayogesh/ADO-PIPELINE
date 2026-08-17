@@ -1,0 +1,10 @@
+2026-08-14T05:54:37.9528083Z ##[section]Starting: Checkout codeway/templates@dev to ./s/codewaytemplates
+2026-08-14T05:54:37.9535512Z ==============================================================================
+2026-08-14T05:54:37.9535755Z Task         : Get sources
+2026-08-14T05:54:37.9535901Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-08-14T05:54:37.9536097Z Version      : 1.0.0
+2026-08-14T05:54:37.9536235Z Author       : Microsoft
+2026-08-14T05:54:37.9536376Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-08-14T05:54:37.9536569Z ==============================================================================
+2026-08-14T05:54:38.2004052Z Cleaning any cached credential from repository: codeway/templates (githubenterprise)
+2026-08-14T05:54:38.2109518Z ##[section]Finishing: Checkout codeway/templates@dev to ./s/codewaytemplates
