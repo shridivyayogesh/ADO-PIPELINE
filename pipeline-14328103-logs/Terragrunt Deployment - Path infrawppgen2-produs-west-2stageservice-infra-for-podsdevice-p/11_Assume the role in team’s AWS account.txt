@@ -1,0 +1,14 @@
+2026-08-14T05:52:34.7101085Z ##[section]Starting: Assume the role in team’s AWS account
+2026-08-14T05:52:34.7108159Z ==============================================================================
+2026-08-14T05:52:34.7108276Z Task         : Bash
+2026-08-14T05:52:34.7108348Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-08-14T05:52:34.7108432Z Version      : 3.274.1
+2026-08-14T05:52:34.7108505Z Author       : Microsoft Corporation
+2026-08-14T05:52:34.7108588Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-08-14T05:52:34.7108678Z ==============================================================================
+2026-08-14T05:52:37.4255421Z Generating script.
+2026-08-14T05:52:37.4266471Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:37.4273865Z [command]/usr/bin/bash /usr/local/ado-agent/_work/_temp/45bcbf2a-616d-4d4c-9dee-4e71eb38a839.sh
+2026-08-14T05:52:38.1416584Z ##[section]Successfully assumed role: arn:aws:iam::508587356765:role/codeway-linux-agent-ec2
+2026-08-14T05:52:38.1427836Z 
+2026-08-14T05:52:38.1492194Z ##[section]Finishing: Assume the role in team’s AWS account
