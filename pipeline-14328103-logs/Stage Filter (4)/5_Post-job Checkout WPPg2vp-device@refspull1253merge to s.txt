@@ -1,0 +1,15 @@
+2026-08-14T05:51:52.7533536Z ##[section]Starting: Checkout WPPg2/vp-device@refs/pull/1253/merge to s
+2026-08-14T05:51:52.7571846Z ==============================================================================
+2026-08-14T05:51:52.7572353Z Task         : Get sources
+2026-08-14T05:51:52.7572618Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-08-14T05:51:52.7572945Z Version      : 1.0.0
+2026-08-14T05:51:52.7573144Z Author       : Microsoft
+2026-08-14T05:51:52.7573416Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-08-14T05:51:52.7573744Z ==============================================================================
+2026-08-14T05:51:53.1751197Z Cleaning any cached credential from repository: WPPg2/vp-device (GitHubEnterprise)
+2026-08-14T05:51:53.2080577Z ##[command]git version
+2026-08-14T05:51:53.2876434Z git version 2.50.1
+2026-08-14T05:51:53.2952386Z ##[command]git lfs version
+2026-08-14T05:51:53.3475245Z git-lfs/3.7.1 (GitHub; linux amd64; go 1.25.11 X:nodwarf5)
+2026-08-14T05:51:53.3548292Z ##[command]git config --unset-all http.https://github.azc.ext.hp.com/WPPg2/vp-device.extraheader
+2026-08-14T05:51:53.3895548Z ##[section]Finishing: Checkout WPPg2/vp-device@refs/pull/1253/merge to s
