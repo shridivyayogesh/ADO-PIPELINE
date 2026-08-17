@@ -1,0 +1,5 @@
+2026-08-14T05:52:38.1586951Z Skipping step due to condition evaluation.
+Evaluating: and(succeeded(), or(contains(variables['Build.Repository.Name'], 'onecloud-'), contains(variables['Build.Repository.Name'], 'hpip-'), contains(variables['Build.Repository.Name'], 'tropos-')))
+Expanded: and(True, or(contains('WPPg2/vp-device', 'onecloud-'), contains('WPPg2/vp-device', 'hpip-'), contains('WPPg2/vp-device', 'tropos-')))
+Result: False
+
