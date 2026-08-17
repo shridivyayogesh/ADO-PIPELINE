@@ -1,0 +1,15 @@
+2026-08-14T05:51:42.8119001Z ##[section]Starting: GetChangedFiles FilterStages
+2026-08-14T05:51:42.8174670Z ==============================================================================
+2026-08-14T05:51:42.8174862Z Task         : Command line
+2026-08-14T05:51:42.8174973Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:51:42.8175304Z Version      : 2.276.0
+2026-08-14T05:51:42.8175420Z Author       : Microsoft Corporation
+2026-08-14T05:51:42.8175536Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:51:42.8175685Z ==============================================================================
+2026-08-14T05:51:49.9210287Z Generating script.
+2026-08-14T05:51:49.9236869Z ========================== Starting Command Output ===========================
+2026-08-14T05:51:49.9237310Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/cc7c9593-3610-482a-8ce5-ecd4a22b8e2c.sh
+2026-08-14T05:51:49.9237675Z No changedFiles set. Use latest commit.
+2026-08-14T05:51:49.9238267Z Changed files: deploy/stagepod1/service.yaml|infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/pod.hcl|infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl|infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl|
+2026-08-14T05:51:49.9245181Z 
+2026-08-14T05:51:49.9258433Z ##[section]Finishing: GetChangedFiles FilterStages
