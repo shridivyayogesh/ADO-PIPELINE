@@ -1,0 +1,30 @@
+2026-08-14T05:52:38.1651315Z ##[section]Starting: Run terragrunt hclfmt
+2026-08-14T05:52:38.1658122Z ==============================================================================
+2026-08-14T05:52:38.1658238Z Task         : Command line
+2026-08-14T05:52:38.1658317Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:52:38.1658422Z Version      : 2.276.0
+2026-08-14T05:52:38.1658493Z Author       : Microsoft Corporation
+2026-08-14T05:52:38.1658573Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:52:38.1658684Z ==============================================================================
+2026-08-14T05:52:40.6699852Z Generating script.
+2026-08-14T05:52:40.6705830Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:40.6721613Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/7685cbd5-4a9a-4ee6-af49-a4ac991bd392.sh
+2026-08-14T05:52:40.6779817Z Running terragrunt hclfmt command on infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/
+2026-08-14T05:52:40.6870562Z time=2026-08-14T05:52:40Z level=info msg=Formatting hcl files from the directory tree /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device.
+2026-08-14T05:52:40.6882888Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/service.hcl
+2026-08-14T05:52:40.6884917Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/iam/dvc-vpdev/terragrunt.hcl
+2026-08-14T05:52:40.6914068Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup/terragrunt.hcl
+2026-08-14T05:52:40.6939536Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup/terragrunt.hcl
+2026-08-14T05:52:40.6951861Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup/terragrunt.hcl
+2026-08-14T05:52:40.6979257Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/waf/dvc-vpdev-podlb-alb/terragrunt.hcl
+2026-08-14T05:52:40.6991474Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource/terragrunt.hcl
+2026-08-14T05:52:40.7004324Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/service-config.hcl
+2026-08-14T05:52:40.7006144Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:52:40.7040496Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/service-config.hcl
+2026-08-14T05:52:40.7047402Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:52:40.7071312Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/listner/dvc-vpdev-podlb-alb/terragrunt.hcl
+2026-08-14T05:52:40.7095714Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret/terragrunt.hcl
+2026-08-14T05:52:40.7104780Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/route53/wppinternal.com/record-sets/vpdev.podlb.device/terragrunt.hcl
+2026-08-14T05:52:40.7113383Z time=2026-08-14T05:52:40Z level=info msg=Formatting /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb/terragrunt.hcl
+2026-08-14T05:52:40.7170082Z 
+2026-08-14T05:52:40.7241731Z ##[section]Finishing: Run terragrunt hclfmt
