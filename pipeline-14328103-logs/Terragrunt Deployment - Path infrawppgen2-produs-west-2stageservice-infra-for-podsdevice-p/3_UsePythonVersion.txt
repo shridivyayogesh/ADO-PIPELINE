@@ -1,0 +1,12 @@
+2026-08-14T05:52:07.3513533Z ##[section]Starting: UsePythonVersion
+2026-08-14T05:52:07.3523397Z ==============================================================================
+2026-08-14T05:52:07.3523569Z Task         : Use Python version
+2026-08-14T05:52:07.3523682Z Description  : Use the specified version of Python from the tool cache, optionally adding it to the PATH
+2026-08-14T05:52:07.3523826Z Version      : 0.276.0
+2026-08-14T05:52:07.3523897Z Author       : Microsoft Corporation
+2026-08-14T05:52:07.3524008Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/tool/use-python-version
+2026-08-14T05:52:07.3524144Z ==============================================================================
+2026-08-14T05:52:12.7511913Z Found tool in cache: Python 3.13.2 x64
+2026-08-14T05:52:12.7612224Z Prepending PATH environment variable with directory: /usr/local/ado-agent/_work/_tool/Python/3.13.2/x64
+2026-08-14T05:52:12.7615801Z Prepending PATH environment variable with directory: /usr/local/ado-agent/_work/_tool/Python/3.13.2/x64/bin
+2026-08-14T05:52:13.9713997Z ##[section]Finishing: UsePythonVersion
