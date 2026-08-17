@@ -1,0 +1,5 @@
+2026-08-14T05:52:25.5451487Z Skipping step due to condition evaluation.
+Evaluating: and(always(), eq(variables['Agent.OS'], 'Windows_NT'))
+Expanded: and(True, eq('Linux', 'Windows_NT'))
+Result: False
+
