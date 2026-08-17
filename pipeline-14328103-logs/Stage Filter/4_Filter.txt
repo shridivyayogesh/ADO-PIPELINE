@@ -1,0 +1,16 @@
+2026-08-14T05:51:49.6019793Z ##[section]Starting: Filter
+2026-08-14T05:51:49.6033470Z ==============================================================================
+2026-08-14T05:51:49.6033779Z Task         : Command line
+2026-08-14T05:51:49.6033989Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:51:49.6034279Z Version      : 2.276.0
+2026-08-14T05:51:49.6034484Z Author       : Microsoft Corporation
+2026-08-14T05:51:49.6034707Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:51:49.6034987Z ==============================================================================
+2026-08-14T05:51:53.4446599Z Generating script.
+2026-08-14T05:51:53.4457872Z ========================== Starting Command Output ===========================
+2026-08-14T05:51:53.4476382Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/391ef4f9-0318-4ca8-bcd9-9a3d5650f13e.sh
+2026-08-14T05:51:53.4536957Z Filter: True
+2026-08-14T05:51:53.4546536Z Identifying code changes for stage filtering...
+2026-08-14T05:51:53.5413150Z Changed files: deploy/stagepod1/service.yaml|infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/pod.hcl|infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl|infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl|
+2026-08-14T05:51:53.5592799Z 
+2026-08-14T05:51:53.5742870Z ##[section]Finishing: Filter
