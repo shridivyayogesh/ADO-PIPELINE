@@ -1,0 +1,16 @@
+2026-08-14T05:52:25.5482990Z ##[section]Starting: Validate aws-iam-authenticator installation
+2026-08-14T05:52:25.5490344Z ==============================================================================
+2026-08-14T05:52:25.5490466Z Task         : Bash
+2026-08-14T05:52:25.5490537Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-08-14T05:52:25.5490621Z Version      : 3.274.1
+2026-08-14T05:52:25.5490697Z Author       : Microsoft Corporation
+2026-08-14T05:52:25.5490785Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-08-14T05:52:25.5490877Z ==============================================================================
+2026-08-14T05:52:28.4725814Z Generating script.
+2026-08-14T05:52:28.4736549Z Script contents:
+2026-08-14T05:52:28.4736905Z aws-iam-authenticator version
+2026-08-14T05:52:28.4740748Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:28.4749533Z [command]/usr/bin/bash /usr/local/ado-agent/_work/_temp/3254fc6c-e857-4dee-b5b6-f6998cede393.sh
+2026-08-14T05:52:28.5157466Z {"Version":"v0.4.0","Commit":"c141eda34ad1b6b4d71056810951801348f8c367"}
+2026-08-14T05:52:28.5178537Z 
+2026-08-14T05:52:28.5237918Z ##[section]Finishing: Validate aws-iam-authenticator installation
