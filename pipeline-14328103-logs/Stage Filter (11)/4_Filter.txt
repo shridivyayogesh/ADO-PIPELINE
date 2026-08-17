@@ -1,0 +1,19 @@
+2026-08-14T05:51:35.8526615Z ##[section]Starting: Filter
+2026-08-14T05:51:35.8534875Z ==============================================================================
+2026-08-14T05:51:35.8535037Z Task         : Command line
+2026-08-14T05:51:35.8535137Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:51:35.8535280Z Version      : 2.276.0
+2026-08-14T05:51:35.8535386Z Author       : Microsoft Corporation
+2026-08-14T05:51:35.8535503Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:51:35.8535634Z ==============================================================================
+2026-08-14T05:51:39.6597812Z Generating script.
+2026-08-14T05:51:39.6610546Z ========================== Starting Command Output ===========================
+2026-08-14T05:51:39.6685969Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/43c3c45b-c9a6-41fb-b759-34d4a550d332.sh
+2026-08-14T05:51:39.6750281Z Filter: True
+2026-08-14T05:51:39.6781128Z Identifying code changes for stage filtering...
+2026-08-14T05:51:39.7771255Z Changed files: deploy/stagepod1/service.yaml|infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/pod.hcl|infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl|infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl|
+2026-08-14T05:51:39.7940261Z Identified change in /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/pod.hcl
+2026-08-14T05:51:39.7974279Z Identified change in /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:51:39.8136575Z Identified change in /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup/terragrunt.hcl
+2026-08-14T05:51:39.8142488Z 
+2026-08-14T05:51:39.8251688Z ##[section]Finishing: Filter
