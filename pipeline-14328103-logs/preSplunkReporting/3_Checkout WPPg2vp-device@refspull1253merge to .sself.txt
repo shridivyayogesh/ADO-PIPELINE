@@ -1,0 +1,825 @@
+2026-08-14T05:50:43.8140410Z ##[section]Starting: Checkout WPPg2/vp-device@refs/pull/1253/merge to ./s/self
+2026-08-14T05:50:43.8145563Z ==============================================================================
+2026-08-14T05:50:43.8145699Z Task         : Get sources
+2026-08-14T05:50:43.8145779Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-08-14T05:50:43.8145882Z Version      : 1.0.0
+2026-08-14T05:50:43.8145956Z Author       : Microsoft
+2026-08-14T05:50:43.8146032Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-08-14T05:50:43.8146128Z ==============================================================================
+2026-08-14T05:50:45.0789038Z Repository is current at '/usr/local/ado-agent/_work/1/s/vp-device', move to '/usr/local/ado-agent/_work/1/s/self'.
+2026-08-14T05:50:45.0789994Z Repository will be located at '/usr/local/ado-agent/_work/1/s/self'.
+2026-08-14T05:50:45.0790400Z Syncing repository: WPPg2/vp-device (GitHubEnterprise)
+2026-08-14T05:50:45.0800131Z ##[command]git version
+2026-08-14T05:50:45.0809642Z git version 2.50.1
+2026-08-14T05:50:45.0810858Z ##[command]git lfs version
+2026-08-14T05:50:45.0820854Z git-lfs/3.7.1 (GitHub; linux amd64; go 1.25.11 X:nodwarf5)
+2026-08-14T05:50:45.0823541Z ##[command]git init "/usr/local/ado-agent/_work/1/s/self"
+2026-08-14T05:50:45.0831781Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-14T05:50:45.0832218Z hint: is subject to change. To configure the initial branch name to use in all
+2026-08-14T05:50:45.0832651Z hint: of your new repositories, which will suppress this warning, call:
+2026-08-14T05:50:45.0833963Z Initialized empty Git repository in /usr/local/ado-agent/_work/1/s/self/.git/
+2026-08-14T05:50:45.0834768Z hint:
+2026-08-14T05:50:45.0835097Z hint: 	git config --global init.defaultBranch <name>
+2026-08-14T05:50:45.0835406Z hint:
+2026-08-14T05:50:45.0835739Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-14T05:50:45.0836162Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-14T05:50:45.0836513Z hint:
+2026-08-14T05:50:45.0836797Z hint: 	git branch -m <name>
+2026-08-14T05:50:45.0837084Z hint:
+2026-08-14T05:50:45.0837422Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-14T05:50:45.0838773Z ##[command]git remote add origin https://github.azc.ext.hp.com/WPPg2/vp-device
+2026-08-14T05:50:45.0849339Z ##[command]git sparse-checkout disable
+2026-08-14T05:50:45.0860981Z ##[command]git config gc.auto 0
+2026-08-14T05:50:45.0871455Z ##[command]git config core.longpaths true
+2026-08-14T05:50:45.0917590Z ##[command]git config --get-all http.https://github.azc.ext.hp.com/WPPg2/vp-device.extraheader
+2026-08-14T05:50:45.0930284Z ##[command]git config --get-all http.extraheader
+2026-08-14T05:50:45.0940805Z ##[command]git config --get-regexp .*extraheader
+2026-08-14T05:50:45.0951233Z ##[command]git config --get-all http.proxy
+2026-08-14T05:50:45.0961883Z ##[command]git config http.version HTTP/1.1
+2026-08-14T05:50:45.0974345Z ##[command]git config --get-all remote.origin.promisor
+2026-08-14T05:50:45.0984843Z ##[command]git config --get-all remote.origin.partialclonefilter
+2026-08-14T05:50:45.0998903Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin   +refs/heads/*:refs/remotes/origin/* +refs/pull/1253/merge:refs/remotes/pull/1253/merge
+2026-08-14T05:50:45.1007450Z remote: Enumerating objects: 39314, done.        
+2026-08-14T05:50:45.1008152Z remote: Counting objects:   0% (1/1257)        
+2026-08-14T05:50:45.1008515Z remote: Counting objects:   1% (13/1257)        
+2026-08-14T05:50:45.1008850Z remote: Counting objects:   2% (26/1257)        
+2026-08-14T05:50:45.1009169Z remote: Counting objects:   3% (38/1257)        
+2026-08-14T05:50:45.1009503Z remote: Counting objects:   4% (51/1257)        
+2026-08-14T05:50:45.1009832Z remote: Counting objects:   5% (63/1257)        
+2026-08-14T05:50:45.1010415Z remote: Counting objects:   6% (76/1257)        
+2026-08-14T05:50:45.1010765Z remote: Counting objects:   7% (88/1257)        
+2026-08-14T05:50:45.1011097Z remote: Counting objects:   8% (101/1257)        
+2026-08-14T05:50:45.1011434Z remote: Counting objects:   9% (114/1257)        
+2026-08-14T05:50:45.1011767Z remote: Counting objects:  10% (126/1257)        
+2026-08-14T05:50:45.1012109Z remote: Counting objects:  11% (139/1257)        
+2026-08-14T05:50:45.1012455Z remote: Counting objects:  12% (151/1257)        
+2026-08-14T05:50:45.1012783Z remote: Counting objects:  13% (164/1257)        
+2026-08-14T05:50:45.1013107Z remote: Counting objects:  14% (176/1257)        
+2026-08-14T05:50:45.1013441Z remote: Counting objects:  15% (189/1257)        
+2026-08-14T05:50:45.1013782Z remote: Counting objects:  16% (202/1257)        
+2026-08-14T05:50:45.1014120Z remote: Counting objects:  17% (214/1257)        
+2026-08-14T05:50:45.1014465Z remote: Counting objects:  18% (227/1257)        
+2026-08-14T05:50:45.1014794Z remote: Counting objects:  19% (239/1257)        
+2026-08-14T05:50:45.1015127Z remote: Counting objects:  20% (252/1257)        
+2026-08-14T05:50:45.1015462Z remote: Counting objects:  21% (264/1257)        
+2026-08-14T05:50:45.1015804Z remote: Counting objects:  22% (277/1257)        
+2026-08-14T05:50:45.1016151Z remote: Counting objects:  23% (290/1257)        
+2026-08-14T05:50:45.1016485Z remote: Counting objects:  24% (302/1257)        
+2026-08-14T05:50:45.1016800Z remote: Counting objects:  25% (315/1257)        
+2026-08-14T05:50:45.1017144Z remote: Counting objects:  26% (327/1257)        
+2026-08-14T05:50:45.1017481Z remote: Counting objects:  27% (340/1257)        
+2026-08-14T05:50:45.1017817Z remote: Counting objects:  28% (352/1257)        
+2026-08-14T05:50:45.1018144Z remote: Counting objects:  29% (365/1257)        
+2026-08-14T05:50:45.1018480Z remote: Counting objects:  30% (378/1257)        
+2026-08-14T05:50:45.1018827Z remote: Counting objects:  31% (390/1257)        
+2026-08-14T05:50:45.1019155Z remote: Counting objects:  32% (403/1257)        
+2026-08-14T05:50:45.1019483Z remote: Counting objects:  33% (415/1257)        
+2026-08-14T05:50:45.1019813Z remote: Counting objects:  34% (428/1257)        
+2026-08-14T05:50:45.1020158Z remote: Counting objects:  35% (440/1257)        
+2026-08-14T05:50:45.1020507Z remote: Counting objects:  36% (453/1257)        
+2026-08-14T05:50:45.1020835Z remote: Counting objects:  37% (466/1257)        
+2026-08-14T05:50:45.1021153Z remote: Counting objects:  38% (478/1257)        
+2026-08-14T05:50:45.1021480Z remote: Counting objects:  39% (491/1257)        
+2026-08-14T05:50:45.1021822Z remote: Counting objects:  40% (503/1257)        
+2026-08-14T05:50:45.1022168Z remote: Counting objects:  41% (516/1257)        
+2026-08-14T05:50:45.1022501Z remote: Counting objects:  42% (528/1257)        
+2026-08-14T05:50:45.1022834Z remote: Counting objects:  43% (541/1257)        
+2026-08-14T05:50:45.1023174Z remote: Counting objects:  44% (554/1257)        
+2026-08-14T05:50:45.1023522Z remote: Counting objects:  45% (566/1257)        
+2026-08-14T05:50:45.1023867Z remote: Counting objects:  46% (579/1257)        
+2026-08-14T05:50:45.1024193Z remote: Counting objects:  47% (591/1257)        
+2026-08-14T05:50:45.1024525Z remote: Counting objects:  48% (604/1257)        
+2026-08-14T05:50:45.1024875Z remote: Counting objects:  49% (616/1257)        
+2026-08-14T05:50:45.1025220Z remote: Counting objects:  50% (629/1257)        
+2026-08-14T05:50:45.1025543Z remote: Counting objects:  51% (642/1257)        
+2026-08-14T05:50:45.1026052Z remote: Counting objects:  52% (654/1257)        
+2026-08-14T05:50:45.1026400Z remote: Counting objects:  53% (667/1257)        
+2026-08-14T05:50:45.1026748Z remote: Counting objects:  54% (679/1257)        
+2026-08-14T05:50:45.1027090Z remote: Counting objects:  55% (692/1257)        
+2026-08-14T05:50:45.1027409Z remote: Counting objects:  56% (704/1257)        
+2026-08-14T05:50:45.1027730Z remote: Counting objects:  57% (717/1257)        
+2026-08-14T05:50:45.1028284Z remote: Counting objects:  58% (730/1257)        
+2026-08-14T05:50:45.1028630Z remote: Counting objects:  59% (742/1257)        
+2026-08-14T05:50:45.1028959Z remote: Counting objects:  60% (755/1257)        
+2026-08-14T05:50:45.1029293Z remote: Counting objects:  61% (767/1257)        
+2026-08-14T05:50:45.1029645Z remote: Counting objects:  62% (780/1257)        
+2026-08-14T05:50:45.1029987Z remote: Counting objects:  63% (792/1257)        
+2026-08-14T05:50:45.1030324Z remote: Counting objects:  64% (805/1257)        
+2026-08-14T05:50:45.1030665Z remote: Counting objects:  65% (818/1257)        
+2026-08-14T05:50:45.1031004Z remote: Counting objects:  66% (830/1257)        
+2026-08-14T05:50:45.1031346Z remote: Counting objects:  67% (843/1257)        
+2026-08-14T05:50:45.1031675Z remote: Counting objects:  68% (855/1257)        
+2026-08-14T05:50:45.1031992Z remote: Counting objects:  69% (868/1257)        
+2026-08-14T05:50:45.1032308Z remote: Counting objects:  70% (880/1257)        
+2026-08-14T05:50:45.1032611Z remote: Counting objects:  71% (893/1257)        
+2026-08-14T05:50:45.1032926Z remote: Counting objects:  72% (906/1257)        
+2026-08-14T05:50:45.1033249Z remote: Counting objects:  73% (918/1257)        
+2026-08-14T05:50:45.1033586Z remote: Counting objects:  74% (931/1257)        
+2026-08-14T05:50:45.1033890Z remote: Counting objects:  75% (943/1257)        
+2026-08-14T05:50:45.1034172Z remote: Counting objects:  76% (956/1257)        
+2026-08-14T05:50:45.1034469Z remote: Counting objects:  77% (968/1257)        
+2026-08-14T05:50:45.1034818Z remote: Counting objects:  78% (981/1257)        
+2026-08-14T05:50:45.1035160Z remote: Counting objects:  79% (994/1257)        
+2026-08-14T05:50:45.1035494Z remote: Counting objects:  80% (1006/1257)        
+2026-08-14T05:50:45.1035829Z remote: Counting objects:  81% (1019/1257)        
+2026-08-14T05:50:45.1036177Z remote: Counting objects:  82% (1031/1257)        
+2026-08-14T05:50:45.1036540Z remote: Counting objects:  83% (1044/1257)        
+2026-08-14T05:50:45.1038672Z remote: Counting objects:  84% (1056/1257)        
+2026-08-14T05:50:45.1040920Z remote: Counting objects:  85% (1069/1257)        
+2026-08-14T05:50:45.1041295Z remote: Counting objects:  86% (1082/1257)        
+2026-08-14T05:50:45.1041636Z remote: Counting objects:  87% (1094/1257)        
+2026-08-14T05:50:45.1041975Z remote: Counting objects:  88% (1107/1257)        
+2026-08-14T05:50:45.1042321Z remote: Counting objects:  89% (1119/1257)        
+2026-08-14T05:50:45.1042662Z remote: Counting objects:  90% (1132/1257)        
+2026-08-14T05:50:45.1043008Z remote: Counting objects:  91% (1144/1257)        
+2026-08-14T05:50:45.1043333Z remote: Counting objects:  92% (1157/1257)        
+2026-08-14T05:50:45.1043660Z remote: Counting objects:  93% (1170/1257)        
+2026-08-14T05:50:45.1044007Z remote: Counting objects:  94% (1182/1257)        
+2026-08-14T05:50:45.1044343Z remote: Counting objects:  95% (1195/1257)        
+2026-08-14T05:50:45.1044683Z remote: Counting objects:  96% (1207/1257)        
+2026-08-14T05:50:45.1045030Z remote: Counting objects:  97% (1220/1257)        
+2026-08-14T05:50:45.1045389Z remote: Counting objects:  98% (1232/1257)        
+2026-08-14T05:50:45.1045737Z remote: Counting objects:  99% (1245/1257)        
+2026-08-14T05:50:45.1046060Z remote: Counting objects: 100% (1257/1257)        
+2026-08-14T05:50:45.1046409Z remote: Counting objects: 100% (1257/1257), done.        
+2026-08-14T05:50:45.1046776Z remote: Compressing objects:   0% (1/686)        
+2026-08-14T05:50:45.1047126Z remote: Compressing objects:   1% (7/686)        
+2026-08-14T05:50:45.1047675Z remote: Compressing objects:   2% (14/686)        
+2026-08-14T05:50:45.1048012Z remote: Compressing objects:   3% (21/686)        
+2026-08-14T05:50:45.1048363Z remote: Compressing objects:   4% (28/686)        
+2026-08-14T05:50:45.1048709Z remote: Compressing objects:   5% (35/686)        
+2026-08-14T05:50:45.1049047Z remote: Compressing objects:   6% (42/686)        
+2026-08-14T05:50:45.1049540Z remote: Compressing objects:   7% (49/686)        
+2026-08-14T05:50:45.1049882Z remote: Compressing objects:   8% (55/686)        
+2026-08-14T05:50:45.1050223Z remote: Compressing objects:   9% (62/686)        
+2026-08-14T05:50:45.1050557Z remote: Compressing objects:  10% (69/686)        
+2026-08-14T05:50:45.1050900Z remote: Compressing objects:  11% (76/686)        
+2026-08-14T05:50:45.1051239Z remote: Compressing objects:  12% (83/686)        
+2026-08-14T05:50:45.1051584Z remote: Compressing objects:  13% (90/686)        
+2026-08-14T05:50:45.1051919Z remote: Compressing objects:  14% (97/686)        
+2026-08-14T05:50:45.1052244Z remote: Compressing objects:  15% (103/686)        
+2026-08-14T05:50:45.1052589Z remote: Compressing objects:  16% (110/686)        
+2026-08-14T05:50:45.1052932Z remote: Compressing objects:  17% (117/686)        
+2026-08-14T05:50:45.1053274Z remote: Compressing objects:  18% (124/686)        
+2026-08-14T05:50:45.1053606Z remote: Compressing objects:  19% (131/686)        
+2026-08-14T05:50:45.1053954Z remote: Compressing objects:  20% (138/686)        
+2026-08-14T05:50:45.1054301Z remote: Compressing objects:  21% (145/686)        
+2026-08-14T05:50:45.1054638Z remote: Compressing objects:  22% (151/686)        
+2026-08-14T05:50:45.1054972Z remote: Compressing objects:  23% (158/686)        
+2026-08-14T05:50:45.1055308Z remote: Compressing objects:  24% (165/686)        
+2026-08-14T05:50:45.1055658Z remote: Compressing objects:  25% (172/686)        
+2026-08-14T05:50:45.1056008Z remote: Compressing objects:  26% (179/686)        
+2026-08-14T05:50:45.1056348Z remote: Compressing objects:  27% (186/686)        
+2026-08-14T05:50:45.1056666Z remote: Compressing objects:  28% (193/686)        
+2026-08-14T05:50:45.1057014Z remote: Compressing objects:  29% (199/686)        
+2026-08-14T05:50:45.1057411Z remote: Compressing objects:  30% (206/686)        
+2026-08-14T05:50:45.1057759Z remote: Compressing objects:  31% (213/686)        
+2026-08-14T05:50:45.1058100Z remote: Compressing objects:  32% (220/686)        
+2026-08-14T05:50:45.1058449Z remote: Compressing objects:  33% (227/686)        
+2026-08-14T05:50:45.1058804Z remote: Compressing objects:  34% (234/686)        
+2026-08-14T05:50:45.1059168Z remote: Compressing objects:  35% (241/686)        
+2026-08-14T05:50:45.1059522Z remote: Compressing objects:  36% (247/686)        
+2026-08-14T05:50:45.1059867Z remote: Compressing objects:  37% (254/686)        
+2026-08-14T05:50:45.1060213Z remote: Compressing objects:  38% (261/686)        
+2026-08-14T05:50:45.1060572Z remote: Compressing objects:  39% (268/686)        
+2026-08-14T05:50:45.1060917Z remote: Compressing objects:  40% (275/686)        
+2026-08-14T05:50:45.1061251Z remote: Compressing objects:  41% (282/686)        
+2026-08-14T05:50:45.1061593Z remote: Compressing objects:  42% (289/686)        
+2026-08-14T05:50:45.1061923Z remote: Compressing objects:  43% (295/686)        
+2026-08-14T05:50:45.1062257Z remote: Compressing objects:  44% (302/686)        
+2026-08-14T05:50:45.1062620Z remote: Compressing objects:  45% (309/686)        
+2026-08-14T05:50:45.1062960Z remote: Compressing objects:  46% (316/686)        
+2026-08-14T05:50:45.1063286Z remote: Compressing objects:  47% (323/686)        
+2026-08-14T05:50:45.1063622Z remote: Compressing objects:  48% (330/686)        
+2026-08-14T05:50:45.1063976Z remote: Compressing objects:  49% (337/686)        
+2026-08-14T05:50:45.1064317Z remote: Compressing objects:  50% (343/686)        
+2026-08-14T05:50:45.1064651Z remote: Compressing objects:  51% (350/686)        
+2026-08-14T05:50:45.1065179Z remote: Compressing objects:  52% (357/686)        
+2026-08-14T05:50:45.1065535Z remote: Compressing objects:  53% (364/686)        
+2026-08-14T05:50:45.1075144Z remote: Compressing objects:  54% (371/686)        
+2026-08-14T05:50:45.1075523Z remote: Compressing objects:  55% (378/686)        
+2026-08-14T05:50:45.1075870Z remote: Compressing objects:  56% (385/686)        
+2026-08-14T05:50:45.1076202Z remote: Compressing objects:  57% (392/686)        
+2026-08-14T05:50:45.1076745Z remote: Compressing objects:  58% (398/686)        
+2026-08-14T05:50:45.1077081Z remote: Compressing objects:  59% (405/686)        
+2026-08-14T05:50:45.1077423Z remote: Compressing objects:  60% (412/686)        
+2026-08-14T05:50:45.1077737Z remote: Compressing objects:  61% (419/686)        
+2026-08-14T05:50:45.1078052Z remote: Compressing objects:  62% (426/686)        
+2026-08-14T05:50:45.1078387Z remote: Compressing objects:  63% (433/686)        
+2026-08-14T05:50:45.1078717Z remote: Compressing objects:  64% (440/686)        
+2026-08-14T05:50:45.1079067Z remote: Compressing objects:  65% (446/686)        
+2026-08-14T05:50:45.1079372Z remote: Compressing objects:  66% (453/686)        
+2026-08-14T05:50:45.1079809Z remote: Compressing objects:  67% (460/686)        
+2026-08-14T05:50:45.1080142Z remote: Compressing objects:  68% (467/686)        
+2026-08-14T05:50:45.1080466Z remote: Compressing objects:  69% (474/686)        
+2026-08-14T05:50:45.1080797Z remote: Compressing objects:  70% (481/686)        
+2026-08-14T05:50:45.1081136Z remote: Compressing objects:  71% (488/686)        
+2026-08-14T05:50:45.1081461Z remote: Compressing objects:  72% (494/686)        
+2026-08-14T05:50:45.1081796Z remote: Compressing objects:  73% (501/686)        
+2026-08-14T05:50:45.1082098Z remote: Compressing objects:  74% (508/686)        
+2026-08-14T05:50:45.1082395Z remote: Compressing objects:  75% (515/686)        
+2026-08-14T05:50:45.1082690Z remote: Compressing objects:  76% (522/686)        
+2026-08-14T05:50:45.1083208Z remote: Compressing objects:  77% (529/686)        
+2026-08-14T05:50:45.1083503Z remote: Compressing objects:  78% (536/686)        
+2026-08-14T05:50:45.1083805Z remote: Compressing objects:  79% (542/686)        
+2026-08-14T05:50:45.1084095Z remote: Compressing objects:  80% (549/686)        
+2026-08-14T05:50:45.1084385Z remote: Compressing objects:  81% (556/686)        
+2026-08-14T05:50:45.1084705Z remote: Compressing objects:  82% (563/686)        
+2026-08-14T05:50:45.1085002Z remote: Compressing objects:  83% (570/686)        
+2026-08-14T05:50:45.1085300Z remote: Compressing objects:  84% (577/686)        
+2026-08-14T05:50:45.1085638Z remote: Compressing objects:  85% (584/686)        
+2026-08-14T05:50:45.1085969Z remote: Compressing objects:  86% (590/686)        
+2026-08-14T05:50:45.1086309Z remote: Compressing objects:  87% (597/686)        
+2026-08-14T05:50:45.1086646Z remote: Compressing objects:  88% (604/686)        
+2026-08-14T05:50:45.1086979Z remote: Compressing objects:  89% (611/686)        
+2026-08-14T05:50:45.1087316Z remote: Compressing objects:  90% (618/686)        
+2026-08-14T05:50:45.1087644Z remote: Compressing objects:  91% (625/686)        
+2026-08-14T05:50:45.1088002Z remote: Compressing objects:  92% (632/686)        
+2026-08-14T05:50:45.1088340Z remote: Compressing objects:  93% (638/686)        
+2026-08-14T05:50:45.1088689Z remote: Compressing objects:  94% (645/686)        
+2026-08-14T05:50:45.1088888Z remote: Compressing objects:  95% (652/686)        
+2026-08-14T05:50:45.1089073Z remote: Compressing objects:  96% (659/686)        
+2026-08-14T05:50:45.1089259Z remote: Compressing objects:  97% (666/686)        
+2026-08-14T05:50:45.1089440Z remote: Compressing objects:  98% (673/686)        
+2026-08-14T05:50:45.1089624Z remote: Compressing objects:  99% (680/686)        
+2026-08-14T05:50:45.1089808Z remote: Compressing objects: 100% (686/686)        
+2026-08-14T05:50:45.1089993Z remote: Compressing objects: 100% (686/686), done.        
+2026-08-14T05:50:45.1090293Z Receiving objects:   0% (1/39314)
+2026-08-14T05:50:45.1090760Z Receiving objects:   1% (394/39314)
+2026-08-14T05:50:45.1090950Z Receiving objects:   2% (787/39314)
+2026-08-14T05:50:45.1091118Z Receiving objects:   3% (1180/39314)
+2026-08-14T05:50:45.1091297Z Receiving objects:   4% (1573/39314)
+2026-08-14T05:50:45.1091480Z Receiving objects:   5% (1966/39314)
+2026-08-14T05:50:45.1091667Z Receiving objects:   6% (2359/39314)
+2026-08-14T05:50:45.1091848Z Receiving objects:   7% (2752/39314)
+2026-08-14T05:50:45.1092144Z Receiving objects:   8% (3146/39314)
+2026-08-14T05:50:45.1092316Z Receiving objects:   9% (3539/39314)
+2026-08-14T05:50:45.1092489Z Receiving objects:  10% (3932/39314)
+2026-08-14T05:50:45.1092664Z Receiving objects:  11% (4325/39314)
+2026-08-14T05:50:45.1092832Z Receiving objects:  12% (4718/39314)
+2026-08-14T05:50:45.1093008Z Receiving objects:  13% (5111/39314)
+2026-08-14T05:50:45.1093183Z Receiving objects:  14% (5504/39314)
+2026-08-14T05:50:45.1093354Z Receiving objects:  15% (5898/39314)
+2026-08-14T05:50:45.1093534Z Receiving objects:  16% (6291/39314)
+2026-08-14T05:50:45.1093715Z Receiving objects:  17% (6684/39314)
+2026-08-14T05:50:45.1093887Z Receiving objects:  18% (7077/39314)
+2026-08-14T05:50:45.1094187Z Receiving objects:  19% (7470/39314)
+2026-08-14T05:50:45.1094358Z Receiving objects:  20% (7863/39314)
+2026-08-14T05:50:45.1094530Z Receiving objects:  21% (8256/39314)
+2026-08-14T05:50:45.1094704Z Receiving objects:  22% (8650/39314)
+2026-08-14T05:50:45.1094888Z Receiving objects:  23% (9043/39314)
+2026-08-14T05:50:45.1095067Z Receiving objects:  24% (9436/39314)
+2026-08-14T05:50:45.1095240Z Receiving objects:  25% (9829/39314)
+2026-08-14T05:50:45.1095409Z Receiving objects:  26% (10222/39314)
+2026-08-14T05:50:45.1095584Z Receiving objects:  27% (10615/39314)
+2026-08-14T05:50:45.1095759Z Receiving objects:  28% (11008/39314)
+2026-08-14T05:50:45.1095931Z Receiving objects:  29% (11402/39314)
+2026-08-14T05:50:45.1096103Z Receiving objects:  30% (11795/39314)
+2026-08-14T05:50:45.1096271Z Receiving objects:  31% (12188/39314)
+2026-08-14T05:50:45.1096449Z Receiving objects:  32% (12581/39314)
+2026-08-14T05:50:45.1096623Z Receiving objects:  33% (12974/39314)
+2026-08-14T05:50:45.1096797Z Receiving objects:  34% (13367/39314)
+2026-08-14T05:50:45.1096966Z Receiving objects:  35% (13760/39314)
+2026-08-14T05:50:45.1097140Z Receiving objects:  36% (14154/39314)
+2026-08-14T05:50:45.1097317Z Receiving objects:  37% (14547/39314)
+2026-08-14T05:50:45.1097493Z Receiving objects:  38% (14940/39314)
+2026-08-14T05:50:45.1097669Z Receiving objects:  39% (15333/39314)
+2026-08-14T05:50:45.1097839Z Receiving objects:  40% (15726/39314)
+2026-08-14T05:50:45.1098016Z Receiving objects:  41% (16119/39314)
+2026-08-14T05:50:45.1098192Z Receiving objects:  42% (16512/39314)
+2026-08-14T05:50:45.1098371Z Receiving objects:  43% (16906/39314)
+2026-08-14T05:50:45.1098541Z Receiving objects:  44% (17299/39314)
+2026-08-14T05:50:45.1098712Z Receiving objects:  45% (17692/39314)
+2026-08-14T05:50:45.1098899Z Receiving objects:  46% (18085/39314)
+2026-08-14T05:50:45.1099077Z Receiving objects:  47% (18478/39314)
+2026-08-14T05:50:45.1099253Z Receiving objects:  48% (18871/39314)
+2026-08-14T05:50:45.1099539Z Receiving objects:  49% (19264/39314)
+2026-08-14T05:50:45.1099868Z Receiving objects:  50% (19657/39314)
+2026-08-14T05:50:45.1100194Z Receiving objects:  51% (20051/39314)
+2026-08-14T05:50:45.1100526Z Receiving objects:  52% (20444/39314)
+2026-08-14T05:50:45.1100847Z Receiving objects:  53% (20837/39314)
+2026-08-14T05:50:45.1101168Z Receiving objects:  54% (21230/39314)
+2026-08-14T05:50:45.1101490Z Receiving objects:  55% (21623/39314)
+2026-08-14T05:50:45.1101804Z Receiving objects:  56% (22016/39314)
+2026-08-14T05:50:45.1102134Z Receiving objects:  57% (22409/39314)
+2026-08-14T05:50:45.1102376Z Receiving objects:  58% (22803/39314)
+2026-08-14T05:50:45.1102560Z Receiving objects:  59% (23196/39314)
+2026-08-14T05:50:45.1102739Z Receiving objects:  60% (23589/39314)
+2026-08-14T05:50:45.1102916Z Receiving objects:  61% (23982/39314)
+2026-08-14T05:50:45.1103093Z Receiving objects:  62% (24375/39314)
+2026-08-14T05:50:45.1103394Z Receiving objects:  63% (24768/39314)
+2026-08-14T05:50:45.1103575Z Receiving objects:  64% (25161/39314)
+2026-08-14T05:50:45.1103754Z Receiving objects:  65% (25555/39314)
+2026-08-14T05:50:45.1103940Z Receiving objects:  66% (25948/39314)
+2026-08-14T05:50:45.1104112Z Receiving objects:  67% (26341/39314)
+2026-08-14T05:50:45.1104292Z Receiving objects:  68% (26734/39314)
+2026-08-14T05:50:45.1104576Z Receiving objects:  69% (27127/39314)
+2026-08-14T05:50:45.1104757Z Receiving objects:  70% (27520/39314)
+2026-08-14T05:50:45.1104939Z Receiving objects:  71% (27913/39314)
+2026-08-14T05:50:45.1105112Z Receiving objects:  72% (28307/39314)
+2026-08-14T05:50:45.1105289Z Receiving objects:  73% (28700/39314)
+2026-08-14T05:50:45.1105466Z Receiving objects:  74% (29093/39314)
+2026-08-14T05:50:45.1105644Z Receiving objects:  75% (29486/39314)
+2026-08-14T05:50:45.1105823Z Receiving objects:  76% (29879/39314)
+2026-08-14T05:50:45.1105995Z Receiving objects:  77% (30272/39314)
+2026-08-14T05:50:45.1106262Z Receiving objects:  78% (30665/39314)
+2026-08-14T05:50:45.1106445Z Receiving objects:  79% (31059/39314)
+2026-08-14T05:50:45.1106623Z Receiving objects:  80% (31452/39314)
+2026-08-14T05:50:45.1106793Z Receiving objects:  81% (31845/39314)
+2026-08-14T05:50:45.1106970Z Receiving objects:  82% (32238/39314)
+2026-08-14T05:50:45.1107148Z Receiving objects:  83% (32631/39314)
+2026-08-14T05:50:45.1107328Z Receiving objects:  84% (33024/39314)
+2026-08-14T05:50:45.1107512Z Receiving objects:  85% (33417/39314)
+2026-08-14T05:50:45.1107682Z Receiving objects:  86% (33811/39314)
+2026-08-14T05:50:45.1107860Z Receiving objects:  87% (34204/39314)
+2026-08-14T05:50:45.1108038Z Receiving objects:  88% (34597/39314)
+2026-08-14T05:50:45.1108214Z Receiving objects:  89% (34990/39314)
+2026-08-14T05:50:45.1108384Z Receiving objects:  90% (35383/39314)
+2026-08-14T05:50:45.1108563Z Receiving objects:  91% (35776/39314)
+2026-08-14T05:50:45.1108741Z Receiving objects:  92% (36169/39314)
+2026-08-14T05:50:45.1108922Z Receiving objects:  93% (36563/39314)
+2026-08-14T05:50:45.1109100Z Receiving objects:  94% (36956/39314)
+2026-08-14T05:50:45.1109268Z Receiving objects:  95% (37349/39314)
+2026-08-14T05:50:45.1109443Z Receiving objects:  96% (37742/39314)
+2026-08-14T05:50:45.1109634Z Receiving objects:  97% (38135/39314)
+2026-08-14T05:50:45.1109810Z Receiving objects:  98% (38528/39314)
+2026-08-14T05:50:45.1109981Z Receiving objects:  99% (38921/39314)
+2026-08-14T05:50:45.1110186Z remote: Total 39314 (delta 608), reused 1070 (delta 501), pack-reused 38057 (from 1)        
+2026-08-14T05:50:45.1110401Z Receiving objects: 100% (39314/39314)
+2026-08-14T05:50:45.1110604Z Receiving objects: 100% (39314/39314), 6.75 MiB | 43.49 MiB/s, done.
+2026-08-14T05:50:45.1110798Z Resolving deltas:   0% (0/17360)
+2026-08-14T05:50:45.1110970Z Resolving deltas:   1% (175/17360)
+2026-08-14T05:50:45.1111151Z Resolving deltas:   2% (348/17360)
+2026-08-14T05:50:45.1111326Z Resolving deltas:   3% (521/17360)
+2026-08-14T05:50:45.1111502Z Resolving deltas:   4% (695/17360)
+2026-08-14T05:50:45.1111674Z Resolving deltas:   5% (868/17360)
+2026-08-14T05:50:45.1111844Z Resolving deltas:   6% (1042/17360)
+2026-08-14T05:50:45.1112021Z Resolving deltas:   7% (1216/17360)
+2026-08-14T05:50:45.1112195Z Resolving deltas:   8% (1389/17360)
+2026-08-14T05:50:45.1112370Z Resolving deltas:   9% (1563/17360)
+2026-08-14T05:50:45.1112537Z Resolving deltas:  10% (1736/17360)
+2026-08-14T05:50:45.1112713Z Resolving deltas:  11% (1910/17360)
+2026-08-14T05:50:45.1112894Z Resolving deltas:  12% (2084/17360)
+2026-08-14T05:50:45.1113069Z Resolving deltas:  13% (2257/17360)
+2026-08-14T05:50:45.1113286Z Resolving deltas:  14% (2431/17360)
+2026-08-14T05:50:45.1113608Z Resolving deltas:  15% (2604/17360)
+2026-08-14T05:50:45.1114143Z Resolving deltas:  16% (2778/17360)
+2026-08-14T05:50:45.1114477Z Resolving deltas:  17% (2952/17360)
+2026-08-14T05:50:45.1114782Z Resolving deltas:  18% (3126/17360)
+2026-08-14T05:50:45.1115013Z Resolving deltas:  19% (3299/17360)
+2026-08-14T05:50:45.1115565Z Resolving deltas:  20% (3472/17360)
+2026-08-14T05:50:45.1115907Z Resolving deltas:  21% (3646/17360)
+2026-08-14T05:50:45.1116227Z Resolving deltas:  22% (3821/17360)
+2026-08-14T05:50:45.1116560Z Resolving deltas:  23% (3993/17360)
+2026-08-14T05:50:45.1116887Z Resolving deltas:  24% (4168/17360)
+2026-08-14T05:50:45.1117199Z Resolving deltas:  25% (4340/17360)
+2026-08-14T05:50:45.1117448Z Resolving deltas:  26% (4514/17360)
+2026-08-14T05:50:45.1117857Z Resolving deltas:  27% (4688/17360)
+2026-08-14T05:50:45.1118189Z Resolving deltas:  28% (4863/17360)
+2026-08-14T05:50:45.1118402Z Resolving deltas:  29% (5035/17360)
+2026-08-14T05:50:45.1118658Z Resolving deltas:  30% (5208/17360)
+2026-08-14T05:50:45.1118906Z Resolving deltas:  31% (5382/17360)
+2026-08-14T05:50:45.1119086Z Resolving deltas:  32% (5556/17360)
+2026-08-14T05:50:45.1119337Z Resolving deltas:  33% (5729/17360)
+2026-08-14T05:50:45.1119653Z Resolving deltas:  34% (5903/17360)
+2026-08-14T05:50:45.1119842Z Resolving deltas:  35% (6076/17360)
+2026-08-14T05:50:45.1120154Z Resolving deltas:  36% (6251/17360)
+2026-08-14T05:50:45.1120331Z Resolving deltas:  37% (6424/17360)
+2026-08-14T05:50:45.1120529Z Resolving deltas:  38% (6597/17360)
+2026-08-14T05:50:45.1120819Z Resolving deltas:  39% (6771/17360)
+2026-08-14T05:50:45.1121000Z Resolving deltas:  40% (6944/17360)
+2026-08-14T05:50:45.1121207Z Resolving deltas:  41% (7118/17360)
+2026-08-14T05:50:45.1121497Z Resolving deltas:  42% (7292/17360)
+2026-08-14T05:50:45.1121680Z Resolving deltas:  43% (7465/17360)
+2026-08-14T05:50:45.1121860Z Resolving deltas:  44% (7639/17360)
+2026-08-14T05:50:45.1122035Z Resolving deltas:  45% (7812/17360)
+2026-08-14T05:50:45.1122204Z Resolving deltas:  46% (7986/17360)
+2026-08-14T05:50:45.1122380Z Resolving deltas:  47% (8161/17360)
+2026-08-14T05:50:45.1122566Z Resolving deltas:  48% (8334/17360)
+2026-08-14T05:50:45.1122743Z Resolving deltas:  49% (8507/17360)
+2026-08-14T05:50:45.1122920Z Resolving deltas:  50% (8680/17360)
+2026-08-14T05:50:45.1123088Z Resolving deltas:  51% (8854/17360)
+2026-08-14T05:50:45.1123270Z Resolving deltas:  52% (9028/17360)
+2026-08-14T05:50:45.1123443Z Resolving deltas:  53% (9202/17360)
+2026-08-14T05:50:45.1123621Z Resolving deltas:  54% (9375/17360)
+2026-08-14T05:50:45.1123792Z Resolving deltas:  55% (9548/17360)
+2026-08-14T05:50:45.1124001Z Resolving deltas:  56% (9722/17360)
+2026-08-14T05:50:45.1124329Z Resolving deltas:  57% (9896/17360)
+2026-08-14T05:50:45.1124653Z Resolving deltas:  58% (10069/17360)
+2026-08-14T05:50:45.1124989Z Resolving deltas:  59% (10243/17360)
+2026-08-14T05:50:45.1125300Z Resolving deltas:  60% (10416/17360)
+2026-08-14T05:50:45.1125617Z Resolving deltas:  61% (10590/17360)
+2026-08-14T05:50:45.1125934Z Resolving deltas:  62% (10764/17360)
+2026-08-14T05:50:45.1126248Z Resolving deltas:  63% (10938/17360)
+2026-08-14T05:50:45.1126569Z Resolving deltas:  64% (11111/17360)
+2026-08-14T05:50:45.1126900Z Resolving deltas:  65% (11284/17360)
+2026-08-14T05:50:45.1127222Z Resolving deltas:  66% (11458/17360)
+2026-08-14T05:50:45.1127554Z Resolving deltas:  67% (11632/17360)
+2026-08-14T05:50:45.1127888Z Resolving deltas:  68% (11805/17360)
+2026-08-14T05:50:45.1128207Z Resolving deltas:  69% (11979/17360)
+2026-08-14T05:50:45.1128512Z Resolving deltas:  70% (12152/17360)
+2026-08-14T05:50:45.1128828Z Resolving deltas:  71% (12326/17360)
+2026-08-14T05:50:45.1129138Z Resolving deltas:  72% (12500/17360)
+2026-08-14T05:50:45.1129443Z Resolving deltas:  73% (12673/17360)
+2026-08-14T05:50:45.1129771Z Resolving deltas:  74% (12847/17360)
+2026-08-14T05:50:45.1130094Z Resolving deltas:  75% (13020/17360)
+2026-08-14T05:50:45.1130409Z Resolving deltas:  76% (13194/17360)
+2026-08-14T05:50:45.1130714Z Resolving deltas:  77% (13368/17360)
+2026-08-14T05:50:45.1131032Z Resolving deltas:  78% (13541/17360)
+2026-08-14T05:50:45.1131363Z Resolving deltas:  79% (13715/17360)
+2026-08-14T05:50:45.1131691Z Resolving deltas:  80% (13888/17360)
+2026-08-14T05:50:45.1132031Z Resolving deltas:  81% (14062/17360)
+2026-08-14T05:50:45.1132349Z Resolving deltas:  82% (14236/17360)
+2026-08-14T05:50:45.1132837Z Resolving deltas:  83% (14409/17360)
+2026-08-14T05:50:45.1133170Z Resolving deltas:  84% (14584/17360)
+2026-08-14T05:50:45.1133506Z Resolving deltas:  85% (14757/17360)
+2026-08-14T05:50:45.1133838Z Resolving deltas:  86% (14930/17360)
+2026-08-14T05:50:45.1134166Z Resolving deltas:  87% (15104/17360)
+2026-08-14T05:50:45.1134498Z Resolving deltas:  88% (15277/17360)
+2026-08-14T05:50:45.1134826Z Resolving deltas:  89% (15451/17360)
+2026-08-14T05:50:45.1135304Z Resolving deltas:  90% (15624/17360)
+2026-08-14T05:50:45.1135638Z Resolving deltas:  91% (15798/17360)
+2026-08-14T05:50:45.1135961Z Resolving deltas:  92% (15972/17360)
+2026-08-14T05:50:45.1136300Z Resolving deltas:  93% (16145/17360)
+2026-08-14T05:50:45.1136630Z Resolving deltas:  94% (16319/17360)
+2026-08-14T05:50:45.1136963Z Resolving deltas:  95% (16492/17360)
+2026-08-14T05:50:45.1137287Z Resolving deltas:  96% (16666/17360)
+2026-08-14T05:50:45.1137623Z Resolving deltas:  97% (16840/17360)
+2026-08-14T05:50:45.1137959Z Resolving deltas:  98% (17014/17360)
+2026-08-14T05:50:45.1138283Z Resolving deltas:  99% (17187/17360)
+2026-08-14T05:50:45.1138609Z Resolving deltas: 100% (17360/17360)
+2026-08-14T05:50:45.1138945Z Resolving deltas: 100% (17360/17360), done.
+2026-08-14T05:50:45.1139300Z From https://github.azc.ext.hp.com/WPPg2/vp-device
+2026-08-14T05:50:45.1139690Z  * [new branch]        10747_otherPodLogPath     -> origin/10747_otherPodLogPath
+2026-08-14T05:50:45.1140057Z  * [new branch]        AMI                       -> origin/AMI
+2026-08-14T05:50:45.1140434Z  * [new branch]        Add-timeout-policymgmr    -> origin/Add-timeout-policymgmr
+2026-08-14T05:50:45.1140845Z  * [new branch]        Automated-branch_lib_core_java -> origin/Automated-branch_lib_core_java
+2026-08-14T05:50:45.1141240Z  * [new branch]        BugFix                    -> origin/BugFix
+2026-08-14T05:50:45.1141597Z  * [new branch]        CLDCON-111                -> origin/CLDCON-111
+2026-08-14T05:50:45.1141977Z  * [new branch]        CLDCON-11215_inactive     -> origin/CLDCON-11215_inactive
+2026-08-14T05:50:45.1142368Z  * [new branch]        CLDCON-11388              -> origin/CLDCON-11388
+2026-08-14T05:50:45.1142745Z  * [new branch]        CLDCON-11388-prod-pod8    -> origin/CLDCON-11388-prod-pod8
+2026-08-14T05:50:45.1143190Z  * [new branch]        CLDCON-21289-Datadog_Alerts_Optimization -> origin/CLDCON-21289-Datadog_Alerts_Optimization
+2026-08-14T05:50:45.1143667Z  * [new branch]        CLDCON-21289_DatadogOptimization -> origin/CLDCON-21289_DatadogOptimization
+2026-08-14T05:50:45.1144084Z  * [new branch]        CLDCON-21332              -> origin/CLDCON-21332
+2026-08-14T05:50:45.1144449Z  * [new branch]        CLDCON-22758              -> origin/CLDCON-22758
+2026-08-14T05:50:45.1144810Z  * [new branch]        CLDCON-4591               -> origin/CLDCON-4591
+2026-08-14T05:50:45.1145189Z  * [new branch]        CLDCON-4591_prd__pod1     -> origin/CLDCON-4591_prd__pod1
+2026-08-14T05:50:45.1145567Z  * [new branch]        CloudConfig               -> origin/CloudConfig
+2026-08-14T05:50:45.1145940Z  * [new branch]        NOC-enablement            -> origin/NOC-enablement
+2026-08-14T05:50:45.1146299Z  * [new branch]        NexusIQfix                -> origin/NexusIQfix
+2026-08-14T05:50:45.1146679Z  * [new branch]        Nidhi_changes_VpDev_Avreg_ -> origin/Nidhi_changes_VpDev_Avreg_
+2026-08-14T05:50:45.1147132Z  * [new branch]        PROD-GP3-west2-nonactive-5-7N-us-west-2-subnet-a -> origin/PROD-GP3-west2-nonactive-5-7N-us-west-2-subnet-a
+2026-08-14T05:50:45.1147621Z  * [new branch]        PROD-GP3-west2-nonactive-5-7N-us-west-2-subnet-b -> origin/PROD-GP3-west2-nonactive-5-7N-us-west-2-subnet-b
+2026-08-14T05:50:45.1148053Z  * [new branch]        Pod-5,7,9--subnetB        -> origin/Pod-5,7,9--subnetB
+2026-08-14T05:50:45.1148462Z  * [new branch]        Prod-GP3-D5-P9-us-west-2-device-pod9-subnet-a -> origin/Prod-GP3-D5-P9-us-west-2-device-pod9-subnet-a
+2026-08-14T05:50:45.1148945Z  * [new branch]        Prod-GP3-D5-P9-us-west-2-device-pod9-subnet-b -> origin/Prod-GP3-D5-P9-us-west-2-device-pod9-subnet-b
+2026-08-14T05:50:45.1149537Z  * [new branch]        Prod-infra-ado            -> origin/Prod-infra-ado
+2026-08-14T05:50:45.1149956Z  * [new branch]        RRGEN2_24.4.1_prod_pod1_remaining -> origin/RRGEN2_24.4.1_prod_pod1_remaining
+2026-08-14T05:50:45.1150401Z  * [new branch]        RRGEN2_24.4.1_prod_pod1_subnet-a -> origin/RRGEN2_24.4.1_prod_pod1_subnet-a
+2026-08-14T05:50:45.1150853Z  * [new branch]        RRI-24.3.19_prod_non-active_remaining -> origin/RRI-24.3.19_prod_non-active_remaining
+2026-08-14T05:50:45.1151469Z  * [new branch]        RRI-24.3.19_prod_non-active_subnet-a -> origin/RRI-24.3.19_prod_non-active_subnet-a
+2026-08-14T05:50:45.1151923Z  * [new branch]        RRI-24.3.19_prod_pod1_remaining -> origin/RRI-24.3.19_prod_pod1_remaining
+2026-08-14T05:50:45.1160527Z  * [new branch]        RRI-24.3.19_prod_pod1_subnet-a -> origin/RRI-24.3.19_prod_pod1_subnet-a
+2026-08-14T05:50:45.1160984Z  * [new branch]        RRI-24.3.19_prod_pod8_remaining -> origin/RRI-24.3.19_prod_pod8_remaining
+2026-08-14T05:50:45.1161404Z  * [new branch]        RRI-24.3.19_prod_pod8_subnet-a -> origin/RRI-24.3.19_prod_pod8_subnet-a
+2026-08-14T05:50:45.1161769Z  * [new branch]        Ria-WPP7471               -> origin/Ria-WPP7471
+2026-08-14T05:50:45.1162108Z  * [new branch]        STRATUSIOT-4751           -> origin/STRATUSIOT-4751
+2026-08-14T05:50:45.1162452Z  * [new branch]        STRATUSIOT-8441           -> origin/STRATUSIOT-8441
+2026-08-14T05:50:45.1162807Z  * [new branch]        Stage-infra-changes       -> origin/Stage-infra-changes
+2026-08-14T05:50:45.1163148Z  * [new branch]        URIPattern                -> origin/URIPattern
+2026-08-14T05:50:45.1163465Z  * [new branch]        UpdateBug                 -> origin/UpdateBug
+2026-08-14T05:50:45.1163805Z  * [new branch]        WPBug                     -> origin/WPBug
+2026-08-14T05:50:45.1164169Z  * [new branch]        WPPGEN2-10747-prodpod5-a  -> origin/WPPGEN2-10747-prodpod5-a
+2026-08-14T05:50:45.1164572Z  * [new branch]        WPPGEN2-10747_nonActive_b -> origin/WPPGEN2-10747_nonActive_b
+2026-08-14T05:50:45.1164956Z  * [new branch]        WPPGEN2-10747_prodpod1_b  -> origin/WPPGEN2-10747_prodpod1_b
+2026-08-14T05:50:45.1165334Z  * [new branch]        WPPGEN2-10747_prodpod5-b  -> origin/WPPGEN2-10747_prodpod5-b
+2026-08-14T05:50:45.1165711Z  * [new branch]        WPPGEN2-10747_stagePod1   -> origin/WPPGEN2-10747_stagePod1
+2026-08-14T05:50:45.1166099Z  * [new branch]        WPPGEN2-11143-pod4-sub_a  -> origin/WPPGEN2-11143-pod4-sub_a
+2026-08-14T05:50:45.1166498Z  * [new branch]        WPPGEN2-11143-pod4-sub_b  -> origin/WPPGEN2-11143-pod4-sub_b
+2026-08-14T05:50:45.1166940Z  * [new branch]        WPPGEN2-11398-VP-Dev-Pie-RP-Removal-Infra-Changes -> origin/WPPGEN2-11398-VP-Dev-Pie-RP-Removal-Infra-Changes
+2026-08-14T05:50:45.1167496Z  * [new branch]        WPPGEN2-11398-VPDev-Prod-Non-Active-Pods--Subnet-B--RP-Removal-Infra-Changes -> origin/WPPGEN2-11398-VPDev-Prod-Non-Active-Pods--Subnet-B--RP-Removal-Infra-Changes
+2026-08-14T05:50:45.1168084Z  * [new branch]        WPPGEN2-11398-VPDev-Prod-Pod1--Subnet-B--RP-Removal-Infra-Changes -> origin/WPPGEN2-11398-VPDev-Prod-Pod1--Subnet-B--RP-Removal-Infra-Changes
+2026-08-14T05:50:45.1168634Z  * [new branch]        WPPGEN2-11398-VPDev-Prod-Pod4--Subnet-B--RP-Removal-Infra-Changes -> origin/WPPGEN2-11398-VPDev-Prod-Pod4--Subnet-B--RP-Removal-Infra-Changes
+2026-08-14T05:50:45.1169167Z  * [new branch]        WPPGEN2-11398-VPDevice-Pie-RP-Removal-Naming-Fix -> origin/WPPGEN2-11398-VPDevice-Pie-RP-Removal-Naming-Fix
+2026-08-14T05:50:45.1169617Z  * [new branch]        WPPGEN2-11627             -> origin/WPPGEN2-11627
+2026-08-14T05:50:45.1169999Z  * [new branch]        WPPGEN2-11627_Other_a     -> origin/WPPGEN2-11627_Other_a
+2026-08-14T05:50:45.1170405Z  * [new branch]        WPPGEN2-11627_Other_b     -> origin/WPPGEN2-11627_Other_b
+2026-08-14T05:50:45.1170812Z  * [new branch]        WPPGEN2-2097_POD5_enablement -> origin/WPPGEN2-2097_POD5_enablement
+2026-08-14T05:50:45.1171209Z  * [new branch]        WPPGEN2-2106              -> origin/WPPGEN2-2106
+2026-08-14T05:50:45.1171799Z  * [new branch]        WPPGEN2-3800              -> origin/WPPGEN2-3800
+2026-08-14T05:50:45.1172179Z  * [new branch]        WPPGEN2-7110_Rohith       -> origin/WPPGEN2-7110_Rohith
+2026-08-14T05:50:45.1172604Z  * [new branch]        WPPGEN2-7216-Exception-Log-Optimization -> origin/WPPGEN2-7216-Exception-Log-Optimization
+2026-08-14T05:50:45.1173023Z  * [new branch]        WPPGEN2-7288              -> origin/WPPGEN2-7288
+2026-08-14T05:50:45.1173525Z  * [new branch]        WPPGEN2-7399              -> origin/WPPGEN2-7399
+2026-08-14T05:50:45.1173885Z  * [new branch]        WPPGEN2-7554              -> origin/WPPGEN2-7554
+2026-08-14T05:50:45.1174227Z  * [new branch]        WPPGEN2-7714              -> origin/WPPGEN2-7714
+2026-08-14T05:50:45.1174593Z  * [new branch]        WPPGEN2-7884              -> origin/WPPGEN2-7884
+2026-08-14T05:50:45.1174988Z  * [new branch]        WPPGEN2-8832-Mysql-Upgrade -> origin/WPPGEN2-8832-Mysql-Upgrade
+2026-08-14T05:50:45.1175375Z  * [new branch]        WSBug                     -> origin/WSBug
+2026-08-14T05:50:45.1175733Z  * [new branch]        active-pod-sub-a          -> origin/active-pod-sub-a
+2026-08-14T05:50:45.1176094Z  * [new branch]        active-pod-sub-b          -> origin/active-pod-sub-b
+2026-08-14T05:50:45.1176456Z  * [new branch]        adding-asset-group        -> origin/adding-asset-group
+2026-08-14T05:50:45.1176827Z  * [new branch]        akarsh-modi-patch-1       -> origin/akarsh-modi-patch-1
+2026-08-14T05:50:45.1177212Z  * [new branch]        akarsh-modi-patch-10      -> origin/akarsh-modi-patch-10
+2026-08-14T05:50:45.1177585Z  * [new branch]        akarsh-modi-patch-11      -> origin/akarsh-modi-patch-11
+2026-08-14T05:50:45.1177951Z  * [new branch]        akarsh-modi-patch-12      -> origin/akarsh-modi-patch-12
+2026-08-14T05:50:45.1178327Z  * [new branch]        akarsh-modi-patch-13      -> origin/akarsh-modi-patch-13
+2026-08-14T05:50:45.1178700Z  * [new branch]        akarsh-modi-patch-2       -> origin/akarsh-modi-patch-2
+2026-08-14T05:50:45.1179078Z  * [new branch]        akarsh-modi-patch-3       -> origin/akarsh-modi-patch-3
+2026-08-14T05:50:45.1179453Z  * [new branch]        akarsh-modi-patch-4       -> origin/akarsh-modi-patch-4
+2026-08-14T05:50:45.1179834Z  * [new branch]        akarsh-modi-patch-5       -> origin/akarsh-modi-patch-5
+2026-08-14T05:50:45.1180214Z  * [new branch]        akarsh-modi-patch-6       -> origin/akarsh-modi-patch-6
+2026-08-14T05:50:45.1180599Z  * [new branch]        akarsh-modi-patch-7       -> origin/akarsh-modi-patch-7
+2026-08-14T05:50:45.1180979Z  * [new branch]        akarsh-modi-patch-8       -> origin/akarsh-modi-patch-8
+2026-08-14T05:50:45.1181358Z  * [new branch]        akarsh-modi-patch-9       -> origin/akarsh-modi-patch-9
+2026-08-14T05:50:45.1181715Z  * [new branch]        authzToken                -> origin/authzToken
+2026-08-14T05:50:45.1182076Z  * [new branch]        authz_changes             -> origin/authz_changes
+2026-08-14T05:50:45.1182438Z  * [new branch]        bump_databag              -> origin/bump_databag
+2026-08-14T05:50:45.1182776Z  * [new branch]        certs                     -> origin/certs
+2026-08-14T05:50:45.1183411Z  * [new branch]        cldcon-29581_prodotherpods -> origin/cldcon-29581_prodotherpods
+2026-08-14T05:50:45.1183824Z  * [new branch]        cldcon-29581_prodpod1     -> origin/cldcon-29581_prodpod1
+2026-08-14T05:50:45.1184221Z  * [new branch]        cldcon-29581_prodpod3     -> origin/cldcon-29581_prodpod3
+2026-08-14T05:50:45.1184611Z  * [new branch]        cldcon-29581_prodpod4     -> origin/cldcon-29581_prodpod4
+2026-08-14T05:50:45.1184999Z  * [new branch]        cldcon-29581_prodpod5     -> origin/cldcon-29581_prodpod5
+2026-08-14T05:50:45.1185372Z  * [new branch]        cldcon-29581_prodpod6     -> origin/cldcon-29581_prodpod6
+2026-08-14T05:50:45.1185751Z  * [new branch]        cldcon-29581_prodpod7     -> origin/cldcon-29581_prodpod7
+2026-08-14T05:50:45.1186126Z  * [new branch]        cldcon-29581_prodpod8     -> origin/cldcon-29581_prodpod8
+2026-08-14T05:50:45.1186717Z  * [new branch]        cldcon-29581_prodpod9     -> origin/cldcon-29581_prodpod9
+2026-08-14T05:50:45.1187082Z  * [new branch]        cldcon-29581_stagepod1    -> origin/cldcon-29581_stagepod1
+2026-08-14T05:50:45.1187373Z  * [new branch]        cldcon-29581_stagepod3    -> origin/cldcon-29581_stagepod3
+2026-08-14T05:50:45.1187707Z  * [new branch]        cldcon-4591_stg           -> origin/cldcon-4591_stg
+2026-08-14T05:50:45.1188244Z  * [new branch]        commoncerts               -> origin/commoncerts
+2026-08-14T05:50:45.1188612Z  * [new branch]        coretto-build             -> origin/coretto-build
+2026-08-14T05:50:45.1188987Z  * [new branch]        dev_chethana_vpdev        -> origin/dev_chethana_vpdev
+2026-08-14T05:50:45.1189395Z  * [new branch]        feature/datadog-avreg-metrics-inline-v2.1.131 -> origin/feature/datadog-avreg-metrics-inline-v2.1.131
+2026-08-14T05:50:45.1189862Z  * [new branch]        feature/datadog-custom-metrics-v2.1.131 -> origin/feature/datadog-custom-metrics-v2.1.131
+2026-08-14T05:50:45.1190320Z  * [new branch]        feature/emailclient-oauth2-migration -> origin/feature/emailclient-oauth2-migration
+2026-08-14T05:50:45.1190675Z  * [new branch]        feature/emailclient-test-fixes -> origin/feature/emailclient-test-fixes
+2026-08-14T05:50:45.1190895Z  * [new branch]        filterId-flag-off         -> origin/filterId-flag-off
+2026-08-14T05:50:45.1191095Z  * [new branch]        fix-for-prod-issue        -> origin/fix-for-prod-issue
+2026-08-14T05:50:45.1191347Z  * [new branch]        fix/STPI-8640-update-asset-manifest.yaml-for-repo-vp-device -> origin/fix/STPI-8640-update-asset-manifest.yaml-for-repo-vp-device
+2026-08-14T05:50:45.1191613Z  * [new branch]        fix/remove-r11-codeowners-20260804 -> origin/fix/remove-r11-codeowners-20260804
+2026-08-14T05:50:45.1191833Z  * [new branch]        inactive-pod-sub-a        -> origin/inactive-pod-sub-a
+2026-08-14T05:50:45.1192042Z  * [new branch]        json-logging-adoption     -> origin/json-logging-adoption
+2026-08-14T05:50:45.1192246Z  * [new branch]        json_log                  -> origin/json_log
+2026-08-14T05:50:45.1192436Z  * [new branch]        lib_core_adoption         -> origin/lib_core_adoption
+2026-08-14T05:50:45.1192639Z  * [new branch]        makeandmodel              -> origin/makeandmodel
+2026-08-14T05:50:45.1192831Z  * [new branch]        master                    -> origin/master
+2026-08-14T05:50:45.1193050Z  * [new branch]        nat_removal_eip_alloc_stage_pod1_a-b -> origin/nat_removal_eip_alloc_stage_pod1_a-b
+2026-08-14T05:50:45.1193269Z  * [new branch]        nginx_change              -> origin/nginx_change
+2026-08-14T05:50:45.1193469Z  * [new branch]        non-active-sub-b          -> origin/non-active-sub-b
+2026-08-14T05:50:45.1193656Z  * [new branch]        ocm_rba                   -> origin/ocm_rba
+2026-08-14T05:50:45.1193845Z  * [new branch]        paramConfig               -> origin/paramConfig
+2026-08-14T05:50:45.1194047Z  * [new branch]        paramstore-cache-fix      -> origin/paramstore-cache-fix
+2026-08-14T05:50:45.1194256Z  * [new branch]        paramstore-config         -> origin/paramstore-config
+2026-08-14T05:50:45.1194453Z  * [new branch]        paramstore-impl           -> origin/paramstore-impl
+2026-08-14T05:50:45.1194647Z  * [new branch]        paramstore-off-flag       -> origin/paramstore-off-flag
+2026-08-14T05:50:45.1194847Z  * [new branch]        paramstore-vpdev          -> origin/paramstore-vpdev
+2026-08-14T05:50:45.1195050Z  * [new branch]        pie_disable_accessLogs    -> origin/pie_disable_accessLogs
+2026-08-14T05:50:45.1195257Z  * [new branch]        pod4-heap-change          -> origin/pod4-heap-change
+2026-08-14T05:50:45.1195448Z  * [new branch]        pod4-prod                 -> origin/pod4-prod
+2026-08-14T05:50:45.1195637Z  * [new branch]        podspecific               -> origin/podspecific
+2026-08-14T05:50:45.1195854Z  * [new branch]        prod-GP3-3-4-6-8-Dec12-us-east-1-subnet-a -> origin/prod-GP3-3-4-6-8-Dec12-us-east-1-subnet-a
+2026-08-14T05:50:45.1196256Z  * [new branch]        prod-GP3-3-4-6-8-Dec12-us-east-1-subnet-b -> origin/prod-GP3-3-4-6-8-Dec12-us-east-1-subnet-b
+2026-08-14T05:50:45.1196481Z  * [new branch]        prod-pod4-sub-A           -> origin/prod-pod4-sub-A
+2026-08-14T05:50:45.1196686Z  * [new branch]        prod-pod4-sub-B           -> origin/prod-pod4-sub-B
+2026-08-14T05:50:45.1196898Z  * [new branch]        prod-pod5-sub-A           -> origin/prod-pod5-sub-A
+2026-08-14T05:50:45.1197191Z  * [new branch]        prod-pod5-sub-B           -> origin/prod-pod5-sub-B
+2026-08-14T05:50:45.1197381Z  * [new branch]        prod-pod6-sub-A           -> origin/prod-pod6-sub-A
+2026-08-14T05:50:45.1197682Z  * [new branch]        prod-pod6-sub-B           -> origin/prod-pod6-sub-B
+2026-08-14T05:50:45.1198055Z  * [new branch]        prod-pod7-subA            -> origin/prod-pod7-subA
+2026-08-14T05:50:45.1198399Z  * [new branch]        prod-pod7-subB            -> origin/prod-pod7-subB
+2026-08-14T05:50:45.1198740Z  * [new branch]        prod-pod8-sub-A           -> origin/prod-pod8-sub-A
+2026-08-14T05:50:45.1198946Z  * [new branch]        prod-pod8-sub-B           -> origin/prod-pod8-sub-B
+2026-08-14T05:50:45.1199155Z  * [new branch]        rds-ssl-non-active-prod   -> origin/rds-ssl-non-active-prod
+2026-08-14T05:50:45.1199370Z  * [new branch]        rds-ssl-pod5-prod         -> origin/rds-ssl-pod5-prod
+2026-08-14T05:50:45.1199700Z  * [new branch]        rds-ssl-stage-pod1        -> origin/rds-ssl-stage-pod1
+2026-08-14T05:50:45.1199912Z  * [new branch]        rds-ssl-stage-pod3        -> origin/rds-ssl-stage-pod3
+2026-08-14T05:50:45.1200111Z  * [new branch]        removinguuid              -> origin/removinguuid
+2026-08-14T05:50:45.1200321Z  * [new branch]        retry_for_all_clients     -> origin/retry_for_all_clients
+2026-08-14T05:50:45.1200520Z  * [new branch]        retry_ppm                 -> origin/retry_ppm
+2026-08-14T05:50:45.1200727Z  * [new branch]        revert-385-skernerl_deploy -> origin/revert-385-skernerl_deploy
+2026-08-14T05:50:45.1200962Z  * [new branch]        revert-504-WPPGEN2-10747_nonActive_a -> origin/revert-504-WPPGEN2-10747_nonActive_a
+2026-08-14T05:50:45.1201215Z  * [new branch]        revert-519-WPPGEN2-10747_prodpod4_activePOD -> origin/revert-519-WPPGEN2-10747_prodpod4_activePOD
+2026-08-14T05:50:45.1201444Z  * [new branch]        revert-filterId           -> origin/revert-filterId
+2026-08-14T05:50:45.1201640Z  * [new branch]        riya-ranjan-patch-1       -> origin/riya-ranjan-patch-1
+2026-08-14T05:50:45.1201848Z  * [new branch]        riya-ranjan-patch-2       -> origin/riya-ranjan-patch-2
+2026-08-14T05:50:45.1202050Z  * [new branch]        riya-ranjan-patch-3       -> origin/riya-ranjan-patch-3
+2026-08-14T05:50:45.1202251Z  * [new branch]        riya-ranjan-patch-4       -> origin/riya-ranjan-patch-4
+2026-08-14T05:50:45.1202464Z  * [new branch]        riya-sunnisa-rasheed-patch-1 -> origin/riya-sunnisa-rasheed-patch-1
+2026-08-14T05:50:45.1202682Z  * [new branch]        riya-sunnisa-rasheed-patch-2 -> origin/riya-sunnisa-rasheed-patch-2
+2026-08-14T05:50:45.1202901Z  * [new branch]        riya_wppgen2-5136_0427    -> origin/riya_wppgen2-5136_0427
+2026-08-14T05:50:45.1203113Z  * [new branch]        rollback-sub-b            -> origin/rollback-sub-b
+2026-08-14T05:50:45.1203311Z  * [new branch]        rp-cleanup-pie            -> origin/rp-cleanup-pie
+2026-08-14T05:50:45.1203528Z  * [new branch]        rp-vpdev_logrotation      -> origin/rp-vpdev_logrotation
+2026-08-14T05:50:45.1203726Z  * [new branch]        rppom                     -> origin/rppom
+2026-08-14T05:50:45.1203915Z  * [new branch]        sagar-bellad-patch-3      -> origin/sagar-bellad-patch-3
+2026-08-14T05:50:45.1204124Z  * [new branch]        sagar-bellad-patch-3-1    -> origin/sagar-bellad-patch-3-1
+2026-08-14T05:50:45.1204332Z  * [new branch]        sagar-bellad-patch-4      -> origin/sagar-bellad-patch-4
+2026-08-14T05:50:45.1204538Z  * [new branch]        sagar-bellad-patch-5      -> origin/sagar-bellad-patch-5
+2026-08-14T05:50:45.1204874Z  * [new branch]        sagar-bellad-patch-6      -> origin/sagar-bellad-patch-6
+2026-08-14T05:50:45.1205073Z  * [new branch]        sagar-bellad-patch-7      -> origin/sagar-bellad-patch-7
+2026-08-14T05:50:45.1205274Z  * [new branch]        sagar-bellad-patch-8      -> origin/sagar-bellad-patch-8
+2026-08-14T05:50:45.1205478Z  * [new branch]        sagar-bellad-patch-9      -> origin/sagar-bellad-patch-9
+2026-08-14T05:50:45.1205703Z  * [new branch]        sam_WPPGEN2-5538_0614_vpdev -> origin/sam_WPPGEN2-5538_0614_vpdev
+2026-08-14T05:50:45.1205995Z  * [new branch]        sanity_test               -> origin/sanity_test
+2026-08-14T05:50:45.1206194Z  * [new branch]        service.yaml-prod         -> origin/service.yaml-prod
+2026-08-14T05:50:45.1206394Z  * [new branch]        service.yaml.file-stage   -> origin/service.yaml.file-stage
+2026-08-14T05:50:45.1206605Z  * [new branch]        skernel_prod_deploy       -> origin/skernel_prod_deploy
+2026-08-14T05:50:45.1206805Z  * [new branch]        skernel_stage_deploy      -> origin/skernel_stage_deploy
+2026-08-14T05:50:45.1207028Z  * [new branch]        stage_whitelist_security_groups -> origin/stage_whitelist_security_groups
+2026-08-14T05:50:45.1207244Z  * [new branch]        step3-changes             -> origin/step3-changes
+2026-08-14T05:50:45.1207435Z  * [new branch]        testcase                  -> origin/testcase
+2026-08-14T05:50:45.1207613Z  * [new branch]        try-012                   -> origin/try-012
+2026-08-14T05:50:45.1207816Z  * [new branch]        updating-asset-grouping   -> origin/updating-asset-grouping
+2026-08-14T05:50:45.1208020Z  * [new branch]        vasyl/Sonar               -> origin/vasyl/Sonar
+2026-08-14T05:50:45.1208226Z  * [new branch]        vpdev-chethana-countrycode -> origin/vpdev-chethana-countrycode
+2026-08-14T05:50:45.1208455Z  * [new branch]        vpdev-custom-metric-avreg-failure -> origin/vpdev-custom-metric-avreg-failure
+2026-08-14T05:50:45.1208677Z  * [new branch]        vpdev-haneesh-url-change  -> origin/vpdev-haneesh-url-change
+2026-08-14T05:50:45.1208890Z  * [new branch]        vpdev-pod1-rollback       -> origin/vpdev-pod1-rollback
+2026-08-14T05:50:45.1209187Z  * [new branch]        vpdev-pod4-subnet-a       -> origin/vpdev-pod4-subnet-a
+2026-08-14T05:50:45.1209575Z  * [new branch]        vpdev-pod4-subnet-b       -> origin/vpdev-pod4-subnet-b
+2026-08-14T05:50:45.1209954Z  * [new branch]        vpdev_tokengen            -> origin/vpdev_tokengen
+2026-08-14T05:50:45.1210308Z  * [new branch]        webBug                    -> origin/webBug
+2026-08-14T05:50:45.1210637Z  * [new branch]        webServices               -> origin/webServices
+2026-08-14T05:50:45.1210996Z  * [new branch]        webservices               -> origin/webservices
+2026-08-14T05:50:45.1211336Z  * [new branch]        wns                       -> origin/wns
+2026-08-14T05:50:45.1211681Z  * [new branch]        wppgen2_6898              -> origin/wppgen2_6898
+2026-08-14T05:50:45.1212021Z  * [new branch]        wppgen2_7673              -> origin/wppgen2_7673
+2026-08-14T05:50:45.1212406Z  * [new branch]        wppgen2_7673_changes      -> origin/wppgen2_7673_changes
+2026-08-14T05:50:45.1212778Z  * [new branch]        yaml_tropos               -> origin/yaml_tropos
+2026-08-14T05:50:45.1213119Z  * [new ref]           refs/pull/1253/merge      -> pull/1253/merge
+2026-08-14T05:50:45.1213457Z  * [new tag]           v2.1.105                  -> v2.1.105
+2026-08-14T05:50:45.1213776Z  * [new tag]           v2.1.106                  -> v2.1.106
+2026-08-14T05:50:45.1214087Z  * [new tag]           v2.1.107                  -> v2.1.107
+2026-08-14T05:50:45.1214399Z  * [new tag]           v2.1.108                  -> v2.1.108
+2026-08-14T05:50:45.1214722Z  * [new tag]           v2.1.109                  -> v2.1.109
+2026-08-14T05:50:45.1215040Z  * [new tag]           v2.1.110                  -> v2.1.110
+2026-08-14T05:50:45.1215349Z  * [new tag]           v2.1.111                  -> v2.1.111
+2026-08-14T05:50:45.1215654Z  * [new tag]           v2.1.112                  -> v2.1.112
+2026-08-14T05:50:45.1216140Z  * [new tag]           v2.1.114                  -> v2.1.114
+2026-08-14T05:50:45.1216455Z  * [new tag]           v2.1.115                  -> v2.1.115
+2026-08-14T05:50:45.1216768Z  * [new tag]           v2.1.116                  -> v2.1.116
+2026-08-14T05:50:45.1217092Z  * [new tag]           v2.1.117                  -> v2.1.117
+2026-08-14T05:50:45.1217405Z  * [new tag]           v2.1.118                  -> v2.1.118
+2026-08-14T05:50:45.1217854Z  * [new tag]           v2.1.119                  -> v2.1.119
+2026-08-14T05:50:45.1218171Z  * [new tag]           v2.1.120                  -> v2.1.120
+2026-08-14T05:50:45.1218489Z  * [new tag]           v2.1.121                  -> v2.1.121
+2026-08-14T05:50:45.1218807Z  * [new tag]           v2.1.122                  -> v2.1.122
+2026-08-14T05:50:45.1219104Z  * [new tag]           v2.1.123                  -> v2.1.123
+2026-08-14T05:50:45.1219278Z  * [new tag]           v2.1.124                  -> v2.1.124
+2026-08-14T05:50:45.1219456Z  * [new tag]           v2.1.125                  -> v2.1.125
+2026-08-14T05:50:45.1219626Z  * [new tag]           v2.1.126                  -> v2.1.126
+2026-08-14T05:50:45.1219798Z  * [new tag]           v2.1.127                  -> v2.1.127
+2026-08-14T05:50:45.1219970Z  * [new tag]           v2.1.128                  -> v2.1.128
+2026-08-14T05:50:45.1220145Z  * [new tag]           v2.1.129                  -> v2.1.129
+2026-08-14T05:50:45.1220314Z  * [new tag]           v2.1.130                  -> v2.1.130
+2026-08-14T05:50:45.1220486Z  * [new tag]           v2.1.131                  -> v2.1.131
+2026-08-14T05:50:45.1220657Z  * [new tag]           v2.1.132                  -> v2.1.132
+2026-08-14T05:50:45.1220827Z  * [new tag]           v2.1.133                  -> v2.1.133
+2026-08-14T05:50:45.1220990Z  * [new tag]           v2.1.134                  -> v2.1.134
+2026-08-14T05:50:45.1221160Z  * [new tag]           v2.1.135                  -> v2.1.135
+2026-08-14T05:50:45.1221332Z  * [new tag]           v2.1.136                  -> v2.1.136
+2026-08-14T05:50:45.1221508Z  * [new tag]           v2.1.137                  -> v2.1.137
+2026-08-14T05:50:45.1221681Z  * [new tag]           v2.1.48                   -> v2.1.48
+2026-08-14T05:50:45.1221846Z  * [new tag]           v2.1.49                   -> v2.1.49
+2026-08-14T05:50:45.1222017Z  * [new tag]           v2.1.53                   -> v2.1.53
+2026-08-14T05:50:45.1222185Z  * [new tag]           v2.1.54                   -> v2.1.54
+2026-08-14T05:50:45.1222360Z  * [new tag]           v2.1.55                   -> v2.1.55
+2026-08-14T05:50:45.1222535Z  * [new tag]           v2.1.56                   -> v2.1.56
+2026-08-14T05:50:45.1222713Z  * [new tag]           v2.1.57                   -> v2.1.57
+2026-08-14T05:50:45.1222885Z  * [new tag]           v2.1.58                   -> v2.1.58
+2026-08-14T05:50:45.1223056Z  * [new tag]           v2.1.77                   -> v2.1.77
+2026-08-14T05:50:45.1223223Z  * [new tag]           v2.1.79                   -> v2.1.79
+2026-08-14T05:50:45.1223397Z  * [new tag]           v2.1.80                   -> v2.1.80
+2026-08-14T05:50:45.1223561Z  * [new tag]           v2.1.81                   -> v2.1.81
+2026-08-14T05:50:45.1223730Z  * [new tag]           v2.1.88                   -> v2.1.88
+2026-08-14T05:50:45.1223901Z  * [new tag]           v2.1.89                   -> v2.1.89
+2026-08-14T05:50:45.1224070Z  * [new tag]           v2.1.90                   -> v2.1.90
+2026-08-14T05:50:45.1224241Z  * [new tag]           v2.1.91                   -> v2.1.91
+2026-08-14T05:50:45.1224418Z  * [new tag]           vp-device-1.0.10          -> vp-device-1.0.10
+2026-08-14T05:50:45.1224611Z  * [new tag]           vp-device-1.0.11          -> vp-device-1.0.11
+2026-08-14T05:50:45.1224803Z  * [new tag]           vp-device-1.0.12          -> vp-device-1.0.12
+2026-08-14T05:50:45.1224989Z  * [new tag]           vp-device-1.0.13          -> vp-device-1.0.13
+2026-08-14T05:50:45.1225178Z  * [new tag]           vp-device-1.0.14          -> vp-device-1.0.14
+2026-08-14T05:50:45.1225510Z  * [new tag]           vp-device-1.0.15          -> vp-device-1.0.15
+2026-08-14T05:50:45.1225701Z  * [new tag]           vp-device-1.0.16          -> vp-device-1.0.16
+2026-08-14T05:50:45.1225892Z  * [new tag]           vp-device-1.0.17          -> vp-device-1.0.17
+2026-08-14T05:50:45.1226083Z  * [new tag]           vp-device-1.0.18          -> vp-device-1.0.18
+2026-08-14T05:50:45.1226278Z  * [new tag]           vp-device-1.0.19          -> vp-device-1.0.19
+2026-08-14T05:50:45.1226588Z  * [new tag]           vp-device-1.0.2           -> vp-device-1.0.2
+2026-08-14T05:50:45.1226942Z  * [new tag]           vp-device-1.0.3           -> vp-device-1.0.3
+2026-08-14T05:50:45.1227150Z  * [new tag]           vp-device-1.0.4           -> vp-device-1.0.4
+2026-08-14T05:50:45.1227334Z  * [new tag]           vp-device-1.0.5           -> vp-device-1.0.5
+2026-08-14T05:50:45.1227521Z  * [new tag]           vp-device-1.0.6           -> vp-device-1.0.6
+2026-08-14T05:50:45.1227706Z  * [new tag]           vp-device-1.0.7           -> vp-device-1.0.7
+2026-08-14T05:50:45.1227890Z  * [new tag]           vp-device-1.0.8           -> vp-device-1.0.8
+2026-08-14T05:50:45.1228072Z  * [new tag]           vp-device-1.0.9           -> vp-device-1.0.9
+2026-08-14T05:50:45.1228261Z  * [new tag]           vp-device-1.1.3           -> vp-device-1.1.3
+2026-08-14T05:50:45.1228443Z  * [new tag]           vp-device-2.0.0           -> vp-device-2.0.0
+2026-08-14T05:50:45.1228627Z  * [new tag]           vp-device-2.0.1           -> vp-device-2.0.1
+2026-08-14T05:50:45.1228810Z  * [new tag]           vp-device-2.0.10          -> vp-device-2.0.10
+2026-08-14T05:50:45.1228998Z  * [new tag]           vp-device-2.0.13          -> vp-device-2.0.13
+2026-08-14T05:50:45.1229328Z  * [new tag]           vp-device-2.0.15          -> vp-device-2.0.15
+2026-08-14T05:50:45.1229671Z  * [new tag]           vp-device-2.0.16          -> vp-device-2.0.16
+2026-08-14T05:50:45.1230002Z  * [new tag]           vp-device-2.0.20          -> vp-device-2.0.20
+2026-08-14T05:50:45.1230331Z  * [new tag]           vp-device-2.0.21          -> vp-device-2.0.21
+2026-08-14T05:50:45.1230675Z  * [new tag]           vp-device-2.0.22          -> vp-device-2.0.22
+2026-08-14T05:50:45.1231009Z  * [new tag]           vp-device-2.0.24          -> vp-device-2.0.24
+2026-08-14T05:50:45.1231344Z  * [new tag]           vp-device-2.0.25          -> vp-device-2.0.25
+2026-08-14T05:50:45.1231685Z  * [new tag]           vp-device-2.0.26          -> vp-device-2.0.26
+2026-08-14T05:50:45.1232022Z  * [new tag]           vp-device-2.0.27          -> vp-device-2.0.27
+2026-08-14T05:50:45.1232367Z  * [new tag]           vp-device-2.0.28          -> vp-device-2.0.28
+2026-08-14T05:50:45.1232705Z  * [new tag]           vp-device-2.0.29          -> vp-device-2.0.29
+2026-08-14T05:50:45.1233121Z  * [new tag]           vp-device-2.0.3           -> vp-device-2.0.3
+2026-08-14T05:50:45.1233464Z  * [new tag]           vp-device-2.0.31          -> vp-device-2.0.31
+2026-08-14T05:50:45.1233806Z  * [new tag]           vp-device-2.0.32          -> vp-device-2.0.32
+2026-08-14T05:50:45.1234137Z  * [new tag]           vp-device-2.0.33          -> vp-device-2.0.33
+2026-08-14T05:50:45.1234461Z  * [new tag]           vp-device-2.0.35          -> vp-device-2.0.35
+2026-08-14T05:50:45.1234798Z  * [new tag]           vp-device-2.0.37          -> vp-device-2.0.37
+2026-08-14T05:50:45.1235143Z  * [new tag]           vp-device-2.0.38          -> vp-device-2.0.38
+2026-08-14T05:50:45.1235485Z  * [new tag]           vp-device-2.0.39          -> vp-device-2.0.39
+2026-08-14T05:50:45.1235832Z  * [new tag]           vp-device-2.0.4           -> vp-device-2.0.4
+2026-08-14T05:50:45.1236174Z  * [new tag]           vp-device-2.0.40          -> vp-device-2.0.40
+2026-08-14T05:50:45.1236507Z  * [new tag]           vp-device-2.0.41          -> vp-device-2.0.41
+2026-08-14T05:50:45.1236850Z  * [new tag]           vp-device-2.0.42          -> vp-device-2.0.42
+2026-08-14T05:50:45.1237195Z  * [new tag]           vp-device-2.0.43          -> vp-device-2.0.43
+2026-08-14T05:50:45.1238208Z  * [new tag]           vp-device-2.0.44          -> vp-device-2.0.44
+2026-08-14T05:50:45.1238550Z  * [new tag]           vp-device-2.0.45          -> vp-device-2.0.45
+2026-08-14T05:50:45.1238889Z  * [new tag]           vp-device-2.0.46          -> vp-device-2.0.46
+2026-08-14T05:50:45.1239222Z  * [new tag]           vp-device-2.0.47          -> vp-device-2.0.47
+2026-08-14T05:50:45.1239640Z  * [new tag]           vp-device-2.0.48          -> vp-device-2.0.48
+2026-08-14T05:50:45.1240076Z  * [new tag]           vp-device-2.0.49          -> vp-device-2.0.49
+2026-08-14T05:50:45.1240398Z  * [new tag]           vp-device-2.0.5           -> vp-device-2.0.5
+2026-08-14T05:50:45.1240734Z  * [new tag]           vp-device-2.0.51          -> vp-device-2.0.51
+2026-08-14T05:50:45.1241079Z  * [new tag]           vp-device-2.0.52          -> vp-device-2.0.52
+2026-08-14T05:50:45.1241424Z  * [new tag]           vp-device-2.0.53          -> vp-device-2.0.53
+2026-08-14T05:50:45.1241770Z  * [new tag]           vp-device-2.0.54          -> vp-device-2.0.54
+2026-08-14T05:50:45.1242149Z  * [new tag]           vp-device-2.0.55          -> vp-device-2.0.55
+2026-08-14T05:50:45.1242480Z  * [new tag]           vp-device-2.0.56          -> vp-device-2.0.56
+2026-08-14T05:50:45.1242817Z  * [new tag]           vp-device-2.0.57          -> vp-device-2.0.57
+2026-08-14T05:50:45.1243149Z  * [new tag]           vp-device-2.0.6           -> vp-device-2.0.6
+2026-08-14T05:50:45.1251855Z  * [new tag]           vp-device-2.0.9           -> vp-device-2.0.9
+2026-08-14T05:50:45.1252325Z  * [new tag]           vp-device-2.1.0           -> vp-device-2.1.0
+2026-08-14T05:50:45.1252668Z  * [new tag]           vp-device-2.1.1           -> vp-device-2.1.1
+2026-08-14T05:50:45.1253007Z  * [new tag]           vp-device-2.1.10          -> vp-device-2.1.10
+2026-08-14T05:50:45.1253355Z  * [new tag]           vp-device-2.1.15          -> vp-device-2.1.15
+2026-08-14T05:50:45.1253720Z  * [new tag]           vp-device-2.1.16          -> vp-device-2.1.16
+2026-08-14T05:50:45.1254071Z  * [new tag]           vp-device-2.1.17          -> vp-device-2.1.17
+2026-08-14T05:50:45.1254418Z  * [new tag]           vp-device-2.1.18          -> vp-device-2.1.18
+2026-08-14T05:50:45.1254747Z  * [new tag]           vp-device-2.1.2           -> vp-device-2.1.2
+2026-08-14T05:50:45.1255081Z  * [new tag]           vp-device-2.1.21          -> vp-device-2.1.21
+2026-08-14T05:50:45.1255418Z  * [new tag]           vp-device-2.1.22          -> vp-device-2.1.22
+2026-08-14T05:50:45.1255767Z  * [new tag]           vp-device-2.1.23          -> vp-device-2.1.23
+2026-08-14T05:50:45.1256104Z  * [new tag]           vp-device-2.1.24          -> vp-device-2.1.24
+2026-08-14T05:50:45.1256442Z  * [new tag]           vp-device-2.1.25          -> vp-device-2.1.25
+2026-08-14T05:50:45.1256786Z  * [new tag]           vp-device-2.1.26          -> vp-device-2.1.26
+2026-08-14T05:50:45.1257241Z  * [new tag]           vp-device-2.1.27          -> vp-device-2.1.27
+2026-08-14T05:50:45.1257581Z  * [new tag]           vp-device-2.1.28          -> vp-device-2.1.28
+2026-08-14T05:50:45.1257929Z  * [new tag]           vp-device-2.1.29          -> vp-device-2.1.29
+2026-08-14T05:50:45.1258275Z  * [new tag]           vp-device-2.1.3           -> vp-device-2.1.3
+2026-08-14T05:50:45.1258597Z  * [new tag]           vp-device-2.1.30          -> vp-device-2.1.30
+2026-08-14T05:50:45.1258934Z  * [new tag]           vp-device-2.1.31          -> vp-device-2.1.31
+2026-08-14T05:50:45.1259320Z  * [new tag]           vp-device-2.1.31-SNAPSHOT -> vp-device-2.1.31-SNAPSHOT
+2026-08-14T05:50:45.1259704Z  * [new tag]           vp-device-2.1.32          -> vp-device-2.1.32
+2026-08-14T05:50:45.1260065Z  * [new tag]           vp-device-2.1.33          -> vp-device-2.1.33
+2026-08-14T05:50:45.1260430Z  * [new tag]           vp-device-2.1.34          -> vp-device-2.1.34
+2026-08-14T05:50:45.1260788Z  * [new tag]           vp-device-2.1.4           -> vp-device-2.1.4
+2026-08-14T05:50:45.1261145Z  * [new tag]           vp-device-2.1.44          -> vp-device-2.1.44
+2026-08-14T05:50:45.1261684Z  * [new tag]           vp-device-2.1.45          -> vp-device-2.1.45
+2026-08-14T05:50:45.1262048Z  * [new tag]           vp-device-2.1.46          -> vp-device-2.1.46
+2026-08-14T05:50:45.1262399Z  * [new tag]           vp-device-2.1.47          -> vp-device-2.1.47
+2026-08-14T05:50:45.1262754Z  * [new tag]           vp-device-2.1.5           -> vp-device-2.1.5
+2026-08-14T05:50:45.1263118Z  * [new tag]           vp-device-2.1.51          -> vp-device-2.1.51
+2026-08-14T05:50:45.1263627Z  * [new tag]           vp-device-2.1.6           -> vp-device-2.1.6
+2026-08-14T05:50:45.1263981Z  * [new tag]           vp-device-2.1.7           -> vp-device-2.1.7
+2026-08-14T05:50:45.1264331Z  * [new tag]           vp-device-2.1.8           -> vp-device-2.1.8
+2026-08-14T05:50:45.1264684Z  * [new tag]           vp-device-2.1.9           -> vp-device-2.1.9
+2026-08-14T05:50:45.1265048Z  * [new tag]           vpdev-docs-1.0.0          -> vpdev-docs-1.0.0
+2026-08-14T05:50:45.1265410Z  * [new tag]           vpdev-docs-1.0.1          -> vpdev-docs-1.0.1
+2026-08-14T05:50:45.1265776Z  * [new tag]           vpdev-docs-1.0.2          -> vpdev-docs-1.0.2
+2026-08-14T05:50:45.1266123Z  * [new tag]           vpdev-docs-1.1.0          -> vpdev-docs-1.1.0
+2026-08-14T05:50:46.1539326Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin   +164fc48798ee3c3b43ac7ebf071bf27d9320899e
+2026-08-14T05:50:46.1565014Z From https://github.azc.ext.hp.com/WPPg2/vp-device
+2026-08-14T05:50:46.1565317Z  * branch              164fc48798ee3c3b43ac7ebf071bf27d9320899e -> FETCH_HEAD
+2026-08-14T05:50:47.0950229Z ##[command]git checkout --progress --force refs/remotes/pull/1253/merge
+2026-08-14T05:50:47.0963402Z Note: switching to 'refs/remotes/pull/1253/merge'.
+2026-08-14T05:50:47.0963527Z 
+2026-08-14T05:50:47.0963758Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-08-14T05:50:47.0964029Z changes and commit them, and you can discard any commits you make in this
+2026-08-14T05:50:47.0964312Z state without impacting any branches by switching back to a branch.
+2026-08-14T05:50:47.0964429Z 
+2026-08-14T05:50:47.0964652Z If you want to create a new branch to retain commits you create, you may
+2026-08-14T05:50:47.0964915Z do so (now or later) by using -c with the switch command. Example:
+2026-08-14T05:50:47.0965022Z 
+2026-08-14T05:50:47.0965223Z   git switch -c <new-branch-name>
+2026-08-14T05:50:47.0965331Z 
+2026-08-14T05:50:47.0965532Z Or undo this operation with:
+2026-08-14T05:50:47.0965627Z 
+2026-08-14T05:50:47.0965814Z   git switch -
+2026-08-14T05:50:47.0965889Z 
+2026-08-14T05:50:47.0966120Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-08-14T05:50:47.0966245Z 
+2026-08-14T05:50:47.0966504Z HEAD is now at 164fc487 Merge 06903d3fd3c073436557998419b71b87e0e72ca8 into 40cfb36251277e252ee90ca368a84e726cf35bb7
+2026-08-14T05:50:47.0976990Z ##[section]Finishing: Checkout WPPg2/vp-device@refs/pull/1253/merge to ./s/self
