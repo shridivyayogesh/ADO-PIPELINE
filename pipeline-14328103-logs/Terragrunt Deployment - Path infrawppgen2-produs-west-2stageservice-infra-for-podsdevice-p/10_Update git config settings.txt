@@ -1,0 +1,14 @@
+2026-08-14T05:52:31.4114303Z ##[section]Starting: Update git config settings
+2026-08-14T05:52:31.4121741Z ==============================================================================
+2026-08-14T05:52:31.4121855Z Task         : Bash
+2026-08-14T05:52:31.4121924Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-08-14T05:52:31.4122007Z Version      : 3.274.1
+2026-08-14T05:52:31.4122084Z Author       : Microsoft Corporation
+2026-08-14T05:52:31.4122166Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-08-14T05:52:31.4122258Z ==============================================================================
+2026-08-14T05:52:34.6808252Z Generating script.
+2026-08-14T05:52:34.6819951Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:34.6828712Z [command]/usr/bin/bash /usr/local/ado-agent/_work/_temp/64981907-adb4-484f-810b-cbdf23265eac.sh
+2026-08-14T05:52:34.6883248Z Configuring GitHub Enterprise access
+2026-08-14T05:52:34.7007397Z 
+2026-08-14T05:52:34.7066654Z ##[section]Finishing: Update git config settings
