@@ -1,0 +1,362 @@
+2026-08-14T05:52:40.7275371Z ##[section]Starting: Run terragrunt run-all validate
+2026-08-14T05:52:40.7283657Z ==============================================================================
+2026-08-14T05:52:40.7283769Z Task         : Command line
+2026-08-14T05:52:40.7283845Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:52:40.7283950Z Version      : 2.276.0
+2026-08-14T05:52:40.7284020Z Author       : Microsoft Corporation
+2026-08-14T05:52:40.7284103Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:52:40.7284201Z ==============================================================================
+2026-08-14T05:52:43.5497927Z Generating script.
+2026-08-14T05:52:43.5503839Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:43.5518784Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/8f755e9d-ac0f-4392-8abf-1a1836dd8ebd.sh
+2026-08-14T05:52:43.5572738Z Running terragrunt run-all validate command on infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/
+2026-08-14T05:52:43.5575360Z terragrunt IncludeArgs: 
+2026-08-14T05:52:43.5575907Z terragrunt IncludeUnitsReadingArgs: 
+2026-08-14T05:52:43.5576257Z ExtraArgs: 
+2026-08-14T05:52:44.3310018Z time=2026-08-14T05:52:44Z level=info msg=Stack at infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/:
+2026-08-14T05:52:44.3311045Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-a-vpdev-VPDevGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:52:44.3312367Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/asg/device-subnet-b-vpdev-VPDevGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:52:44.3313436Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/iam/dvc-vpdev (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret])
+2026-08-14T05:52:44.3314357Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:52:44.3315319Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/route53/wppinternal.com/record-sets/vpdev.podlb.device (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb])
+2026-08-14T05:52:44.3316129Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/secretsmanager/vp-device-secret (excluded: false, dependencies: [])
+2026-08-14T05:52:44.3316971Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-a-vpdev-VPDevSecurityGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:52:44.3318548Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-subnet-b-vpdev-VPDevSecurityGroup (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup])
+2026-08-14T05:52:44.3322102Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/security-group/device-vpdev-podlb-VPDevLoadBalancerSecurityGroup (excluded: false, dependencies: [])
+2026-08-14T05:52:44.3323086Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/listner/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb, /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource])
+2026-08-14T05:52:44.3324063Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/tg/vpdev-target-group/resource (excluded: false, dependencies: [])
+2026-08-14T05:52:44.3324830Z   => Module /usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/waf/dvc-vpdev-podlb-alb (excluded: false, dependencies: [/usr/local/ado-agent/_work/1/s/infra/wppgen2-prod/us-west-2/stage/service-infra-for-pods/device-pod1/wppgen2/vp-device/lb/dvc-vpdev-podlb-alb])
+2026-08-14T05:52:45.5354853Z 
+2026-08-14T05:52:45.6925044Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:45.6925416Z 
+2026-08-14T05:52:45.6925795Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:45.6925871Z 
+2026-08-14T05:52:45.6926092Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:45.6926388Z [0m[32m
+2026-08-14T05:52:45.6926604Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:45.6926825Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:45.6927026Z [0m[32m
+2026-08-14T05:52:45.6927331Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:45.6927627Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:45.6927847Z [0m[32m
+2026-08-14T05:52:45.6928160Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:45.6928383Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:45.7503488Z 
+2026-08-14T05:52:45.7504897Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:45.7505316Z - Finding hashicorp/aws versions matching "~> 4.1.0"...
+2026-08-14T05:52:45.7677035Z 
+2026-08-14T05:52:45.7678311Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:45.7678774Z - Finding hashicorp/aws versions matching "~> 3.74.0"...
+2026-08-14T05:52:45.7809970Z 
+2026-08-14T05:52:45.7811222Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:45.7811523Z - Finding hashicorp/aws versions matching "~> 4.3.0"...
+2026-08-14T05:52:45.8970531Z - Installing hashicorp/aws v4.1.0...
+2026-08-14T05:52:45.9091551Z - Installing hashicorp/aws v3.74.3...
+2026-08-14T05:52:45.9483911Z - Installing hashicorp/aws v4.3.0...
+2026-08-14T05:52:48.3873878Z - Installed hashicorp/aws v4.3.0 (signed by HashiCorp)
+2026-08-14T05:52:48.3874508Z 
+2026-08-14T05:52:48.3875717Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:48.3877206Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:48.3877740Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:48.3878238Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:48.3884612Z 
+2026-08-14T05:52:48.3885429Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:48.3885980Z [0m[32m
+2026-08-14T05:52:48.3886432Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:48.3886933Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:48.3887361Z should now work.
+2026-08-14T05:52:48.3887561Z 
+2026-08-14T05:52:48.3888129Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:48.3888624Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:48.3889089Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:48.5379880Z - Installed hashicorp/aws v4.1.0 (signed by HashiCorp)
+2026-08-14T05:52:48.5380505Z 
+2026-08-14T05:52:48.5381549Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:48.5382155Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:48.5383498Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:48.5387470Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:48.5390944Z 
+2026-08-14T05:52:48.5391640Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:48.5392113Z [0m[32m
+2026-08-14T05:52:48.5392537Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:48.5393073Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:48.5393497Z should now work.
+2026-08-14T05:52:48.5393718Z 
+2026-08-14T05:52:48.5394146Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:48.5394625Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:48.5395091Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:48.7928285Z - Installed hashicorp/aws v3.74.3 (signed by HashiCorp)
+2026-08-14T05:52:48.7929040Z 
+2026-08-14T05:52:48.7929999Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:48.7930738Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:48.7931391Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:48.7938104Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:48.7941685Z 
+2026-08-14T05:52:48.7942482Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:48.8009574Z [0m[32m
+2026-08-14T05:52:48.8009975Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:48.8010395Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:48.8010738Z should now work.
+2026-08-14T05:52:48.8010865Z 
+2026-08-14T05:52:48.8011199Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:48.8011609Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:48.8012020Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:50.5333696Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:52:50.5334179Z [0m
+2026-08-14T05:52:50.6422116Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:52:50.6422965Z [0m
+2026-08-14T05:52:51.2016052Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:52:51.2016967Z [0m
+2026-08-14T05:52:53.4016181Z 
+2026-08-14T05:52:53.4022334Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:53.5085442Z 
+2026-08-14T05:52:53.5088273Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:53.5160247Z [0m[1mInitializing modules...[0m
+2026-08-14T05:52:53.5188980Z - iam_policy in ../iam_policy
+2026-08-14T05:52:53.5207437Z 
+2026-08-14T05:52:53.5208414Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:53.5473609Z 
+2026-08-14T05:52:53.5474758Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:52:53.6201982Z [0m[32m
+2026-08-14T05:52:53.6202457Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:53.6202857Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:53.6381793Z [0m[32m
+2026-08-14T05:52:53.6382407Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:53.6383171Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:53.6606368Z [0m[32m
+2026-08-14T05:52:53.6607814Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:53.6609442Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:53.6610538Z [0m[32m
+2026-08-14T05:52:53.6614774Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:52:53.6615182Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:52:53.7680819Z 
+2026-08-14T05:52:53.7681826Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:53.7682341Z - Finding hashicorp/aws versions matching "~> 4.3.0"...
+2026-08-14T05:52:53.7833775Z 
+2026-08-14T05:52:53.7834347Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:53.7835259Z - Finding hashicorp/aws versions matching "~> 3.73.0"...
+2026-08-14T05:52:53.8303690Z 
+2026-08-14T05:52:53.8304896Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:53.8305634Z - Finding latest version of hashicorp/aws...
+2026-08-14T05:52:53.8317514Z 
+2026-08-14T05:52:53.8332671Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:52:53.8333283Z - Finding hashicorp/aws versions matching "~> 4.3.0"...
+2026-08-14T05:52:53.9514235Z - Installing hashicorp/aws v4.3.0...
+2026-08-14T05:52:53.9529994Z - Installing hashicorp/aws v3.73.0...
+2026-08-14T05:52:53.9857910Z - Installing hashicorp/aws v4.3.0...
+2026-08-14T05:52:53.9930255Z - Installing hashicorp/aws v6.60.0...
+2026-08-14T05:52:57.1899668Z - Installed hashicorp/aws v3.73.0 (signed by HashiCorp)
+2026-08-14T05:52:57.1900083Z 
+2026-08-14T05:52:57.1900815Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:57.1901367Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:57.1901876Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:57.1902332Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:57.1922709Z 
+2026-08-14T05:52:57.1923773Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:57.1924522Z [0m[32m
+2026-08-14T05:52:57.1925616Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:57.1926247Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:57.1926617Z should now work.
+2026-08-14T05:52:57.1926738Z 
+2026-08-14T05:52:57.1927071Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:57.1927466Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:57.1927959Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:57.1954004Z - Installed hashicorp/aws v4.3.0 (signed by HashiCorp)
+2026-08-14T05:52:57.1955387Z 
+2026-08-14T05:52:57.1955978Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:57.1956408Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:57.1956797Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:57.1957154Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:57.1962266Z 
+2026-08-14T05:52:57.1963058Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:57.1963624Z [0m[32m
+2026-08-14T05:52:57.1964161Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:57.1964692Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:57.1965239Z should now work.
+2026-08-14T05:52:57.1965491Z 
+2026-08-14T05:52:57.1966206Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:57.1966769Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:57.1967285Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:57.3238232Z - Installed hashicorp/aws v4.3.0 (signed by HashiCorp)
+2026-08-14T05:52:57.3244566Z 
+2026-08-14T05:52:57.3245632Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:52:57.3246384Z selections it made above. Include this file in your version control repository
+2026-08-14T05:52:57.3247039Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:52:57.3257681Z you run "terraform init" in the future.[0m
+2026-08-14T05:52:57.3288070Z 
+2026-08-14T05:52:57.3296456Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:52:57.3302836Z [0m[32m
+2026-08-14T05:52:57.3303531Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:52:57.3304173Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:52:57.3304745Z should now work.
+2026-08-14T05:52:57.3305152Z 
+2026-08-14T05:52:57.3306082Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:52:57.3306921Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:52:57.3321182Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:52:59.9485420Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:52:59.9486452Z [0m
+2026-08-14T05:53:00.2240873Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:00.2241736Z [0m
+2026-08-14T05:53:00.2497794Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:00.2498601Z [0m
+2026-08-14T05:53:03.2804052Z 
+2026-08-14T05:53:03.2805631Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:03.3718814Z [0m[32m
+2026-08-14T05:53:03.3782038Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:03.3782489Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:03.4010313Z 
+2026-08-14T05:53:03.4011533Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:03.4378112Z 
+2026-08-14T05:53:03.4379000Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:03.4763533Z [0m[32m
+2026-08-14T05:53:03.4764393Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:03.4765143Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:03.5104129Z 
+2026-08-14T05:53:03.5106562Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:03.5107827Z - Finding hashicorp/aws versions matching "~> 3.74.0"...
+2026-08-14T05:53:03.5122252Z [0m[32m
+2026-08-14T05:53:03.5123019Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:03.5123690Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:03.6068610Z 
+2026-08-14T05:53:03.6069652Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:03.6070290Z - Finding latest version of hashicorp/template...
+2026-08-14T05:53:03.6632986Z 
+2026-08-14T05:53:03.6633668Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:03.6634001Z - Finding hashicorp/aws versions matching "~> 4.10.0"...
+2026-08-14T05:53:03.6673544Z - Finding hashicorp/aws versions matching "~> 4.10.0"...
+2026-08-14T05:53:03.6708197Z - Installing hashicorp/aws v3.74.3...
+2026-08-14T05:53:03.7176295Z - Finding latest version of hashicorp/template...
+2026-08-14T05:53:03.8619584Z - Installing hashicorp/aws v4.10.0...
+2026-08-14T05:53:04.1080838Z - Installing hashicorp/aws v4.10.0...
+2026-08-14T05:53:04.6978742Z - Installed hashicorp/aws v6.60.0 (signed by HashiCorp)
+2026-08-14T05:53:04.6979518Z 
+2026-08-14T05:53:04.6980701Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:04.6981387Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:04.7025272Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:04.7026086Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:04.7026839Z 
+2026-08-14T05:53:04.7027705Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:04.7028234Z [0m[32m
+2026-08-14T05:53:04.7028732Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:04.7029276Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:04.7029790Z should now work.
+2026-08-14T05:53:04.7030023Z 
+2026-08-14T05:53:04.7030462Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:04.7030989Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:04.7031480Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:06.8201433Z - Installed hashicorp/aws v3.74.3 (signed by HashiCorp)
+2026-08-14T05:53:06.8202200Z 
+2026-08-14T05:53:06.8203449Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:06.8204110Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:06.8204803Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:06.8205507Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:06.8226756Z 
+2026-08-14T05:53:06.8228251Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:06.8229010Z [0m[32m
+2026-08-14T05:53:06.8229625Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:06.8297386Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:06.8298030Z should now work.
+2026-08-14T05:53:06.8298805Z 
+2026-08-14T05:53:06.8299314Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:06.8299885Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:06.8300411Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:07.0587678Z - Installed hashicorp/aws v4.10.0 (signed by HashiCorp)
+2026-08-14T05:53:07.1460607Z - Installed hashicorp/aws v4.10.0 (signed by HashiCorp)
+2026-08-14T05:53:07.1674585Z - Installing hashicorp/template v2.2.0...
+2026-08-14T05:53:07.2668231Z - Installing hashicorp/template v2.2.0...
+2026-08-14T05:53:07.6172242Z - Installed hashicorp/template v2.2.0 (signed by HashiCorp)
+2026-08-14T05:53:07.6172466Z 
+2026-08-14T05:53:07.6173135Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:07.6173551Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:07.6173942Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:07.6174289Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:07.6188700Z 
+2026-08-14T05:53:07.6190555Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:07.6191197Z [0m[32m
+2026-08-14T05:53:07.6191760Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:07.6192335Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:07.6192686Z should now work.
+2026-08-14T05:53:07.6193111Z 
+2026-08-14T05:53:07.6193603Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:07.6194007Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:07.6194400Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:07.7054511Z - Installed hashicorp/template v2.2.0 (signed by HashiCorp)
+2026-08-14T05:53:07.7054834Z 
+2026-08-14T05:53:07.7055664Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:07.7056091Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:07.7056498Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:07.7056867Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:07.7062329Z 
+2026-08-14T05:53:07.7063129Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:07.7063804Z [0m[32m
+2026-08-14T05:53:07.7064441Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:07.7065014Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:07.7065561Z should now work.
+2026-08-14T05:53:07.7065809Z 
+2026-08-14T05:53:07.7067099Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:07.7067659Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:07.7068170Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:09.8085052Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:09.8086142Z [0m
+2026-08-14T05:53:11.6312945Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:11.6314021Z [0m
+2026-08-14T05:53:12.0156253Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:12.0157026Z [0m
+2026-08-14T05:53:12.1593660Z 
+2026-08-14T05:53:12.1594789Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:12.3234296Z [0m[32m
+2026-08-14T05:53:12.3235249Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:12.3243974Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:12.5034689Z 
+2026-08-14T05:53:12.5041110Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:12.5041581Z - Finding hashicorp/aws versions matching ">= 3.61.0"...
+2026-08-14T05:53:12.6697145Z - Installing hashicorp/aws v6.60.0...
+2026-08-14T05:53:13.3075150Z 
+2026-08-14T05:53:13.3076743Z [0m[1mInitializing the backend...[0m
+2026-08-14T05:53:13.4709842Z [0m[32m
+2026-08-14T05:53:13.4710801Z Successfully configured the backend "s3"! Terraform will automatically
+2026-08-14T05:53:13.4711837Z use this backend unless the backend configuration changes.[0m
+2026-08-14T05:53:13.6524456Z 
+2026-08-14T05:53:13.6526068Z [0m[1mInitializing provider plugins...[0m
+2026-08-14T05:53:13.6526719Z - Finding hashicorp/aws versions matching "~> 3.74.0"...
+2026-08-14T05:53:13.8171804Z - Installing hashicorp/aws v3.74.3...
+2026-08-14T05:53:15.3768427Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:15.3769367Z [0m
+2026-08-14T05:53:16.4518471Z - Installed hashicorp/aws v3.74.3 (signed by HashiCorp)
+2026-08-14T05:53:16.4518945Z 
+2026-08-14T05:53:16.4519985Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:16.4520421Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:16.4520824Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:16.4521207Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:16.4533184Z 
+2026-08-14T05:53:16.4534033Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:16.4534790Z [0m[32m
+2026-08-14T05:53:16.4535237Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:16.4535899Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:16.4536758Z should now work.
+2026-08-14T05:53:16.4536882Z 
+2026-08-14T05:53:16.4537215Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:16.4537612Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:16.4538005Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:17.9280801Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:17.9281324Z [0m
+2026-08-14T05:53:20.3835564Z - Installed hashicorp/aws v6.60.0 (signed by HashiCorp)
+2026-08-14T05:53:20.3835927Z 
+2026-08-14T05:53:20.3836658Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-08-14T05:53:20.3837090Z selections it made above. Include this file in your version control repository
+2026-08-14T05:53:20.3837493Z so that Terraform can guarantee to make the same selections by default when
+2026-08-14T05:53:20.3837848Z you run "terraform init" in the future.[0m
+2026-08-14T05:53:20.3838017Z 
+2026-08-14T05:53:20.3838456Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-08-14T05:53:20.3838823Z [0m[32m
+2026-08-14T05:53:20.3839156Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-08-14T05:53:20.3839551Z any changes that are required for your infrastructure. All Terraform commands
+2026-08-14T05:53:20.3839894Z should now work.
+2026-08-14T05:53:20.3840008Z 
+2026-08-14T05:53:20.3840196Z If you ever set or change modules or backend configuration for Terraform,
+2026-08-14T05:53:20.3840445Z rerun this command to reinitialize your working directory. If you forget, other
+2026-08-14T05:53:20.3840660Z commands will detect it and remind you to do so if necessary.[0m
+2026-08-14T05:53:26.3586874Z [32m[1mSuccess![0m The configuration is valid.
+2026-08-14T05:53:26.3587336Z [0m
+2026-08-14T05:53:26.3883215Z 
+2026-08-14T05:53:26.3943624Z ##[section]Finishing: Run terragrunt run-all validate
