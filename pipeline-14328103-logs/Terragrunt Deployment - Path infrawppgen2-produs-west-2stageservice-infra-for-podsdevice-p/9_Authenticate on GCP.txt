@@ -1,0 +1,14 @@
+2026-08-14T05:52:28.5295809Z ##[section]Starting: Authenticate on GCP
+2026-08-14T05:52:28.5305686Z ==============================================================================
+2026-08-14T05:52:28.5305905Z Task         : Command line
+2026-08-14T05:52:28.5306050Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2026-08-14T05:52:28.5306242Z Version      : 2.276.0
+2026-08-14T05:52:28.5306376Z Author       : Microsoft Corporation
+2026-08-14T05:52:28.5306539Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2026-08-14T05:52:28.5306726Z ==============================================================================
+2026-08-14T05:52:31.3930016Z Generating script.
+2026-08-14T05:52:31.3936388Z ========================== Starting Command Output ===========================
+2026-08-14T05:52:31.3950987Z [command]/usr/bin/bash --noprofile --norc /usr/local/ado-agent/_work/_temp/6c64def1-eb17-4397-b389-4c4959ef4d0e.sh
+2026-08-14T05:52:31.4007082Z Authentication skipped because the optional 'gcpAuthFile' parameter was not provided!
+2026-08-14T05:52:31.4016146Z 
+2026-08-14T05:52:31.4078715Z ##[section]Finishing: Authenticate on GCP
